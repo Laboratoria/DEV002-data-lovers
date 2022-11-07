@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+}
+
+::placeholder{
+    color: var(--gray);
+}
+
+:root{
+    --bg-gradient: #060920;
+    --blue: #4B81D1;
+    --blue-hover: #3268ba;
+    --red: #841818;
+    --red-hover: #700e0e;
+    --yellow: #E0BB20;
+    --yellow-hover: #c8a61b;
+    --black: #000000;
+    --gray: #8F8F95;
+    --gray-dark: #464855;
+    --font-base: 'Montserrat', sans-serif; /* Medium 500, light 300 */
+}
+
+body{
+    background-image: linear-gradient(to bottom, #fffbef, #f9f4e4, #f3ecd8, #eee5cd, #e8dec2, #e4d8b9, #dfd3b0, #dbcda7, #d7c79e, #d3c294, #cfbc8b, #cbb782);
+}
