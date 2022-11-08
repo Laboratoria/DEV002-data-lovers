@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+}
+
+::placeholder{
+    color: var(--gray);
+}
+
+:root{
+    --bg-gradient: #060920;
+    --blue: #4B81D1;
+    --blue-hover: #3268ba;
+    --red: #841818;
+    --red-hover: #700e0e;
+    --yellow: #E0BB20;
+    --yellow-hover: #c8a61b;
+    --black: #000000;
+    --gray: #8F8F95;
+    --gray-dark: #464855;
+    --font-base: 'Montserrat', sans-serif; /* Medium 500, light 300 */
+}
+
+body{
+    background-image: linear-gradient(to bottom, #fffbef, #f9f4e4, #f3ecd8, #eee5cd, #e8dec2, #e4d8b9, #dfd3b0, #dbcda7, #d7c79e, #d3c294, #cfbc8b, #cbb782);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-width: 320px;
+    height: 830px;
+}
+
+header{
+    width: 100%;
+    height: 200px;
+}
+
+header .header-logo{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .header-logo img{
+    width: 250px;
+}
+
+header nav{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header nav .header-nav-input{
+    width: 90%;
+    display: flex;
+}
+
+header nav .header-nav-input input{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    /* border: none; */
+    border: 1px solid var(--blue);
+    text-indent: 20px;
+}
+
+header nav .header-nav-button{
+    position: absolute;
+    right: 30px;
+    top: 105px;
+}
+
+header nav .header-nav-button button{
+    background: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+header nav .header-nav-button button img{
+    width: 20px;
+}
