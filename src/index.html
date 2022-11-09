@@ -6,26 +6,42 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <header>
-      <div class= "header-logo">
-        <img src="assets/logo-gold.png" alt="Harry's Cabinet"/>
-      </div>
-      <div class="header-slogan">
-        <span>Welcome to our magical space</span>
-      </div>
-    </header>
     <main>
-        <div class="main-search">
-          <div class="main-search-input">
-            <input type="text" placeholder="Try 'Gryffindor'" id="search">
+      <!--Home-->
+      <container class="home active">
+
+        <section class="home-header">
+          <div class= "home-header-logo">
+            <img src="assets/logo-gold.png" alt="Harry's Cabinet"/>
           </div>
-          <div class="main-search-icon">
-            <img src="assets/search.png" alt="search icon"/>
+          <div class="home-header-slogan">
+            <span>Welcome to our magical space</span>
           </div>
-        </div>
-        <div class="main-more-button">
-          <button>...</button>
-        </div>
+        </section>
+
+        <section class="searcher">
+          <div class="home-search">
+            <div class="home-search-input">
+              <input type="text" placeholder="Try 'Gryffindor'" id="search">
+            </div>
+            <div class="home-search-icon-button">
+              <button>
+              <img src="assets/search.png" alt="search icon"/>
+              </button>
+            </div>
+          </div>
+          
+          <div class="home-more-button">
+            <button>...</button>
+          </div>
+       </section>
+
+
+      </container>
+      <!--Search results-->
+
+      <!--Characters details-->
+
     </main>
     <script src="main.js" type="module"></script>
   </body>

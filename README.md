@@ -67,4 +67,4 @@ Para nuestras historias de usuario, comenzamos identificando a 3 usuarios objeti
 Con estos datos, comenzamos a crear las historias de usuario que mostramos a continuación:
 
 * Primera historia de usuario:
-        Como usuarios, queremos una página web en la que podamos ver los personajes de Harry Potter.
+        Como usuarios queremos una página web en la que podamos ver los personajes de Harry Potter.
