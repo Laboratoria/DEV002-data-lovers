@@ -2,62 +2,75 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Lovers - Harry Potter</title>
+    <script src="https://kit.fontawesome.com/77b370538f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav>
-        <span></span>
-        <span></span>
+        <span><i class="fa-solid fa-bars"></i></span>
+        <img src="./images/glasses 80x60.png" alt="harry potter glasses">
       </nav>
     </header>
     <main>
-      <h2></h2>
+      <h2>Characters</h2>
       <form>
-        <span></span>
-        <input>
+        <span><i class="fa-brands fa-searchengin"></i></span>
+        <input type="text" placeholder="Character name">
       </form>
       <section>
-        <p></p>
-        <button></button>
+        <p>Filter by</p>
+        <button>A-Z</button>
+        <label for="">BOOKS</label>
         <select>
-          <label></label>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
+          <option>Harry Potter and the Sorcerer's Stone</option>
+          <option>Harry Potter and the chamber of secrets</option>
+          <option>Harry Potter and the Prisoner of Azkaban</option>
+          <option>Harry Potter and the Goblet of Fire</option>
+          <option>Harry Potter and the Order of the Phoenix</option>
+          <option>Harry Potter and the Half-Blood Prince</option>
+          <option>Harry Potter and the Deathly Hallows</option>
+          <option>Harry Potter and the Cursed Child</option>
         </select>
-        <select>
-          <label></label>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
-        <select>
-          <label></label>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
+        <form action="#">
+          <label for="house">HOUSES</label>
+          <select name="houses" id="house">
+            <option value="Selecciona">HOUSES</option>
+            <option value="gryffindor">Gryffindor</option>
+            <option>Ravenclaw</option>
+            <option>Slytherin</option>
+            <option>Hufflepuff</option>
+            <option>Unknown</option>
+          </select>
+        </form>
+        <div>
+          <li><a href="">ANCESTRY</a>
+            <ul>
+              <li>Muggle</li>
+              <li>Born-Muggle</li>
+              <li>Half blood</li>
+              <li>Pure blood</li>
+              <li>Unknown</li>
+            </ul>
+          </li>
+        </div>
       </section>
       <section>
         <div>
-          <span></span>
-          <p></p>
+          <span><i class="fa-solid fa-hat-wizard"></i></span>
+          <p>Nombre</p>
         </div>
       </section>
     </main>
     <footer>
-      <p></p>
+      <p>
+        Page created for educational purposes only<br>
+        Made with 💛  for DataLovers project<br>
+        Laboratoria: cohort DEV002<br>
+        November 2022
+      </p>
     </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
