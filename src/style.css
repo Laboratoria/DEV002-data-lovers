@@ -35,6 +35,8 @@ body{
     min-height: 100vh;
 }
 
+/*Home*/
+
 main .home .home-header{
     display: flex;
     flex-direction: column;
@@ -148,3 +150,7 @@ main .home .searcher .home-more-button button {
 main .home .searcher .home-more-button button:hover{
     color: var(--blue-hover)
 }
+
+/*Search results*/
+
+/*Characters details*/
