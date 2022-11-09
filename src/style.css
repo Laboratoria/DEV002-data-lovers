@@ -26,4 +26,125 @@
 body{
     background-image: linear-gradient(to bottom, #fffbef, #f9f4e4, #f3ecd8, #eee5cd, #e8dec2, #e4d8b9, #dfd3b0, #dbcda7, #d7c79e, #d3c294, #cfbc8b, #cbb782);
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main .home .home-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main .home .home-header .home-header-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 60%;
+    margin-bottom: 2%;
+}
+
+main .home .home-header .home-header-logo img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main .home .home-header .home-header-slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 44px;
+    width: 90%;
+}
+
+main .home .searcher{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+main .home .searcher .home-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 18%;
+}
+
+main .home .searcher .home-search .home-search-input{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+main .home .searcher .home-search .home-search-input input{
+    display: flex;
+    flex-direction: row;
+    border-radius: 44px;
+    height: 100px;
+    width: 90%;
+    background: none;
+    font-size: 38px;
+    border: 2px solid var(--blue);
+    text-indent: 24px;
+    font-family: var(--font-base);
+}
+
+main .home .searcher .home-search .home-search-input input:focus{
+    outline: none;
+}
+
+main .home .searcher .home-search .home-search-input input:hover{
+    border: 2px solid var(--blue-hover);
+}
+
+main .home .searcher .home-search .home-search-icon-button{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 8%;
+}
+
+main .home .searcher .home-search .home-search-icon-button button{
+    background: none;
+    border: none;
+}
+
+main .home .searcher .home-search .home-search-icon-button button img{
+    display: flex;
+    flex-direction: row;
+    width: 54px;
+    margin-top: 24px;
+}
+
+main .home .searcher .home-more-button{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+main .home .searcher .home-more-button button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-size: 120px;
+    background: none;
+    border: none;
+    color: var(--blue);
+}
+
+main .home .searcher .home-more-button button:hover{
+    color: var(--blue-hover)
 }
