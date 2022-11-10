@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color:#212342;
+    --secondary-blue:#4E4C75;
+    --titles-color: #C2B091;
+    --gryffindor-color:#740001;
+    --slytherin-color: #2A623D;
+    --ravenclaw-color: #728DDA; 
+    --hufflepuff-color: #F0C75E;
+    --titles-font: 'Berkshire Swash', cursive;
+    --secondary-font: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: var(--titles-font);
+    color:var(--titles-color);
+}
