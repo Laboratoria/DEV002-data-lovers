@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="grid-container">
     <header>
       <nav class="navbar">
         <span><i class="fa-solid fa-bars"></i></span>
@@ -30,43 +30,15 @@
           <button class="search-submit"><i class="fa-brands fa-searchengin"></i></button>
         </form>
       </div>
-      <section>
-        <p>Filter by</p>
-        <button>A-Z</button>
-        <label for="">BOOKS</label>
-        <select>
-          <option>Harry Potter and the Sorcerer's Stone</option>
-          <option>Harry Potter and the chamber of secrets</option>
-          <option>Harry Potter and the Prisoner of Azkaban</option>
-          <option>Harry Potter and the Goblet of Fire</option>
-          <option>Harry Potter and the Order of the Phoenix</option>
-          <option>Harry Potter and the Half-Blood Prince</option>
-          <option>Harry Potter and the Deathly Hallows</option>
-          <option>Harry Potter and the Cursed Child</option>
-        </select>
-        <form action="#">
-          <label for="house">HOUSES</label>
-          <select name="houses" id="house">
-            <option value="Selecciona">HOUSES</option>
-            <option value="gryffindor">Gryffindor</option>
-            <option>Ravenclaw</option>
-            <option>Slytherin</option>
-            <option>Hufflepuff</option>
-            <option>Unknown</option>
-          </select>
-        </form>
-        <div>
-          <li><a href="">ANCESTRY</a>
-            <ul>
-              <li>Muggle</li>
-              <li>Born-Muggle</li>
-              <li>Half blood</li>
-              <li>Pure blood</li>
-              <li>Unknown</li>
-            </ul>
-          </li>
-        </div>
-      </section>
+      <aside class="nav-menu">
+        <ul class="nav-menu-list">
+          <p class="filter-by">Filter by</p>
+          <li class="nav-menu-list-item"> <a href="#" class="nav-menu-link nav-link">Reverse order</a></li>
+          <li class="nav-menu-list-item"> <a href="#" class="nav-menu-link nav-link">Books</a></li>
+          <li class="nav-menu-list-item"> <a href="#" class="nav-menu-link nav-link">Houses</a></li>
+          <li class="nav-menu-list-item"> <a href="#" class="nav-menu-link nav-link">Ancestry</a></li>
+        </ul>
+      </aside>
       <section>
         <div>
           <span><i class="fa-solid fa-hat-wizard"></i></span>
