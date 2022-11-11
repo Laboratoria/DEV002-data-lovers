@@ -1,0 +1,95 @@
+
+body{
+  background-color: blueviolet;
+}
+#logo{
+border-radius: 150px;
+position: relative;
+display: flex;
+left: 45%;
+margin-bottom: 5%;
+}
+hr{
+  height: 5px;
+  background-color: black;
+}
+h1{
+  font-family: 'Island Moments', cursive;
+  font-size: 500%;
+  text-align: center;
+}
+#contenedor{
+  display: flex;
+  justify-content: flex-start;
+
+}
+#raya{
+  width: 5px;
+  height:50px;
+  background-color: black;
+  margin-left: 17%;
+}
+#search{
+  display: flex;
+  position: relative;
+  left: 5%;
+  margin-bottom: 10%;
+  width: 60%;
+  height: 50px;
+  border-radius: 50px;
+  border: 15px solid rgba(102, 95, 95, 0.629);
+  border-color: black;
+  position: relative;
+}
+#menu{
+  position: absolute;
+  margin-bottom: 105px;
+  margin-left: 6%;
+
+}
+#glasses{
+  align-self: baseline;
+  margin-left: 8%;
+}
+
+/* ul.menu li {
+  display: flex;
+  position: relative;
+  align-content: center;
+  display: inline;
+  padding-right: 15%;
+} */
+#autora{
+  background-color:#4b40b6;
+  display: flex;
+  flex-direction: row;
+}
+#foto{
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.subtitles{
+  font-family: 'Calligraffitti', cursive;
+}
+#paragraph{
+  font-family: 'Caveat', cursive;
+  font-size: 180%;
+  display: flex;
+  align-items: right;
+    align-self: center;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.centrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#arrow{
+  left: 80%;
+}
+.subtitles{
+  font-size: 350%;
+}
