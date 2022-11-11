@@ -30,7 +30,6 @@ h2 {
     font-size: 30px;
     text-align: center;
     font-family: var(--titles-font);
-<<<<<<< HEAD
     color:var(--titles-color);
     margin-bottom: 10px;
 }
@@ -147,8 +146,6 @@ footer p {
     font-size: 10px;
     font-weight: lighter;
     color: var(--titles-color);
-=======
-    color: var(--titles-color);
 }
 
 /*feature-barra-menus start here*/
@@ -248,5 +245,4 @@ footer {
         grid-template:
             "header header"100px "navbar navbar"50px "aside aside"50px "main main"auto "footer footer"100px / 200px auto;
     }
->>>>>>> Agrega etiqueta aside para nav-menu y estilos
 }
