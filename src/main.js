@@ -1,6 +1,22 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import {getAllCharacters} from "./data.js";
 
-console.log(example, data);
+
+
+// const data = dataTest();
+const input = document.getElementById("search");
+
+//console.log("datos " + data);
+//console.log("input " + input);
+
+input.addEventListener("keydown", async (event) =>{  
+    const inputDos = document.getElementById("search");
+    //const keyInput = event.key;
+    //console.log("dos " +inputDos.value)
+    const data = await getAllCharacters();
+    //console.log(data)
+    const result = data.filter((characters) => {
+        return characters.name.toLowerCase().includes(inputDos.value)
+    })
+    console.log("resultado " + inputDos.value, result)
+})
+
