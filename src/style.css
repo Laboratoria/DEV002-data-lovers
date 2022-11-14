@@ -16,9 +16,7 @@
     --secondary-font: 'Josefin Sans', sans-serif;
 }
 
-html {
-    height: 100%;
-}
+
 
 body {
     background-color: var(--main-color);
@@ -148,73 +146,36 @@ footer p {
     color: var(--titles-color);
 }
 
-/*feature-barra-menus start here*/
-.grid-container>* {
-    padding: 1px;
-    text-align: center;
-}
+.nav-menu{
+    height: auto;
+	width: 90%;
+    max-width: 600px;
+    min-width: 250px;
+	overflow: hidden;
+	background: transparent;
+	margin: 0 auto;
+	position: static;
 
-header {
-    grid-area: header;
-    text-align: center;
-    height: 80px;
-    
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-nav {
-    grid-area: navbar;
-    text-align: center;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: main;
-}
-
-.filter-by {
-    font-size: 15px;
-    padding: 0 40px;
-    line-height: 80px;
-    width: max-content;
-    color: var(--titles-color);
-    text-transform: uppercase;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
-    margin: 0 auto;
 }
 
 .nav-link {
     color: var(--titles-color);
     text-decoration: none;
+    text-size-adjust: 5em;
+    padding: 0 auto;
 }
 
 .nav-menu-list {
     display: flex;
-    margin-right: 500px;
+    flex-wrap: wrap;
     list-style: none;
-}
-
-.nav-menu-list-item {
+    padding: none;
+    position: absolute;
     font-size: 18px;
-    margin: 0 10px;
-    line-height: 80px;
     text-transform: uppercase;
-    width: max-content;
+    line-height: 80px;
+    padding: 8px 10px;
+    border-radius: 7px;
 }
 
 .nav-menu-link{
@@ -229,20 +190,29 @@ aside {
     z-index: 6;
 }
 
-footer {
-    grid-area: footer;
+.filter-by {
+    font-size: 15px;
+    padding: 0 40px;
+    line-height: 80px;
+    width: max-content;
+    color: var(--titles-color);
+    text-transform: uppercase;
 }
 
-.grid-container {
-    display: grid;
-    gap: 10px;
-    grid-template:
-        "header"100px "navbar"50px "aside"50px "main"auto "footer"100px;
+.characters-name{
+    font-size: 20px;
+    padding:40px;
+    line-height: 80px;
+    width: max-content;
+    color: var(--titles-color);
 }
 
-@media (min-width: 600px) {
-    .grid-container {
-        grid-template:
-            "header header"100px "navbar navbar"50px "aside aside"50px "main main"auto "footer footer"100px / 200px auto;
-    }
+.card-element{
+    font-size: 15px;
+    padding: 0 40px;
+    line-height: 80px;
+    width: max-content;
+    color: var(--titles-color);
+    text-transform: uppercase;
+
 }
