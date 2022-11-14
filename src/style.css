@@ -68,14 +68,14 @@ main .home .home-header .home-header-slogan{
     width: 90%;
 }
 
-main .home .searcher{
+main .home .home-searcher{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-main .home .searcher .home-search{
+main .home .home-searcher .home-searcher-input{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -83,14 +83,14 @@ main .home .searcher .home-search{
     margin-top: 18%;
 }
 
-main .home .searcher .home-search .home-search-input{
+main .home .home-searcher .home-searcher-input .search-input{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
 }
 
-main .home .searcher .home-search .home-search-input input{
+main .home .home-searcher .home-searcher-input .search-input input{
     display: flex;
     flex-direction: row;
     border-radius: 44px;
@@ -103,40 +103,40 @@ main .home .searcher .home-search .home-search-input input{
     font-family: var(--font-base);
 }
 
-main .home .searcher .home-search .home-search-input input:focus{
+main .home .home-searcher .home-searcher-input .search-input input:focus{
     outline: none;
 }
 
-main .home .searcher .home-search .home-search-input input:hover{
+main .home .home-searcher .home-searcher-input .search-input input:hover{
     border: 2px solid var(--blue-hover);
 }
 
-main .home .searcher .home-search .home-search-icon-button{
+main .home .home-searcher .home-searcher-input .search-button{
     display: flex;
     flex-direction: row;
     position: absolute;
     right: 8%;
 }
 
-main .home .searcher .home-search .home-search-icon-button button{
+main .home .home-searcher .home-searcher-input .search-button button{
     background: none;
     border: none;
 }
 
-main .home .searcher .home-search .home-search-icon-button button img{
+main .home .home-searcher .home-searcher-input .search-button button img{
     display: flex;
     flex-direction: row;
     width: 54px;
     margin-top: 24px;
 }
 
-main .home .searcher .home-more-button{
+main .home .home-searcher .home-more-button{
     display: flex;
     flex-direction: column;
     width: 10%;
 }
 
-main .home .searcher .home-more-button button {
+main .home .home-searcher .home-more-button button {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -147,10 +147,103 @@ main .home .searcher .home-more-button button {
     color: var(--blue);
 }
 
-main .home .searcher .home-more-button button:hover{
+main .home .home-searcher .home-more-button button:hover{
     color: var(--blue-hover)
 }
+
+/*nav*/
+
 
 /*Search results*/
 
 /*Characters details*/
+.nav-searcher{
+    width: 100%;
+    height: auto;
+}
+
+.nav-searcher .nav-searcher-top{
+    width: 100%;
+    height: 450px;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-logo{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-logo img{
+    width: 90%;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar{
+    width: 100%;
+    height: 30%;
+    display: block;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
+    width: 90%;
+    height: 120px;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid var(--blue);
+    text-indent: 20px;
+    font-size: 40px;
+    color: var(--gray-dark);
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button{
+    position: absolute;
+    right: 90px;
+    top: 335px;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button button{
+    background: none;
+    width: 80px;
+    height: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button button img{
+    width: 80px;
+}
+
+.nav-searcher .nav-searcher-bottom{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-buttons{
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-buttons button{
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* inactive components */
+.inactive{
+    display: none;
+}
