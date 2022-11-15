@@ -16,19 +16,15 @@
     --secondary-font: 'Josefin Sans', sans-serif;
 }
 
-
-
 body {
     background-color: var(--main-color);
-    min-height: 100%;
-
 }
 
 h2 {
     font-size: 30px;
     text-align: center;
     font-family: var(--titles-font);
-    color:var(--titles-color);
+    color: var(--titles-color);
     margin-bottom: 10px;
 }
 
@@ -57,22 +53,21 @@ h2 {
     display: inline-block;
     position: absolute;
     right: 20px;
-    background-image:url("./images/glasses\ 80x60.png");
+    background-image: url("./images/glasses\ 80x60.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 
-
 .search-wrapper {
-	height: auto;
-	width: 90%;
+    height: auto;
+    width: 90%;
     max-width: 600px;
     min-width: 250px;
-	overflow: hidden;
-	background: transparent;
-	margin: 0 auto;
-	position: static;
+    overflow: hidden;
+    background: transparent;
+    margin: 0 auto;
+    position: static;
 }
 
 .search--form {
@@ -88,9 +83,8 @@ h2 {
 
 .search--input-wrapper {
     width: 100%;
-    overflow: hidden; 
-} 
-
+    overflow: hidden;
+}
 
 .search-input {
     height: 40px;
@@ -134,7 +128,7 @@ h2 {
 footer {
     width: 100%;
     height: 60px;
-    position:absolute;
+    position: absolute;
     bottom: 0;
 }
 
@@ -146,73 +140,130 @@ footer p {
     color: var(--titles-color);
 }
 
-.nav-menu{
-    height: auto;
-	width: 90%;
-    max-width: 600px;
-    min-width: 250px;
-	overflow: hidden;
-	background: transparent;
-	margin: 0 auto;
-	position: static;
-
+.container-menu {
+    width: 100%;
+    height: 70px;
+    padding: 0px 20px;
+    background: transparent;
 }
 
-.nav-link {
-    color: var(--titles-color);
-    text-decoration: none;
-    text-size-adjust: 5em;
-    padding: 0 auto;
+.nav-menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
 }
 
-.nav-menu-list {
+nav {
+    height: 100%;
+}
+
+nav>ul {
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: none;
-    position: absolute;
-    font-size: 18px;
-    text-transform: uppercase;
-    line-height: 80px;
-    padding: 8px 10px;
-    border-radius: 7px;
 }
 
-.nav-menu-link{
-    padding: 8px 10px;
-    border-radius: 7px;
+nav>ul>li {
+    height: 100%;
+    list-style: none;
+    position: relative;
 }
-.nav-menu-link:hover {
-    border-bottom: 5px solid ;
+
+nav>ul>li>div>a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transform: all 300ms ease;
+}
+
+nav>ul>li>div>a:hover {
+    transform: scale(1.1);
+    border-bottom: 5px solid;
     border-color: var(--secondary-blue);
-    border-radius: 0px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px var(--secondary-blue);
     transition: right 0.5s ease;
     z-index: 6;
 }
 
-.filter-by {
-    font-size: 15px;
-    padding: 0 40px;
-    line-height: 80px;
-    width: max-content;
-    color: var(--titles-color);
+/*sub-nav-menu*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--secondary-blue);
+    box-shadow: 0px 0px 10px 0.5px var(--secondary-blue);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul a{
+    display: block;
+    color: var(--main-color);
+    background-color: var(--titles-color);
+    padding: 6px;
+    margin-left: 14px;
+    margin-top: 10px;
+    font-size: 14PX;
     text-transform: uppercase;
 }
 
-.characters-name{
+nav ul li ul a{
+background: var(--main-color);
+color: var(--secondary-blue);
+transform: scale(1.1);
+padding-left: 30px;
+font-size: 14px;
+}
+
+.characters-name {
     font-size: 20px;
-    padding:40px;
+    padding: 40px;
     line-height: 80px;
     width: max-content;
     color: var(--titles-color);
 }
 
-.card-element{
+.card-element {
+
     font-size: 15px;
     padding: 0 40px;
     line-height: 80px;
     width: max-content;
     color: var(--titles-color);
     text-transform: uppercase;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    transition: .5s;
 
+}
+
+ul, ol {
+    list-style: none;
+}
+
+li p, a {
+    text-decoration: none;
+    text-size-adjust: 1em;
+    background: transparent;
+    color: var(--titles-color);
+    margin: 0 auto;
+    max-width: 992px;
+    padding: 10px 15px;
 }
