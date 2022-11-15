@@ -10,16 +10,15 @@ color: var(--gray);
 }
 
 :root{
-  --bg-gradient: #060920;
   --blue: #4B81D1;
-  --blue-hover: #3268ba;
+  --blue-hover: #1c53a6;
   --red: #841818;
-  --red-hover: #700e0e;
+  --red-hover: #610808;
   --yellow: #E0BB20;
-  --yellow-hover: #c8a61b;
+  --yellow-hover: #b4920a;
   --black: #000000;
   --gray: #8F8F95;
-  --gray-dark: #464855;
+  --gray-dark: #3a3c4a;
   --font-base: 'Montserrat', sans-serif; /* Medium 500, light 300 */
 }
 
