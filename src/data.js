@@ -1,7 +1,7 @@
-
-
-
-
+export const showCharacterbyName = (data, cName) => {
+  let characterSelected = data.characters.filter(element => element.name == cName);
+  console.log(characterSelected)
+  return characterSelected;
 
 export const printCharacters = (data) => {
   return data.characters
@@ -29,5 +29,4 @@ characters.sort(function (a, b) {
     // a must be equal to b
     return 0;
   });*/
-
   
