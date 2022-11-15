@@ -214,5 +214,43 @@ footer p {
     width: max-content;
     color: var(--titles-color);
     text-transform: uppercase;
+}
 
+/* searcher */
+.nav-menu {
+    height: 100px;
+}
+.characters-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.characters-list {
+    position: relative;
+
+}
+
+.card {
+    width:115px;
+    height: 115px;
+    border: solid 1px var(--titles-color);
+    border-radius: 40px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card span i {
+    padding-top: 18px;
+    font-size: 30px;
+}
+
+.card p {
+    padding-top: 18px;
+    color: var(--titles-color);
+    font-family: var(--secondary-font);
+    font-size: 15px;
 }
