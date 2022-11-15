@@ -1,0 +1,46 @@
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background-image: url(lentes.png);
+}
+#hola{
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.hi-slide{
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 115px auto 0;
+
+}
+
+.hi-prev .hi-slide,
+.hi-slide .hi-prev{
+   position: absolute;
+   top: 50%;
+   width: 40px;
+   margin-top: -20px;
+   border-radius: 50px;
+   line-height: 40px;
+   text-align: center;
+   cursor: pointer;
+   background-color: aliceblue;
+   color: black;
+   transition: all 0.7s;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover{
+  opacity: 1;
+  background-color: antiquewhite;
+}
+
+.hi-slide .hi-prev{
+  left: -70px;
+
+}
