@@ -1,53 +1,93 @@
+body {
+  background-image: linear-gradient(125deg, #3d2a52, #764082, #a85d84, #8d4887, #58B19F);
+  animation: bganimation 15s infinite;
+  background-size: 400%;
+}
 
-body{
-  background-color: blueviolet;
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
-#logo{
-border-radius: 150px;
-position: relative;
-display: flex;
-left: 45%;
-margin-bottom: 5%;
+
+#logo {
+  border-radius: 150px;
+  position: relative;
+  display: flex;
+  left: 45%;
+  margin-bottom: 5%;
 }
-hr{
+
+hr {
   height: 5px;
   background-color: black;
 }
-h1{
+
+/* .menu li{
+  display: flex;
+  float: left;
+   margin-bottom: 3%;
+   margin-left: 8%;
+
+
+} */
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+ul li {}
+
+h1 {
   font-family: 'Island Moments', cursive;
   font-size: 500%;
   text-align: center;
 }
-#contenedor{
+
+#contenedor {
   display: flex;
   justify-content: flex-start;
 
 }
-#raya{
+
+#raya {
   width: 5px;
-  height:50px;
+  height: 50px;
   background-color: black;
   margin-left: 17%;
 }
-#search{
+
+#search {
   display: flex;
   position: relative;
   left: 5%;
   margin-bottom: 10%;
   width: 60%;
-  height: 50px;
+  height: 20px;
   border-radius: 50px;
   border: 15px solid rgba(102, 95, 95, 0.629);
   border-color: black;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
 }
-#menu{
+
+#menu {
   position: absolute;
   margin-bottom: 105px;
   margin-left: 6%;
 
 }
-#glasses{
+
+#glasses {
   align-self: baseline;
   margin-left: 8%;
 }
@@ -59,37 +99,114 @@ h1{
   display: inline;
   padding-right: 15%;
 } */
-#autora{
-  background-color:#4b40b6;
+#box {
+  display: flex;
+  justify-content: center;
+}
+
+#autora {
+  background-color: #a29dcf;
   display: flex;
   flex-direction: row;
+  width: 80%;
+  box-shadow: 5px 8px 50px rgba(0, 0, 0, 0.5);
 }
-#foto{
+
+#foto {
   margin-left: 5%;
   margin-top: 5%;
   margin-bottom: 5%;
+  box-shadow: 10px 10px 20px #604e7e;
 }
-.subtitles{
+
+.subtitles {
   font-family: 'Calligraffitti', cursive;
+  display: flex;
+  margin-left: 80px;
+
 }
-#paragraph{
+
+#summary {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section:hover {
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.col {
+  display: flex;
+  justify-content: space-between;
+}
+
+section p{
+  display: flex;
+
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 30px 20px;
+  background-position: center;
+  background-size: cover;
+  transition:  all;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 8px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card1 {
+  background-image: url(imag/casa-gryffindor.jpg);
+  align-items: flex-start;
+}
+
+.card2 {
+  background-image: url(imag/casa-hufflepuff.jpg);
+  align-items: flex-start;
+}
+
+.card3 {
+  background-image: url(imag/casa-ravenclaw.jpg);
+  align-items: flex-end;
+}
+
+.card4 {
+  background-image: url(imag/casa-slytherin.jpg);
+  align-items: flex-end;
+}
+
+#paragraph {
   font-family: 'Caveat', cursive;
   font-size: 180%;
   display: flex;
   align-items: right;
-    align-self: center;
-    margin-left: 10%;
-    margin-right: 10%;
+  align-self: center;
+  margin-left: 10%;
+  margin-right: 10%;
 
 }
-.centrar{
+
+.centrar {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#arrow{
+
+#arrow {
   left: 80%;
 }
-.subtitles{
+
+.subtitles {
   font-size: 350%;
 }
