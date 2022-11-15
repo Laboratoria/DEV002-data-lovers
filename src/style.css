@@ -18,7 +18,16 @@
 
 body {
     background-color: var(--main-color);
+
 }
+
+
+
+
+
+
+
+
 
 h2 {
     font-size: 30px;
@@ -232,28 +241,6 @@ padding-left: 30px;
 font-size: 14px;
 }
 
-.characters-name {
-    font-size: 20px;
-    padding: 40px;
-    line-height: 80px;
-    width: max-content;
-    color: var(--titles-color);
-}
-
-.card-element {
-
-    font-size: 15px;
-    padding: 0 40px;
-    line-height: 80px;
-    width: max-content;
-    color: var(--titles-color);
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    transition: .5s;
-
-}
-
 ul, ol {
     list-style: none;
 }
@@ -266,4 +253,30 @@ li p, a {
     margin: 0 auto;
     max-width: 992px;
     padding: 10px 15px;
+}
+.characters-name {
+    font-size: 20px;
+    padding: 40px;
+    line-height: 80px;
+    width: max-content;
+    color: var(--titles-color);
+}
+.charactersList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-element {
+
+    font-size: 15px;
+    padding: 0 40px;
+    border: solid 1px;
+    border-radius: 40px;
+    line-height: 80px;
+    width: max-content;
+    color: var(--titles-color);
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    transition: .5s;
 }
