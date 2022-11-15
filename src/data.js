@@ -2,6 +2,7 @@ export const showCharacterbyName = (data, cName) => {
   let characterSelected = data.characters.filter(element => element.name == cName);
   console.log(characterSelected)
   return characterSelected;
+};
 
 export const printCharacters = (data) => {
   return data.characters
@@ -18,6 +19,7 @@ export const orderCharacters = (data) => {
   return data.characters
   .reverse();
 };
+
 /*let characters = data.characters;
 characters.sort(function (a, b) {
     if (a.house > b.house) {

@@ -1,9 +1,8 @@
-import { example, orderCharacters, printCharacters, printElements, showCharacterbyName } from './data.js';
+import {orderCharacters, printCharacters, printElements, showCharacterbyName } from './data.js';
 import data from './data/harrypotter/data.js';
 
 const searchI = document.querySelector('#search-character');
 const searchB = document.getElementById("search-button");
-const list = document.getElementById("characters-list-example");
 let showCharacter;
 let colorHat;
 let list = document.getElementById("characteresList");
@@ -17,7 +16,7 @@ searchI.addEventListener('keyup', searchButton);
         let cName = searchI.value;
         let characterFound = showCharacterbyName(data,cName);
         console.log(characterFound);
-
+        list.innerHTML = '';
     characterFound.forEach(element => {
         if(element.house == "Gryffindor") {
                 colorHat = "#740001";
@@ -40,12 +39,14 @@ searchI.addEventListener('keyup', searchButton);
         })
     }
 
-listElements(data.characters.map((character) => character.name + character.house));
+listElements(data.characters.map((character) => character.name));
+
 orderAscendent.addEventListener("click", () => {
     list.innerHTML = '';
     let names = data.characters.map((character) => character.name).sort();
     listElements(names);
 });
+
 orderDescendent.addEventListener("click", () => {
     list.innerHTML = '';
     let names = data.characters.map((character) => character.name).sort().reverse();
