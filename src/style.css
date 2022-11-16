@@ -159,11 +159,6 @@ main .home .home-searcher .home-more-button button:hover{
 }
 
 /*nav*/
-
-
-/*Search results*/
-
-/*Characters details*/
 .nav-searcher{
   width: 100%;
   height: auto;
@@ -171,25 +166,26 @@ main .home .home-searcher .home-more-button button:hover{
 
 .nav-searcher .nav-searcher-top{
   width: 100%;
-  height: 4.5rem;
+  height: 20rem;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-logo{
   width: 100%;
-  height: 70%;
+  height: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-logo img{
-  width: 90%;
+  width: 80%;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-bar{
   width: 100%;
   height: 30%;
   display: block;
+  margin-top: 5%;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
@@ -197,31 +193,29 @@ main .home .home-searcher .home-more-button button:hover{
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
   width: 90%;
-  height: 1.2rem;
+  height: 5rem;
   border-radius: 5rem;
   outline: none;
   border: 0.2rem solid var(--blue);
   text-indent: 2rem;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--gray-dark);
+  background: none;
 }
 
-.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button{
-  position: absolute;
-  right: 9rem;
-  top: 33.5rem;
-}
-
-.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button button{
+.nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
   background: none;
   width: 8rem;
-  height: auto;
   border: none;
   cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  font-size: 5vw;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button button img{
@@ -230,24 +224,50 @@ main .home .home-searcher .home-more-button button:hover{
 
 .nav-searcher .nav-searcher-bottom{
   width: 100%;
-  height: 100px;
+  height: 4rem;
   display: flex;
   justify-content: flex-end;
 }
 
-.nav-searcher .nav-searcher-bottom .searcher-bottom-buttons{
+.nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
   width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-sort button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-sort button img{
+  width: 50%;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
+  width: 10%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
 }
 
-.nav-searcher .nav-searcher-bottom .searcher-bottom-buttons button{
+.nav-searcher .nav-searcher-bottom .searcher-bottom-filter button{
   width: 100%;
+  height: 100%;
   border: none;
   background: none;
   cursor: pointer;
   font-size: 30px;
+}
+
+.nav-searcher .nav-searcher-bottom .searcher-bottom-filter button img{
+  width: 50%;
 }
 
 /* inactive components */
