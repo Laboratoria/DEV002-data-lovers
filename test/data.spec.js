@@ -1,14 +1,17 @@
-import { example, anotherExample } from '../src/data.js';
+
+import { filtrarData, sortData,computeStats } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filtarData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filtrarData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `150 nombres de pociones`', () => {
+    expect(filtrarData(todos)).toBe('');
   });
+
+  it('returns')
 });
 
 
