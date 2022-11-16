@@ -60,7 +60,7 @@ main .home .home-header .home-header-logo{
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin-top: 60%;
+  margin-top: 70%;
   margin-bottom: 2%;
 }
 
@@ -109,10 +109,10 @@ main .home .home-searcher .home-searcher-input .search-input input{
   display: flex;
   flex-direction: row;
   border-radius: 4.4rem;
-  height: 10rem;
+  height: 5rem;
   width: 90%;
   background: none;
-  font-size: 3.8rem;
+  font-size: 5vw;
   border: 0.2rem solid var(--blue);
   text-indent: 2.4rem;
   font-family: var(--font-base);
@@ -131,26 +131,26 @@ main .home .home-searcher .home-searcher-input .search-input button{
   border: none;
   position: absolute;
   width: 10%;
-  font-size: 5rem;
+  font-size: 2.5rem;
   height: auto;
-  right: 8rem;
+  right: 4rem;
 }
 
 main .home .home-searcher .home-more-button{
   display: flex;
-  flex-direction: column;
-  width: 10%;
+  justify-content: center;
+  width: 100%;
 }
 
 main .home .home-searcher .home-more-button button {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  font-size: 12rem;
+  width: 20%;
+  font-size: 9vw;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
   background: none;
   border: none;
   color: var(--blue);
+  cursor: pointer;
 }
 
 main .home .home-searcher .home-more-button button:hover{
@@ -255,32 +255,17 @@ main .home .home-searcher .home-more-button button:hover{
 }
 
 /* Responsive Design */
-@media screen and (min-width: 320px){
-  main .home .home-searcher .home-searcher-input .search-input input{
-    height: 5rem;
-    font-size: 5vw;
-  }
-  main .home .home-searcher .home-searcher-input .search-input button{
-    font-size: 2.5rem;
-    right: 4rem;
-  }
-}
-
-@media screen and (min-width: 500px){
-  main .home .home-searcher .home-searcher-input .search-input input{
-    height: 6rem;
-    font-size: 5vw;
-  }
-}
-
-@media screen and (min-width: 700px){
+@media screen and (min-width: 640px){
   main .home .home-searcher .home-searcher-input .search-input input{
     height: 7rem;
     font-size: 3vw;
   }
+  main .home .home-header .home-header-logo{
+    margin-top: 30%;
+  }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 960px){
   main .home .home-searcher .home-searcher-input .search-input input{
     height: 8rem;
     font-size: 3vw;
@@ -289,9 +274,12 @@ main .home .home-searcher .home-more-button button:hover{
     font-size: 3rem;
     right: 5rem;
   }
+  main .home .home-header .home-header-logo{
+    margin-top: 20%;
+  }
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1366px){
   main .home .home-searcher .home-searcher-input .search-input input{
     height: 10rem;
     font-size: 3vw;
