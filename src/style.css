@@ -45,8 +45,10 @@ ul {
   justify-content: space-between;
 }
 
-ul li {}
-
+/*ul li {
+    
+}
+*/
 h1 {
   font-family: 'Island Moments', cursive;
   font-size: 500%;
@@ -209,4 +211,23 @@ section p{
 
 .subtitles {
   font-size: 350%;
+  margin-top: 20px;
+}
+p{
+    margin-left:6px;
+    margin-bottom: 5px;
+    margin-right: 6px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Caveat', cursive;
+   
+}
+p1{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: justify;
+    margin-right: 5px;
+    font-family: 'Caveat', cursive;
+
 }
