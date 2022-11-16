@@ -251,3 +251,21 @@ main .home .home-searcher .home-more-button button:hover{
 .inactive{
     display: none;
 }
+
+
+@media screen and (max-width: 320px) {
+    .home {
+        width: 100%;
+    }
+}
+
+.search-results .results{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.character .character-image {
+    border-radius: 5rem;
+    width: 10rem;
+    height: 10rem;
+}
