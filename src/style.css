@@ -77,6 +77,7 @@ main .home .home-header .home-header-slogan{
   align-items: center;
   width: 90%;
 }
+
 main .home .home-header .home-header-slogan span{
   font-size: 4.5vw;
   color: var(--gray-dark);
@@ -112,7 +113,7 @@ main .home .home-searcher .home-searcher-input .search-input input{
   height: 5rem;
   width: 90%;
   background: none;
-  font-size: 5vw;
+  font-size: 4vw;
   border: 0.2rem solid var(--blue);
   text-indent: 2.4rem;
   font-family: var(--font-base);
@@ -260,23 +261,43 @@ main .home .home-searcher .home-more-button button:hover{
     height: 7rem;
     font-size: 3vw;
   }
+
   main .home .home-header .home-header-logo{
-    margin-top: 30%;
+    margin-top: 45%;
   }
 }
 
 @media screen and (min-width: 960px){
-  main .home .home-searcher .home-searcher-input .search-input input{
-    height: 8rem;
+  main .home .home-header .home-header-logo{
+    margin-top: 30%;
+  }
+
+  main .home .home-header .home-header-logo img{
+    width: 80%;
+  }
+
+  main .home .home-header .home-header-slogan span{
     font-size: 3vw;
   }
+
+  main .home .home-searcher .home-searcher-input {
+    margin-top: 12%;
+  }
+
+  main .home .home-searcher .home-searcher-input .search-input input{
+    width: 80%;
+    height: 7rem;
+    font-size: 3vw;
+    text-indent: 4rem;
+  }
+
   main .home .home-searcher .home-searcher-input .search-input button{
     font-size: 3rem;
-    right: 5rem;
+    right: 10rem;
   }
-  main .home .home-header .home-header-logo{
-    margin-top: 20%;
-  }
+
+  main .home .home-searcher .home-more-button button {
+    font-size: 6vw;
 }
 
 @media screen and (min-width: 1366px){
@@ -285,6 +306,7 @@ main .home .home-searcher .home-more-button button:hover{
     font-size: 3vw;
     border: .3rem solid var(--blue);
   }
+
   main .home .home-searcher .home-searcher-input .search-input button{
     font-size: 5rem;
     right: 8rem;
