@@ -285,6 +285,27 @@ main .home .home-searcher .home-more-button button:hover{
   main .home .home-header .home-header-logo{
     margin-top: 45%;
   }
+
+  main .nav-searcher .nav-searcher-top{
+    height: 20rem;
+  }
+
+  main .nav-searcher .nav-searcher-top{
+    margin-top: 5%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar{
+    margin-top: 2%;
+    height: 25%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+    height: 5rem;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -319,6 +340,40 @@ main .home .home-searcher .home-more-button button:hover{
   main .home .home-searcher .home-more-button button {
     font-size: 6vw;
   }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-logo{
+    height: 60%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-logo img{
+    width: 60%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar{
+    height: 30%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+    height: 6rem;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
+    font-size: 4vw;
+    right: 5.5rem;
+  }
+
+  main .nav-searcher .nav-searcher-bottom{
+    margin-top: 2rem;
+    height: 6rem;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort button img{
+    width: 40%;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter button img{
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 1366px){
@@ -352,5 +407,40 @@ main .home .home-searcher .home-more-button button:hover{
 
   main .home .home-searcher .home-more-button button {
     font-size: 3vw;
+  }
+
+  main .nav-searcher .nav-searcher-top{
+    margin-top: 1%;
+    height: 23rem;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-logo{
+    height: 53%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-logo img{
+    width: 35%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+    height: 7rem;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
+    width: 80%;
+  }
+
+  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
+    font-size: 2vw;
+    right: 21rem;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
+    width: 5%;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
+    width: 5%;
+    margin-right: 10%;
   }
 }
