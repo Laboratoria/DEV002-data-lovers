@@ -252,20 +252,18 @@ main .home .home-searcher .home-more-button button:hover{
     display: none;
 }
 
-
-@media screen and (max-width: 320px) {
-    .home {
-        width: 100%;
-    }
-}
-
 .search-results .results{
     display: grid;
-    grid-auto-flow: column;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 .character .character-image {
-    border-radius: 5rem;
-    width: 10rem;
-    height: 10rem;
+    border-radius: 10rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+.character .name{
+    text-align: center;
 }
