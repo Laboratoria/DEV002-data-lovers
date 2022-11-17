@@ -6,6 +6,13 @@ export const showCharacterbyName = (data, cName) => {
   return characterSelected;
 };
 
+export const showAutomatic = (data) => {
+  let filtered = data.characters.filter(element => element.name);
+  let finalArray = filtered.map( (element) => ({name: element.name, house: element.house}))
+
+  return finalArray;
+};
+
 // export const printCharacters = (data) => {
 //   return data.characters
 //   .filter(character => character.house == "Gryffindor")
@@ -35,12 +42,3 @@ characters.sort(function (a, b) {
   });*/
   
 
-export const showAutomatic = (data) => {
-  let filtered = data.characters.filter(element => element.name);
-  console.log(filtered)
-  let finalArray = filtered.map( (element) => ({name: element.name, house: element.house}))
-  
-  console.log(finalArray)
-
-  return finalArray;
-};
