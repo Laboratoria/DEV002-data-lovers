@@ -37,13 +37,17 @@ El usuario al ingresar a la página web podra:
 ### **5.1 Prototipo Móvil**
 
 ![Prototipo Blanco y Negro](./src/img/prototipoMovilbyn.jpeg)
+
 ![Prototipo Figma](./src/img/prototipoMovil.jpeg)
+
 ![Prototipo Figma](./src/img/paginaPokemonesMovil.jpeg)
 
 ### **5.2 Prototipo Desktop**
 
 ![Prototipo Blanco y Negro](./src//img/prototipoDesktopbyn.jpeg)
+
 ![Prototipo Figma](./src//img/prototipoDesktop.jpeg)
+
 ![Prototipo Figma](./src//img/paginaPokemonesDesktop.jpeg)
 
 ### **5.3 DISEÑO FINAL PROYECTO**
