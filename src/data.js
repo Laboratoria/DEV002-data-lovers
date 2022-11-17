@@ -1,3 +1,7 @@
+export const characters = (data) => {
+  return(data.characters.filter(element => element.name));
+}
+
 export const createArrayObjects = (data) => {
   let filtered = data.characters.filter(element => element.name);
   let finalArray = filtered.map( (element) => ({name: element.name, house: element.house}))
