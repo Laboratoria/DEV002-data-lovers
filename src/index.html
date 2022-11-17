@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>Harry's Cabinet</title>
     <link rel="stylesheet" href="style.css"/>
   </head>
@@ -21,11 +22,7 @@
           <div class="home-searcher-input">
             <div class="search-input">
               <input type="text" placeholder="Try 'Gryffindor'" id="search">
-            </div>
-            <div class="search-button">
-              <button>
-              <img src="assets/search.png" alt="search icon"/>
-              </button>
+              <button>🔍</button>
             </div>
           </div>
           <div class="home-more-button">
@@ -43,24 +40,32 @@
               <div class="searcher-top-bar">
                   <div class="searcher-top-bar-input">
                       <input type="text" placeholder="Try 'Gryffindor'"/>
-                  </div>
-                  <div class="searcher-top-bar-button">
-                      <button>
-                          <img src="assets/search.png" alt="">
-                      </button>
+                      <button>🔍</button>
                   </div>
               </div>
           </section>
           <section class="nav-searcher-bottom">
-              <div class="searcher-bottom-buttons searcher-bottom-sort">
-                  <button>Sort</button>
+              <div class="searcher-bottom-sort">
+                  <button>
+                    <img src="./assets/sort.svg" alt="sort button icon"/>
+                  </button>
               </div>
               <div class="searcher-bottom-buttons searcher-bottom-filter">
-                  <button>Filter</button>
+                  <button>
+                    <img src="./assets/filter.svg" alt="filter button icon"/>
+                  </button>
               </div>
           </section>
       </container>
 
+  <!--Sort menu-->
+      <container class="inactive">
+        <form>
+          <p>Sort by</p>
+          <input type="radio" name='a-z' value="a-z">
+          <label for="a-z"></label>
+        </form>
+      </container>
   <!--Search results-->
 
   <!--Characters details-->
