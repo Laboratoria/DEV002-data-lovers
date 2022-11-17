@@ -1,34 +1,27 @@
-export const showCharacterbyName = (data, cName) => {
-  let characterSelected = data.characters.filter(element => element.name == cName);
-  console.log(characterSelected)
-  return characterSelected;
+export const createArrayObjects = (data) => {
+  let filtered = data.characters.filter(element => element.name);
+  let finalArray = filtered.map( (element) => ({name: element.name, house: element.house}))
+
+  return finalArray;
 };
 
-export const printCharacters = (data) => {
-  return data.characters
-  .filter(character => character.house == "Gryffindor")
-  .map((character) => character.name)
-  .join("<br />");
-};
+export const filterCompare = (array, cName) => {
+  let comparedElements = array.filter(element => element.name.toLowerCase().includes(cName.toLowerCase().trim()));
+  return comparedElements;
+}
 
-export const printElements = (elements) => {
-  return elements.join("<br />");
-};
+export const filterAscendent = (array) => {
+  let ascendent = array.sort(function(a, b) {
+    return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
+    })
 
-export const orderCharacters = (data) => {
-  return data.characters
-  .reverse();
-};
+    return ascendent;
+}
 
-/*let characters = data.characters;
-characters.sort(function (a, b) {
-    if (a.house > b.house) {
-      return 1;
-    }
-    if (a.house < b.house) {
-      return -1;
-    }
-    // a must be equal to b
-    return 0;
-  });*/
-  
+export const filterDescendent = (array) => {
+  let descendent = array.sort(function(a, b) {
+    return((a.name < b.name)? 1: ((a.name > b.name)? -1: 0));
+    })
+
+    return descendent;
+}
