@@ -247,21 +247,14 @@ ul, ol {
     list-style: none;
 }
 
-li p, a {
+.nav-link{
     text-decoration: none;
-    text-size-adjust: 1em;
+    text-size-adjust: 3em;
     background: transparent;
     color: var(--titles-color);
     margin: 0 auto;
     max-width: 992px;
     padding: 10px 15px;
-}
-.characters-name {
-    font-size: 20px;
-    padding: 40px;
-    line-height: 80px;
-    width: max-content;
-    color: var(--titles-color);
 }
 
 .charactersList {
@@ -274,35 +267,60 @@ li p, a {
 }
 
 .card-element {
-    width:120px;
-    height: 125px;
-    border: solid 1px var(--titles-color);
-    border-radius: 40px;
-    margin: 10px;
+    width:130px;
+    height: 150px;
+    border-radius: 18px;
+    margin: 30px;
     text-align: center;
-    color: var(--titles-color);
     font-family: var(--secondary-font);
-    font-size: 15px;
+    font-size: 17px;
+    background-color: var(--titles-color);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    transform-style: preserve-3d;
+    transform: perspective(100px);
+}
+
+.rgb::after{
+    content: "";
+    background: linear-gradient(90deg,
+    #740001 0%,
+    #F0C75E 35%,
+    #728DDA 60%,
+    #2A623D 85% )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    border-radius: 16px;
+    inset:  -3px;
+    filter: blur(10px);
+    transform: translateZ(-3px);
+    animation: rgb 15s linear infinite;
+}
+
+@keyframes rgb{
+    0%{background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 .card-element:hover {
+    transform: scale(1.2,1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     background-color: var(--secondary-blue);
     cursor: pointer;
 }
 
-.card-span {
-    padding-top: 40px;
-    font-size: 30px;
-}
-
 #span-i {
-    padding-top: 18px;
-    font-size: 30px;
+    padding: 18px;
+    padding-bottom: 10px;
+    font-size: 60px;
 }
 
 .card-p {
-    padding-top: 10px;
-    color: var(--titles-color);
+    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: var(--main-color);
     font-family: var(--secondary-font);
-    font-size: 15px;
+    font-size: bold 15px;
 }
