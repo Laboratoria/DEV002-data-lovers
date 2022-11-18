@@ -1,19 +1,19 @@
-import {createArrayObjects, filterCompare, filterAscendent,filterDescendent} from './data.js';
+import {characters, createArrayObjects, filterCompare, filterAscendent,filterDescendent} from './data.js';
 import data from './data/harrypotter/data.js';
 
 const searchInput = document.getElementById('search-character');
-const searchButton = document.getElementById("search-button");
+const searchClose = document.getElementById("search-closeButton");
 
 let list = document.getElementById("characteresList");
 let orderAscendent = document.getElementById("filterAscendent");
 let orderDescendent = document.getElementById("filterDescendent");
 
-searchButton.addEventListener("click", searchButton);
+searchClose.addEventListener('click', closeSearch);
 searchInput.addEventListener('keyup', searchRealTime);
 
 let charactersNameHouse = createArrayObjects(data);
 
-listElements(data.characters.filter(element => element.name));
+listElements(characters(data));
 
 function listElements(elements) {
     elements.forEach((element) => {
@@ -63,3 +63,14 @@ orderDescendent.addEventListener("click", () => {
     list.innerHTML = '';
     listElements(filterDescendent(charactersNameHouse));
 });
+
+searchClose.addEventListener("click", ()=> {
+    searchInput.value = '';
+    listElements(characters(data));
+});
+
+function closeSearch () {
+    searchInput.value = '';
+    list.innerHTML = '';
+    listElements(characters(data));
+}

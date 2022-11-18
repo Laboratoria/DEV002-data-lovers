@@ -114,23 +114,20 @@ h2 {
     outline: none;
 }
 
-.search-submit {
+.close-search {
     height: 40px;
     background-color: var(--secondary-blue);
     border: none;
 }
 
-.search-submit:hover {
-    cursor: pointer;
-}
-
-.search-submit i {
-    font-size: 30px;
+.close-search i {
+    font-size: 25px;
     padding-right: 10px;
     color: var(--titles-color);
 }
 
-.search-submit i:hover {
+.close-search i:hover {
+    cursor: pointer;
     color: var(--main-color);
 }
 
