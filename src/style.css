@@ -276,7 +276,49 @@ li p, a {
     width: max-content;
     color: var(--titles-color);
     text-transform: uppercase;
+<<<<<<< HEAD
     backface-visibility: hidden;
     border-radius: 10px;
     transition: .5s;
+=======
+}
+
+/* searcher */
+.nav-menu {
+    height: 100px;
+}
+.characters-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.characters-list {
+    position: relative;
+
+}
+
+.card {
+    width:115px;
+    height: 115px;
+    border: solid 1px var(--titles-color);
+    border-radius: 40px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card span i {
+    padding-top: 18px;
+    font-size: 30px;
+}
+
+.card p {
+    padding-top: 18px;
+    color: var(--titles-color);
+    font-family: var(--secondary-font);
+    font-size: 15px;
+>>>>>>> Primer commit de este feature. Se finaliza la funcionalidad del buscador con la funcion correspondiente en data.js, la logica para imprimir en HTML desde main.js, se utiliza interpolación de cadenas dentro de un forEach para la generación automática de las cards. Se agregan los estilos a las cards. Se modifica la sección contendor de los personajes en html
 }
