@@ -143,9 +143,20 @@ main .home .home-searcher .home-more-button{
   width: 100%;
 }
 
-main .home .home-searcher .home-more-button button {
+main .home .home-searcher .home-more-button .dotsButton {
   width: 20%;
   font-size: 9vw;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+main .home .home-searcher .home-more-button .charactersButton {
+  width: 20%;
+  font-size: 4vw;
   letter-spacing: 1.5rem;
   font-weight: 700;
   background: none;
