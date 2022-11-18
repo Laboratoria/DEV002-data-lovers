@@ -277,7 +277,7 @@ ul, ol {
     transform: perspective(100px);
 }
 
-.rgb::after{
+ .rgb::after{
     content: "";
     background: linear-gradient(90deg,
     #740001 0%,
@@ -291,9 +291,9 @@ ul, ol {
     filter: blur(10px);
     transform: translateZ(-3px);
     animation: rgb 15s linear infinite;
-}
+} */
 
-@keyframes rgb{
+ @keyframes rgb{
     0%{background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
@@ -320,4 +320,32 @@ ul, ol {
     color: var(--main-color);
     font-family: var(--secondary-font);
     font-size: bold 15px;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar {
+        height: 80px;
+    }
+    
+    .navbar span {
+            width: 80px;
+            height: 80px;
+            font-size: 40px;
+        }
+
+    .navbar .logo {
+        width: 80px;
+        height: 80px;
+        right: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+    .search-input {
+        font-size: 15px;
+    }
 }
