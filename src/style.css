@@ -295,7 +295,6 @@ li p, a {
     border-radius: 40px;
     margin: 10px;
     text-align: center;
-    /* padding-top: 45px; */
     color: var(--titles-color);
     font-family: var(--secondary-font);
     font-size: 15px;
@@ -304,15 +303,6 @@ li p, a {
 .card-element:hover {
     background-color: var(--secondary-blue);
     cursor: pointer;
-}
-
-.card {
-    width:115px;
-    height: 115px;
-    border: solid 1px var(--titles-color);
-    border-radius: 40px;
-    margin: 10px;
-    text-align: center;
 }
 
 .card-span {
