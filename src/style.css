@@ -157,6 +157,15 @@ footer p {
     color: var(--titles-color);
 }
 
+.container-menu {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: transparent;
+}
 
 
 
@@ -269,91 +278,32 @@ li p, a {
     width: max-content;
     color: var(--titles-color);
 }
+
 .charactersList {
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
+    max-height: 80%;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .card-element {
-
-    font-size: 15px;
-    padding: 0 40px;
-    border: solid 1px;
+    width:120px;
+    height: 120px;
+    border: solid 1px var(--titles-color);
     border-radius: 40px;
-    line-height: 80px;
-    width: max-content;
+    margin: 10px;
+    text-align: center;
+    padding-top: 45px;
     color: var(--titles-color);
-    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    font-size: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.characters-container {
-    width: 90%;
-    max-height: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: center;
+.card-element:hover {
+    background-color: var(--secondary-blue);
+    cursor: pointer;
 }
 
 .card {
