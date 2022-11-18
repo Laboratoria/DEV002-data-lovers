@@ -15,8 +15,6 @@ let charactersNameHouse = createArrayObjects(data);
 
 listElements(characters(data));
 
-// listElements(data.characters.filter(element => element.name));
-
 function listElements(elements) {
     elements.forEach((element) => {
         let  li = document.createElement('li');
