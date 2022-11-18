@@ -20,20 +20,20 @@ function pintarDirectores() {
 console.log(pintarDirectores());
 
 //PINTA PRODUCTORES
-function pintarProductores() {
-  let directoresHtml = "<h2>Productores</h2>";
-  directoresHtml += "<ul>";
+function pintarProducer() {
+  let producerHtml = "<h2>Productores</h2>";
+  producerHtml += "<ul>";
 
-  //CABIAS A llamarProductores
-  let arregloDirectores = operaciones.llamarDirectores(data.films);
+  //CAMBIAR A llamarProductores
+  let arregloProducer = operaciones.llamarProductores(data.films);
 
-  for (let i = 0; i < arregloDirectores.length; i++) {
-    directoresHtml += "<li>";
-    directoresHtml += arregloDirectores[i];
-    directoresHtml += "</li>";
+  for (let i = 0; i < arregloProducer.length; i++) {
+    producerHtml += "<li>";
+    producerHtml += arregloProducer[i];
+    producerHtml += "</li>";
   }
 
-  directoresHtml += "</ul>";
-  directoresproductoresdiv.innerHTML += directoresHtml;
+  producerHtml += "</ul>";
+  directoresproductoresdiv.innerHTML += producerHtml;
 }
-console.log(pintarProductores());
+console.log(pintarProducer());

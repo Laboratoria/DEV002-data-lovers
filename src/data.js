@@ -19,17 +19,17 @@ const operaciones = {
   //Esto es una función que recibe como argumento las películas
   llamarProductores(peliculas) {
     let pelicula;
-    let todosLosDirectores = [];
+    let todosLosProductores = [];
     //En este ciclo for recorrimos el array de películas y luego con el if trajimos los directores pero no cada vez que estuvieran presentes sino que vinieran sólo una vez.
     for (let i = 0; i < peliculas.length; i++) {
       pelicula = peliculas[i];
 
-      if (!todosLosDirectores.includes(pelicula.director)) {
-        todosLosDirectores.push(pelicula.director);
+      if (!todosLosProductores.includes(pelicula.producer)) {
+        todosLosProductores.push(pelicula.producer);
       }
     }
 
-    return todosLosDirectores;
+    return todosLosProductores;
   },
 };
 export default operaciones;
