@@ -31,29 +31,34 @@
       <input id="search" type="text">
       <img src="imag/buscando.png" width="18px">
     </div>
+    <p id="infoCharacters" class="infoCharacters">
+    <div>
 
-    <select name="characters" class="select">
-      <option value="characters" selected="selected">Filter for Characters</option>
-      <option value="A-Z">A-Z</option>
-      <option value="Z-A">Z-A</option>
-      <option value="Alive">Alive</option>
-      <option value="Dead">Dead</option>
-    </select>
-    <select name="Spells" class="select">
-      <option value="Spells">Spells</option>
-      <option value="Spell type">Spell type</option>
-    </select>
-    <select name="Books" class="select">
-      <option value="Books">Books</option>
-      <option value="oldest">Oldest</option>
-      <option value="Recently">Recently</option>
-    </select>
-    <select name="Potions" class="select">
-      <option value="Potions">Potions</option>
-      <option value="A-Z">A-Z</option>
-      <option value="Z-A">Z-A</option>
+      <select name="characters" class="" id="characters">
+        <option selected value="all">Filter for Characters</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+      </select>
+      <select name="Spells" class="select" id="spells">
+        <option value="Spells">Spells</option>
+        <option value="Spell type">Spell type</option>
+      </select>
+      <select name="Books" class="select" id="books">
+        <option value="Books">Books</option>
+        <option value="oldest">Oldest</option>
+        <option value="Recently">Recently</option>
+      </select>
+      <select name="Potions" class="select" id="potions">
+        <option value="Potions">Potions</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
 
-    </select>
+        </p>
+      </select>
+    </div>
+
   </div>
   <hr>
 
@@ -69,7 +74,7 @@
         Harry Potter is a series of fantasy novels written by British author J.K. Rowling.
         Here you will find all the information you need to know about the world of Harry Potter.
       </p>
-      <img  id="hibrido" src="imag/hibrido.png" width="10%">
+      <img id="hibrido" src="imag/hibrido.png" width="10%">
     </div>
   </div>
 
@@ -103,12 +108,15 @@
           </div>
         </div>
         <p id="infoAboutHouses">
-          In howarts there are 1000 students in total. There are 7 classes, which means that there are 143 students per class,
-          divided into four houses which are Gryffindor, Slytherin, Ravenclaw and Hufflepuff, giving us 35 students per class
+          In howarts there are 1000 students in total. There are 7 classes, which means that there are 143 students per
+          class,
+          divided into four houses which are Gryffindor, Slytherin, Ravenclaw and Hufflepuff, giving us 35 students per
+          class
           and house.
         </p>
       </section>
   </div>
+  <section class="cards" id="cards">
 
   </section>
   <!-- <h2 class="subtitles">
