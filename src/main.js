@@ -22,7 +22,7 @@ function listElements(elements) {
         let i = document.createElement('i')
         let p = document.createElement('p');
     
-        li.className = 'card-element'
+        li.className = 'card-element rgb'
         p.innerHTML = element.name;
         p.className = 'card-p';
         i.className = 'fa-solid fa-hat-wizard';
@@ -38,7 +38,7 @@ function listElements(elements) {
         } else if(element.house == "Ravenclaw") {
             span.style.color = "#728DDA";
         } else {
-            span.style.color = "#000";
+            span.style.color = "gray";
         }
 
         list.appendChild(li);
