@@ -37,3 +37,18 @@ function pintarProducer() {
   directoresproductoresdiv.innerHTML += producerHtml;
 }
 console.log(pintarProducer());
+
+//pintar imagenes//
+function pintarImagenes() {
+  let imgHTML = "<h2> POSTERS</h2>";
+  let arregloTodasLasImagenes = operaciones.llamarImagenes(data.films);
+
+  for (let i = 0; i < arregloTodasLasImagenes.length; i++) {
+    imgHTML += '<img src="';
+    imgHTML += arregloTodasLasImagenes[i];
+    imgHTML += '">';
+  }
+
+  llamarImagenesdiv.innerHTML += imgHTML;
+}
+console.log(pintarImagenes());

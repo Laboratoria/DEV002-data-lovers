@@ -31,5 +31,21 @@ const operaciones = {
 
     return todosLosProductores;
   },
+
+  llamarImagenes(peliculas) {
+    let pelicula;
+    let todasLasImagenes = [];
+    //En este ciclo for recorrimos el array de películas y luego con el if trajimos las imagenes//
+    for (let i = 0; i < peliculas.length; i++) {
+      pelicula = peliculas[i];
+      if (!todasLasImagenes.includes(pelicula.poster)) {
+        todasLasImagenes.push(pelicula.poster);
+      }
+      console.log(pelicula.poster);
+    }
+    console.log(todasLasImagenes);
+    return todasLasImagenes;
+  },
 };
+
 export default operaciones;
