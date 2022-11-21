@@ -1,15 +1,12 @@
 body{
-    background-image: url(img/LogoPokemon.jpeg);
-    background-size: 100%;
     margin: 0;
-    width: 1440px;
-    height: 1024px;
-   /* min-width: 100%; */
-  /*  min-height: 100%; */
-    position: relative;
+    background: rgb(207, 200, 215);
+    min-width: 100%; 
+    min-height: 100%;
+    
 }
 
-.grid-container {
+/*.grid-container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
 
@@ -52,4 +49,4 @@ button {
     font-weight: 100;
     font-size: 13px;
     right: 5%;
- }
+ }*/
