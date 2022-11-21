@@ -8,7 +8,8 @@ const filmst = data.films
 const app = document.getElementById('app')
 
 filmst.forEach(product => {
-  divt.innerHTML += `<li>${product.title} -  ${product.producer}</li>`
+  divt.innerHTML += `<li> <img src="${product.poster}" class="img-movies" ></li>`
+
 })
 
 
