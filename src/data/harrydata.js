@@ -1,4 +1,4 @@
-[
+[Characters
   {
     "name": "Harry Potter",
     "alternate_names": [

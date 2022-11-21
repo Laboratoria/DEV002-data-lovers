@@ -3,6 +3,7 @@ body {
   animation: bganimation 15s infinite;
   background-size: 400%;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 @keyframes bganimation {
@@ -19,12 +20,13 @@ body {
   }
 }
 
-#barra{
+#barra {
   display: flex;
   flex-direction: row;
   background-color: rgba(11, 11, 12, 0.555);
   margin-bottom: 0;
 }
+
 #logo {
   border-radius: 150px;
   left: 45%;
@@ -36,15 +38,16 @@ body {
 
 
 
-div h1{
+div h1 {
   font-family: 'Island Moments', cursive;
   font-size: 30px;
   margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   position: relative;
 }
 
-.select{
+.select {
   display: flex;
   align-self: center;
   margin-left: 20px;
@@ -84,10 +87,12 @@ hr {
   justify-content: flex-end;
 }
 
-select{
+select {
   height: 20px;
+  border-radius: 20px;
 }
-#menu {
+
+#buho {
   position: absolute;
   margin-bottom: 105px;
   margin-left: 6%;
@@ -105,7 +110,7 @@ select{
 }
 
 #autora {
-  background-color:  rgba(139, 108, 212, 0.123);
+  background-color: rgba(139, 108, 212, 0.123);
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -113,7 +118,7 @@ select{
   position: relative;
 }
 
-#hibrido{
+#hibrido {
   position: absolute;
   margin-top: 25%;
   margin-left: 730px;
@@ -137,7 +142,7 @@ select{
   width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .col {
@@ -145,32 +150,27 @@ select{
   justify-content: space-between;
 }
 
-section p{
+section p {
   display: flex;
-  margin-left:6px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 6px;
-    font-size: 20px;
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
+  margin-left: 6px;
+  margin-right: 6px;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
 }
 
-#infoAboutHouses{
-  margin-left: 30px;
+#infoAboutHouses {
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
-  background-color: #58B19F;
   border-radius: 40%;
   border-radius: 10px;
   text-align: center;
-  width: 290px;
-
-
-
+  margin-right: 10%;
+  align-items: center;
+  background-color: #b2c033d8;
 }
 
-h3{
+h3 {
   display: flex;
   align-self: center;
   font-size: 50px;
@@ -178,13 +178,15 @@ h3{
 
 }
 
-#houses{
+#houses {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 5%;
   margin-right: 5px;
+  z-index: 1;
 }
+
 .card {
   width: 200px;
   height: 230px;
@@ -197,7 +199,7 @@ h3{
   margin: 30px 20px;
   background-position: center;
   background-size: cover;
-  transition:  all;
+  transition: all;
 }
 
 .card:hover {
@@ -208,11 +210,13 @@ h3{
 .card1 {
   background-image: url(imag/casa-gryffindor.jpg);
   align-items: flex-start;
+
 }
 
 .card2 {
   background-image: url(imag/casa-hufflepuff.jpg);
   align-items: flex-start;
+
 }
 
 .card3 {
@@ -248,4 +252,41 @@ h3{
 
 .subtitles {
   font-size: 350%;
+}
+
+.tapiz {
+  background-image: url(imag/background.jpg);
+  width: 80%;
+  border-radius: 20px;}
+
+h3 {
+  margin-left: 43%;
+  z-index: 1;
+}
+
+#cardConteiner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  /* background-color: #b2c033d8; */
+  border-radius: 20px;
+}
+
+#conteiner{
+  display: flex;
+  flex-direction: column;
+  max-width: 170px;
+}
+
+.data{
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedorCard{
+  background-color:#b2c033d8;
+  display: grid;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 15px;
 }
