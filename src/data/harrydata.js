@@ -1,10 +1,7 @@
-<<<<<<<< HEAD:src/data/harry-data.js
+
 export default {
 
 Characters: [
-========
-[Characters
->>>>>>>> a4eb79b3e68afe8e0dde30c135c150523a9dd429:src/data/harrydata.js
   {
     "name": "Harry Potter",
     "alternate_names": [
