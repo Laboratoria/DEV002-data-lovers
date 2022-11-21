@@ -291,7 +291,7 @@ ul, ol {
     filter: blur(10px);
     transform: translateZ(-3px);
     animation: rgb 15s linear infinite;
-} */
+}
 
  @keyframes rgb{
     0%{background-position: 0% 50%;}
