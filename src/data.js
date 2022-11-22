@@ -1,7 +1,7 @@
-// estas funciones son de ejemplo
+import data from './harrydata.js';
 
-export const example = () => {
-  return 'example';
+export const sort = () => {
+  return 'element.name';
 };
 
 export const anotherExample = () => {
