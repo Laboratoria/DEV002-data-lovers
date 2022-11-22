@@ -4,7 +4,7 @@
 
 body{
     margin: 0;
-    background: rgb(207, 200, 215);
+    background: rgb(242, 240, 245);
     min-width: 100%; 
     min-height: 100%;    
     
@@ -87,14 +87,38 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
+   
+    width: 100%;
+    height: 100%;
     display:none;
 }
 .tarjetaPokemones{
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    background: #03071e;
+    width: 20%;
+    height: 50%;
+    border-radius: 10%;
+    background-image:url(img/fondopoke.jpg);
 } 
+
+.encabezadoTarjeta{
+    
+    background-color: bisque;
+}
+
+.aboutP, .nombreP, .textoh3{
+    margin:0;
+} 
+   
+
+.descripcionTarjeta{
+  
+    background-color: azure;
+}
+
+.botonesTarjeta{
+    
+    background-color: coral;
+}
+
 
 /* Estilos pagina Estadisticas*/ 
 
