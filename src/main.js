@@ -44,8 +44,6 @@ selectCharacters.addEventListener('change', () => {
 
 });
 
-
-
 // seleccionamos los hechizos de la A-Z
 const selectSpells = document.querySelector('#segundoSelect');
 console.log(selectSpells)
