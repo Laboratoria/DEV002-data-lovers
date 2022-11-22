@@ -1,23 +1,39 @@
-import { example, anotherExample } from '../src/data.js';
+//import {name of the function} from "./data.js";
+
+// test("should get the API info", () =>{
+//     expect(getCharactersInfo).
+
+// });
+
+//crear mock para probar getAllCharacters sin la API
+//hacer test código async con API
+//matchers (isEqual, toBe (primit), lessThan)
+// devolucion API payload
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+//test("should get the characters name and theirs image", () =>{});
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+//import {example} from '../src/data.js';
+
+// describe('example', () => {
+//   it('is a function', () => {
+//     expect(typeof example).toBe('function');
+//   });
+
+//   it('returns `example`', () => {
+//     expect(example()).toBe('example');
+//   });
+// });
+
+
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });

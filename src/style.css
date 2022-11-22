@@ -64,6 +64,15 @@ main .home .home-header .home-header-logo{
   margin-bottom: 2%;
 }
 
+main .home .home-header .home-header-logo button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+}
+
 main .home .home-header .home-header-logo img{
   display: flex;
   flex-direction: column;
@@ -186,6 +195,12 @@ main .home .home-searcher .home-more-button button:hover{
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.nav-searcher .nav-searcher-top .searcher-top-logo button{
+  width: 80%;
+  background: none;
+  border: none;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-logo img{

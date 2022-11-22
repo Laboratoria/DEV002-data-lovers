@@ -9,10 +9,12 @@
   <body>
     <main>
       <!--Home-->
-      <container class="home "> <!--"inactive"-->
+      <container class="home " id="home"> <!--"inactive"-->
         <section class="home-header">
           <div class= "home-header-logo">
+            <button id="logoButtonHome">
             <img src="assets/logo-gold.png" alt="Harry's Cabinet"/>
+            </button>
           </div>
           <div class="home-header-slogan">
             <span>Welcome to our magical space</span>
@@ -21,7 +23,7 @@
         <section class="home-searcher">
           <div class="home-searcher-input">
             <div class="search-input">
-              <input type="text" placeholder="Try 'Gryffindor'" id="search" class="inpuuuut">
+              <input type="text" placeholder="Try 'Gryffindor'" id="search" class="inputSearch">
               <button>🔍</button>
             </div>
           </div>
@@ -33,14 +35,16 @@
       </container>
 
       <!--nav-->
-      <container class="nav-searcher inactive"> <!--"inactive"-->
+      <container class="nav-searcher inactive" id="navSearcher"> <!--"inactive"-->
           <section class="nav-searcher-top">
               <div class= "searcher-top-logo">
+                <button id="logoButtonNav">
                   <img src="assets/logo-gold.png" alt="Harry's Cabinet">
+                </button>
               </div>
               <div class="searcher-top-bar">
                 <div class="searcher-top-bar-input">
-                  <input type="text" placeholder="Try 'Gryffindor'" id="searchTwo" class="inpuuuut"/>
+                  <input type="text" placeholder="Try 'Gryffindor'" id="searchTwo" class="inputSearch"/>
                   <button>🔍</button>
               </div>
               </div>
@@ -69,7 +73,7 @@
       </container>
   <!--Search results-->
 
-      <container class="search-results">
+      <container class="search-results" id="searchResults">
         <section class="results" id="results">
         </section>
       </container>
