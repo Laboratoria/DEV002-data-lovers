@@ -69,3 +69,4 @@ characterButton.addEventListener("click", async (show) => {
   logoButtonNav.addEventListener("click", (e) => {
     window.location.reload(logoButtonNav)
   })
+  
