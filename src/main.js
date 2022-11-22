@@ -4,8 +4,8 @@ import {getAllCharacters} from "./data.js";
 
 const inputs = document.querySelectorAll(".inputSearch");  //cambiar nombre
 
-inputs.forEach(input =>{ 
-  input.addEventListener("keydown", async (event) =>{  
+inputs.forEach(input =>{
+  input.addEventListener("keydown", async (event) =>{
     if (event.keyCode === 13){
       document.getElementById("home").hidden = true;
       document.getElementById("navSearcher").classList.remove("inactive");
@@ -18,13 +18,12 @@ inputs.forEach(input =>{
 
       let characterName = "";
       result.forEach(character => {
-          characterName += 
+          characterName +=
           `<div class="character">
               <img class="character-image" src="${character.image || "assets/user.png"}"/>
               <h3 class="name">${character.name}</h3>
           </div>`
       })
-
       //obtener result y cambiarle el HTML
       document.getElementById("results").innerHTML = characterName
     }
@@ -32,40 +31,37 @@ inputs.forEach(input =>{
 })
 
 // esconder los ... y mostrar characters
-
 const dotButton = document.getElementById("dotsButton");
 const characterButton = document.getElementById("charactersButton");
 
-dotButton.addEventListener("click", (e) => {
+dotButton.addEventListener("click", () => {
   document.getElementById("dotsButton").hidden = true;
   document.getElementById("charactersButton").classList.remove("inactive");
 })
 
 // al hacer click en characters, se esconde home y se muestra el nav con los personajes (nombre e imagen)
-
-characterButton.addEventListener("click", async (show) => {
+characterButton.addEventListener("click", async() => {
   document.getElementById("home").hidden = true;
   document.getElementById("navSearcher").classList.remove("inactive");
 
+  //data contiene el resultado de la promesa
   let data = await getAllCharacters();
-     //data contiene el resultado de la promesa
 
-    let characterName = "";
+  let characterName = "";
   data.forEach(character => {
-      characterName += 
-      `<div class="character">
-            <img class="character-image" src="${character.image || "assets/user.png"}"/>
-            <h3 class="name">${character.name}</h3>
-        </div>`
+    characterName +=
+    `<div class="character">
+      <img class="character-image" src="${character.image || "assets/user.png"}"/>
+      <h3 class="name">${character.name}</h3>
+    </div>`
 })
-    //obtener result y cambiarle el HTML Y ocultar los resultados de la API
-    document.getElementById("results").innerHTML = characterName
+  //obtener result y cambiarle el HTML Y ocultar los resultados de la API
+  document.getElementById("results").innerHTML = characterName
 })
 
 // recargar página una vez que se presiona el logo y va a home
-
   const logoButtonNav = document.getElementById("logoButtonNav");
 
-  logoButtonNav.addEventListener("click", (e) => {
+  logoButtonNav.addEventListener("click", () => {
     window.location.reload(logoButtonNav)
   })
