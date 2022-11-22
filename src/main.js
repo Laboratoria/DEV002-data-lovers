@@ -3,6 +3,7 @@ import data from './data/harrypotter/data.js';
 
 const searchInput = document.getElementById('search-character');
 const searchClose = document.getElementById("search-closeButton");
+const seeCharactersButton = document.getElementById("see all characters");
 
 let list = document.getElementById("characteresList");
 let orderAscendent = document.getElementById("filterAscendent");
@@ -11,9 +12,8 @@ let orderDescendent = document.getElementById("filterDescendent");
 searchClose.addEventListener('click', closeSearch);
 searchInput.addEventListener('keyup', searchRealTime);
 
-let charactersNameHouse = createArrayObjects(data);
 
-listElements(characters(data));
+let charactersNameHouse = createArrayObjects(data);
 
 function listElements(elements) {
     elements.forEach((element) => {
@@ -22,7 +22,7 @@ function listElements(elements) {
         let i = document.createElement('i')
         let p = document.createElement('p');
     
-        li.className = 'card-element rgb'
+        li.className = 'card-element'
         p.innerHTML = element.name;
         p.className = 'card-p';
         i.className = 'fa-solid fa-hat-wizard';
@@ -66,6 +66,11 @@ orderDescendent.addEventListener("click", () => {
 
 searchClose.addEventListener("click", ()=> {
     searchInput.value = '';
+    listElements(characters(data));
+});
+
+seeCharactersButton.addEventListener("click", ()=> {
+    list.innerHTML = '';
     listElements(characters(data));
 });
 

@@ -1,153 +1,213 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Lovers - Harry Potter</title>
+    <script
+      src="https://kit.fontawesome.com/77b370538f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Lovers - Harry Potter</title>
-  <script src="https://kit.fontawesome.com/77b370538f.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navbar">
-      <span><i class="fa-solid fa-bars"></i></span>
-      <div class="logo"></div>
-    </nav>
-  </header>
-  <main>
-    <h2>Characters</h2>
-    <div class="search-wrapper">
-      <form class="search--form">
-        <div class="search--input-wrapper">
-          <input id="search-character" class="search-input" placeholder="Character name or lastname">
+  <body>
+    <header>
+      <nav class="navbar">
+        <span><i class="fa-solid fa-bars"></i></span>
+        <div class="logo"></div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Characters</h2>
+        <p class="description-text">
+          Witches, wizards and Muggles! We meet so many characters in the Harry
+          Potter books. Learn more about your favourite (or least favourite)
+          ones here.
+        </p>
+        <img
+          class="description-image"
+          src="images/characters.png"
+          alt="Picture of the three main characters of Harry Potter"
+        />
+      </section>
+      <section>
+        <button
+          id="see all characters"
+          class="see-all-characters"
+          type="button"
+        >
+          Meet the characters
+        </button>
+      </section>
+      <div class="search-wrapper">
+        <form class="search--form">
+          <div class="search--input-wrapper">
+            <input
+              id="search-character"
+              class="search-input"
+              placeholder="Search by name"
+            />
+          </div>
+          <button id="search-closeButton" class="close-search" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </form>
+      </div>
+      <section class="container-menu">
+        <div class="nav-menu">
+          <nav>
+            <ul class="nav-menu-list">
+              <!-- <li>
+                <p class="nav-link">Filter by</p>
+              </li> -->
+              <li id="filterReverseOrder" class="list-item list-item-click">
+                <div class="list-button list-button-click">
+                  <a href="#" class="nav-link"
+                    ><i class="fa-solid fa-wand-sparkles"></i>Order</a
+                  >
+                </div>
+                <ul class="list_show">
+                  <li id="filterAscendent" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Ascendent</a>
+                  </li>
+                  <li id="filterDescendent" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Descendent</a>
+                  </li>
+                </ul>
+              </li>
+              <li id="filterBooks" class="list-item list-item-click">
+                <div class="list-button list-button-click">
+                  <a href="#" class="nav-link">
+                    <i class="fa-solid fa-book-quran"></i>Books</a
+                  >
+                </div>
+                <ul class="list_show">
+                  <li id="filterBook1" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Sorcerer's Stone</a
+                    >
+                  </li>
+                  <li id="filterBook2" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the chamber of secrets</a
+                    >
+                  </li>
+                  <li id="filterBook3" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Prisoner of Azkaban</a
+                    >
+                  </li>
+                  <li id="filterBook4" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Goblet of Fire</a
+                    >
+                  </li>
+                  <li id="filterBook5" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Order of the Phoenix</a
+                    >
+                  </li>
+                  <li id="filterBook6" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Half-Blood Prince</a
+                    >
+                  </li>
+                  <li id="filterBook7" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Deathly Hallows</a
+                    >
+                  </li>
+                  <li id="filterBook8" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside"
+                      >Harry Potter and the Cursed Child</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li id="filterHouses" class="nav-menu-list-item list-item-click">
+                <div class="list-button list-button-click">
+                  <a href="#" class="nav-link"
+                    ><i class="fa-solid fa-broom-ball"></i>Houses</a
+                  >
+                </div>
+                <ul class="list_show">
+                  <li id="filterHouseGryffindor" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Gryffindor</a>
+                  </li>
+                  <li id="filterHouseHufflepuff" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Hufflepuff</a>
+                  </li>
+                  <li id="filterHouseRavenclaw" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Ravenclaw</a>
+                  </li>
+                  <li id="filterHouseSlytherin" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Slytherin</a>
+                  </li>
+                  <li id="filterHouseHomeless" class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Homeless</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                id="filterAncestry"
+                class="nav-menu-list-item list-item-click"
+              >
+                <div class="list-button list-button-click">
+                  <a href="#" class="nav-link"
+                    ><i class="fa-solid fa-hand-sparkles"></i>Ancestry</a
+                  >
+                </div>
+                <ul class="list_show">
+                  <li class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Born-Muggle</a>
+                  </li>
+                  <li class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Muggle</a>
+                  </li>
+                  <li class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Half blood</a>
+                  </li>
+                  <li class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Pure blood</a>
+                  </li>
+                  <li class="list_inside">
+                    <a href="#" class="nav-link nav-link-inside">Unknown</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <button id="search-closeButton" class="close-search" type="button"><i class="fa-solid fa-xmark"></i></button>
-      </form>
-    </div>
-    <section class="container-menu">
-      <div class="nav-menu">
-        <nav>
-          <ul class="nav-menu-list">
-            <li>
-              <p class="nav-link">Filter by</p>
-            </li>
-            <li id="filterReverseOrder" class="list-item list-item-click">
-              <div class="list-button list-button-click">
-                <a href="#" class="nav-link"><i class="fa-solid fa-wand-sparkles"></i>Order</a>
-              </div>
-              <ul class="list_show">
-                <li id="filterAscendent" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Ascendent</a>
-                </li>
-                <li id="filterDescendent" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Descendent</a>
-                </li>
-              </ul>
-            </li>
-            <li id="filterBooks" class="list-item list-item-click">
-              <div class="list-button list-button-click">
-                <a href="#" class="nav-link">
-                  <i class="fa-solid fa-book-quran"></i>Books</a>
-              </div>
-              <ul class="list_show">
-                <li id="filterBook1" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Sorcerer's Stone</a>
-                </li>
-                <li id="filterBook2" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the chamber of secrets</a>
-                </li>
-                <li id="filterBook3" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Prisoner of Azkaban</a>
-                </li>
-                <li id="filterBook4" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Goblet of Fire</a>
-                </li>
-                <li id="filterBook5" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Order of the Phoenix</a>
-                </li>
-                <li id="filterBook6" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Half-Blood Prince</a>
-                </li>
-                <li id="filterBook7" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Deathly Hallows</a>
-                </li>
-                <li id="filterBook8" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Harry Potter and the Cursed Child</a>
-                </li>
-              </ul>
-            </li>
-            <li id="filterHouses" class="nav-menu-list-item list-item-click">
-              <div class="list-button list-button-click">
-                <a href="#" class="nav-link"><i class="fa-solid fa-broom-ball"></i>Houses</a>
-              </div>
-              <ul class="list_show">
-                <li id="filterHouseGryffindor" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Gryffindor</a>
-                </li>
-                <li id="filterHouseHufflepuff" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Hufflepuff</a>
-                </li>
-                <li id="filterHouseRavenclaw" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Ravenclaw</a>
-                </li>
-                <li id="filterHouseSlytherin" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Slytherin</a>
-                </li>
-                <li id="filterHouseHomeless" class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Homeless</a>
-                </li>
-              </ul>
-            </li>
-            <li id="filterAncestry" class="nav-menu-list-item list-item-click">
-              <div class="list-button list-button-click">
-                <a href="#" class="nav-link"><i class="fa-solid fa-hand-sparkles"></i>Ancestry</a>
-              </div>
-              <ul class="list_show">
-                <li class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Born-Muggle</a>
-                </li>
-                <li class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Muggle</a>
-                </li>
-                <li class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Half blood</a>
-                </li>
-                <li class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Pure blood</a>
-                </li>
-                <li class="list_inside">
-                  <a href="#" class="nav-link nav-link-inside">Unknown</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <section>
-      <div>
-        <ul id="characteresList" class="charactersList"></ul>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>
-      Page created for educational purposes only<br>
-      Made with 💛 for DataLovers project<br>
-      Laboratoria: cohort DEV002<br>
-      November 2022
-    </p>
-  </footer>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-</body>
-
+      </section>
+      <section>
+        <div>
+          <ul id="characteresList" class="charactersList"></ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Page created for educational purposes only<br />
+        Made with 💛 for DataLovers project ||
+        Laboratoria: cohort DEV002 ||
+        November 2022
+      </p>
+    </footer>
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
