@@ -92,6 +92,7 @@ body{
     height: 100%;
     display:none;
 }
+
 .tarjetaPokemones{
     width: 20%;
     height: 50%;
@@ -119,6 +120,9 @@ body{
     background-color: coral;
 }
 
+.filtrosBusqueda {
+    display: none;
+}
 
 /* Estilos pagina Estadisticas*/ 
 
