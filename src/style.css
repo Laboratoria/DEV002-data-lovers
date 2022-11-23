@@ -579,8 +579,3 @@ main .home .home-searcher .home-more-button button:hover{
     font-size: 1vw;
   }
 }
-
-main .search-results .results .characterNotFound .notFound {
-  font-size: 3.5vw;
-  color: var(--red);
-}
