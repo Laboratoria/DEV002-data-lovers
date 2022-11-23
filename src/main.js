@@ -56,3 +56,4 @@ const logoButtonNav = document.getElementById("logoButtonNav");
 logoButtonNav.addEventListener("click", () => {
   window.location.reload(logoButtonNav)
 })
+
