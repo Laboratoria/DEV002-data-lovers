@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import { filtrar } from './data.js';
+import {  } from './data.js';
 
 //Array donde se almacenan todos los pokemones
 const pokemon = data.pokemon;
