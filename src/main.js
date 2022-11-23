@@ -14,9 +14,10 @@ const createCharactersHtml = (characters) =>{
   return characterName
 }
 const characterNotFound = (characters) => {
-  let characterDataNotFound = `<div class="characterNotFound">
-        <h3 class="notFound">No results for this search</h3>
-        </div>`
+  let characterDataNotFound =
+    `<div class="characterNotFound">
+      <h3 class="notFound">No results for this search</h3>
+    </div>`
   return characterDataNotFound
 }
 
