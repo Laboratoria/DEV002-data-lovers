@@ -47,13 +47,14 @@ body{
 
 
  footer {
+   
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 50px;
-    background-color: #03071e;
+    background-color: #0e153c;
     opacity: 0.7;
  }
 
@@ -66,7 +67,7 @@ body{
    
     width: 40px;
     height:40px;
-    margin: 3px;
+    margin: 7px;
 
  }
 .cajaAutores{
