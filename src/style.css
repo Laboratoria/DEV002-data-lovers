@@ -1,3 +1,4 @@
+
 body{
     background-image: url(data/pokemon/Imagenes/Fondo.jpeg);
     width: 1440px;
@@ -6,7 +7,10 @@ body{
     background-position: top center;
     background-attachment: fixed;
     background-size: contain;
+    font-family: 'Nerko One', cursive;
+    
 }
+
 
 .Titulo{
     position: absolute;
@@ -91,3 +95,63 @@ body{
     top: 0px;
     background: rgba(28, 15, 106, 0.71);
 }
+.kanto{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    left: 707px;
+    top: 55px;
+    font-family: 'Nerko One', cursive;
+    background: rgba(234, 184, 10, 0.48);
+    box-shadow: inset 0px 4px 4px #000000;
+    font-size: 100%;
+    
+}
+.text-white{
+    color: rgb(255,255,255);
+}
+.johto{
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    left: 1055px;
+    top: 55px;
+    font-family: 'Nerko One', cursive;
+    background: rgba(28, 15, 106, 0.82);
+    box-shadow: inset 0px 4px 4px #000000;
+    font-size: 100%;
+
+}
+.pokemones{
+
+    position: absolute;
+    width: 400px;
+    height: 140px;
+    left: -50px;
+    top: 430px;
+
+    }
+    .ubi1{
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    left: 715px;
+    top: -50px;
+
+    }
+
+    .ubi2{
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    left: 1067px;
+    top: -50px;
+        
+        }
+
+        
+         
