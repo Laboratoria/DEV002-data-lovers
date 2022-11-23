@@ -92,6 +92,7 @@ body{
     height: 100%;
     display:none;
 }
+
 .tarjetaPokemones{
     width: 20%;
     height: 50%;
@@ -117,6 +118,10 @@ body{
 .botonesTarjeta{
     
     background-color: coral;
+}
+
+.filtrosBusqueda {
+    display: none;
 }
 
 
