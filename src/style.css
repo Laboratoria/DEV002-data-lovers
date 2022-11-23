@@ -88,14 +88,17 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
-   
+   display: flex;
+   flex-direction: column;
     width: 100%;
     height: 100%;
     display:none;
 }
 
 .tarjetaPokemones{
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
     height: 50%;
     border-radius: 10%;
     background-image:url(img/fondopoke.jpg);
@@ -109,7 +112,17 @@ body{
 .aboutP, .nombreP, .textoh3{
     margin:0;
 } 
-   
+
+.imgPokemon{
+   width: 70px;
+   height: 70px;
+}
+
+.nombreP{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: blue;
+}
 
 .descripcionTarjeta{
   
