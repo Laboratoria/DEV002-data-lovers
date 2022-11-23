@@ -1,3 +1,4 @@
+//para las pruebas unitarias de las funciones implementadas en el archivo data.js.
 import { example, anotherExample } from '../src/data.js';
 
 

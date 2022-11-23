@@ -1,3 +1,4 @@
+/*mis funciones para obtener, procesar y manipular datos*/
 // estas funciones son de ejemplo
 
 export const example = () => {

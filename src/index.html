@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <img class="logo" src="img/logo.png" alt="loguito">
+      <h1>MUNDO POKÉMON</h1>
+    </header>
+
+    <div id="container-pokemones">    <!-- caparazón de mi listado, aquí irán los filtros y el paginador(cambiar de páginas)-->
+      <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon"
+      maxlenght="30" autocomplete="off"> 
+      <h2>pokemones</h2>
+      <div id="listado-pokemones"></div> <!-- estarán las tarjetas-->
+    </div>
+
+  
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
