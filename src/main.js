@@ -38,15 +38,33 @@ function pintarProducer() {
 }
 console.log(pintarProducer());
 
-//pintar imagenes//
+//pintar imagenes, año de lanzamiento y puntuación
+//ESTO ES UNA PRUEBA CON OBJETOS para poder traer diferentes propiedades del elemento que conforma el Array
 function pintarImagenes() {
   let imgHTML = "<h2> POSTERS</h2>";
-  let arregloTodasLasImagenes = operaciones.llamarImagenes(data.films);
 
-  for (let i = 0; i < arregloTodasLasImagenes.length; i++) {
+  for (let i = 0; i < data.films.length; i++) {
+    let pelicula;
+    pelicula = data.films[i];
+    imgHTML += '<div class="column">';
+    imgHTML += '<div class="card">';
     imgHTML += '<img src="';
-    imgHTML += arregloTodasLasImagenes[i];
-    imgHTML += '">';
+    imgHTML += pelicula.poster;
+    imgHTML += '" style="width:130px">';
+
+    imgHTML += "<h3>";
+    imgHTML += pelicula.title;
+    imgHTML += "</h3>";
+
+    imgHTML += "<p>";
+    imgHTML += "Año de lanzamiento:" + " " + pelicula.release_date;
+    imgHTML += "</p>";
+
+    imgHTML += "<p>";
+    imgHTML += "Puntuación:" + pelicula.rt_score;
+    imgHTML += "</p>";
+    imgHTML += "</div>";
+    imgHTML += "</div>";
   }
 
   llamarImagenesdiv.innerHTML += imgHTML;

@@ -23,7 +23,6 @@ const operaciones = {
     //En este ciclo for recorrimos el array de películas y luego con el if trajimos los directores pero no cada vez que estuvieran presentes sino que vinieran sólo una vez.
     for (let i = 0; i < peliculas.length; i++) {
       pelicula = peliculas[i];
-
       if (!todosLosProductores.includes(pelicula.producer)) {
         todosLosProductores.push(pelicula.producer);
       }
@@ -41,9 +40,24 @@ const operaciones = {
       if (!todasLasImagenes.includes(pelicula.poster)) {
         todasLasImagenes.push(pelicula.poster);
       }
-      console.log(pelicula.poster);
     }
-    console.log(todasLasImagenes);
+    return todasLasImagenes;
+  },
+
+  llamarInfoBasicaPelicula(peliculas) {
+    let pelicula;
+    let todasLasImagenes = [];
+    //En este ciclo for recorrimos el array de películas y luego con el if trajimos las imagenes//
+    for (let i = 0; i < peliculas.length; i++) {
+      pelicula = peliculas[i];
+      if (!todasLasImagenes.includes(pelicula.poster)) {
+        todasLasImagenes.push(
+          JSON.parse(
+            '{"id": "' + pelicula.id + '","title": "' + pelicula.title + "}"
+          )
+        );
+      }
+    }
     return todasLasImagenes;
   },
 };
