@@ -1,5 +1,4 @@
-
-body{
+body {
     background-image: url(data/pokemon/Imagenes/Fondo.jpeg);
     width: 1440px;
     height: 720px;
@@ -8,11 +7,11 @@ body{
     background-attachment: fixed;
     background-size: contain;
     font-family: 'Nerko One', cursive;
-    
+
 }
 
 
-.Titulo{
+.Titulo {
     position: absolute;
     width: 1543px;
     height: 108px;
@@ -22,14 +21,16 @@ body{
     border: 1px solid #000000;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
-.nombre{
+
+.nombre {
     position: absolute;
     width: 420px;
     height: 100px;
     left: 530px;
     top: 5px;
 }
-.pokebola1{
+
+.pokebola1 {
     position: absolute;
     left: 5%;
     right: 30%;
@@ -40,7 +41,8 @@ body{
     Top: 32px;
     Left: 450.13px;
 }
-.pokebola2{
+
+.pokebola2 {
     position: absolute;
     left: 67.15%;
     right: 28.67%;
@@ -51,7 +53,8 @@ body{
     Top: 32px;
     Left: 967px;
 }
-.datoscuriosos{
+
+.datoscuriosos {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -63,7 +66,8 @@ body{
     background: rgba(28, 15, 106, 0.67);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.titulo2{
+
+.titulo2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -73,7 +77,8 @@ body{
     left: 20px;
     top: 8px;
 }
-.fondocaja1{
+
+.fondocaja1 {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -86,7 +91,8 @@ body{
     top: 55px;
     background: rgba(234, 184, 10, 0.48);
 }
-.fondocaja2{
+
+.fondocaja2 {
     display: flex;
     position: absolute;
     width: 300px;
@@ -95,7 +101,8 @@ body{
     top: 0px;
     background: rgba(28, 15, 106, 0.71);
 }
-.kanto{
+
+.kanto {
     display: block;
     position: absolute;
     border-radius: 50%;
@@ -107,12 +114,14 @@ body{
     background: rgba(234, 184, 10, 0.48);
     box-shadow: inset 0px 4px 4px #000000;
     font-size: 100%;
-    
+
 }
-.text-white{
-    color: rgb(255,255,255);
+
+.text-white {
+    color: rgb(255, 255, 255);
 }
-.johto{
+
+.johto {
     display: block;
     position: absolute;
     border-radius: 50%;
@@ -126,7 +135,8 @@ body{
     font-size: 100%;
 
 }
-.pokemones{
+
+.pokemones {
 
     position: absolute;
     width: 400px;
@@ -134,24 +144,74 @@ body{
     left: -50px;
     top: 430px;
 
-    }
-    .ubi1{
+}
+
+.ubi1 {
     position: absolute;
     width: 80px;
     height: 90px;
     left: 715px;
     top: -50px;
 
-    }
+}
 
-    .ubi2{
+.ubi2 {
     position: absolute;
     width: 80px;
     height: 90px;
     left: 1067px;
     top: -50px;
-        
-        }
 
-        
-         
+}
+
+.Filtros {
+    position: absolute;
+    width: 1543px;
+    height: 50px;
+    left: -9px;
+    top: 0px;
+    background: rgba(28, 15, 106, 0.82);
+    border: 1px solid #000000;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Ordenar {
+    position: absolute;
+    width: 176px;
+    height: 40px;
+    left: 103px;
+    top: 15px;
+}
+
+.Tipo {
+    position: absolute;
+    width: 177px;
+    height: 40px;
+    left: 457px;
+    top: 15px;
+}
+
+.Debilidades {
+    position: absolute;
+    width: 167px;
+    height: 40px;
+    left: 831px;
+    top: 15px;
+}
+
+.Resistencia {
+    position: absolute;
+    width: 167px;
+    height: 40px;
+    left: 1195px;
+    top: 15px;
+}
+
+.volver {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 29px;
+    top: 683px;
+    background: rgba(234, 10, 10, 0.48);
+}
