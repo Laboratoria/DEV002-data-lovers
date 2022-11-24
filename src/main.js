@@ -13,7 +13,7 @@ const createCharactersHtml = (characters) =>{
   })
   return characterName
 }
-const characterNotFound = (characters) => {
+export const characterNotFound = () => {
   let characterDataNotFound =
     `<div class="characterNotFound">
       <h3 class="notFound">No results for this search</h3>
