@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Harry Potter",
+    "species": "human",
+    "gender": "male",
+    "house": "Gryffindor",
+    "dateOfBirth": "31-07-1980",
+    "ancestry": "half-blood",
+    "hogwartsStudent": true,
+    "hogwartsStaff": false,
+    "alive": true,
+    "image": "https://hp-api.herokuapp.com/images/harry.jpg"
+  },
+  {
+    "name": "Hermione Granger",
+    "species": "human",
+    "gender": "female",
+    "house": "Gryffindor",
+    "dateOfBirth": "19-09-1979",
+    "ancestry": "muggleborn",
+    "hogwartsStudent": true,
+    "hogwartsStaff": false,
+    "alive": true,
+    "image": "https://hp-api.herokuapp.com/images/hermione.jpeg"
+  },
+  {
+    "name": "Ron Weasley",
+    "species": "human",
+    "gender": "male",
+    "house": "Gryffindor",
+    "dateOfBirth": "01-03-1980",
+    "wizard": true,
+    "ancestry": "pure-blood",
+    "hogwartsStudent": true,
+    "hogwartsStaff": false,
+    "alive": true,
+    "image": "https://hp-api.herokuapp.com/images/ron.jpg"
+  },
+  {
+    "name": "Draco Malfoy",
+    "species": "human",
+    "gender": "male",
+    "house": "Slytherin",
+    "dateOfBirth": "05-06-1980",
+    "wizard": true,
+    "ancestry": "pure-blood",
+    "hogwartsStudent": true,
+    "hogwartsStaff": false,
+    "alive": true,
+    "image": "https://hp-api.herokuapp.com/images/draco.jpg"
+  },
+  {
+    "name": "Minerva McGonagall",
+    "species": "human",
+    "gender": "female",
+    "house": "Gryffindor",
+    "dateOfBirth": "04-10-1925",
+    "wizard": true,
+    "ancestry": "",
+    "hogwartsStudent": false,
+    "hogwartsStaff": true,
+    "alive": true,
+    "image": "https://hp-api.herokuapp.com/images/mcgonagall.jpg"
+  }
+]
