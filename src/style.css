@@ -215,3 +215,35 @@ body {
     top: 683px;
     background: rgba(234, 10, 10, 0.48);
 }
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 284px;
+    left: 100px;
+    justify-content: space-around;
+    border-radius: 30px;
+    float: left;
+    width: 20%;
+    top: 100px;
+    column-gap: 40px;
+    column-count: 4;
+    padding: 5px;
+}
+
+.pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    background: rgba(28, 15, 106, 0.82);
+    border-radius: 30px;
+    float: left;
+    width: 80%;
+}
+
+.imagen {
+    height: 150px;
+    margin: 25px;
+}

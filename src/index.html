@@ -36,9 +36,9 @@
             <li>
             </li>
             <img class="ubi1" src="data/pokemon/Imagenes/R (2).png">
-            <input type="button" value="Región  Kanto" class="kanto text-white">
+            <input type="button" value="Región  Kanto" class="kanto text-white" id="bKanto">
             <img class="ubi2" src="data/pokemon/Imagenes/R (2).png">
-            <input type="button" value="Región Johto" class="johto text-white">
+            <input type="button" value="Región Johto" class="johto text-white" id="bJohto">
           </div>
     </section>
   </div>
@@ -125,7 +125,9 @@
         </select>
       </div>
     </header>
-    <input type="button" onclick="history.back()" value="VOLVER" class="volver">
+    <input type="button" onclick="history.back(-1)" value="VOLVER" class="volver">
+
+    <div id="listaPokemon"></div>
   </div>
 
 
