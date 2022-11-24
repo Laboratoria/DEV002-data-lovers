@@ -2,11 +2,85 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no", maximum-scale="1.0", minimum-scale="1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+      <section class="paginaPrincipal">
+    <div class="Botones"> <!-- El grid tiene 3 columnas-->
+      
+        <button type="button" id="btnPokemones" class = "btn"  >POKEMONES</button>
+        <button type="button" id="btnEstadistica" class = "btn" >ESTADISTICAS</button>
+     
+         </div>
+
+    <footer>
+      <div class="redesSociales">
+        <img src="img/facebook.png" alt="" class="redes">
+        <img src="img/instagram.png" alt="" class="redes">
+        <img src="img/youtube.png" alt="" class="redes">
+
+      </div>
+    <div class="cajaAutores">
+      <p class = autores> by: Adriana Zambrano - Erika Suesca 2022</p> 
+    </div>
+      
+    </footer>
+  </section>
+
+    <!-- PAGINA DE POKEMONES-->
+    <section class="filtrosBusqueda">
+      <input type="search" class="buscador" id="buscador" placeholder="Busca los pokemones">
+      <h4>FILTER</h4>
+
+      <input type="radio" name="Filter" value="Resistant" id="Resistant">
+      <label for="Resistant">Resistant</label>
+    
+      <input type="radio" name="Filter" value="Weaknesses" id="Weaknesses">
+      <label for="Weaknesses">Weaknesses</label>
+    
+      <input type="radio" name="Filter" value="Type" id="Type">
+      <label for="Type">Type</label>
+      <form> 
+          <label><input type="checkbox" name="cb-bug">Bug</label>
+          <label><input type="checkbox" name="cb-dark"> Dark</label>
+          <label><input type="checkbox" name="cb-dragon"> Dragon</label>
+          <label><input type="checkbox" name="cb-electric"> Electric</label>
+          <label><input type="checkbox" name="cb-fighting"> Fighting</label>
+          <label><input type="checkbox" name="cb-flying"> Flying</label>
+          <label><input type="checkbox" name="cb-ghost"> Ghost</label>
+          <label><input type="checkbox" name="cb-grass"> Grass</label>
+          <label><input type="checkbox" name="cb-ground"> Ground</label>
+          <label><input type="checkbox" name="cb-ice"> Ice</label>
+          <label><input type="checkbox" name="cb-normal"> Normal</label>
+          <label><input type="checkbox" name="cb-poison"> Poison</label>
+          <label><input type="checkbox" name="cb-psychic"> Psychic</label>
+          <label><input type="checkbox" name="cb-rock"> Rock</label>
+          <label><input type="checkbox" name="cb-steel"> Steel</label>
+          <label><input type="checkbox" name="cb-water"> Water</label>
+      </form>
+    </section>
+    
+     
+    <section class="paginaPokemones" id="seccionPokemones" >
+    
+      </section>
+
+
+   <!-- PAGINA DE ESTADISTICAS-->      
+
+
+   <section class="paginaEstadistica">
+    <div class="estadisticas">
+
+    </div>
+  </section>
+
+
+
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
