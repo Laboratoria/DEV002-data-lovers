@@ -88,21 +88,29 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
-   display: flex;
-   flex-direction: column;
-    width: 100%;
+   background-color: #b8bbc8;
+     width: 100%;
     height: 100%;
     display:none;
+}
+
+.contenedorTarjetas{
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+       grid-gap: 10px;
+   
 }
 
 .tarjetaPokemones{
     display: flex;
     flex-direction: column;
-    width: max-content;
+     width: max-content;
     height: 50%;
     border-radius: 10%;
     background-image:url(img/fondopoke.jpg);
 } 
+
 
 .encabezadoTarjeta{
     
