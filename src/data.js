@@ -51,13 +51,15 @@ const operaciones = {
     for (let i = 0; i < peliculas.length; i++) {
       pelicula = peliculas[i];
       if (!todasLasImagenes.includes(pelicula.poster)) {
-        todasLasImagenes.push(
-          JSON.parse(
-            '{"id": "' + pelicula.id + '","title": "' + pelicula.title + "}"
-          )
-        );
+        todasLasImagenes.push(pelicula.poster);
+        //JSON.parse(
+        //'{"id": "' + pelicula.id + '","title": "' + pelicula.title + "}"
+
+        //  );
       }
+      console.log(pelicula.poster);
     }
+    console.log(todasLasImagenes);
     return todasLasImagenes;
   },
 };
