@@ -24,7 +24,8 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
 
 //Tarjetas de pokemones
 const seccion = document.getElementById('seccionPokemones');
-const contenedor = document.getElementById('tarjetaPokemones');
+const contenedor = document.createElement('div');
+contenedor.setAttribute('class','contenedorTarjetas'); 
 
 const mostrar = (pokemones)=>{
     pokemones.forEach(pokemon => {
@@ -32,10 +33,28 @@ const mostrar = (pokemones)=>{
         
         seccion.appendChild(contenedor);
         seccion.setAttribute('class', 'paginaPokemones');
-        contenedor.innerHTML+=  `<div>
-                                    <img src='${pokemon.img}' class='imgPokemon'>
-                                   </div>`
-        document.getElementById('nombrePokemon').innerHTML+=`<h2 class='nombreP'> ${pokemon.name} </h2>`
+       contenedor.innerHTML+=  
+       
+       ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
+                                 <div class="encabezadoTarjeta">
+                                   <h2 id="nombrePokemon" class="nombreP">${pokemon.name} </h2>
+                                   <img src="${pokemon.img}" alt="" id="imagenPokemon" class="imgPokemon">
+                                   <h3 id="tipoPokemon" class="textoh3"> Type: </h3>
+                                   <h3 id="generacionPokemon" class="textoh3"> Generation:</h3>          
+                                 </div>
+                                 
+                                 <div class="descripcionTarjeta">
+                                   <p id="aboutPokemon" class="aboutP">Descripcion</p>
+                                 
+                                 </div>
+                                 
+                                 <div class="botonesTarjeta">
+                                   <button id="btnStats" class="bntS"> Stats </button>
+                                   <button id="btnResistencia" class="btnR">Characteristics</button>
+                                 </div>
+                                                      
+                                 </div>  `                        
+     
 
     });
 } 
