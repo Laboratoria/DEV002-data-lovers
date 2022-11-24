@@ -88,6 +88,7 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
+   background-color: #b8bbc8;
    display: flex;
    flex-direction: column;
     width: 100%;
