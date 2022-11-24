@@ -1,5 +1,6 @@
 import {getAllCharacters} from "./data.js";
 
+// manejo inputs
 const inputs = document.querySelectorAll(".inputSearch");
 const createCharactersHtml = (characters) =>{
   let characterName = "";
@@ -11,6 +12,13 @@ const createCharactersHtml = (characters) =>{
     </div>`
   })
   return characterName
+}
+const characterNotFound = (characters) => {
+  let characterDataNotFound =
+    `<div class="characterNotFound">
+      <h3 class="notFound">No results for this search</h3>
+    </div>`
+  return characterDataNotFound
 }
 
 inputs.forEach(input =>{
@@ -24,9 +32,13 @@ inputs.forEach(input =>{
       let result = data.filter((characters) => {
           return characters.name.toLowerCase().includes(input.value)
       })
-      const charactersHTML = createCharactersHtml(result);
-      //obtener result y cambiarle el HTML
-      document.getElementById("results").innerHTML = charactersHTML
+      if (result == false){
+        const dataNotFound = characterNotFound(result);
+        document.getElementById("results").innerHTML = dataNotFound
+      } else {
+        const charactersHTML = createCharactersHtml(result);
+        document.getElementById("results").innerHTML = charactersHTML
+      }
     }
   })
 })

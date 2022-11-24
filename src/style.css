@@ -1,9 +1,9 @@
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--font-base);
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base);
+  }
 
 :root{
   --blue: #4B81D1;
@@ -23,24 +23,24 @@
   color: var(--gray);
   }
 
-/* width */
+ /* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+ /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px var(--gray);
   border-radius: 10px;
 }
 
-/* Handle */
+ /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--yellow);
   border-radius: 10px;
 }
 
-/* Handle on hover */
+ /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--yellow-hover);
 }
@@ -188,13 +188,14 @@ main .home .home-searcher .home-more-button .dotsButton {
 }
 
 main .home .home-searcher .home-more-button .charactersButton {
-  width: 30%;
+  width: 20%;
   font-size: 4vw;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
   background: none;
   border: none;
   color: var(--blue);
   cursor: pointer;
-  margin-top: 3rem;
 }
 
 main .home .home-searcher .home-more-button button:hover{
@@ -231,6 +232,7 @@ main .home .home-searcher .home-more-button button:hover{
 
 .nav-searcher .nav-searcher-top .searcher-top-logo img{
   width: 80%;
+  cursor: pointer;
 }
 
 .nav-searcher .nav-searcher-top .searcher-top-bar{
@@ -323,19 +325,19 @@ main .home .home-searcher .home-more-button button:hover{
 }
 
 /* Search results view */
-.search-results{
+main .search-results{
   width: 100vw;
   height: auto;
 }
 
-.search-results .results{
+main .search-results .results{
   width: 100%;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
 }
 
-.search-results .results .character{
+main .search-results .results .character{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -343,7 +345,7 @@ main .home .home-searcher .home-more-button button:hover{
   height: 23rem;
   margin-top: 1rem;
 }
-.search-results .results .character .character-image {
+main .search-results .results .character .character-image {
   width: 18rem;
   height: 18rem;
   object-fit: cover;
@@ -352,11 +354,11 @@ main .home .home-searcher .home-more-button button:hover{
   cursor: pointer;
 }
 
-.search-results .results .character .character-image:hover{
+main .search-results .results .character .character-image:hover{
   box-shadow: 0px 5px 25px var(--gray);
 }
 
-.search-results .results .character .name{
+main .search-results .results .character .name{
   width: 100%;
   margin-top: 1rem;
   font-size: 3vw;
@@ -366,16 +368,31 @@ main .home .home-searcher .home-more-button button:hover{
   text-align: center;
 }
 
-.search-results .results .character .name:hover{
+main .search-results .results .character .name:hover{
   color: var(--blue-hover);
 }
 
-/* inactive components */
+main .search-results .results .characterNotFound{
+  grid-column: 1 /span 2;
+  width: 100vw;
+  height: 73.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .search-results .results .characterNotFound .notFound {
+  font-size: 4.5vw;
+  font-weight: 600;
+  color: var(--red);
+}
+
+ /* inactive components */
 .inactive{
   display: none;
 }
 
-/* Responsive Design */
+ /* Responsive Design */
 @media screen and (min-width: 640px){
   main .home .home-searcher .home-searcher-input .search-input input{
     height: 7rem;
@@ -409,6 +426,10 @@ main .home .home-searcher .home-more-button button:hover{
 
   main .home .home-searcher .home-more-button .charactersButton{
     font-size: 3.2vw;
+  }
+
+  main .search-results .results .characterNotFound{
+    height: 70vh;
   }
 }
 
@@ -491,91 +512,109 @@ main .home .home-searcher .home-more-button button:hover{
   main .search-results .results .character .name{
     font-size: 1.8vw;
   }
+
+  main .search-results .results .characterNotFound{
+    height: 62vh;
+  }
+
+  main .search-results .results .characterNotFound .notFound{
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (min-width: 1366px){
   main .home .home-header .home-header-logo{
     margin-top: 10%;
   }
-
+  
   main .home .home-header .home-header-logo img{
     width: 60%;
   }
-
+  
   main .home .home-header .home-header-slogan span{
     font-size: 2.5vw;
   }
-
+  
   main .home .home-searcher .home-searcher-input{
     margin-top: 6%;
   }
-
+  
   main .home .home-searcher .home-searcher-input .search-input input{
     width: 55%;
     height: 8rem;
     font-size: 2vw;
     border: .3rem solid var(--blue);
   }
-
+  
   main .home .home-searcher .home-searcher-input .search-input button{
     font-size: 4rem;
     right: 40rem;
   }
-
+  
   main .home .home-searcher .home-more-button .dotsButton {
     font-size: 3vw;
   }
-
+  
   main .home .home-searcher .home-more-button .charactersButton{
     font-size: 1.5vw;
   }
-
+  
   main .nav-searcher .nav-searcher-top{
     margin-top: 1%;
     height: 23rem;
   }
-
+  
   main .nav-searcher .nav-searcher-top .searcher-top-logo{
     height: 53%;
   }
-
+  
   main .nav-searcher .nav-searcher-top .searcher-top-logo img{
     width: 35%;
   }
-
+  
   main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
     height: 7rem;
   }
-
+  
   main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
     width: 80%;
   }
-
+  
   main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
     font-size: 2vw;
     right: 21rem;
   }
-
+  
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
     width: 5%;
   }
-
+  
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
     width: 5%;
     margin-right: 10%;
   }
-
+  
   main .search-results{
     display: flex;
     justify-content: center;
   }
-
+  
   main .search-results .results{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 90vw;
   }
-
+  
   main .search-results .results .character .name{
     font-size: 1vw;
   }
+
+  main .search-results .results .characterNotFound{
+    width: 90vw;
+  }
+
+  main .search-results .results .characterNotFound .notFound{
+    font-size: 2vw;
+  }
 }
+
+
