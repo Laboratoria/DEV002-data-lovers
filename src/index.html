@@ -54,6 +54,15 @@
                   <button>
                     <img src="./assets/sort.svg" alt="sort button icon"/>
                   </button>
+                  <div class="dropdown-menu">
+                    <form>
+                      <p>Sort by</p>
+                      <input type="radio" name="sort-characters" value="a-z" id="a-z">
+                      <label for="a-z"> a - z</label>
+                      <input type="radio" name="sort-characters" value="z-a" id="z-a">
+                      <label for="z-a"> z - a</label>
+                    </form>
+                  </div>
               </div>
               <div class="searcher-bottom-buttons searcher-bottom-filter">
                   <button>
@@ -64,13 +73,6 @@
       </section>
 
       <!--Sort menu-->
-      <section class="inactive inactive">
-        <form>
-          <p>Sort by</p>
-          <input type="radio" name="a-z" value="a-z">
-          <label for="a-z"></label>
-        </form>
-      </section>
       <!--Search results-->
       <section class="search-results" id="searchResults">
         <section class="results" id="results">
