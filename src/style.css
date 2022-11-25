@@ -1,0 +1,82 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    background-color: black;
+    background-image: url("background");
+    background-size: cover;
+    font-family: 'Harry Potter', sans-serif;                                           
+}
+.title {
+    width: 50rem;
+    height: 15rem;
+    padding: 2rem;
+    margin-left: 25rem;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+    color: #eeba30;
+
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+    color:#8B7B32;
+}
+
+.container {
+    /*border: .3rem solid black;*/
+    display: flex;
+    height: 17rem; 
+    padding: 3rem;
+
+}
+.box {
+    width: 2rem;
+    height: 2rem;
+    flex-basis: 10rem;
+    flex-grow: 1;
+}
+img {
+    width: 14rem;
+    height: 16rem;
+    cursor: pointer;
+
+}
+
+button[type=button] { 
+
+
+    letter-spacing: .1rem;
+    cursor:pointer;
+    padding: .4rem;
+    width: 48rem;
+    margin-bottom: 2rem;
+    border-width: 2px;
+    border-color: #A79942;
+    border-radius: .3rem;
+    margin: 9rem 30% 7rem;
+ }
+ button[type=button]:hover {
+    background-color: #A79942;
+    color: #f6f6f6;
+ }
+#cargarAPI:hover {
+    background-color: #A79942;
+    color: #f6f6f6;
+}
