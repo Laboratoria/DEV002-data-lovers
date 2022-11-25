@@ -101,4 +101,3 @@ sortZBtn.onclick = () => {
   const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse());
   document.getElementById("results").innerHTML = charactersHTML
 }
-
