@@ -576,6 +576,23 @@ main .search-results .results .characterNotFound .notFound {
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
     font-size: 3.5vw;
   }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
+    width: 50%;
+    height: 19rem;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
+    font-size: 2.4vw;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
+    font-size: 3vw;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+    font-size: 2.5vw;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -672,6 +689,23 @@ main .search-results .results .characterNotFound .notFound {
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
     font-size: 2.3vw;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
+    width: 42%;
+    height: 22rem;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
+    font-size: 2.3vw;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
+    font-size: 2.5vw;
+  }
+
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+    font-size: 2vw;
   }
 }
 
@@ -777,5 +811,3 @@ main .search-results .results .characterNotFound .notFound {
     font-size: 1.2vw;
   }
 }
-
-
