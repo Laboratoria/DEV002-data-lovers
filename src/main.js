@@ -80,7 +80,7 @@ logoButtonNav.addEventListener("click", () => {
 const sortABtn = document.querySelector('#a-z');
 const sortZBtn = document.querySelector('#z-a');
 
-function sortingCharacters (charactersList){
+export function sortingCharacters (charactersList){
   const newCharactersSorted = charactersList.sort((a, b) => {
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
@@ -101,3 +101,4 @@ sortZBtn.onclick = () => {
   const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse());
   document.getElementById("results").innerHTML = charactersHTML
 }
+
