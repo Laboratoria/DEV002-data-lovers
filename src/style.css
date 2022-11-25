@@ -13,14 +13,16 @@ Global Styles
   padding: 0; /*espacios entre mi contenedor y los hijos (hacia adentro). Pueden haber varios hijos(pokemon-item)*/
   box-sizing: border-box; }
 
-
-
+  
 header{
 
    text-align: center;
     width: 100%;
     height: auto;
     margin: 2rem !important;/*con esto le digo que es mas importante que las otras(en este caso margin)*/
+}
+header .titulo{ /*lo mismo sería escribir solo h1*/
+  color: #efb810;
 }
 
 header .logo{
@@ -63,11 +65,6 @@ padding: 0.5rem 1.5rem; /*estoy poniendo 1.5 de forma horizontal y 0.5 vertical*
 #container-pokemones .search-Pokemon:focus {
 outline: none;
 }
-
-
-
-
-
 
 #listado-pokemones{
    /* background-color: aquamarine;*/

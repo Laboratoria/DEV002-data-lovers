@@ -2,34 +2,14 @@
  registro de manejadores de eventos (event listeners o event handlers), ....*/
 
 //IMPORTACIÓN DE MÓDULOS
-// import { example } from './data.js';
-//import pokemon from './data/pokemon/pokemon.js';
-import data from './data/pokemon/pokemon.js';
+import { buscarPorInput } from './data.js';
+import { visualizarPokemones } from './js/componentes.js';
+import { pokemones } from './js/store.js';
 
-const pokemones = data.pokemon;
+visualizarPokemones(pokemones);
 
 
-//DECLARACIÓN DE VARIABLES
-//const pokemonNames=pokemon.map(pokemon.name);
+const inputSearch = document.getElementById('searchName')
 
-const listadoPokemones = document.getElementById('listado-pokemones')
-// console.log(listadoPokemones)
-// const htmlPrueba=`<h2>pokemonesV2</h2>`;//etiqueta html que se va a incrustar al contenedor ListadoPokemones 
-// listadoPokemones.innerHTML=htmlPrueba
+inputSearch.addEventListener('input', buscarPorInput)
 
-let htmlContainerPokemones = '';
-pokemones.forEach(poke => {
-  //incrustando la tarjeta pokemon--item con javaScript a html usando InnerHTML
-  const pokemoncito = `
-   <div class="pokemon-item">    
-     <h3>el pokemon se llama ${poke.name} ${poke.num} </h3>
-     <img  src="${poke.img}" >
-
-   </div>
-  `;
-  // console.log(pokemoncito)
-  htmlContainerPokemones = htmlContainerPokemones + pokemoncito
-
-});
-// console.log(htmlContainerPokemones);
-listadoPokemones.innerHTML = htmlContainerPokemones  //variable que incrusta el listado de pokemones

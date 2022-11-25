@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers Ale y Jhoa</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <img class="logo" src="img/logo.png" alt="loguito">
-      <h1>MUNDO POKÉMON</h1>
-    </header>
 
-    <div id="container-pokemones">    <!-- caparazón de mi listado, aquí irán los filtros y el paginador(cambiar de páginas)-->
-      <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon"
-      maxlenght="30" autocomplete="off"> 
-      <h2>pokemones</h2>
-      <div id="listado-pokemones"></div> <!-- estarán las tarjetas-->
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers Ale y Jhoa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<body>
+  <header>
+    <img class="logo" src="img/logo.png" alt="loguito">
+    <h1 class="titulo">MUNDO POKÉMON</h1>
+  </header>
+  <div id="container-pokemones">
+    <!-- caparazón de mi listado, aquí irán los filtros y el paginador(cambiador de páginas)-->
+    <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon" maxlenght="30"
+      autocomplete="off">
+    <h2>pokemones</h2>
+
+    <select name="tipos" id="select-tipos">
+      <option value="" disabled selected>Selecciona tipo</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+<!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
+ <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
+<div id="listado-pokemones"></div> <!-- estarán las tarjetas-->
+  </div>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
