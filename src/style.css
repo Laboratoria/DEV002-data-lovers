@@ -2,7 +2,10 @@
     box-sizing: border-box
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body{
+    padding: 20px;
     margin: 0;
     background: rgb(242, 240, 245);
     min-width: 100%; 
@@ -26,7 +29,7 @@ body{
 }
 
 .btn {
-     margin: 3%;
+    margin: 3%;
     width:160px ;
     font-size: 14px;
     word-wrap: break-word;
@@ -37,7 +40,6 @@ body{
     border-radius: 5px;
     padding: 7px 20px;
     text-transform: uppercase;
-   /* place-content: fixed;*/ 
     cursor: pointer;
  }
 
@@ -46,8 +48,7 @@ body{
   }
 
 
- footer {
-   
+ footer {   
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -88,58 +89,77 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
-   background-color: #b8bbc8;
-     width: 100%;
+    display: flex;
+    width: 100%;
     height: 100%;
-    display:none;
+    display: none;
 }
 
 .contenedorTarjetas{
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-       grid-gap: 10px;
-   
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    order: 2;
+   }
+
+.contenedorFiltros{
+    background-color: blue;
+    order: 1;
+    width: 250px;
+    height: 250px;
 }
 
 .tarjetaPokemones{
     display: flex;
+    padding: 15px;
     flex-direction: column;
-     width: max-content;
-    height: 50%;
-    border-radius: 10%;
-    background-image:url(img/fondopoke.jpg);
+    width: min-content;
+    height: 300px;
+    border-radius: 7px;
+    border: solid 2px black;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
 } 
 
-
-.encabezadoTarjeta{
-    
-    background-color: bisque;
+.nombreP {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: black;    
+    text-transform: capitalize;
 }
 
-.aboutP, .nombreP, .textoh3{
-    margin:0;
+.textoh3, .sizeP {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: black;    
+        text-transform: capitalize;
+}
+
+.encabezadoTarjeta{
+    display: flex;
+}
+
+
+.sizeP, .nombreP, .textoh3{
+    margin:0px;
 } 
 
 .imgPokemon{
-   width: 70px;
-   height: 70px;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
 }
 
-.nombreP{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: blue;
+.imgPokemon:hover{
+    transform: rotateY(180deg)
 }
 
-.descripcionTarjeta{
-  
-    background-color: azure;
-}
+/*.descripcionTarjeta{
+}*/
 
 .botonesTarjeta{
-    
-    background-color: coral;
+    margin-top: 15px;
 }
 
 .filtrosBusqueda {

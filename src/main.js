@@ -26,6 +26,8 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
 const seccion = document.getElementById('seccionPokemones');
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class','contenedorTarjetas'); 
+const filtros = document.createElement('div');
+filtros.setAttribute('class','contenedorFiltros'); 
 
 const mostrar = (pokemones)=>{
     pokemones.forEach(pokemon => {
@@ -33,18 +35,22 @@ const mostrar = (pokemones)=>{
         
         seccion.appendChild(contenedor);
         seccion.setAttribute('class', 'paginaPokemones');
+        seccion.appendChild(filtros);
        contenedor.innerHTML+=  
        
        ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
-                                 <div class="encabezadoTarjeta">
-                                   <h2 id="nombrePokemon" class="nombreP">${pokemon.name} </h2>
-                                   <img src="${pokemon.img}" alt="" id="imagenPokemon" class="imgPokemon">
-                                   <h3 id="tipoPokemon" class="textoh3"> Type: </h3>
-                                   <h3 id="generacionPokemon" class="textoh3"> Generation:</h3>          
-                                 </div>
+                                <h2 id="nombrePokemon" class="nombreP">${pokemon.name} </h2>
+                                <h3 id="numeroPokemon" class="textoh3">${pokemon.num} </h3>
+                                 <div class="encabezadoTarjeta">                     
+                                  <img src="${pokemon.img}" alt="" id="imagenPokemon" class="imgPokemon">
+                                  <div class = 'contenedorh3'> <h3 id="tipoPokemon" class="textoh3">Type: ${pokemon.type} </h3>
+                                 <h3 id="generacionPokemon" class="textoh3"> Generation:${pokemon.generation.name} </h3>
+                                 </div>      
+                            </div>
                                  
                                  <div class="descripcionTarjeta">
-                                   <p id="aboutPokemon" class="aboutP">Descripcion</p>
+                                   <p id="heightPokemon" class="sizeP"> height: ${pokemon.size.height}</p>
+                                   <p id="weightPokemon" class="sizeP"> weight: ${pokemon.size.weight}</p>
                                  
                                  </div>
                                  
