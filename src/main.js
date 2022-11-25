@@ -16,22 +16,21 @@ selectCharacters.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-      const spells=data.characters;
-     spells.forEach(element => {
+    const characters = data.characters;
+    characters.forEach(element => {
+      let img= element.image !== "" ? element.image : "imag/incognito.jpg";
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
-        <img  class="imagen" src="${element.image}" >
-
+      
+        <img  class="imagen" src="${img}">
          <div class="caja">
           <p class="data">Name: ${element.name}</p>
           <p class="data">Species: ${element.species}</p>
          <p class="data">Gender: ${element.gender}</p>
-          <p class="data">Ancestry: ${element.ancestry}</p>
-          <p class="data">Actor: ${element.actor}</p>
-
+          <p class="data">Alive: ${element.alive}</p>
+          <p class="data">Specie: ${element.species}</p>
         </div>
      </div>
      
@@ -43,6 +42,40 @@ selectCharacters.addEventListener('change', () => {
   }
 
 });
+document.getElementById("btnCharac").addEventListener("click", () => {
+    const accederAlDom = document.getElementById('home')
+    accederAlDom.style.display = 'none';
+    const cardConteiner = document.getElementById('cardConteiner');
+    cardConteiner.style.display = 'block';
+
+    const characters = data.characters;
+    characters.forEach(element => {
+      let img= element.image !== "" ? element.image : "imag/incognito.jpg";
+      const createElement = document.createElement("div")
+      createElement.setAttribute("class", 'contenedorCard');
+      const templateTest = `
+      <div id="template">
+      
+        <img  class="imagen" src="${img}">
+         <div class="caja">
+          <p class="data">Name: ${element.name}</p>
+          <p class="data">Species: ${element.species}</p>
+         <p class="data">Gender: ${element.gender}</p>
+          <p class="data">Alive: ${element.alive}</p>
+          <p class="data">Specie: ${element.species}</p>
+        </div>
+     </div>
+     
+      `;
+      createElement.innerHTML = templateTest;
+      test1.appendChild(createElement);
+
+    });
+  
+
+});
+
+
 
 // seleccionamos los hechizos de la A-Z
 const selectSpells = document.querySelector('#segundoSelect');
@@ -60,20 +93,20 @@ selectSpells.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-      const spells=data.spells;
-     spells.forEach(element => {
+    const spells = data.spells;
+    spells.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
         <img  class="imagen" src="imag/magic.png">
          <div class="caja">
-          <p class="data">Id: ${element.id}</p>
+          
           <p class="data">Name: ${element.name}</p>
           <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Pronunciation: ${element.pronunciation}</p>
+          <p class="data">Description: ${element.description}</p>
+          <p class="data">Type: ${element.spell_type}</p>
           <p class="data">Etymology: ${element.etymology}</p>
-
         </div>
      </div>
       `;
@@ -83,4 +116,3 @@ selectSpells.addEventListener('change', () => {
   }
 
 });
-

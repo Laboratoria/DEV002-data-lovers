@@ -38,13 +38,12 @@
         <option value="z-a">Z-A</option>
         <option value="alive">Alive</option>
         <option value="dead">Dead</option>
-        <option value="species ">Species</option>
       </select>
       <select name="Spells" class="select" id="segundoSelect">
         <option disabled selected>Spells</option>
         <option value="spellsa-z">Spells A-Z</option>
         <option value="spellsz-a">Spells Z-A</option>
-        <option value="spellType">Spell type</option>
+        
       </select>
       <select name="Books" class="select" id="tercerSelect">
         <option disabled selected >Books</option>
@@ -64,24 +63,21 @@
     <div id="raya"></div>
     <img id="buho" src="imag/buho.png" width="5%">
     <img id="glasses" src="imag/lentes.png" width="5%">
+    <button id="btnCharac" class="btnPrincipal">Characters</button>
+    <button id="btnSpells" class="btnPrincipal">Spells</button>
+    <button id="btnBooks" class="btnPrincipal">Books</button>
+    <button id="btnPotions" class="btnPrincipal">Potions</button>
   </div>
 
-  <div id="spells"></div>
-
-  <article id="showCards">
-  </article>
+  <!-- <article id="showCards">
+  </article> -->
 
   <section id="cardConteiner">
+
     <div class="test"></div>
-    <div id="container">
-
-      <div>
-        <img id="imagen" src="imag/harry-potter.png" ${foto} alt="foto del personaje"> </img>
-      </div>
-
-    </div>
 
   </section>
+
 
   <section id="home">
     <div id="box">
@@ -112,7 +108,8 @@
           nor alive.
         </p>
       </section>
-      
+
+
       <section class="tapiz">
         <h3>Houses</h3>
         <section id="houses">
@@ -126,21 +123,21 @@
               <div class="card card4"></div>
             </div>
           </div>
+
+          <p id="infoAboutHouses">
+            In howarts there are 1000 students in total. There are 7 classes, which means that there are 143 students
+            per
+            class,
+            divided into four houses which are Gryffindor, Slytherin, Ravenclaw and Hufflepuff, giving us 35 students
+            per
+            class
+            and house.
+          </p>
+
+        </section>
+      </section>
     </div>
-    <p id="infoAboutHouses">
-      In howarts there are 1000 students in total. There are 7 classes, which means that there are 143 students per
-      class,
-      divided into four houses which are Gryffindor, Slytherin, Ravenclaw and Hufflepuff, giving us 35 students per
-      class
-      and house.
-    </p>
-    </section>
-  </div>
-  <div id="Cards">
-    <p id="charactersTotal"></p>
-   
-  </div>
-  <section id="animations" class="animations"></section>
+
   </section>
   </section>
   <script src="./main.js" type="module"></script>
