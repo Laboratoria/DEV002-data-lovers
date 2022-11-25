@@ -10,10 +10,7 @@
 //matchers (isEqual, toBe (primit), lessThan)
 // devolucion API payload
 
-
 //test("should get the characters name and theirs image", () =>{});
-
-
 
 //import {example} from '../src/data.js';
 
@@ -37,3 +34,11 @@
 //     expect(anotherExample()).toBe('OMG');
 //   });
 // });
+
+import sortingCharacters from '../src/main';
+
+describe('sortingCharacter', () => {
+    it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
+        expect(sortingCharacters([{name: 'Harry'},{name: 'Barry'}])).toBe([{name: 'Barry'},{name: 'Harry'}]);
+    });
+});
