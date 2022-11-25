@@ -330,21 +330,48 @@ main .home .home-searcher .home-more-button button:hover{
   position: absolute;
   border: .2rem solid var(--yellow);
   background-color: #fafafa;
-  padding: 2rem;
+  opacity: 90%;
+  border-radius: 1rem;
+  display: none;
 }
 
 .dropdown-menu form{
-  width: 100;
   height: 100%;
-  display: block;
   font-size: 4vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-menu form p{
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 2rem;
+  color: var(--blue);
+}
+
+.dropdown-menu form .dropdown-menu-options{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dropdown-menu form .dropdown-menu-options .option{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dropdown-menu form .dropdown-menu-options .option input{
+  accent-color: var(--blue);
+  transform: scale(1.2);
+}
+
+.dropdown-menu form .dropdown-menu-options .option label{
+  color: var(--gray-dark)
 }
 
 
+.searcher-bottom-sort:hover .dropdown-menu{
+  display: block;
+}
 
 /* Search results view */
 main .search-results{
