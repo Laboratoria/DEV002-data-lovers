@@ -75,17 +75,24 @@ logoButtonNav.addEventListener("click", () => {
 const sortABtn = document.querySelector('#a-z');
 const sortZBtn = document.querySelector('#z-a');
 
-sortABtn.onclick = () => {
-  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
-  const newCharactersSorted = newCharacters.sort((a, b) => {
+function sortingCharacters (charactersList){
+  const newCharactersSorted = charactersList.sort((a, b) => {
     if(a.name < b.name) { return -1; }
     if(a.name > b.name) { return 1; }
     return 0
   })
-  const charactersHTML = createCharactersHtml(newCharactersSorted);
+  return newCharactersSorted
+}
+
+sortABtn.onclick = () => {
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+  const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters));
   document.getElementById("results").innerHTML = charactersHTML
 }
 
 sortZBtn.onclick = () => {
   console.log('Ordename z - a')
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+  const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse());
+  document.getElementById("results").innerHTML = charactersHTML
 }
