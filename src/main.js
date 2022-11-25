@@ -30,12 +30,13 @@ inputs.forEach(input =>{
       let data = await getAllCharacters();
       //filter(función de arreglo) necesita una condición que se entrega con return. la condición entrega true o false
       let result = data.filter((characters) => {
-          return characters.name.toLowerCase().includes(input.value)
+        return characters.name.toLowerCase().includes(input.value)
       })
       if (result == false){
         const dataNotFound = characterNotFound(result);
         document.getElementById("results").innerHTML = dataNotFound
       } else {
+        window.localStorage.setItem('Character', JSON.stringify(result));
         const charactersHTML = createCharactersHtml(result);
         document.getElementById("results").innerHTML = charactersHTML
       }
@@ -58,6 +59,7 @@ characterButton.addEventListener("click", async() => {
   document.getElementById("home").hidden = true;
   document.getElementById("navSearcher").classList.remove("inactive");
   let data = await getAllCharacters();
+  window.localStorage.setItem('Character', JSON.stringify(data));
   const charactersHTML = createCharactersHtml(data);
   document.getElementById("results").innerHTML = charactersHTML
 })
@@ -68,3 +70,22 @@ const logoButtonNav = document.getElementById("logoButtonNav");
 logoButtonNav.addEventListener("click", () => {
   window.location.reload(logoButtonNav)
 })
+
+/* Sort function */
+const sortABtn = document.querySelector('#a-z');
+const sortZBtn = document.querySelector('#z-a');
+
+sortABtn.onclick = () => {
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+  const newCharactersSorted = newCharacters.sort((a, b) => {
+    if(a.name < b.name) { return -1; }
+    if(a.name > b.name) { return 1; }
+    return 0
+  })
+  const charactersHTML = createCharactersHtml(newCharactersSorted);
+  document.getElementById("results").innerHTML = charactersHTML
+}
+
+sortZBtn.onclick = () => {
+  console.log('Ordename z - a')
+}
