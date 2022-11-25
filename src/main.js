@@ -24,6 +24,11 @@ const characterNotFound = (characters) => {
 inputs.forEach(input =>{
   input.addEventListener("keydown", async (event) =>{
     if (event.keyCode === 13){
+
+      /* Reseting sort options */
+      const sortButtons = document.getElementsByName('sort-characters');
+      sortButtons.forEach(button => button.checked = false);
+
       document.getElementById("home").hidden = true;
       document.getElementById("navSearcher").classList.remove("inactive");
       //data contiene el resultado de la promesa
