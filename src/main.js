@@ -96,8 +96,54 @@ sortABtn.onclick = () => {
 }
 
 sortZBtn.onclick = () => {
-  console.log('Ordename z - a')
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
   const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse());
+  document.getElementById("results").innerHTML = charactersHTML
+}
+
+/* Filter function */
+const filterGryffindorBtn = document.querySelector('#gryffindor');
+const filterSlytherinBtn = document.querySelector('#slytherin');
+const filterHufflepuffBtn = document.querySelector('#hufflepuff');
+const filterRavenclawBtn = document.querySelector('#ravenclaw');
+const filterHouseUndefinedBtn = document.querySelector('#houseUndefined');
+
+function filterCharacters (charactersList, filterParam){
+  const newCharactersFiltered = charactersList.filter(character => {
+    return character.house === filterParam
+  })
+  return newCharactersFiltered
+}
+
+function setFilterCharacters (filterparam){
+  const param = filterparam
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+  const charactersHTML = createCharactersHtml(filterCharacters(newCharacters, param));
+  document.getElementById("results").innerHTML = charactersHTML
+}
+
+filterGryffindorBtn.onclick = () => {
+  const filterParam = 'Gryffindor'
+  setFilterCharacters(filterParam)
+}
+
+filterSlytherinBtn.onclick = () => {
+  const filterParam = 'Slytherin'
+  setFilterCharacters(filterParam)
+}
+
+filterHufflepuffBtn.onclick = () => {
+  const filterParam = 'Hufflepuff'
+  setFilterCharacters(filterParam)
+}
+
+filterRavenclawBtn.onclick = () => {
+  const filterParam = 'Ravenclaw'
+  setFilterCharacters(filterParam)
+}
+
+filterHouseUndefinedBtn.onclick = () => {
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+  const charactersHTML = createCharactersHtml(newCharacters);
   document.getElementById("results").innerHTML = charactersHTML
 }
