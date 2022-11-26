@@ -1,17 +1,19 @@
-//import {dotButton} from "../src/main";
+//npm test main.spec.js
 
-test("ocultar dotButton y mostrar characterButton", () => {
-    document.body.innerHTML =
-    `<button class="dotsButton" id="dotsButton" >...</button>;
-    <button class="charactersButton inactive" id="charactersButton">Characters</button>`;
-    require("../src/main");
+import { sortingCharacters } from '../src/main';
 
-    const dotsButton = document.getElementById("dotsButton")
-    dotsButton.dispatchEvent(new Event("click"))
-    const characterButton = document.getElementById("charactersButton")
-
-    expect(characterButton.classList.contains("inactive")).toBe(false);
+describe('sortingCharacter', () => {
+    it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
+        const result = sortingCharacters([{name: 'Harry'},{name: 'Barry'}])
+        expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Barry'},{name: 'Harry'}]));
+    });
 });
+
+//JSON es una variable global (es un obj que tiene propiedades)
+//NO se pueden comparar objetos, se deben pasar a string o comparar una de las propiedades
+//el test decía que no podía comparar objetos por lo que se utilizó JSON.stringify() para pasar el objeto a string y poder compararlos
+//JSON.stringify() pasa un objeto a string
+//JSON.parse() pasa un string a objeto
 
 // test("recarga página al presiona logo en nav", () => {
 //     document.body.innerHTML =
@@ -51,35 +53,35 @@ test("ocultar dotButton y mostrar characterButton", () => {
 //     expect(navSection.classList.contains("inactive")).toBe(true);
 // });
 
-describe('window.location', () => {
-    const { location } = window;
+// describe('window.location', () => {
+//     const { location } = window;
 
-    beforeAll(() => {
-        delete window.location;
-        window.location = { reload: jest.fn() };
-    });
+//     beforeAll(() => {
+//         delete window.location;
+//         window.location = { reload: jest.fn() };
+//     });
 
-    afterAll(() => {
-        window.location = location;
-    });
+//     afterAll(() => {
+//         window.location = location;
+//     });
 
-    it("mocks `reload`", () => {
-        expect(jest.isMockFunction(window.location.reload)).toBe(true);
-    });
+//     it("mocks `reload`", () => {
+//         expect(jest.isMockFunction(window.location.reload)).toBe(true);
+//     });
 
-    it("redirigir a home", () => {
-        document.body.innerHTML =
-            `<button id="logoButtonNav">
-                <img src="assets/logo-gold.png" alt="Harry's Cabinet">
-            </button>`
-        require("../src/main");
+//     it("redirigir a home", () => {
+//         document.body.innerHTML =
+//             `<button id="logoButtonNav">
+//                 <img src="assets/logo-gold.png" alt="Harry's Cabinet">
+//             </button>`
+//         require("../src/main");
 
-        const navBtn = document.getElementById("logoButtonNav")
-        navBtn.dispatchEvent(new Event("click"))
-        //window.location.reload();
-        expect(window.location.reload).toBe(true);
-    });
-});
+//         const navBtn = document.getElementById("logoButtonNav")
+//         navBtn.dispatchEvent(new Event("click"))
+//         //window.location.reload();
+//         expect(window.location.reload).toBeCalledTimes(1);
+//     });
+// });
 
 // test("cambiar html results por character", () => {
 //     const { createCharactersHtml } = require("../src/main");

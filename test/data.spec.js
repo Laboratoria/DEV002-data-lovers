@@ -1,3 +1,5 @@
+//npm test data.spec.js
+
 //import {name of the function} from "./data.js";
 
 // test("should get the API info", () =>{
@@ -34,11 +36,3 @@
 //     expect(anotherExample()).toBe('OMG');
 //   });
 // });
-
-import sortingCharacters from '../src/main';
-
-describe('sortingCharacter', () => {
-    it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
-        expect(sortingCharacters([{name: 'Harry'},{name: 'Barry'}])).toBe([{name: 'Barry'},{name: 'Harry'}]);
-    });
-});
