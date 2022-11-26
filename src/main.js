@@ -74,6 +74,8 @@ const logoButtonNav = document.getElementById("logoButtonNav");
 
 logoButtonNav.addEventListener("click", () => {
   window.location.reload(logoButtonNav)
+  window.localStorage.removeItem('Character')
+  window.localStorage.removeItem('CharacterFiltered')
 })
 
 /* Sort function */
@@ -90,14 +92,92 @@ export function sortingCharacters (charactersList){
 }
 
 sortABtn.onclick = () => {
-  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
-  const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters));
-  document.getElementById("results").innerHTML = charactersHTML
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
+  const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
+
+  if(newCharactersFiltered){
+    const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered))
+    document.getElementById("results").innerHTML = charactersHTML
+  } else{
+    const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters))
+    document.getElementById("results").innerHTML = charactersHTML
+  }
 }
 
 sortZBtn.onclick = () => {
-  console.log('Ordename z - a')
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
+  const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
+
+  if(newCharactersFiltered){
+    const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered).reverse())
+    document.getElementById("results").innerHTML = charactersHTML
+  } else {
+    const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse())
+    document.getElementById("results").innerHTML = charactersHTML
+  }
+}
+
+/* Filter function */
+const filterGryffindorBtn = document.querySelector('#gryffindor');
+const filterSlytherinBtn = document.querySelector('#slytherin');
+const filterHufflepuffBtn = document.querySelector('#hufflepuff');
+const filterRavenclawBtn = document.querySelector('#ravenclaw');
+const filterHouseUndefinedBtn = document.querySelector('#houseUndefined');
+
+function filterCharacters (charactersList, filterParam){
+  const newCharactersFiltered = charactersList.filter(character => {
+    return character.house === filterParam
+  })
+  window.localStorage.setItem('CharacterFiltered', JSON.stringify(newCharactersFiltered));
+  return newCharactersFiltered
+}
+
+function setFilterCharacters (filterparam){
+  const param = filterparam
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
-  const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse());
+  const filteredCharacters = filterCharacters(newCharacters, param)
+  let sortedCharacters = filteredCharacters
+  console.log(sortABtn.checked, sortZBtn.checked)
+  if(sortABtn.checked){
+    sortedCharacters = sortingCharacters(sortedCharacters)
+  }else if(sortZBtn.checked){
+    sortedCharacters = sortingCharacters(sortedCharacters).reverse()
+  }
+  const charactersHTML = createCharactersHtml(sortedCharacters);
+  document.getElementById("results").innerHTML = charactersHTML
+}
+
+filterGryffindorBtn.onclick = () => {
+  const filterParam = 'Gryffindor'
+  setFilterCharacters(filterParam)
+}
+
+filterSlytherinBtn.onclick = () => {
+  const filterParam = 'Slytherin'
+  setFilterCharacters(filterParam)
+}
+
+filterHufflepuffBtn.onclick = () => {
+  const filterParam = 'Hufflepuff'
+  setFilterCharacters(filterParam)
+}
+
+filterRavenclawBtn.onclick = () => {
+  const filterParam = 'Ravenclaw'
+  setFilterCharacters(filterParam)
+}
+
+filterHouseUndefinedBtn.onclick = () => {
+  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+
+  let sortedCharacters = newCharacters
+  if(sortABtn.checked){
+    sortedCharacters = sortingCharacters(sortedCharacters)
+  }else if(sortZBtn.checked){
+    sortedCharacters = sortingCharacters(sortedCharacters).reverse()
+  }
+
+  window.localStorage.removeItem('CharacterFiltered')
+  const charactersHTML = createCharactersHtml(newCharacters);
   document.getElementById("results").innerHTML = charactersHTML
 }
