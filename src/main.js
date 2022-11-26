@@ -170,14 +170,12 @@ filterRavenclawBtn.onclick = () => {
 filterHouseUndefinedBtn.onclick = () => {
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
 
-  /* const filteredCharacters = filterCharacters(newCharacters, param)
-  let sortedCharacters = filteredCharacters
-  console.log(sortABtn.checked, sortZBtn.checked)
+  let sortedCharacters = newCharacters
   if(sortABtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters)
   }else if(sortZBtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters).reverse()
-  } */
+  }
 
   window.localStorage.removeItem('CharacterFiltered')
   const charactersHTML = createCharactersHtml(newCharacters);
