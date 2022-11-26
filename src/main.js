@@ -13,7 +13,7 @@ const createCharactersHtml = (characters) =>{
   })
   return characterName
 }
-const characterNotFound = (characters) => {
+const characterNotFound = () => {
   let characterDataNotFound =
     `<div class="characterNotFound">
       <h3 class="notFound">No results for this search</h3>
@@ -52,31 +52,37 @@ inputs.forEach(input =>{
 // esconder los ... y mostrar characters
 const dotButton = document.getElementById("dotsButton");
 
-dotButton.addEventListener("click", () => {
-  document.getElementById("dotsButton").hidden = true;
-  document.getElementById("charactersButton").classList.remove("inactive");
-})
+if (dotButton){
+  dotButton.addEventListener("click", () => {
+    document.getElementById("dotsButton").hidden = true;
+    document.getElementById("charactersButton").classList.remove("inactive");
+  })
+}
 
 // al hacer click en characters, se esconde home y se muestra el nav con los personajes (nombre e imagen)
 const characterButton = document.getElementById("charactersButton");
 
-characterButton.addEventListener("click", async() => {
-  document.getElementById("home").hidden = true;
-  document.getElementById("navSearcher").classList.remove("inactive");
-  let data = await getAllCharacters();
-  window.localStorage.setItem('Character', JSON.stringify(data));
-  const charactersHTML = createCharactersHtml(data);
-  document.getElementById("results").innerHTML = charactersHTML
-})
+if (characterButton){
+  characterButton.addEventListener("click", async() => {
+    document.getElementById("home").hidden = true;
+    document.getElementById("navSearcher").classList.remove("inactive");
+    let data = await getAllCharacters();
+    window.localStorage.setItem('Character', JSON.stringify(data));
+    const charactersHTML = createCharactersHtml(data);
+    document.getElementById("results").innerHTML = charactersHTML
+  })
+}
 
 // recargar página una vez que se presiona el logo y va a home
 const logoButtonNav = document.getElementById("logoButtonNav");
 
-logoButtonNav.addEventListener("click", () => {
-  window.location.reload(logoButtonNav)
-  window.localStorage.removeItem('Character')
-  window.localStorage.removeItem('CharacterFiltered')
-})
+if (logoButtonNav){
+  logoButtonNav.addEventListener("click", () => {
+    window.location.reload(logoButtonNav)
+    window.localStorage.removeItem('Character')
+    window.localStorage.removeItem('CharacterFiltered')
+  })
+}
 
 /* Sort function */
 const sortABtn = document.querySelector('#a-z');
@@ -137,7 +143,7 @@ function setFilterCharacters (filterparam){
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
   const filteredCharacters = filterCharacters(newCharacters, param)
   let sortedCharacters = filteredCharacters
-  console.log(sortABtn.checked, sortZBtn.checked)
+  // console.log(sortABtn.checked, sortZBtn.checked)
   if(sortABtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters)
   }else if(sortZBtn.checked){
@@ -174,7 +180,7 @@ filterHouseUndefinedBtn.onclick = () => {
   if(sortABtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters)
   }else if(sortZBtn.checked){
-    sortedCharacters = sortingCharacters(sortedCharacters).reverse()
+    sortingCharacters(sortedCharacters).reverse()
   }
 
   window.localStorage.removeItem('CharacterFiltered')
