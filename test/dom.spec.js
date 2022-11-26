@@ -1,3 +1,5 @@
+//npm test dom.spec.js
+
 test("ocultar dotButton y mostrar characterButton", () => {
     document.body.innerHTML =
     `<button class="dotsButton" id="dotsButton" >...</button>;
