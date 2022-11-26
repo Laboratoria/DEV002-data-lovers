@@ -4,7 +4,7 @@ import {  } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 
 
-  
+// Funciones para visualizar las secciones del html: 
  document.getElementById("btnPokemones").addEventListener("click", () => {
     document.querySelector('.paginaPrincipal').style.display= 'none';
     document.querySelector('.paginaEstadistica').style.display= 'none';
@@ -20,22 +20,25 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
     document.querySelector('.filtrosBusqueda').style.display= 'none'
 });
 
-//console.log(example, data);
 
-//Tarjetas de pokemones
-const seccion = document.getElementById('seccionPokemones');
-const contenedor = document.createElement('div');
+  const seccion = document.getElementById('seccionPokemones');
+  seccion.setAttribute('class', 'paginaPokemones');
+ const contenedorPadre= document.createElement('div');
+ contenedorPadre.setAttribute('class','contenedorP');
+ const contenedor = document.createElement('div');
 contenedor.setAttribute('class','contenedorTarjetas'); 
 const filtros = document.createElement('div');
 filtros.setAttribute('class','contenedorFiltros'); 
+contenedorPadre.appendChild(contenedor);     
+contenedorPadre.appendChild(filtros);
+seccion.appendChild(contenedorPadre);
+
+
 
 const mostrar = (pokemones)=>{
     pokemones.forEach(pokemon => {
-
-        
-        seccion.appendChild(contenedor);
-        seccion.setAttribute('class', 'paginaPokemones');
-        seccion.appendChild(filtros);
+         
+            
        contenedor.innerHTML+=  
        
        ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
@@ -47,7 +50,7 @@ const mostrar = (pokemones)=>{
                                  <h3 id="generacionPokemon" class="textoh3"> Generation:${pokemon.generation.name} </h3>
                                  </div>      
                             </div>
-                                 
+                            
                                  <div class="descripcionTarjeta">
                                    <p id="heightPokemon" class="sizeP"> height: ${pokemon.size.height}</p>
                                    <p id="weightPokemon" class="sizeP"> weight: ${pokemon.size.weight}</p>
@@ -61,7 +64,7 @@ const mostrar = (pokemones)=>{
                                                       
                                  </div>  `                        
      
-
+    
     });
 } 
  mostrar(pokemon.pokemon);
