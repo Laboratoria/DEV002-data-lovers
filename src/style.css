@@ -5,9 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body{
+
     padding: 20px;
     margin: 0;
-    background: rgb(242, 240, 245);
+    background: white;
     min-width: 100%; 
     min-height: 100%;    
     
@@ -113,9 +114,9 @@ body{
     order: 2;
    }
 
-
-
 .tarjetaPokemones{
+   background: linear-gradient(90deg, #C9D6FF,#E2E2E2);  
+  
     display: flex;
     padding: 15px;
     flex-direction: column;
@@ -124,15 +125,15 @@ body{
     justify-self: stretch;
     align-self: stretch;
     border-radius: 7px;
-    border: solid 2px black;
     box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
 } 
 
 .nombreP {
+    color: #343b59;
     margin:0px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: black;    
+    font-size: 30px;
+   /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
     text-transform: capitalize;
 }
 
