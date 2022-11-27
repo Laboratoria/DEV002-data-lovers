@@ -31,7 +31,13 @@ computeStats(data): la función compute o calcular, nos permitirá hacer cálcul
  data proporcionada.*/
 
   export const buscarPorInput = (e) => {
-  const textoIngresado = e.target.value;//para mostrar el valor del imput
+  const textoIngresado = e.target.value;//para obtener el valor del imput
   const pokemonesFiltrados = pokemones.filter(pokemon => pokemon.name.includes(textoIngresado))
   visualizarPokemones(pokemonesFiltrados)
 }
+
+export const buscarPorTipo=(e)=>{
+  const tipoIngresado = e.target.value;//para obtener el tipo seleccionado
+  const pokemonesFiltradosPorTipo = pokemones.filter(pokemon => pokemon.type.includes(tipoIngresado))
+  visualizarPokemones(pokemonesFiltradosPorTipo)
+};
