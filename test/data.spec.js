@@ -1,5 +1,5 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
-import { example, anotherExample } from '../src/data.js';
+import { example, anotherExample, suma } from '../src/data.js';
 
 
 describe('example', () => {
@@ -22,3 +22,11 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+
+
+//ejemplo del test de suma planteado por nosotras
+describe('suma', () => {
+  it('sumar 1 + 2 es igual a 3', () => {
+  expect(suma(1, 2)).toBe(3);
+});
+})

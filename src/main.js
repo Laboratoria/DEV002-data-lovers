@@ -2,34 +2,34 @@
  registro de manejadores de eventos (event listeners o event handlers), ....*/
 
 //IMPORTACIÓN DE MÓDULOS
-// import { example } from './data.js';
-//import pokemon from './data/pokemon/pokemon.js';
-import data from './data/pokemon/pokemon.js';
+import { buscarPorInput, buscarPorTipo } from './data.js';
+import { visualizarPokemones } from './js/componentes.js';
+import { pokemones } from './js/store.js';
 
-const pokemones = data.pokemon;
+//llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi página principal
+visualizarPokemones(pokemones);
+
+//funcion buscar por imput de texto de nombre del pokemon
+const inputSearch = document.getElementById('searchName')
+inputSearch.addEventListener('input', buscarPorInput)
+
+//funcion buscar por imput select de tipo del pokemon
+const typeSearch= document.getElementById('select-tipos')
+typeSearch.addEventListener("change",buscarPorTipo)
 
 
-//DECLARACIÓN DE VARIABLES
-//const pokemonNames=pokemon.map(pokemon.name);
 
-const listadoPokemones = document.getElementById('listado-pokemones')
-// console.log(listadoPokemones)
-// const htmlPrueba=`<h2>pokemonesV2</h2>`;//etiqueta html que se va a incrustar al contenedor ListadoPokemones 
-// listadoPokemones.innerHTML=htmlPrueba
 
-let htmlContainerPokemones = '';
-pokemones.forEach(poke => {
-  //incrustando la tarjeta pokemon--item con javaScript a html usando InnerHTML
-  const pokemoncito = `
-   <div class="pokemon-item">    
-     <h3>el pokemon se llama ${poke.name} ${poke.num} </h3>
-     <img  src="${poke.img}" >
 
-   </div>
-  `;
-  // console.log(pokemoncito)
-  htmlContainerPokemones = htmlContainerPokemones + pokemoncito
 
-});
-// console.log(htmlContainerPokemones);
-listadoPokemones.innerHTML = htmlContainerPokemones  //variable que incrusta el listado de pokemones
+/*
+const tiposPokemones = pokemones.map(pokemon=>pokemon.type);
+//console.log(tiposPokemones)
+tiposPokemones.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
+console.log(tiposPokemones)
+for (let i=0;i<251;i++)
+{
+    if(tipos.value)
+    const pokemonesTipoBug=pokemones.filter(pokemon=>pokemon.type=='bug')
+}
+*/
