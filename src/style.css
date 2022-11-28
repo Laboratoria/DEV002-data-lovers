@@ -24,20 +24,20 @@ header{
 }
 
 header .logo{
-    width: 10%;
+    width: 80%;
     height: auto;
-    object-fit: cover; /*adapta la imagen a mi contenedor*/
+    object-fit: fixed; /*adapta la imagen a mi contenedor*/
 }
 
 
 body {
 
-    font-family: "Inter", sans-serif;
-    color: #334155;
+    font-family: 'Poppins', sans-serif;
+    color: #5A6170;
     line-height: 1.5;
     font-size: 0.875rem;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.5)),url('img/fondo.png');
+    background-color: #dadfea;
    /* background-image: url('img/fondo.png');*/
     background-position: center center;
     /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
