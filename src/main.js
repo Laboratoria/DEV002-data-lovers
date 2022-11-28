@@ -35,7 +35,7 @@ inputs.forEach(input =>{
       let data = await getAllCharacters();
       //filter(función de arreglo) necesita una condición que se entrega con return. la condición entrega true o false
       let result = data.filter((characters) => {
-        return characters.name.toLowerCase().includes(input.value)
+        return characters.name.toLowerCase().includes(input.value.toLowerCase())
       })
       if (result == false){
         const dataNotFound = characterNotFound(result);
