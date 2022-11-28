@@ -53,47 +53,6 @@ describe('sortingCharacter', () => {
 //     expect(navSection.classList.contains("inactive")).toBe(true);
 // });
 
-// describe('window.location', () => {
-//     const { location } = window;
-
-//     beforeAll(() => {
-//         delete window.location;
-//         window.location = { reload: jest.fn() };
-//     });
-
-//     afterAll(() => {
-//         window.location = location;
-//     });
-
-//     it("mocks `reload`", () => {
-//         expect(jest.isMockFunction(window.location.reload)).toBe(true);
-//     });
-
-//     it("redirigir a home", () => {
-//         document.body.innerHTML =
-//             `<button id="logoButtonNav">
-//                 <img src="assets/logo-gold.png" alt="Harry's Cabinet">
-//             </button>`
-//         require("../src/main");
-
-//         const navBtn = document.getElementById("logoButtonNav")
-//         navBtn.dispatchEvent(new Event("click"))
-//         //window.location.reload();
-//         expect(window.location.reload).toBeCalledTimes(1);
-//     });
-// });
-
-// test("cambiar html results por character", () => {
-//     const { createCharactersHtml } = require("../src/main");
-
-//     const inputs = document.querySelectorAll(".inputSearch")
-//     inputs.dispatchEvent(new Event("onclick", "keyCode === 13"))
-//     const resultSection = document.getElementById("results")
-
-//     expect(resultSection).toBe(createCharactersHtml);
-// });
-
-
 //describe, en lugar de test ayuda a agrupar distintos test relacionados
 //typeof no da tipo de elemento en html, si no que en JS
 //hay que decirle a jest que se corre web para cambiar de ambiente --env=jsdom
