@@ -18,4 +18,4 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
     listadoPokemones.innerHTML = htmlContainerPokemones  //variable que incrusta el listado de pokemones
   }
   
-  
+    

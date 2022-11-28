@@ -22,6 +22,10 @@ typeSearch.addEventListener("change",buscarPorTipo)
 
 
 
+
+
+
+
 /*
 const tiposPokemones = pokemones.map(pokemon=>pokemon.type);
 //console.log(tiposPokemones)
