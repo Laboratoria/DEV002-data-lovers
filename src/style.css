@@ -164,6 +164,7 @@ main .home .home-searcher .home-searcher-input .search-input button{
 background: none;
 border: none;
 position: absolute;
+cursor: pointer;
 width: 10%;
 font-size: 2.5rem;
 height: auto;

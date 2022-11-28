@@ -1,7 +1,9 @@
-import {getAllCharacters} from "./data.js";
+import {getAllCharacters, filterCharactersFun, sortingCharacters} from "./data.js";
 
 // manejo inputs
 const inputs = document.querySelectorAll(".inputSearch");
+const searchButtons = document.querySelectorAll("#searchButtonNav, #searchButtonHome");
+
 const createCharactersHtml = (characters) =>{
   let characterName = "";
   characters.forEach(character => {
@@ -24,7 +26,6 @@ const characterNotFound = () => {
 inputs.forEach(input =>{
   input.addEventListener("keydown", async (event) =>{
     if (event.keyCode === 13){
-
       /* Reseting sort options */
       const sortButtons = document.getElementsByName('sort-characters');
       sortButtons.forEach(button => button.checked = false);
@@ -45,6 +46,32 @@ inputs.forEach(input =>{
         const charactersHTML = createCharactersHtml(result);
         document.getElementById("results").innerHTML = charactersHTML
       }
+    }
+  })
+})
+
+searchButtons.forEach(btn =>{
+  btn.addEventListener("click", async () => {
+    const inputValue = document.getElementById("home").hidden ? inputs[1].value : inputs[0].value
+    /* Reseting sort options */
+    const sortButtons = document.getElementsByName('sort-characters');
+    sortButtons.forEach(button => button.checked = false);
+
+    document.getElementById("home").hidden = true;
+    document.getElementById("navSearcher").classList.remove("inactive");
+    //data contiene el resultado de la promesa
+    let data = await getAllCharacters();
+    //filter(función de arreglo) necesita una condición que se entrega con return. la condición entrega true o false
+    let result = data.filter((characters) => {
+      return characters.name.toLowerCase().includes(inputValue.toLowerCase())
+    })
+    if (result == false){
+      const dataNotFound = characterNotFound(result);
+      document.getElementById("results").innerHTML = dataNotFound
+    } else {
+      window.localStorage.setItem('Character', JSON.stringify(result));
+      const charactersHTML = createCharactersHtml(result);
+      document.getElementById("results").innerHTML = charactersHTML
     }
   })
 })
@@ -88,15 +115,6 @@ if (logoButtonNav){
 const sortABtn = document.querySelector('#a-z');
 const sortZBtn = document.querySelector('#z-a');
 
-export function sortingCharacters (charactersList){
-  const newCharactersSorted = charactersList.sort((a, b) => {
-    if(a.name < b.name) { return -1; }
-    if(a.name > b.name) { return 1; }
-    return 0
-  })
-  return newCharactersSorted
-}
-
 if (sortABtn){
   sortABtn.onclick = () => {
     const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
@@ -134,10 +152,8 @@ const filterHufflepuffBtn = document.querySelector('#hufflepuff');
 const filterRavenclawBtn = document.querySelector('#ravenclaw');
 const filterHouseUndefinedBtn = document.querySelector('#houseUndefined');
 
-function filterCharacters (charactersList, filterParam){
-  const newCharactersFiltered = charactersList.filter(character => {
-    return character.house === filterParam
-  })
+function filterCharacters(newCharacters, param){
+  const newCharactersFiltered = filterCharactersFun(newCharacters, param)
   window.localStorage.setItem('CharacterFiltered', JSON.stringify(newCharactersFiltered));
   return newCharactersFiltered
 }
