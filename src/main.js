@@ -13,7 +13,7 @@ const createCharactersHtml = (characters) =>{
   })
   return characterName
 }
-const characterNotFound = (characters) => {
+const characterNotFound = () => {
   let characterDataNotFound =
     `<div class="characterNotFound">
       <h3 class="notFound">No results for this search</h3>
@@ -52,31 +52,37 @@ inputs.forEach(input =>{
 // esconder los ... y mostrar characters
 const dotButton = document.getElementById("dotsButton");
 
-dotButton.addEventListener("click", () => {
-  document.getElementById("dotsButton").hidden = true;
-  document.getElementById("charactersButton").classList.remove("inactive");
-})
+if (dotButton){
+  dotButton.addEventListener("click", () => {
+    document.getElementById("dotsButton").hidden = true;
+    document.getElementById("charactersButton").classList.remove("inactive");
+  })
+}
 
 // al hacer click en characters, se esconde home y se muestra el nav con los personajes (nombre e imagen)
 const characterButton = document.getElementById("charactersButton");
 
-characterButton.addEventListener("click", async() => {
-  document.getElementById("home").hidden = true;
-  document.getElementById("navSearcher").classList.remove("inactive");
-  let data = await getAllCharacters();
-  window.localStorage.setItem('Character', JSON.stringify(data));
-  const charactersHTML = createCharactersHtml(data);
-  document.getElementById("results").innerHTML = charactersHTML
-})
+if (characterButton){
+  characterButton.addEventListener("click", async() => {
+    document.getElementById("home").hidden = true;
+    document.getElementById("navSearcher").classList.remove("inactive");
+    let data = await getAllCharacters();
+    window.localStorage.setItem('Character', JSON.stringify(data));
+    const charactersHTML = createCharactersHtml(data);
+    document.getElementById("results").innerHTML = charactersHTML
+  })
+}
 
 // recargar página una vez que se presiona el logo y va a home
 const logoButtonNav = document.getElementById("logoButtonNav");
 
-logoButtonNav.addEventListener("click", () => {
-  window.location.reload(logoButtonNav)
-  window.localStorage.removeItem('Character')
-  window.localStorage.removeItem('CharacterFiltered')
-})
+if (logoButtonNav){
+  logoButtonNav.addEventListener("click", () => {
+    window.location.reload(logoButtonNav)
+    window.localStorage.removeItem('Character')
+    window.localStorage.removeItem('CharacterFiltered')
+  })
+}
 
 /* Sort function */
 const sortABtn = document.querySelector('#a-z');
@@ -91,29 +97,33 @@ export function sortingCharacters (charactersList){
   return newCharactersSorted
 }
 
-sortABtn.onclick = () => {
-  const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
-  const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
+if (sortABtn){
+  sortABtn.onclick = () => {
+    const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
+    const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
 
-  if(newCharactersFiltered){
-    const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered))
-    document.getElementById("results").innerHTML = charactersHTML
-  } else{
-    const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters))
-    document.getElementById("results").innerHTML = charactersHTML
+    if(newCharactersFiltered){
+      const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered))
+      document.getElementById("results").innerHTML = charactersHTML
+    } else{
+      const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters))
+      document.getElementById("results").innerHTML = charactersHTML
+    }
   }
 }
 
-sortZBtn.onclick = () => {
-  const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
-  const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
+if (sortZBtn) {
+  sortZBtn.onclick = () => {
+    const newCharacters = JSON.parse(window.localStorage.getItem('Character'))
+    const newCharactersFiltered = JSON.parse(window.localStorage.getItem('CharacterFiltered'))
 
-  if(newCharactersFiltered){
-    const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered).reverse())
-    document.getElementById("results").innerHTML = charactersHTML
-  } else {
-    const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse())
-    document.getElementById("results").innerHTML = charactersHTML
+    if(newCharactersFiltered){
+      const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered).reverse())
+      document.getElementById("results").innerHTML = charactersHTML
+    } else {
+      const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse())
+      document.getElementById("results").innerHTML = charactersHTML
+    }
   }
 }
 
@@ -137,7 +147,7 @@ function setFilterCharacters (filterparam){
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
   const filteredCharacters = filterCharacters(newCharacters, param)
   let sortedCharacters = filteredCharacters
-  console.log(sortABtn.checked, sortZBtn.checked)
+  // console.log(sortABtn.checked, sortZBtn.checked)
   if(sortABtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters)
   }else if(sortZBtn.checked){
@@ -147,37 +157,47 @@ function setFilterCharacters (filterparam){
   document.getElementById("results").innerHTML = charactersHTML
 }
 
-filterGryffindorBtn.onclick = () => {
-  const filterParam = 'Gryffindor'
-  setFilterCharacters(filterParam)
-}
-
-filterSlytherinBtn.onclick = () => {
-  const filterParam = 'Slytherin'
-  setFilterCharacters(filterParam)
-}
-
-filterHufflepuffBtn.onclick = () => {
-  const filterParam = 'Hufflepuff'
-  setFilterCharacters(filterParam)
-}
-
-filterRavenclawBtn.onclick = () => {
-  const filterParam = 'Ravenclaw'
-  setFilterCharacters(filterParam)
-}
-
-filterHouseUndefinedBtn.onclick = () => {
-  const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
-
-  let sortedCharacters = newCharacters
-  if(sortABtn.checked){
-    sortedCharacters = sortingCharacters(sortedCharacters)
-  }else if(sortZBtn.checked){
-    sortedCharacters = sortingCharacters(sortedCharacters).reverse()
+if (filterGryffindorBtn){
+  filterGryffindorBtn.onclick = () => {
+    const filterParam = 'Gryffindor'
+    setFilterCharacters(filterParam)
   }
+}
 
-  window.localStorage.removeItem('CharacterFiltered')
-  const charactersHTML = createCharactersHtml(newCharacters);
-  document.getElementById("results").innerHTML = charactersHTML
+if (filterSlytherinBtn){
+  filterSlytherinBtn.onclick = () => {
+    const filterParam = 'Slytherin'
+    setFilterCharacters(filterParam)
+  }
+}
+
+if (filterHufflepuffBtn){
+  filterHufflepuffBtn.onclick = () => {
+    const filterParam = 'Hufflepuff'
+    setFilterCharacters(filterParam)
+  }
+}
+
+if (filterRavenclawBtn){
+  filterRavenclawBtn.onclick = () => {
+    const filterParam = 'Ravenclaw'
+    setFilterCharacters(filterParam)
+  }
+}
+
+if (filterHouseUndefinedBtn){
+  filterHouseUndefinedBtn.onclick = () => {
+    const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
+
+    let sortedCharacters = newCharacters
+    if(sortABtn.checked){
+      sortedCharacters = sortingCharacters(sortedCharacters)
+    }else if(sortZBtn.checked){
+      sortingCharacters(sortedCharacters).reverse()
+    }
+
+    window.localStorage.removeItem('CharacterFiltered')
+    const charactersHTML = createCharactersHtml(newCharacters);
+    document.getElementById("results").innerHTML = charactersHTML
+  }
 }

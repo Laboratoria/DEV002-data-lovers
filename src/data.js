@@ -7,6 +7,6 @@ export function getAllCharacters () {
 		return data;
 		})
 		.catch((err) => {
-			console.warn("Something went wrong.", err);
+		return err;
 		})
 	}

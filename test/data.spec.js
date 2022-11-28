@@ -1,44 +1,18 @@
-//import {name of the function} from "./data.js";
+//npm test data.spec.js
 
-// test("should get the API info", () =>{
-//     expect(getCharactersInfo).
+import { getAllCharacters } from "../src/data"
+import data from "../src/data_api/data.json"
 
-// });
+global.fetch = jest.fn(() =>
+    Promise.resolve({
+    json: () => Promise.resolve(data),
+    })
+);
 
-//crear mock para probar getAllCharacters sin la API
-//hacer test código async con API
-//matchers (isEqual, toBe (primit), lessThan)
-// devolucion API payload
+it("prueba de retorno de información al llamado de la API", async () =>{
+    const dataAPI = await getAllCharacters()
+    expect(dataAPI[0]["name"]).toBe("Harry Potter")
+    expect(fetch).toHaveBeenCalledTimes(1)
+})
 
-//test("should get the characters name and theirs image", () =>{});
-
-//import {example} from '../src/data.js';
-
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
-
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
-
-import sortingCharacters from '../src/main';
-
-describe('sortingCharacter', () => {
-    it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
-        expect(sortingCharacters([{name: 'Harry'},{name: 'Barry'}])).toBe([{name: 'Barry'},{name: 'Harry'}]);
-    });
-});
+//  si se llama a la api y retorna info mayor a 0 es true

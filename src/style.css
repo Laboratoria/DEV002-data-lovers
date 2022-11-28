@@ -188,13 +188,14 @@ main .home .home-searcher .home-more-button .dotsButton {
 }
 
 main .home .home-searcher .home-more-button .charactersButton {
-  width: 30%;
+  width: 20%;
   font-size: 4vw;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
   background: none;
   border: none;
   color: var(--blue);
   cursor: pointer;
-  margin-top: 3rem;
 }
 
 main .home .home-searcher .home-more-button button:hover{
