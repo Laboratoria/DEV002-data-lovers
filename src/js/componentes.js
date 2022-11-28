@@ -19,3 +19,4 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
   }
   
     
+
