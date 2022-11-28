@@ -8,11 +8,12 @@ const createCharactersHtml = (characters) =>{
     characterName +=
     `<div class="character">
       <img class="character-image" src="${character.image || "assets/user.png"}"/>
-      <h3 class="name">${character.name}</h3>
+      <button class="name">${character.name}</button>
     </div>`
   })
   return characterName
 }
+
 const characterNotFound = () => {
   let characterDataNotFound =
     `<div class="characterNotFound">
@@ -31,6 +32,7 @@ inputs.forEach(input =>{
 
       document.getElementById("home").hidden = true;
       document.getElementById("navSearcher").classList.remove("inactive");
+
       //data contiene el resultado de la promesa
       let data = await getAllCharacters();
       //filter(función de arreglo) necesita una condición que se entrega con return. la condición entrega true o false
@@ -70,6 +72,24 @@ if (characterButton){
     window.localStorage.setItem('Character', JSON.stringify(data));
     const charactersHTML = createCharactersHtml(data);
     document.getElementById("results").innerHTML = charactersHTML
+
+    /* Character Details */
+    const characterDetailsButton = document.querySelectorAll(".name");
+    const searchResultsContainer = document.querySelector("#searchResults");
+    const characterDetailsContainer = document.querySelector('.character-details')
+
+    characterDetailsButton.forEach(button => {
+      button.onclick = (e) => {
+        const characterName = e.target.innerText
+        const characterList = JSON.parse(window.localStorage.getItem("Character"))
+        const characterObject = characterList.find(character => character.name === characterName)
+        console.log(characterObject)
+      }
+    })
+
+/*   characterDetailsContainer.id.remove('#inactive')
+  searchResultsContainer.classList.add('inactive') */
+
   })
 }
 
@@ -147,7 +167,7 @@ function setFilterCharacters (filterparam){
   const newCharacters = JSON.parse(window.localStorage.getItem('Character'));
   const filteredCharacters = filterCharacters(newCharacters, param)
   let sortedCharacters = filteredCharacters
-  // console.log(sortABtn.checked, sortZBtn.checked)
+
   if(sortABtn.checked){
     sortedCharacters = sortingCharacters(sortedCharacters)
   }else if(sortZBtn.checked){
@@ -201,3 +221,5 @@ if (filterHouseUndefinedBtn){
     document.getElementById("results").innerHTML = charactersHTML
   }
 }
+
+

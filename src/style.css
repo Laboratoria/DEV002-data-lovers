@@ -62,6 +62,15 @@ body{
   overflow-x: hidden;
 }
 
+ /* inactive components */
+#inactive{
+  display: none;
+}
+
+.inactive{
+  display: none;
+}
+
 /*Home*/
 
 main{
@@ -489,7 +498,6 @@ main .search-results .results .character .character-image {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 main .search-results .results .character .character-image:hover{
@@ -504,6 +512,8 @@ main .search-results .results .character .name{
   font-weight: 400;
   cursor: pointer;
   text-align: center;
+  background: none;
+  border: none;
 }
 
 main .search-results .results .character .name:hover{
@@ -525,9 +535,36 @@ main .search-results .results .characterNotFound .notFound {
   color: var(--red);
 }
 
- /* inactive components */
-.inactive{
-  display: none;
+main .characters-details{
+  background-color: #fafafa;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5rem 5rem 0 0;
+  box-shadow: 0px 8px 25px var(--gray);
+  flex-direction: column;
+  align-items: center;
+}
+
+main .characters-details .close-character-details{
+  width: 100vw;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+main .characters-details .close-character-details button{
+  color: var(--gray);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 5%;
+  font-size: 5vw;
 }
 
  /* Responsive Design */
