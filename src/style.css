@@ -5,9 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body{
+    
+
     padding: 20px;
     margin: 0;
-    background: rgb(242, 240, 245);
+    background: white;
     min-width: 100%; 
     min-height: 100%;    
     
@@ -89,49 +91,59 @@ body{
 
 /* Estilos pagina pokemones*/ 
 .paginaPokemones{
+    width: 100%;
+    height: 100%;
+   display: none;
+}
+.contenedorP{
+    background-image: url(img/30090587.jpg);
     display: flex;
     width: 100%;
     height: 100%;
-    display: none;
 }
-
-.contenedorTarjetas{
-    width: max-content;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    order: 2;
-   }
-
 .contenedorFiltros{
     background-color: blue;
     order: 1;
     width: 250px;
-    height: 250px;
+    height: 600px;
+    margin-right: 15px;
 }
+.contenedorTarjetas{
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    order: 2;
+   }
 
 .tarjetaPokemones{
+   background: linear-gradient(90deg, #C9D6FF,#E2E2E2);  
+  
     display: flex;
     padding: 15px;
     flex-direction: column;
-    width: min-content;
-    height: 300px;
+    /*width: min-content;
+    height: 300px*/
+    justify-self: stretch;
+    align-self: stretch;
     border-radius: 7px;
-    border: solid 2px black;
     box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
 } 
 
 .nombreP {
+    color: #343b59;
+    margin:0px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: black;    
+    font-size: 30px;
+   /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
     text-transform: capitalize;
 }
 
 .textoh3, .sizeP {
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
-        color: black;    
+        margin: 7px;
+        color: rgb(16, 20, 49);    
         text-transform: capitalize;
 }
 
@@ -139,14 +151,9 @@ body{
     display: flex;
 }
 
-
-.sizeP, .nombreP, .textoh3{
-    margin:0px;
-} 
-
 .imgPokemon{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     transition: transform 0.8s ease;
     transform-style: preserve-3d;
 }
