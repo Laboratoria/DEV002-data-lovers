@@ -33,6 +33,13 @@ contenedorPadre.appendChild(contenedor);
 contenedorPadre.appendChild(filtros);
 seccion.appendChild(contenedorPadre);
 
+// const tipoEmoticon= {
+
+//   grass:'😉',
+//   water:'💖',
+//   poison:'🦢',
+
+// };
 
 
 const mostrar = (pokemones)=>{
@@ -68,4 +75,6 @@ const mostrar = (pokemones)=>{
     });
 } 
  mostrar(pokemon.pokemon);
+ // Filtrar por tipo:
+ addEventListener
 
