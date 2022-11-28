@@ -42,11 +42,20 @@
       <option value="steel">Steel</option>
       <option value="water">Water</option>
     </select>
-
 <!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
  <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
 <div id="listado-pokemones"></div> <!-- (Padre) será rellenado por las tarjetas de los pokemones-->
   </div>
+
+  <div class="modal" id="modalAdd">
+    <div class="modal-container">
+      <div class="close-modal" id="botonCloseModal">X</div>
+      <h2>Pokemon</h2>
+    </div>
+  </div>
+
+
+
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>

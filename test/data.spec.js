@@ -1,5 +1,5 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
-import { example, anotherExample, suma } from '../src/data.js';
+import { example, anotherExample, suma, buscarPorInput, buscarPorTipo } from '../src/data.js';
 
 
 describe('example', () => {

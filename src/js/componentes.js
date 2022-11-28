@@ -6,7 +6,7 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
     arrayPokemones.forEach(poke => {
       //incrustando la tarjeta pokemon--item con javaScript a html usando InnerHTML
       const pokemoncito = `
-       <div class="pokemon-item">    
+       <div class="pokemon-item" id="pokemonItem">    
          <h3>el pokemon se llama ${poke.name} ${poke.num} </h3>
          <img  src="${poke.img}" >
        </div>
@@ -18,5 +18,12 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
     listadoPokemones.innerHTML = htmlContainerPokemones  //variable que incrusta el listado de pokemones
   }
   
-    
+ export const visualizarModalPokemon = (modalPokemon) => { 
+  const itemPokemon = document.getElementById('pokemonItem')
+  const openModal = () => {
+    modalAdd.style.display = 'flex';
+
+  }
+  
+  }
 

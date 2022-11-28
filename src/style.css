@@ -80,3 +80,51 @@ outline: none;
     text-align: center;
 }
 
+.modal {
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+}
+
+.modal-container {
+ /* background-image: url('img/fondo.png');*/
+  background: #f3a8a8;
+  /*background: #fff;*/
+  min-width: 480px;
+  max-width: 98%;
+  min-height: 308px;
+  max-height: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.close-modal {
+  background: red;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
+}

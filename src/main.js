@@ -3,11 +3,18 @@
 
 //IMPORTACIÓN DE MÓDULOS
 import { buscarPorInput, buscarPorTipo } from './data.js';
-import { visualizarPokemones } from './js/componentes.js';
+import { visualizarPokemones, visualizarModalPokemon } from './js/componentes.js';
 import { pokemones } from './js/store.js';
 
 //llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi página principal
 visualizarPokemones(pokemones);
+
+//llamando a la funcion visualizarModalPokemon para mostrar la información específica del pokemon cuando el usuario haga clic a un pokemon-item
+visualizarModalPokemon(pokemones);
+
+//funcion visualizarModalPokemon al hacer clic a un pokemon-item
+const openModal = document.getElementById('pokemonItem')
+openModal.addEventListener('click', visualizarModalPokemon)
 
 //funcion buscar por imput de texto de nombre del pokemon
 const inputSearch = document.getElementById('searchName')
