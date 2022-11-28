@@ -23,8 +23,10 @@ function mostrarHTML(datos){
     let html ='';
          datos.forEach(personaje => {
          console.log(personaje);
-        const {name, house} = personaje;
-        html += `<p> Nombre: ${name} Casa: ${house} </p>`
+            const {name, house, image} = personaje;
+        html += `<p> Nombre: ${name} Casa: ${house}</p>  <img src="">`;
+        html += `<img class='foto' src="${image}">`;
+            
       });
       contenido.innerHTML= html;
 }
