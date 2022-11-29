@@ -46,6 +46,7 @@ inputs.forEach(input =>{
         window.localStorage.setItem('Character', JSON.stringify(result));
         const charactersHTML = createCharactersHtml(result);
         document.getElementById("results").innerHTML = charactersHTML
+        showCharacterDetails()
       }
     }
   })
@@ -64,6 +65,70 @@ if (dotButton){
 // al hacer click en characters, se esconde home y se muestra el nav con los personajes (nombre e imagen)
 const characterButton = document.getElementById("charactersButton");
 
+/* character details */
+function showCharacterDetails(){
+  const characterDetailsButton = document.querySelectorAll(".name");
+  const searchResultsContainer = document.querySelector("#searchResults");
+  const characterDetailsContainer = document.querySelector('.characters-details')
+  const detailsContainer = document.querySelector(".details")
+  const closeDetailsContainer = document.querySelector("#close-details")
+
+  characterDetailsButton.forEach(button => {
+    button.onclick = (e) => {
+      const characterName = e.target.innerText
+      const characterList = JSON.parse(window.localStorage.getItem("Character"))
+      const characterObject = characterList.find(character => character.name === characterName)
+
+      searchResultsContainer.classList.add("inactive")
+      characterDetailsContainer.classList.remove("inactive")
+
+      detailsContainer.innerHTML +=
+      `
+        <div class="character-photo">
+          <img src="${characterObject.image || "assets/user.png"}" alt="character selected photo">
+        </div>
+        <div class="character-principal-details">
+          <span class="details-name">${characterObject.name}</span>
+          <span class="details-birth">${characterObject.dateOfBirth}</span>
+        </div>
+        <div class="character-secondary-details">
+          <div>
+            <span>Alive</span>
+            <p>${characterObject.alive}</p>
+          </div>
+          <div>
+            <span>House</span>
+            <p>${characterObject.house}</p>
+          </div>
+          <div>
+            <span>Species</span>
+            <p>${characterObject.species}</p>
+          </div>
+          <div>
+            <span>Gender</span>
+            <p>${characterObject.gender}</p>
+          </div>
+          <div>
+            <span>Ancestry</span>
+            <p>${characterObject.ancestry}</p>
+          </div>
+          <div>
+            <span>Actor</span>
+            <p>${characterObject.actor}</p>
+          </div>
+        </div>
+      `
+
+      closeDetailsContainer.onclick = () => {
+        searchResultsContainer.classList.remove("inactive")
+        characterDetailsContainer.classList.add("inactive")
+        detailsContainer.innerHTML = ""
+      }
+    }
+  })
+}
+
+
 if (characterButton){
   characterButton.addEventListener("click", async() => {
     document.getElementById("home").hidden = true;
@@ -73,68 +138,7 @@ if (characterButton){
     const charactersHTML = createCharactersHtml(data);
     document.getElementById("results").innerHTML = charactersHTML
 
-    /* Character Details */
-    const characterDetailsButton = document.querySelectorAll(".name");
-    const searchResultsContainer = document.querySelector("#searchResults");
-    const characterDetailsContainer = document.querySelector('.characters-details')
-    const detailsContainer = document.querySelector(".details")
-    const closeDetailsContainer = document.querySelector("#close-details")
-
-    characterDetailsButton.forEach(button => {
-      button.onclick = (e) => {
-        const characterName = e.target.innerText
-        const characterList = JSON.parse(window.localStorage.getItem("Character"))
-        const characterObject = characterList.find(character => character.name === characterName)
-
-        console.log(characterObject)
-
-        searchResultsContainer.classList.add("inactive")
-        characterDetailsContainer.classList.remove("inactive")
-
-        detailsContainer.innerHTML +=
-        `
-          <div class="character-photo">
-            <img src="${characterObject.image || "assets/user.png"}" alt="character selected photo">
-          </div>
-          <div class="character-principal-details">
-            <span class="details-name">${characterObject.name}</span>
-            <span class="details-birth">${characterObject.dateOfBirth}</span>
-          </div>
-          <div class="character-secondary-details">
-            <div>
-              <span>Alive</span>
-              <p>${characterObject.alive}</p>
-            </div>
-            <div>
-              <span>House</span>
-              <p>${characterObject.house}</p>
-            </div>
-            <div>
-              <span>Species</span>
-              <p>${characterObject.species}</p>
-            </div>
-            <div>
-              <span>Gender</span>
-              <p>${characterObject.gender}</p>
-            </div>
-            <div>
-              <span>Ancestry</span>
-              <p>${characterObject.ancestry}</p>
-            </div>
-            <div>
-              <span>Actor</span>
-              <p>${characterObject.actor}</p>
-            </div>
-          </div>
-        `
-
-        closeDetailsContainer.onclick = () => {
-          searchResultsContainer.classList.remove("inactive")
-          characterDetailsContainer.classList.add("inactive")
-          detailsContainer.innerHTML = ""
-        }
-      }
-    })
+    showCharacterDetails()
   })
 }
 
@@ -170,9 +174,11 @@ if (sortABtn){
     if(newCharactersFiltered){
       const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered))
       document.getElementById("results").innerHTML = charactersHTML
+      showCharacterDetails()
     } else{
       const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters))
       document.getElementById("results").innerHTML = charactersHTML
+      showCharacterDetails()
     }
   }
 }
@@ -185,9 +191,11 @@ if (sortZBtn) {
     if(newCharactersFiltered){
       const charactersHTML = createCharactersHtml(sortingCharacters(newCharactersFiltered).reverse())
       document.getElementById("results").innerHTML = charactersHTML
+      showCharacterDetails()
     } else {
       const charactersHTML = createCharactersHtml(sortingCharacters(newCharacters).reverse())
       document.getElementById("results").innerHTML = charactersHTML
+      showCharacterDetails()
     }
   }
 }
@@ -220,6 +228,7 @@ function setFilterCharacters (filterparam){
   }
   const charactersHTML = createCharactersHtml(sortedCharacters);
   document.getElementById("results").innerHTML = charactersHTML
+  showCharacterDetails()
 }
 
 if (filterGryffindorBtn){
