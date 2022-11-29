@@ -163,12 +163,12 @@ JavaScript | HTML | CSS | Jest
 * Prototipo de baja fidelidad
 
         ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/bajaFidelidad1.png)
-        <!-- ![Diseño de baja fidelidad](images/bajaFidelidad1.png) -->
+
+        ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/bajaFidelidad2.png)
+
 
 * Prototipo de alta fidelidad
 
-        AGREGAR IMAGEN
+        ![Diseño de alta fidelidad para movil](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/DA-mobile.png)
 
-## Producto final
-
-        AGREGAR IMAGEN
+        ![Diseño de alta fidelidad para PC](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/DA-desktop.png)
