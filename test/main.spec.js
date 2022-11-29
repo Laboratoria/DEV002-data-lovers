@@ -1,6 +1,6 @@
 //npm test data.spec.js
 
-import { getAllCharacters, sortingCharacters, filterCharactersFun } from "../src/data"
+import { getAllCharacters, sortingCharacters } from "../src/data"
 import data from "../src/data_api/data.json"
 
 // test fetch con mock del mismo y de la API
@@ -21,13 +21,5 @@ describe('sortingCharacter', () => {
     it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
         const result = sortingCharacters([{name: 'Harry'},{name: 'Barry'}])
         expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Barry'},{name: 'Harry'}]));
-    });
-});
-
-// test de filtercharacters
-describe('filtering a character', () => {
-    it(`Debería filtrar a los personajes de Gryffindor [{name: 'Harry', house: 'Gryffindor'}, {name: 'Draco', house: 'Slytherin'}, {name: 'Ron', house: 'Gryffindor'}]`, () => {
-        const result = filterCharactersFun([{name: 'Harry', house: 'Gryffindor'}, {name: 'Draco', house: 'Slytherin'}, {name: 'Ron', house: 'Gryffindor'}], 'Gryffindor')
-        expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Harry', house: 'Gryffindor'}, {name: 'Ron', house: 'Gryffindor'}]));
     });
 });

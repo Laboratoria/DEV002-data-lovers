@@ -2,11 +2,144 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>Harry's Cabinet</title>
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <main>
+      <!--Home-->
+      <section class="home " id="home"> <!--"inactive"-->
+        <section class="home-header">
+          <div class= "home-header-logo">
+            <button id="logoButtonHome">
+              <img src="assets/logo-gold.png" alt="Harry's Cabinet"/>
+            </button>
+          </div>
+          <div class="home-header-slogan">
+            <span>Welcome to our magical space</span>
+          </div>
+        </section>
+        <section class="home-searcher">
+          <div class="home-searcher-input">
+            <div class="search-input">
+              <input type="text" placeholder="Try 'Weasley'" id="search" class="inputSearch">
+              <button id="searchButtonHome">🔍</button>
+            </div>
+          </div>
+          <div class="home-more-button">
+            <button class="dotsButton" id="dotsButton" >...</button>
+            <button class="charactersButton inactive" id="charactersButton" >Characters</button>
+            <button class="charactersButton inactive" id="statusButton" >Dead or Alive?</button>
+          </div>
+        </section>
+      </section>
+
+      <!--nav-->
+      <section class="nav-searcher inactive" id="navSearcher"> <!--"inactive"-->
+        <section class="nav-searcher-top">
+          <div class= "searcher-top-logo">
+            <button id="logoButtonNav">
+              <img src="assets/logo-gold.png" alt="Harry's Cabinet">
+            </button>
+          </div>
+          <div class="searcher-top-bar">
+            <div class="searcher-top-bar-input">
+              <input type="text" placeholder="Try 'Weasley'" id="searchTwo" class="inputSearch"/>
+              <button id="searchButtonNav">🔍</button>
+            </div>
+          </div>
+        </section>
+        <section class="nav-searcher-bottom" id="navSearcherBottom">
+          <div class="searcher-bottom-sort">
+            <button>
+              <img src="./assets/sort.svg" alt="sort button icon"/>
+            </button>
+            <div class="dropdown-menu">
+              <form>
+                <p>Sort by</p>
+                <div class="dropdown-menu-options">
+                  <div class="option">
+                    <input type="radio" name="sort-characters" value="a-z" id="a-z">
+                    <label for="a-z">A - Z</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" name="sort-characters" value="z-a" id="z-a">
+                    <label for="z-a">Z - A</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="searcher-bottom-filter">
+            <button>
+              <img src="./assets/filter.svg" alt="filter button icon"/>
+            </button>
+            <div class="dropdown-filter">
+              <form>
+                <p>Filter by</p>
+                <div class="filter-name-section">
+                  <span>Hogwarts House</span>
+                  <div></div>
+                </div>
+                <div class="dropdown-filter-options">
+                  <div class="options-line">
+                    <div class="option">
+                      <input type="radio" name="filter-characters" value="gryffindor" id="gryffindor">
+                      <label for="gryffindor">Gryffindor</label>
+                    </div>
+                    <div class="option">
+                      <input type="radio" name="filter-characters" value="slytherin" id="slytherin">
+                      <label for="slytherin">Slytherin</label>
+                    </div>
+                  </div>
+                  <div class="options-line">
+                    <div class="option">
+                      <input type="radio" name="filter-characters" value="hufflepuff" id="hufflepuff">
+                      <label for="hufflepuff">Hufflepuff</label>
+                    </div>
+                    <div class="option">
+                      <input type="radio" name="filter-characters" value="ravenclaw" id="ravenclaw">
+                      <label for="ravenclaw">Ravenclaw</label>
+                    </div>
+                  </div>
+                  <div class="options-line last-line">
+                    <div class="option">
+                      <input type="radio" name="filter-characters" value="houseUndefined" id="houseUndefined" checked="true">
+                      <label for="houseUndefined">All</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!--Search results-->
+      <section class="search-results" id="searchResults">
+        <section class="results" id="results">
+        </section>
+      </section>
+
+      <!--Characters details-->
+      <section class="characters-details inactive">
+        <div class="close-character-details">
+          <button id="close-details">x</button>
+        </div>
+        <section class="details">
+        </section>
+      </section>
+
+      <!--Chart-->
+      <section class="chart-section">
+          <!--<section class="status-chart" id="statusChart"></section>-->
+          <canvas class="status-chart" id="statusChart"></canvas>
+      </section>
+
+    </main>
+  <!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js" type="module"></script>
   </body>
 </html>
