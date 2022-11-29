@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filtro = (arr = []) => {
+  return arr.filter((element) => element.house === 'Gryffindor');
 };
 
 export const anotherExample = () => {
