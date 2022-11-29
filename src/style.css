@@ -12,10 +12,12 @@ html {
 
 body{
     background-color: black;
-    background-image: url("./images/wallpaper3.webp");
+    background-image: url("./images/background\ 2.jpeg");
+    
     background-size: cover;
     font-family: 'Harry Potter', sans-serif;   
-    text-align: center;                                        
+    text-align: center; 
+    background-repeat: no-repeat;                                       
 }
 .title {
     width: 50rem;
@@ -46,7 +48,7 @@ h2 {
     gap: 3rem;
 }
 
-img {
+.logos-escuelas {
     width: 20%;
     margin: 1.4%;
     position: relative;
