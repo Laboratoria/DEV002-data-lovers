@@ -5,7 +5,8 @@ import { sortingCharacters } from '../src/main';
 describe('sortingCharacter', () => {
     it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
         const result = sortingCharacters([{name: 'Harry'},{name: 'Barry'}])
-        expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Barry'},{name: 'Harry'}]));
+        expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Barry'},{name: 'Harry'}]))
+        expect(typeof sortingCharacters).toBe('function')
     });
 });
 
