@@ -26,7 +26,7 @@ body {
   background-color: rgba(11, 11, 12, 0.555);
   margin-bottom: 0;
   width: 100%;
-  
+
 }
 
 #logo {
@@ -315,7 +315,7 @@ h3 {
 #template {
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .imagen {
@@ -326,10 +326,10 @@ h3 {
   transform: translateY(-10px);
 }
 
-.btnPrincipal{
+.btnPrincipal {
   display: flex;
   position: relative;
-  top:40px;
+  top: 40px;
   width: 25%;
   height: 9%;
   color: #fff;
@@ -339,7 +339,7 @@ h3 {
   border-radius: 40px;
   border: 2px solid #18031a;
   cursor: pointer;
-  line-height:50%;
+  line-height: 50%;
   text-align: center;
   margin-right: 50px;
   padding: 3% 5%;
