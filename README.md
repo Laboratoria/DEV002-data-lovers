@@ -162,7 +162,8 @@ JavaScript | HTML | CSS | Jest
 
 * Prototipo de baja fidelidad
 
-        ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/src/images/bajaFidelidad1.png)
+        ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/bajaFidelidad1.png)
+        <!-- ![Diseño de baja fidelidad](images/bajaFidelidad1.png) -->
 
 * Prototipo de alta fidelidad
 
