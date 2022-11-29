@@ -76,20 +76,65 @@ if (characterButton){
     /* Character Details */
     const characterDetailsButton = document.querySelectorAll(".name");
     const searchResultsContainer = document.querySelector("#searchResults");
-    const characterDetailsContainer = document.querySelector('.character-details')
+    const characterDetailsContainer = document.querySelector('.characters-details')
+    const detailsContainer = document.querySelector(".details")
+    const closeDetailsContainer = document.querySelector("#close-details")
 
     characterDetailsButton.forEach(button => {
       button.onclick = (e) => {
         const characterName = e.target.innerText
         const characterList = JSON.parse(window.localStorage.getItem("Character"))
         const characterObject = characterList.find(character => character.name === characterName)
+
         console.log(characterObject)
+
+        searchResultsContainer.classList.add("inactive")
+        characterDetailsContainer.classList.remove("inactive")
+
+        detailsContainer.innerHTML +=
+        `
+          <div class="character-photo">
+            <img src="${characterObject.image || "assets/user.png"}" alt="character selected photo">
+          </div>
+          <div class="character-principal-details">
+            <span class="details-name">${characterObject.name}</span>
+            <span class="details-birth">${characterObject.dateOfBirth}</span>
+          </div>
+          <div class="character-secondary-details">
+            <div>
+              <span>Alive</span>
+              <p>${characterObject.alive}</p>
+            </div>
+            <div>
+              <span>House</span>
+              <p>${characterObject.house}</p>
+            </div>
+            <div>
+              <span>Species</span>
+              <p>${characterObject.species}</p>
+            </div>
+            <div>
+              <span>Gender</span>
+              <p>${characterObject.gender}</p>
+            </div>
+            <div>
+              <span>Ancestry</span>
+              <p>${characterObject.ancestry}</p>
+            </div>
+            <div>
+              <span>Actor</span>
+              <p>${characterObject.actor}</p>
+            </div>
+          </div>
+        `
+
+        closeDetailsContainer.onclick = () => {
+          searchResultsContainer.classList.remove("inactive")
+          characterDetailsContainer.classList.add("inactive")
+          detailsContainer.innerHTML = ""
+        }
       }
     })
-
-/*   characterDetailsContainer.id.remove('#inactive')
-  searchResultsContainer.classList.add('inactive') */
-
   })
 }
 

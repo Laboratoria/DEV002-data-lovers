@@ -539,13 +539,10 @@ main .characters-details{
   background-color: #fafafa;
   width: 100vw;
   height: 70vh;
-  display: flex;
   position: absolute;
   bottom: 0;
   border-radius: 5rem 5rem 0 0;
   box-shadow: 0px 8px 25px var(--gray);
-  flex-direction: column;
-  align-items: center;
 }
 
 main .characters-details .close-character-details{
@@ -566,6 +563,72 @@ main .characters-details .close-character-details button{
   margin-right: 5%;
   font-size: 5vw;
 }
+
+
+main .characters-details .details{
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gray-dark);
+}
+
+main .characters-details .details .character-photo{
+  height: 50%;
+}
+
+main .characters-details .details .character-photo img{
+  height: 100%;
+  border-radius: 25rem;
+  box-shadow: 1px 8px 25px var(--gray);
+}
+
+main .characters-details .details .character-principal-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100vw;
+  height: auto;
+}
+
+main .characters-details .details .character-principal-details .details-name{
+  color: var(--blue-hover);
+  font-size: 4vw;
+}
+
+main .characters-details .details .character-principal-details .details-birth{
+  font-size: 3vw;
+  margin-top: 1rem;
+  letter-spacing: .3rem;
+}
+
+main .characters-details .details .character-secondary-details{
+  margin-top: 2rem;
+  width: 100vw;
+  height: 30%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  align-content: space-around;
+}
+
+main .characters-details .details .character-secondary-details div{
+  width: 100%;
+}
+
+main .characters-details .details .character-secondary-details div span{
+  color: var(--blue);
+  font-size: 3vw;
+}
+
+main .characters-details .details .character-secondary-details div p{
+  font-size: 3vw;
+}
+
 
  /* Responsive Design */
 @media screen and (min-width: 640px){
