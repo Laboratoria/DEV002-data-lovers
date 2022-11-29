@@ -1,65 +1,65 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--font-base);
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-base);
+}
 
 :root{
-  --blue: #4B81D1;
-  --blue-hover: #1c53a6;
-  --red: #841818;
-  --red-hover: #610808;
-  --yellow: #E0BB20;
-  --yellow-hover: #b4920a;
-  --black: #000000;
-  --gray: #8F8F95;
-  --gray-dark: #3a3c4a;
-  --beige: #f8f3e3;
-  --font-base: 'Montserrat', sans-serif; /* Medium 500, light 300 */
+--blue: #4B81D1;
+--blue-hover: #1c53a6;
+--red: #841818;
+--red-hover: #610808;
+--yellow: #E0BB20;
+--yellow-hover: #b4920a;
+--black: #000000;
+--gray: #8F8F95;
+--gray-dark: #3a3c4a;
+--beige: #f8f3e3;
+--font-base: 'Montserrat', sans-serif; /* Medium 500, light 300 */
 }
 
 ::placeholder{
-  color: var(--gray);
-  }
+color: var(--gray);
+}
 
- /* width */
+/* width */
 ::-webkit-scrollbar {
-  width: 5px;
+width: 5px;
 }
 
- /* Track */
+/* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px var(--gray);
-  border-radius: 10px;
+box-shadow: inset 0 0 5px var(--gray);
+border-radius: 10px;
 }
 
- /* Handle */
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--yellow);
-  border-radius: 10px;
+background: var(--yellow);
+border-radius: 10px;
 }
 
- /* Handle on hover */
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--yellow-hover);
+background: var(--yellow-hover);
 }
 
 html{
-  font-size: 62.5%;
+font-size: 62.5%;
 }
 
 body{
-  background-image: linear-gradient(to bottom, #f9f4e4, #f3ecd8, #eee5cd, #e8dec2, #dbcda7, #d3c294);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
+background-image: linear-gradient(to bottom, #f9f4e4, #f3ecd8, #eee5cd, #e8dec2, #dbcda7, #d3c294);
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+overflow-x: hidden;
 }
 
  /* inactive components */
@@ -70,423 +70,426 @@ body{
 /*Home*/
 
 main{
-  width: 100vw;
+width: 100vw;
 }
 
 main .home{
-  width: 100vw;
+width: 100vw;
 }
 
 main .home .home-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
 }
 
 main .home .home-header .home-header-logo{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  margin-top: 70%;
-  margin-bottom: 2%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 90%;
+margin-top: 70%;
+margin-bottom: 2%;
 }
 
 main .home .home-header .home-header-logo button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background: none;
-  border: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background: none;
+border: none;
 }
 
 main .home .home-header .home-header-logo img{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
 }
 
 main .home .home-header .home-header-slogan{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 90%;
 }
 
 main .home .home-header .home-header-slogan span{
-  font-size: 4.5vw;
-  color: var(--gray-dark);
+font-size: 4.5vw;
+color: var(--gray-dark);
 }
 
 main .home .home-searcher{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
 }
 
 main .home .home-searcher .home-searcher-input{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  margin-top: 18%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+margin-top: 18%;
 }
 
 main .home .home-searcher .home-searcher-input .search-input{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: center;
+align-items: center;
 }
 
 main .home .home-searcher .home-searcher-input .search-input input{
-  display: flex;
-  flex-direction: row;
-  border-radius: 4.4rem;
-  height: 5rem;
-  width: 90%;
-  background: none;
-  font-size: 4vw;
-  border: 0.2rem solid var(--blue);
-  text-indent: 2.4rem;
-  font-family: var(--font-base);
+display: flex;
+flex-direction: row;
+border-radius: 4.4rem;
+height: 5rem;
+width: 90%;
+background: none;
+font-size: 4vw;
+border: 0.2rem solid var(--blue);
+text-indent: 2.4rem;
+font-family: var(--font-base);
 }
 
 main .home .home-searcher .home-searcher-input .search-input input:focus{
-  outline: none;
+outline: none;
 }
 
 main .home .home-searcher .home-searcher-input .search-input input:hover{
-  border: 0.2rem solid var(--blue-hover);
+border: 0.2rem solid var(--blue-hover);
 }
 
 main .home .home-searcher .home-searcher-input .search-input button{
-  background: none;
-  border: none;
-  position: absolute;
-  width: 10%;
-  font-size: 2.5rem;
-  height: auto;
-  right: 4rem;
+background: none;
+border: none;
+position: absolute;
+cursor: pointer;
+width: 10%;
+font-size: 2.5rem;
+height: auto;
+right: 4rem;
 }
 
 main .home .home-searcher .home-more-button{
-  display: flex;
-  justify-content: center;
-  width: 100%;
+display: flex;
+justify-content: center;
+width: 100%;
+flex-direction: column;
+align-items: center;
 }
 
 main .home .home-searcher .home-more-button .dotsButton {
-  width: 20%;
-  font-size: 9vw;
-  letter-spacing: 1.5rem;
-  font-weight: 700;
-  background: none;
-  border: none;
-  color: var(--blue);
-  cursor: pointer;
+width: 20%;
+font-size: 9vw;
+letter-spacing: 1.5rem;
+font-weight: 700;
+background: none;
+border: none;
+color: var(--blue);
+cursor: pointer;
 }
 
 main .home .home-searcher .home-more-button .charactersButton {
-  width: 30%;
-  font-size: 4vw;
-  background: none;
-  border: none;
-  color: var(--blue);
-  cursor: pointer;
-  margin-top: 3rem;
+width: 30%;
+font-size: 4vw;
+background: none;
+border: none;
+color: var(--blue);
+cursor: pointer;
+margin-top: 3rem;
 }
 
 main .home .home-searcher .home-more-button button:hover{
-  color: var(--blue-hover)
+color: var(--blue-hover)
 }
 
 /*nav*/
 main .nav-searcher{
-  width: 100%;
-  height: auto;
-  position: sticky;
-  top: 0;
-  background-color: var(--beige);
+width: 100%;
+height: auto;
+position: sticky;
+top: 0;
+background-color: var(--beige);
 }
 
 main .nav-searcher .nav-searcher-top{
-  width: 100%;
-  height: 20rem;
+width: 100%;
+height: 20rem;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-logo{
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+width: 100%;
+height: 50%;
+display: flex;
+justify-content: center;
+align-items: flex-end;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-logo button{
-  width: 100%;
-  background: none;
-  border: none;
+width: 100%;
+background: none;
+border: none;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-logo img{
-  width: 80%;
-  cursor: pointer;
+width: 80%;
+cursor: pointer;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-bar{
-  width: 100%;
-  height: 30%;
-  display: block;
-  margin-top: 5%;
+width: 100%;
+height: 30%;
+display: block;
+margin-top: 5%;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
-  width: 90%;
-  height: 5rem;
-  border-radius: 5rem;
-  outline: none;
-  border: 0.2rem solid var(--blue);
-  text-indent: 2rem;
-  font-size: 2rem;
-  color: var(--gray-dark);
-  background: none;
+width: 90%;
+height: 5rem;
+border-radius: 5rem;
+outline: none;
+border: 0.2rem solid var(--blue);
+text-indent: 2rem;
+font-size: 2rem;
+color: var(--gray-dark);
+background: none;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
-  background: none;
-  width: 8rem;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 2.5rem;
-  font-size: 5vw;
+background: none;
+width: 8rem;
+border: none;
+cursor: pointer;
+position: absolute;
+right: 2.5rem;
+font-size: 5vw;
 }
 
 main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-button button img{
-  width: 8rem;
+width: 8rem;
 }
 
 main .nav-searcher .nav-searcher-bottom{
-  width: 100%;
-  height: 4rem;
-  display: flex;
-  justify-content: flex-end;
+width: 100%;
+height: 4rem;
+display: flex;
+justify-content: flex-end;
 }
 
 /* Sort menu button */
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
-  width: 10%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
+width: 10%;
+height: 100%;
+display: flex;
+justify-content: flex-end;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort button{
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 30px;
+width: 100%;
+height: 100%;
+border: none;
+background: none;
+cursor: pointer;
+font-size: 30px;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort button img{
-  width: 50%;
+width: 50%;
 }
 
 /* Sort dropdown menu */
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
-  width: 50%;
-  height: 10rem;
-  position: absolute;
-  border: .2rem solid var(--yellow);
-  background-color: #fafafa;
-  opacity: 90%;
-  border-radius: 1rem;
-  display: none;
+width: 50%;
+height: 10rem;
+position: absolute;
+border: .2rem solid var(--yellow);
+background-color: #fafafa;
+opacity: 90%;
+border-radius: 1rem;
+display: none;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
-  height: 100%;
-  font-size: 4vw;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+height: 100%;
+font-size: 4vw;
+width: 100%;
+display: flex;
+flex-direction: column;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form p{
-  margin: 2rem 0 1rem 2rem;
-  color: var(--blue);
+margin: 2rem 0 1rem 2rem;
+color: var(--blue);
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form .dropdown-menu-options{
-  display: flex;
-  justify-content: space-evenly;
+display: flex;
+justify-content: space-evenly;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form .dropdown-menu-options .option{
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
+width: 40%;
+display: flex;
+justify-content: space-evenly;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form .dropdown-menu-options .option input{
-  accent-color: var(--blue);
-  transform: scale(1.2);
+accent-color: var(--blue);
+transform: scale(1.2);
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form .dropdown-menu-options .option label{
-  color: var(--gray-dark)
+color: var(--gray-dark)
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort:hover .dropdown-menu{
-  display: block;
+display: block;
 }
 
 /* filter button */
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
-  width: 10%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
+width: 10%;
+height: 100%;
+display: flex;
+justify-content: flex-end;
+margin-right: 5%;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter button{
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 30px;
+width: 100%;
+height: 100%;
+border: none;
+background: none;
+cursor: pointer;
+font-size: 30px;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter button img{
-  width: 50%;
+width: 50%;
 }
 
 /* Filter dropdown menu */
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
-  width: 70%;
-  height: 20rem;
-  position: absolute;
-  border: .2rem solid var(--yellow);
-  background-color: #fafafa;
-  opacity: 90%;
-  border-radius: 1rem;
-  display: none;
+width: 70%;
+height: 20rem;
+position: absolute;
+border: .2rem solid var(--yellow);
+background-color: #fafafa;
+opacity: 90%;
+border-radius: 1rem;
+display: none;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
-  height: 100%;
-  font-size: 3.5vw;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+height: 100%;
+font-size: 3.5vw;
+width: 100%;
+display: flex;
+flex-direction: column;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
-  margin: 2rem 0 .5rem 2rem;
-  color: var(--blue);
-  font-size: 4vw;
+margin: 2rem 0 .5rem 2rem;
+color: var(--blue);
+font-size: 4vw;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section{
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  align-items: center;
+width: 100%;
+height: 3rem;
+display: flex;
+align-items: center;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
-  font-size: 3.5vw;
-  margin-left: 2rem;
-  width: 47%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+font-size: 3.5vw;
+margin-left: 2rem;
+width: 47%;
+height: 100%;
+display: flex;
+align-items: center;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section div{
-  width: 40%;
-  border-bottom: .2rem solid var(--yellow);
-  height: 10%;
-  margin-right: 1rem;
+width: 40%;
+border-bottom: .2rem solid var(--yellow);
+height: 10%;
+margin-right: 1rem;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  width: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+width: 100%;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .options-line{
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin-top: 1rem;
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+margin-top: 1rem;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .options-line .option{
-  width: 40%;
+width: 40%;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .options-line .option input{
-  accent-color: var(--blue);
-  transform: scale(1.2);
+accent-color: var(--blue);
+transform: scale(1.2);
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .options-line .option label{
-  color: var(--gray-dark);
+color: var(--gray-dark);
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line{
-  justify-content: flex-start;
+justify-content: flex-start;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line .option{
-  margin-left: 2.2rem;
+margin-left: 2.2rem;
 }
 
 main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter:hover .dropdown-filter{
-  display: block;
+display: block;
 }
 
 /* Search results view */
 main .search-results{
-  width: 100vw;
-  height: auto;
+width: 100vw;
+height: auto;
 }
 
 main .search-results .results{
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr;
+width: 100%;
+display: grid;
+justify-items: center;
+grid-template-columns: 1fr 1fr;
 }
 
 main .search-results .results .character{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 23rem;
-  margin-top: 1rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 23rem;
+margin-top: 1rem;
 }
 main .search-results .results .character .character-image {
   width: 18rem;
@@ -494,10 +497,11 @@ main .search-results .results .character .character-image {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 main .search-results .results .character .character-image:hover{
-  box-shadow: 0px 5px 25px var(--gray);
+box-shadow: 0px 5px 25px var(--gray);
 }
 
 main .search-results .results .character .name{
@@ -513,22 +517,22 @@ main .search-results .results .character .name{
 }
 
 main .search-results .results .character .name:hover{
-  color: var(--blue-hover);
+color: var(--blue-hover);
 }
 
 main .search-results .results .characterNotFound{
-  grid-column: 1 /span 2;
-  width: 100vw;
-  height: 73.8vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+grid-column: 1 /span 2;
+width: 100vw;
+height: 73.8vh;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 main .search-results .results .characterNotFound .notFound {
-  font-size: 4.5vw;
-  font-weight: 600;
-  color: var(--red);
+font-size: 4.5vw;
+font-weight: 600;
+color: var(--red);
 }
 
 main .characters-details{
@@ -628,64 +632,64 @@ main .characters-details .details .character-secondary-details div p{
 
  /* Responsive Design */
 @media screen and (min-width: 640px){
-  main .home .home-searcher .home-searcher-input .search-input input{
-    height: 7rem;
-    font-size: 3vw;
-  }
+main .home .home-searcher .home-searcher-input .search-input input{
+  height: 7rem;
+  font-size: 3vw;
+}
 
-  main .home .home-header .home-header-logo{
-    margin-top: 45%;
-  }
+main .home .home-header .home-header-logo{
+  margin-top: 45%;
+}
 
-  main .nav-searcher .nav-searcher-top{
-    height: 20rem;
-  }
+main .nav-searcher .nav-searcher-top{
+  height: 20rem;
+}
 
-  main .nav-searcher .nav-searcher-top{
-    margin-top: 5%;
-  }
+main .nav-searcher .nav-searcher-top{
+  margin-top: 5%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar{
-    margin-top: 2%;
-    height: 25%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar{
+  margin-top: 2%;
+  height: 25%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
-    height: 5rem;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+  height: 5rem;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
-    height: 100%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
+  height: 100%;
+}
 
-  main .home .home-searcher .home-more-button .charactersButton{
-    font-size: 3.2vw;
-  }
+main .home .home-searcher .home-more-button .charactersButton{
+  font-size: 3.2vw;
+}
 
-  main .search-results .results .characterNotFound{
-    height: 70vh;
-  }
+main .search-results .results .characterNotFound{
+  height: 70vh;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
-    height: 11rem;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
+  height: 11rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
-    font-size: 3.5vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
+  font-size: 3.5vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
-    width: 50%;
-    height: 19rem;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
+  width: 50%;
+  height: 19rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
-    font-size: 2.4vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
+  font-size: 2.4vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
-    font-size: 3vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
+  font-size: 3vw;
+}
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
     font-size: 2.5vw;
@@ -697,113 +701,113 @@ main .characters-details .details .character-secondary-details div p{
 }
 
 @media screen and (min-width: 960px){
-  main .home .home-header .home-header-logo{
-    margin-top: 30%;
-  }
+main .home .home-header .home-header-logo{
+  margin-top: 30%;
+}
 
-  main .home .home-header .home-header-logo img{
-    width: 80%;
-  }
+main .home .home-header .home-header-logo img{
+  width: 80%;
+}
 
-  main .home .home-header .home-header-slogan span{
-    font-size: 3vw;
-  }
+main .home .home-header .home-header-slogan span{
+  font-size: 3vw;
+}
 
-  main .home .home-searcher .home-searcher-input {
-    margin-top: 12%;
-  }
+main .home .home-searcher .home-searcher-input {
+  margin-top: 12%;
+}
 
-  main .home .home-searcher .home-searcher-input .search-input input{
-    width: 80%;
-    height: 7rem;
-    font-size: 3vw;
-    text-indent: 4rem;
-  }
+main .home .home-searcher .home-searcher-input .search-input input{
+  width: 80%;
+  height: 7rem;
+  font-size: 3vw;
+  text-indent: 4rem;
+}
 
-  main .home .home-searcher .home-searcher-input .search-input button{
-    font-size: 3rem;
-    right: 10rem;
-  }
+main .home .home-searcher .home-searcher-input .search-input button{
+  font-size: 3rem;
+  right: 10rem;
+}
 
-  main .home .home-searcher .home-more-button .dotsButton {
-    font-size: 6vw;
-  }
+main .home .home-searcher .home-more-button .dotsButton {
+  font-size: 6vw;
+}
 
-  main .home .home-searcher .home-more-button .charactersButton{
-    font-size: 2.5vw;
-    margin-top: 4rem;
-  }
+main .home .home-searcher .home-more-button .charactersButton{
+  font-size: 2.5vw;
+  margin-top: 4rem;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-logo{
-    height: 60%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-logo{
+  height: 60%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-logo img{
-    width: 60%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-logo img{
+  width: 60%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar{
-    height: 30%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar{
+  height: 30%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
-    height: 6rem;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+  height: 6rem;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
-    font-size: 4vw;
-    right: 5.5rem;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
+  font-size: 4vw;
+  right: 5.5rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom{
-    margin-top: 2rem;
-    height: 6rem;
-  }
+main .nav-searcher .nav-searcher-bottom{
+  margin-top: 2rem;
+  height: 6rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort button img{
-    width: 40%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort button img{
+  width: 40%;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter button img{
-    width: 40%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter button img{
+  width: 40%;
+}
 
-  main .search-results .results{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+main .search-results .results{
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
-  main .search-results .results .character .name{
-    font-size: 1.8vw;
-  }
+main .search-results .results .character .name{
+  font-size: 1.8vw;
+}
 
-  main .search-results .results .characterNotFound{
-    height: 62vh;
-  }
+main .search-results .results .characterNotFound{
+  height: 62vh;
+}
 
-  main .search-results .results .characterNotFound .notFound{
-    font-size: 3.5vw;
-  }
+main .search-results .results .characterNotFound .notFound{
+  font-size: 3.5vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
-    width: 30%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
+  width: 30%;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
-    font-size: 2.3vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
+  font-size: 2.3vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
-    width: 42%;
-    height: 22rem;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
+  width: 42%;
+  height: 22rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
-    font-size: 2.3vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
+  font-size: 2.3vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
-    font-size: 2.5vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
+  font-size: 2.5vw;
+}
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
     font-size: 2vw;
@@ -841,123 +845,123 @@ main .characters-details .details .character-secondary-details div p{
 }
 
 @media screen and (min-width: 1366px){
-  main .home .home-header .home-header-logo{
-    margin-top: 10%;
-  }
+main .home .home-header .home-header-logo{
+  margin-top: 10%;
+}
 
-  main .home .home-header .home-header-logo img{
-    width: 60%;
-  }
+main .home .home-header .home-header-logo img{
+  width: 60%;
+}
 
-  main .home .home-header .home-header-slogan span{
-    font-size: 2.5vw;
-  }
+main .home .home-header .home-header-slogan span{
+  font-size: 2.5vw;
+}
 
-  main .home .home-searcher .home-searcher-input{
-    margin-top: 6%;
-  }
+main .home .home-searcher .home-searcher-input{
+  margin-top: 6%;
+}
 
-  main .home .home-searcher .home-searcher-input .search-input input{
-    width: 55%;
-    height: 8rem;
-    font-size: 2vw;
-    border: .3rem solid var(--blue);
-  }
+main .home .home-searcher .home-searcher-input .search-input input{
+  width: 55%;
+  height: 8rem;
+  font-size: 2vw;
+  border: .3rem solid var(--blue);
+}
 
-  main .home .home-searcher .home-searcher-input .search-input button{
-    font-size: 4rem;
-    right: 40rem;
-  }
+main .home .home-searcher .home-searcher-input .search-input button{
+  font-size: 4rem;
+  right: 40rem;
+}
 
-  main .home .home-searcher .home-more-button .dotsButton {
-    font-size: 3vw;
-  }
+main .home .home-searcher .home-more-button .dotsButton {
+  font-size: 3vw;
+}
 
-  main .home .home-searcher .home-more-button .charactersButton{
-    font-size: 1.5vw;
-  }
+main .home .home-searcher .home-more-button .charactersButton{
+  font-size: 1.5vw;
+}
 
-  main .nav-searcher .nav-searcher-top{
-    margin-top: 1%;
-    height: 23rem;
-  }
+main .nav-searcher .nav-searcher-top{
+  margin-top: 1%;
+  height: 23rem;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-logo{
-    height: 53%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-logo{
+  height: 53%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-logo img{
-    width: 35%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-logo img{
+  width: 35%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
-    height: 7rem;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input{
+  height: 7rem;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
-    width: 80%;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input input{
+  width: 80%;
+}
 
-  main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
-    font-size: 2vw;
-    right: 21rem;
-  }
+main .nav-searcher .nav-searcher-top .searcher-top-bar .searcher-top-bar-input button{
+  font-size: 2vw;
+  right: 21rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
-    width: 5%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort{
+  width: 5%;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
-    width: 5%;
-    margin-right: 10%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter{
+  width: 5%;
+  margin-right: 10%;
+}
 
-  main .search-results{
-    display: flex;
-    justify-content: center;
-  }
+main .search-results{
+  display: flex;
+  justify-content: center;
+}
 
-  main .search-results .results{
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 90vw;
-  }
+main .search-results .results{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 90vw;
+}
 
-  main .search-results .results .character .name{
-    font-size: 1vw;
-  }
+main .search-results .results .character .name{
+  font-size: 1vw;
+}
 
-  main .search-results .results .characterNotFound{
-    width: 90vw;
-  }
+main .search-results .results .characterNotFound{
+  width: 90vw;
+}
 
-  main .search-results .results .characterNotFound .notFound{
-    font-size: 2vw;
-  }
+main .search-results .results .characterNotFound .notFound{
+  font-size: 2vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
-    width: 15%;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu{
+  width: 15%;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
-    font-size: 1.2vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-sort .dropdown-menu form{
+  font-size: 1.2vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
-    width: 24%;
-    height: 23rem;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter{
+  width: 24%;
+  height: 23rem;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
-    font-size: 1.2vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form{
+  font-size: 1.2vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
-    font-size: 1.2vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form p{
+  font-size: 1.2vw;
+}
 
-  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
-    font-size: 1.2vw;
-  }
+main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+  font-size: 1.2vw;
+}
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line .option{
     margin-left: 3rem;
