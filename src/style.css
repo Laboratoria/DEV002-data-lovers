@@ -62,6 +62,11 @@ min-height: 100vh;
 overflow-x: hidden;
 }
 
+ /* inactive components */
+.inactive{
+  display: none !important;
+}
+
 /*Home*/
 
 main{
@@ -485,12 +490,12 @@ height: 23rem;
 margin-top: 1rem;
 }
 main .search-results .results .character .character-image {
-width: 18rem;
-height: 18rem;
-object-fit: cover;
-object-position: center;
-border-radius: 50%;
-cursor: pointer;
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 main .search-results .results .character .character-image:hover{
@@ -498,13 +503,15 @@ box-shadow: 0px 5px 25px var(--gray);
 }
 
 main .search-results .results .character .name{
-width: 100%;
-margin-top: 1rem;
-font-size: 3vw;
-color: var(--blue);
-font-weight: 400;
-cursor: pointer;
-text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 3vw;
+  color: var(--blue);
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  border: none;
 }
 
 main .search-results .results .character .name:hover{
@@ -526,12 +533,102 @@ font-weight: 600;
 color: var(--red);
 }
 
-/* inactive components */
-.inactive{
-display: none;
+main .characters-details{
+  background-color: #fafafa;
+  width: 100vw;
+  height: 70vh;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5rem 5rem 0 0;
+  box-shadow: 0px 8px 25px var(--gray);
 }
 
-/* Responsive Design */
+main .characters-details .close-character-details{
+  width: 100vw;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+main .characters-details .close-character-details button{
+  color: var(--gray);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 5%;
+  font-size: 5vw;
+}
+
+
+main .characters-details .details{
+  height: 90%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gray-dark);
+}
+
+main .characters-details .details .character-photo{
+  height: 50%;
+}
+
+main .characters-details .details .character-photo img{
+  height: 100%;
+  border-radius: 25rem;
+  box-shadow: 1px 8px 25px var(--gray);
+}
+
+main .characters-details .details .character-principal-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100vw;
+  height: auto;
+}
+
+main .characters-details .details .character-principal-details .details-name{
+  color: var(--blue-hover);
+  font-size: 4vw;
+}
+
+main .characters-details .details .character-principal-details .details-birth{
+  font-size: 3vw;
+  margin-top: 1rem;
+  letter-spacing: .3rem;
+}
+
+main .characters-details .details .character-secondary-details{
+  margin-top: 2rem;
+  width: 100vw;
+  height: 30%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  align-content: space-around;
+}
+
+main .characters-details .details .character-secondary-details div{
+  width: 100%;
+}
+
+main .characters-details .details .character-secondary-details div span{
+  color: var(--blue);
+  font-size: 3vw;
+}
+
+main .characters-details .details .character-secondary-details div p{
+  font-size: 3vw;
+}
+
+
+ /* Responsive Design */
 @media screen and (min-width: 640px){
 main .home .home-searcher .home-searcher-input .search-input input{
   height: 7rem;
@@ -592,9 +689,13 @@ main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter
   font-size: 3vw;
 }
 
-main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
-  font-size: 2.5vw;
-}
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+    font-size: 2.5vw;
+  }
+
+  main .characters-details{
+    height: 67vh;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -706,9 +807,39 @@ main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter
   font-size: 2.5vw;
 }
 
-main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
-  font-size: 2vw;
-}
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+    font-size: 2vw;
+  }
+
+  main .characters-details{
+    height: 60vh;
+  }
+
+  main .characters-details .close-character-details{
+    margin-top: 1rem;
+    height: 8%;
+  }
+
+  main .characters-details .close-character-details button{
+    font-size: 4vw;
+    margin-right: 3%;
+  }
+
+  main .characters-details .details .character-principal-details .details-name{
+    font-size: 3vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-birth{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-secondary-details div span{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-secondary-details div p{
+    font-size: 2vw;
+  }
 }
 
 @media screen and (min-width: 1366px){
@@ -830,7 +961,39 @@ main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter
   font-size: 1.2vw;
 }
 
-main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line .option{
-  margin-left: 3rem;
-}
+  main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line .option{
+    margin-left: 3rem;
+  }
+
+  main .characters-details{
+    height: 65vh;
+  }
+
+  main .characters-details .close-character-details{
+    margin-top: 1.5rem;
+  }
+
+  main .characters-details .close-character-details button{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-name{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-birth{
+    font-size: 1.5vw;
+  }
+
+  main .characters-details .details .character-secondary-details{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  main .characters-details .details .character-secondary-details div span{
+    font-size: 1.5vw;
+  }
+
+  main .characters-details .details .character-secondary-details div p{
+    font-size: 1.5vw;
+  }
 }
