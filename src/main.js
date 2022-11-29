@@ -76,7 +76,7 @@ searchButtons.forEach(btn =>{
   })
 })
 
-// esconder los ... y mostrar characters
+// esconder los ... y mostrar characters y status
 const dotButton = document.getElementById("dotsButton");
 
 if (dotButton){
@@ -98,67 +98,6 @@ if (characterButton){
     window.localStorage.setItem('Character', JSON.stringify(data));
     const charactersHTML = createCharactersHtml(data);
     document.getElementById("results").innerHTML = charactersHTML
-  })
-}
-
-// al hacer click en dead or alive?, se esconde home y se muestra el nav con el gráfico
-const statusButton = document.getElementById("statusButton")
-
-if (statusButton) {
-  statusButton.addEventListener("click", async () => {
-    document.getElementById("home").hidden = true;
-    document.getElementById("navSearcher").classList.remove("inactive");
-    let data = await getAllCharacters();
-    let alive = data.filter((characters) => {
-        return characters.alive
-    })
-    let dead = data.filter((characters) => {
-      return !characters.alive
-    })
-     //window.localStorage.setItem('Character', JSON.stringify(data));
-
-    const doughnutChart = document.getElementById("statusChart")
-    new Chart(doughnutChart, {
-      type: 'doughnut',
-      data: {
-        labels: ['Dead', 'Alive'],
-        datasets: [{
-          label: 'Dead or alive?',
-          data: [dead.length, alive.length],
-          backgroundColor: [
-            '#610808',
-            '#4B81D1',
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-
-    // var options = {
-    //   chart: {
-    //     type: 'bar'
-    //   },
-    //   series: [{
-    //     name: 'sales',
-    //     data: [30,40,45,50,49,60,70,91,125]
-    //   }],
-    //   xaxis: {
-    //     categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-    //   }
-    // }
-    
-    // var chart = new ApexCharts(document.querySelector("#statusChart"), options);
-    
-    // chart.render();
-
-    document.getElementById("statusChart").innerHTML = doughnutChart
   })
 }
 

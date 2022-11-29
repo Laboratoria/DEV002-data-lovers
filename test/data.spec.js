@@ -1,6 +1,6 @@
 //npm test data.spec.js
 
-import {getAllCharacters, sortingCharacters} from "../src/data"
+import { getAllCharacters, sortingCharacters } from "../src/data"
 import data from "../src/data_api/data.json"
 
 // test fetch con mock del mismo y de la API
