@@ -180,6 +180,8 @@ main .home .home-searcher .home-more-button{
 display: flex;
 justify-content: center;
 width: 100%;
+flex-direction: column;
+align-items: center;
 }
 
 main .home .home-searcher .home-more-button .dotsButton {
