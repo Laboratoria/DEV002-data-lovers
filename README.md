@@ -162,13 +162,13 @@ JavaScript | HTML | CSS | Jest
 
 * Prototipo de baja fidelidad
 
-        ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/bajaFidelidad1.png)
+![Diseño de baja fidelidad](images/bajaFidelidad1.png)
 
-        ![Diseño de baja fidelidad](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/bajaFidelidad2.png)
+![Diseño de baja fidelidad](images/bajaFidelidad2.png)
 
 
 * Prototipo de alta fidelidad
 
-        ![Diseño de alta fidelidad para movil](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/DA-mobile.png)
+![Diseño de alta fidelidad para movil](images/DA-mobile.png)
 
-        ![Diseño de alta fidelidad para PC](https://github.com/filletournesols/DEV002-data-lovers/blob/main/images/DA-desktop.png)
+![Diseño de alta fidelidad para PC](images/DA-desktop.png)
