@@ -30,6 +30,7 @@
           <div class="home-more-button">
             <button class="dotsButton" id="dotsButton" >...</button>
             <button class="charactersButton inactive" id="charactersButton" >Characters</button>
+            <button class="statusButton inactive" id="statusButton" >Dead or Alive?</button>
           </div>
         </section>
       </section>
@@ -49,7 +50,7 @@
             </div>
           </div>
         </section>
-        <section class="nav-searcher-bottom">
+        <section class="nav-searcher-bottom" id="navSearcherBottom">
           <div class="searcher-bottom-sort">
             <button>
               <img src="./assets/sort.svg" alt="sort button icon"/>
@@ -126,6 +127,14 @@
         <section class="details" id="details">
         </section>
       </section>
+
+      <!--Chart-->
+      <section class="chart-section">
+          <canvas class="status-chart" id="statusChart"></canvas>
+      </section>
+
     </main>
-  <script src="main.js" type="module"></script></body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js" type="module"></script>
+  </body>
 </html>
