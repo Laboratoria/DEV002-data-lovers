@@ -373,6 +373,7 @@ h3 {
   
 }
 @media only screen and(max-width:790px){
- 
-  
+ #barra{
+  width: 100%;
+ }
 }
