@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html xml:lang>
+<html lang=2"es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body>
+ <body>
     <div id="logo">
       <img
         src="https://www.studioghibli.com.au/wp-content/uploads/2017/07/ghibli_logo_gold.png"
         alt="logo"
       />
     </div>
-    <button id="btnordenardirector">Ordenar por director</button>
-
     
+    <div id="miniaturaspeliculasdiv"></div>
+    <div id="llamarImagenesdiv" class="row"></div>
 
     <script src="main.js" type="module"></script>
   </body>
