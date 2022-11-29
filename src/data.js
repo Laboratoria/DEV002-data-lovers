@@ -31,36 +31,22 @@ const operaciones = {
     return todosLosProductores;
   },
 
-  llamarImagenes(peliculas) {
-    let pelicula;
-    let todasLasImagenes = [];
-    //En este ciclo for recorrimos el array de películas y luego con el if trajimos las imagenes//
-    for (let i = 0; i < peliculas.length; i++) {
-      pelicula = peliculas[i];
-      if (!todasLasImagenes.includes(pelicula.poster)) {
-        todasLasImagenes.push(pelicula.poster);
-      }
-    }
-    return todasLasImagenes;
+  //ordenar por directores
+  peliculasOrdenadasPorDirector(peliculas) {
+    peliculas = peliculas.sort((a, b) => {
+      a = a.director.toLowerCase();
+      b = b.director.toLowerCase();
+      return a < b ? -1 : a > b ? 1 : 0;
+    });
+
+    return peliculas;
   },
 
-  llamarInfoBasicaPelicula(peliculas) {
-    let pelicula;
-    let todasLasImagenes = [];
-    //En este ciclo for recorrimos el array de películas y luego con el if trajimos las imagenes//
-    for (let i = 0; i < peliculas.length; i++) {
-      pelicula = peliculas[i];
-      if (!todasLasImagenes.includes(pelicula.poster)) {
-        todasLasImagenes.push(pelicula.poster);
-        //JSON.parse(
-        //'{"id": "' + pelicula.id + '","title": "' + pelicula.title + "}"
-
-        //  );
-      }
-      console.log(pelicula.poster);
-    }
-    console.log(todasLasImagenes);
-    return todasLasImagenes;
+  compareStrings(a, b) {
+    // Assuming you want case-insensitive comparison
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    return a < b ? -1 : a > b ? 1 : 0;
   },
 };
 

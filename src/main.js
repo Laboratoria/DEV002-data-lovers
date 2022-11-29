@@ -1,22 +1,22 @@
 import operaciones from "./data.js";
 import data from "./data/ghibli/ghibli.js";
-
+//filtrar data
 //PINTA DIRECTORES
-//function pintarDirectores() {
-//let directoresHtml = "<h2>Directores</h2>";
-//directoresHtml += "<ul>";
+function pintarDirectores() {
+  let directoresHtml = "<h2>Directores</h2>";
+  directoresHtml += "<ul>";
 
-//let arregloDirectores = operaciones.llamarDirectores(data.films);
+  let arregloDirectores = operaciones.llamarDirectores(data.films);
 
-// for (let i = 0; i < arregloDirectores.length; i++) {
-//directoresHtml += "<li>";
-//directoresHtml += arregloDirectores[i];
-//directoresHtml += "</li>";
-// }
+  for (let i = 0; i < arregloDirectores.length; i++) {
+    directoresHtml += "<li>";
+    directoresHtml += arregloDirectores[i];
+    directoresHtml += "</li>";
+  }
 
-//directoresHtml += "</ul>";
-// directoresproductoresdiv.innerHTML += directoresHtml;
-//}
+  directoresHtml += "</ul>";
+  directoresproductoresdiv.innerHTML += directoresHtml;
+}
 //console.log(pintarDirectores());
 
 //PINTA PRODUCTORES
@@ -40,16 +40,24 @@ import data from "./data/ghibli/ghibli.js";
 
 //pintar imagenes, año de lanzamiento y puntuación
 //ESTO ES UNA PRUEBA CON OBJETOS para poder traer diferentes propiedades del elemento que conforma el Array
-function pintarImagenes() {
-  let imgHTML = "<h2> POSTERS</h2>";
-  let arregloTodasLasImagenes = operaciones.llamarImagenes(data.films);
+function pintarCard() {
+  dibujarCard(data.films);
+}
+console.log(pintarCard());
 
-  for (let i = 0; i < arregloTodasLasImagenes.length; i++) {
+function dibujarCard(peliculas) {
+  llamarImagenesdiv.innerHTML = "";
+  let imgHTML = "<h2></h2>";
+
+  for (let i = 0; i < peliculas.length; i++) {
     let pelicula;
-    pelicula = data.films[i];
-    imgHTML += '<div class="column">';
-    imgHTML += '<div class="card">';
-    imgHTML += '<img src="';
+    pelicula = peliculas[i];
+    imgHTML += '<div class="column" >';
+    imgHTML += '<div class="card" id="';
+    imgHTML += pelicula.id;
+    imgHTML += '">';
+
+    imgHTML += '<img class="imgCard" src="';
     imgHTML += pelicula.poster;
     imgHTML += '" style="width:130px">';
 
@@ -61,6 +69,10 @@ function pintarImagenes() {
     imgHTML += "Año de lanzamiento:" + " " + pelicula.release_date;
     imgHTML += "</p>";
 
+    imgHTML += "<h5>";
+    imgHTML += "Director:" + " " + pelicula.director;
+    imgHTML += "</h5>";
+
     imgHTML += "<p>";
     imgHTML += "Puntuación:" + pelicula.rt_score;
     imgHTML += "</p>";
@@ -70,4 +82,17 @@ function pintarImagenes() {
 
   llamarImagenesdiv.innerHTML += imgHTML;
 }
-console.log(pintarImagenes());
+
+//Ordenar la data
+//por directores
+function ordenarPorDirector() {
+  let peliculasOrdenadas = operaciones.peliculasOrdenadasPorDirector(
+    data.films
+  );
+  dibujarCard(peliculasOrdenadas);
+  // console.log(peliculasOrdenadas);
+}
+
+document
+  .getElementById("btnordenardirector")
+  .addEventListener("click", ordenarPorDirector);
