@@ -63,12 +63,8 @@ body{
 }
 
  /* inactive components */
-#inactive{
-  display: none;
-}
-
 .inactive{
-  display: none;
+  display: none !important;
 }
 
 /*Home*/
@@ -694,6 +690,10 @@ main .characters-details .details .character-secondary-details div p{
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
     font-size: 2.5vw;
   }
+
+  main .characters-details{
+    height: 67vh;
+  }
 }
 
 @media screen and (min-width: 960px){
@@ -806,6 +806,36 @@ main .characters-details .details .character-secondary-details div p{
   }
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .filter-name-section span{
+    font-size: 2vw;
+  }
+
+  main .characters-details{
+    height: 60vh;
+  }
+
+  main .characters-details .close-character-details{
+    margin-top: 1rem;
+    height: 8%;
+  }
+
+  main .characters-details .close-character-details button{
+    font-size: 4vw;
+    margin-right: 3%;
+  }
+
+  main .characters-details .details .character-principal-details .details-name{
+    font-size: 3vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-birth{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-secondary-details div span{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-secondary-details div p{
     font-size: 2vw;
   }
 }
@@ -931,5 +961,37 @@ main .characters-details .details .character-secondary-details div p{
 
   main .nav-searcher .nav-searcher-bottom .searcher-bottom-filter .dropdown-filter form .dropdown-filter-options .last-line .option{
     margin-left: 3rem;
+  }
+
+  main .characters-details{
+    height: 65vh;
+  }
+
+  main .characters-details .close-character-details{
+    margin-top: 1.5rem;
+  }
+
+  main .characters-details .close-character-details button{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-name{
+    font-size: 2vw;
+  }
+
+  main .characters-details .details .character-principal-details .details-birth{
+    font-size: 1.5vw;
+  }
+
+  main .characters-details .details .character-secondary-details{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  main .characters-details .details .character-secondary-details div span{
+    font-size: 1.5vw;
+  }
+
+  main .characters-details .details .character-secondary-details div p{
+    font-size: 1.5vw;
   }
 }
