@@ -1,5 +1,4 @@
 import {getAllCharacters, filterCharactersFun, sortingCharacters} from "./data.js";
-import Chart from "chart.js"
 
 // manejo inputs
 const inputs = document.querySelectorAll(".inputSearch");
@@ -117,7 +116,8 @@ if (statusButton) {
       return !characters.alive
     })
     //window.localStorage.setItem('Character', JSON.stringify(data));
-    const doughnutChart = document.getElementById("statusChart").getContext('2d')
+    const doughnutChart = document.getElementById("statusChart")
+    //.getContext('2d')
     new Chart(doughnutChart, {
       type: 'doughnut',
       data: {
