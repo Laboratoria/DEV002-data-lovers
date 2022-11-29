@@ -1,4 +1,10 @@
 //npm test dom.spec.js
+import { renderChart } from '../src/chartDeadOrAlive'
+
+//global.Chart = jest.fn(() => null);
+jest.mock('../src/chartDeadOrAlive.js', ()=> ({
+    renderChart: ()=> null
+}))
 
 test("ocultar dotButton y mostrar characterButton", () => {
     document.body.innerHTML =
