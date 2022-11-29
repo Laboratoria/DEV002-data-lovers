@@ -1,4 +1,4 @@
-//import { anotherExample, example } from './data.js';
+import { anotherExample, filtro } from './data.js';
 // import data from './data/lol/lol.js';
 //import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -7,8 +7,6 @@
 
 const cargarAPIhp=document.querySelector('#cargarAPI');
 cargarAPIhp.addEventListener('click', obtenerDatos);
-
-//obtenerDatos();
 
 function obtenerDatos() {
     const url = 'https://hp-api.herokuapp.com/api/characters';
