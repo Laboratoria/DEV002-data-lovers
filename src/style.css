@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   background-image: linear-gradient(125deg, #3d2a52, #764082, #a85d84, #8d4887, #58B19F);
   animation: bganimation 15s infinite;
@@ -38,13 +42,14 @@ body {
   left: 45%;
   margin-top: 25px;
   margin-left: 20px;
+  width: auto;
 
 }
 
 h1 {
   font-family: 'Island Moments', cursive;
   font-size:700% ;
-  left: 40px;
+  left: 450px;
   right: 60px;
   bottom: 20px;
   top: 50px;
@@ -77,19 +82,12 @@ hr {
 
 }
 
-#raya {
-  width: 5px;
-  height: 50px;
-  background-color: black;
-  left: 2px;
-}
-
 #search {
   display: flex;
   position: relative;
-  left: 10px;
+  right: 200px;
   top: 220px;
-  width: 350%;
+  width: 310%;
   height: 30px;
   border-radius: 40px;
   border: 3px solid rgba(102, 95, 95, 0.629);
@@ -101,14 +99,15 @@ hr {
 #lupa {
   display: flex;
   position: relative;
-  right: 25px;
+  left: 320px;
   top: 190px;
 
 }
 
 select {
-  height: 30px;
+  height: 40px;
   border-radius: 20px;
+  width: auto;
 }
 
 .filterSelect {
@@ -117,15 +116,9 @@ select {
   justify-content: space-around;
 }
 
-#buho {
-  position: absolute;
-  left: 80px;
-
-}
-
 #glasses {
   align-self: baseline;
-  left: 10px
+  left: 10px;
 }
 
 #box {
@@ -144,8 +137,8 @@ select {
 
 #hibrido {
   position: absolute;
-  margin-top: 25%;
-  margin-left: 730px;
+  top: 60%;
+  left: 80%;
 }
 
 #foto {
@@ -159,15 +152,15 @@ select {
   font-family: 'Calligraffitti', cursive;
   display: flex;
   position: relative;
-  bottom: 90px;
+  bottom: 70px;
   font-size: 65px;
-  margin-left: 350px;
+  margin-left: 15%;
   margin-right: 30px;
 
 }
 
 #summary {
-  margin-right: 50px;
+  margin-right: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -264,9 +257,6 @@ h3 {
   display: flex;
   align-items: right;
   align-self: center;
-  margin-left: 10%;
-  margin-right: 10%;
-
 }
 
 .centrar {
@@ -370,13 +360,19 @@ h3 {
 }
 
 @media only screen and (min-width:320px) and (max-width:768px) {
+ body{
+  margin-bottom: 5px;
+ }
   h1{
 
     font-size: 20px;
+    flex-direction: row;
     margin-right: 0;
     margin-top: 15px;
     margin-left: 0px;
     bottom: 80px;
+    left:120px;
+    top: 0;
 
   }
 
@@ -384,17 +380,22 @@ h3 {
     width: 15%;
     height: 10%;
     margin-top: 15px;
+    margin-left:30px;
   }
   
   .select{
     display: flex;
     position: relative;
-    right: 200px;
-    margin-left: 0;
     font-size: 7px;
-    top: 24px;
-    height: 15px;
-    width: 50px;
+    top: 70px;
+    right: 700px;
+
+  }
+  select{
+    width: auto;
+    height: 20px;
+    display: flex;
+    position: relative;
 
   }
 #search{
@@ -427,6 +428,56 @@ hr{
   height: 0%;
   width: 00%;
 
+}
+#foto{
+  width: 25%;
+  height: 25%;
+  margin-right: 5%;
+  margin-top: 20%;
+}
+#paragraph{
+  font-size: 20px;
+  margin-right: 5%;
 
+}
+#hibrido{
+  top: 180px;
+}
+.subtitles{
+  font-size: 20px;
+  top: 80px;
+  left: 20px;
+}
+p{
+  font-size: 12px;
+  margin-right: 55px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+h3{
+  font-size: 25px;
+}
+.card{
+  width:50px;
+  height: 70px;
+  margin-right: 0;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+#cardConteiner{
+  margin:15px;
+}
+#infoAboutHouses {
+  font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+} 
+.btnPrincipal{
+  left: 0;
+  top: 40px;
+  font-size: 10px;
+  width: auto;
 }
 }
