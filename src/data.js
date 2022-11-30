@@ -59,7 +59,7 @@ export const speciesHalfGiant = (characters) => {
 
 // Filtrar hechizos de la Z-A
 export const spellsZToA = (arr) => {
-  return arr.reverse(data)
+  return arr.reverse(data.id)
 }
 
 // Filtramos por  hechizos de tipo charm
@@ -88,11 +88,8 @@ export const spellsTransportation = (spells) => {
 //   return arr.reverse((a,b)=> a-b);
 // };
 
-export const recentlyBooks = () => {
-  const newArray= Array.from(data.books);
-  return newArray.sort((number,number1) => {
-    return (number.releaseDay > number1.releaseDay) ? 1:-1
-  });
+export const alReves = (arr) => {
+  return arr.reverse(data.id)
 };
 
 // export const anotherExample = () => {
