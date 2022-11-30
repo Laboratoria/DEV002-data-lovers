@@ -1,11 +1,9 @@
 // estas funciones son de ejemplo
 
-export const filtrar = () => {
-  const tipo = 
+
+export const filtrarTipo = (todoslosPokemones,seleccionTipoPokemon ) => {
+  return todoslosPokemones.filter(pokemonTipo=>pokemonTipo.type[0]=== seleccionTipoPokemon)  
   
-
-
-  return 'filtrar';
 };
 
 export const anotherExample = () => {

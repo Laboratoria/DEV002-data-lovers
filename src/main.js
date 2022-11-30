@@ -2,6 +2,8 @@
 import data from './data/pokemon/pokemon.js';
 import {  } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
+import { filtrarTipo } from './data.js';
+
 
 
 // Funciones para visualizar las secciones del html: 
@@ -74,7 +76,54 @@ const mostrar = (pokemones)=>{
     
     });
 } 
- mostrar(pokemon.pokemon);
- // Filtrar por tipo:
- addEventListener
+mostrar(pokemon.pokemon);
+ 
+// Mostrar pokemones Filtrados:
+const todoslosPokemones= pokemon.pokemon;
+
+const botonFiltrar = document.getElementById('btn-filtrar');
+
+botonFiltrar.addEventListener('click',()=>{
+
+  document.getElementById("tipoPokemones").addEventListener("change", () => {
+    let seleccionTipoPokemon =document.getElementById('tipoPokemones').value;
+    if (seleccionTipoPokemon == "") {
+      mostrar(pokemon.pokemon);
+    } else {
+      const dataTipoPokemon = filtrarTipo(todoslosPokemones, seleccionTipoPokemon);     
+      mostrar(dataTipoPokemon);
+       
+      
+    }
+  
+  });
+  
+
+});
+
+
+ 
+
+
+
+
+
+
+
+//  let tipoPokemon= getSelection('')
+// document.getElementById("tipoPokemon").value=
+// const filtrarTipo = (pokemonestipo) => {
+//   Object.entries(pokemon.pokemon).forEach( valor=> valor.forEach(dentro =>{
+//     let datosPokemones= dentro;
+//     const filtroTipos= datosPokemones.filter= (pokemones=> type['']=water)
+    
+//     console.log(filtroTipos)
+//   }
+//   ));
+ 
+//   const tipoPokemones= datosPokemones.filter(tipo=>{
+//   return tipo.type === type['grass'];
+  
+// });
+// console.log(tipoPokemones)
 
