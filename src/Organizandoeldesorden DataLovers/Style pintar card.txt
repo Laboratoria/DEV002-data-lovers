@@ -1,5 +1,4 @@
-      
-      body {
+body {
         font-family: Arial, Helvetica, sans-serif;
         background-image: url("https://pbs.twimg.com/media/ETT8FB8UEAAmv7A?format=jpg&name=large");
     background-color: #60c6eb;
@@ -8,9 +7,7 @@
         text-align:center;
         background-color: #84acf1;
         }
-    
-
-        * {
+ * {
             box-sizing: border-box;
           }
           

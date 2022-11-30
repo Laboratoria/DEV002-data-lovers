@@ -1,6 +1,17 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import operaciones from "./data.js";
+import data from "./data/ghibli/ghibli.js";
+//filtrar data
 
-console.log(example, data);
+//Ordenar la data
+//por directores
+function ordenarPorDirector() {
+  let peliculasOrdenadas = operaciones.peliculasOrdenadasPorDirector(
+    data.films
+  );
+  dibujarCard(peliculasOrdenadas);
+  // console.log(peliculasOrdenadas);
+}
+
+document
+  .getElementById("btnordenardirector")
+  .addEventListener("click", ordenarPorDirector);

@@ -1,9 +1,24 @@
-// estas funciones son de ejemplo
+//esto es un objeto que adentro tiene constantes y funciones
+const operaciones = {
+  
 
-export const example = () => {
-  return 'example';
+  //ordenar por directores
+  peliculasOrdenadasPorDirector(peliculas) {
+    peliculas = peliculas.sort((a, b) => {
+      a = a.director.toLowerCase();
+      b = b.director.toLowerCase();
+      return a < b ? -1 : a > b ? 1 : 0;
+    });
+
+    return peliculas;
+  },
+
+  compareStrings(a, b) {
+    // Assuming you want case-insensitive comparison
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    return a < b ? -1 : a > b ? 1 : 0;
+  },
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export default operaciones;
