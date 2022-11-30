@@ -52,6 +52,11 @@ export const speciesHuman = (characters) => {
   return characters.filter(p => p.species == "human");
 };
 
+// Filtramos por especie Half-Giant
+export const speciesHalfGiant = (characters) => {
+  return characters.filter(p => p.species == "half-giant");
+};
+
 // Filtrar hechizos de la Z-A
 export const spellsZToA = (arr) => {
   return arr.reverse(data)
@@ -75,6 +80,19 @@ export const spellsJinx = (spells) => {
 // Filtramos por  hechizos de tipo Transportation
 export const spellsTransportation = (spells) => {
   return spells.filter(s => s.spell_type == "Transportation");
+};
+
+
+// Filtramos los libros del más reciente al más viejo.
+// export const recentlyBooks = (arr) => {
+//   return arr.reverse((a,b)=> a-b);
+// };
+
+export const recentlyBooks = () => {
+  const newArray= Array.from(data.books);
+  return newArray.sort((number,number1) => {
+    return (number.releaseDay > number1.releaseDay) ? 1:-1
+  });
 };
 
 // export const anotherExample = () => {

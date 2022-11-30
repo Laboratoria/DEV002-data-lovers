@@ -1,4 +1,4 @@
-import { aToZ, zToA, charactersAlive, charactersDead, speciesHuman, spellsZToA, spellsCharm, spellsHex, spellsJinx, spellsTransportation } from './data.js';
+import { aToZ, zToA, charactersAlive, charactersDead, speciesHuman,speciesHalfGiant, spellsZToA, spellsCharm, spellsHex, spellsJinx, spellsTransportation, recentlyBooks } from './data.js';
 import data from './harrydata.js';
 
 
@@ -15,7 +15,8 @@ const selectSpells = document.querySelector('#segundoSelect');
 console.log(selectSpells)
 
 
-
+const selectBooks=document.querySelector('#tercerSelect');
+console.log(selectBooks)
 
 // Filtramos  a los personajes   --------------------------------
 
@@ -197,8 +198,39 @@ selectCharacters.addEventListener('change', () => {
       test1.appendChild(createElement);
       return
     });
-  }
+  // Filtramos por especie half-giant
+  } else if (valorOption == 'speciesHalfGiant') {
+    const x = document.querySelector(".test")
+    x.innerHTML = ""
+    const accederAlDom = document.getElementById('home')
+    accederAlDom.style.display = 'none';
+    const cardConteiner = document.getElementById('cardConteiner');
+    cardConteiner.style.display = 'block';
 
+    const aaa = speciesHalfGiant(data.characters)
+    console.log(aaa)
+    aaa.forEach(element => {
+      const createElement = document.createElement("div")
+      createElement.setAttribute("class", 'contenedorCard');
+      const templateTest = `
+      <div id="template">
+
+        ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
+
+         <div class="caja">
+            <p class="data">Name: ${element.name}</p>
+            <p class="data">Species: ${element.species}</p>
+            <p class="data">Gender: ${element.gender}</p>
+            <p class="data">Ancestry: ${element.ancestry}</p>
+            <p class="data">Actor: ${element.actor}</p>
+          </div>
+     </div>`;
+
+      createElement.innerHTML = templateTest;
+      test1.appendChild(createElement);
+      return
+    });
+  }
 });
 
 
@@ -416,3 +448,77 @@ selectSpells.addEventListener('change', () => {
 
 });
 
+selectBooks.addEventListener('change', () =>{
+  let valorOption = selectBooks.value;
+  console.log(valorOption)
+
+  if (valorOption == 'recently'){
+    const x = document.querySelector(".test")
+    x.innerHTML = ""
+    const accederAlDom = document.getElementById('home')
+    accederAlDom.style.display = 'none';
+    const cardConteiner = document.getElementById('cardConteiner');
+    cardConteiner.style.display = 'block';
+
+
+    const libros = data.books
+    console.log(libros)
+
+    libros.forEach(element => {
+      const createElement = document.createElement("div")
+      createElement.setAttribute("class", 'contenedorCard');
+      const templateTest = `
+      <div id="template">
+
+        ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
+
+         <div class="caja">
+            <p class="data">Tittle: ${element.title}</p>
+            <p class="data">Release Day: ${element.releaseDay}</p>
+            <p class="data">Autor: ${element.autor}</p>
+            <p class="data">Description: ${element.description}</p>
+          </div>
+     </div>`;
+
+      createElement.innerHTML = templateTest;
+
+      test1.appendChild(createElement);
+
+      return
+    });
+  }else if (valorOption == 'oldest'){
+    const x = document.querySelector(".test")
+    x.innerHTML = ""
+    const accederAlDom = document.getElementById('home')
+    accederAlDom.style.display = 'none';
+    const cardConteiner = document.getElementById('cardConteiner');
+    cardConteiner.style.display = 'block';
+
+
+    const oldestBooks = recentlyBooks(data.books)
+    console.log(oldestBooks)
+
+    oldestBooks.forEach(element => {
+      const createElement = document.createElement("div")
+      createElement.setAttribute("class", 'contenedorCard');
+      const templateTest = `
+      <div id="template">
+
+        ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
+
+         <div class="caja">
+            <p class="data">Tittle: ${element.title}</p>
+            <p class="data">Release Day: ${element.releaseDay}</p>
+            <p class="data">Author: ${element.author}</p>
+            <p class="data">Description: ${element.description}</p>
+          </div>
+     </div>`;
+
+      createElement.innerHTML = templateTest;
+
+      test1.appendChild(createElement);
+
+      return
+    });
+  }
+})
