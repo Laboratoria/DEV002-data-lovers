@@ -45,6 +45,7 @@ function createCard(pokemon){
     card.appendChild(number);
     //Poblar al contenedor principal
     container.appendChild(card);
+
 }
 
 
