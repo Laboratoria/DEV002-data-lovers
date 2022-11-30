@@ -27,7 +27,7 @@ El primer paso fue concretar nuestras ideas en formatos de baja calidad, inician
 A partir de estos bocetos solicitamos feedback a compañeras y coaches, con lo que pudimos iterar un nuevo bocetos de las soluciones planteadas. En esta ocasión nos decidimos por utilizar la aplicación miro para poder priorizar la colaboración remota. El resultado fue el siguiente:
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png)
 - **Prototipo de alta fidelidad**
-- [Prototipo de alta calidad](htthttps://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?node-id=0%3A1&t=QlQjPT6PCSrwnXzT-0p:// "Prototipo de alta calidad")### Features
+- ![Prototipo de alta calidad](https://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?node-id=0%3A1&t=QlQjPT6PCSrwnXzT-0p:// "Prototipo de alta calidad")
 - **Objetivo de la interfaz**
 El diseño debe representar el ideal de tu solución. Digamos que es lo que desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu diseño debe seguir los fundamentos de visual design.
 Mencionar paleta de colores y elección de fuente
