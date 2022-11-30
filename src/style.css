@@ -4,12 +4,14 @@
 }
 body {
   background-image: linear-gradient(125deg, #3d2a52, #764082, #a85d84, #8d4887, #58B19F);
-  animation: bganimation 15s infinite;
+  animation: bganimation 15s;
   background-size: 400%;
   margin: 0;
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 30px;
+  background-repeat:repeat-y;
+  
 }
 
 @keyframes bganimation {
@@ -25,7 +27,10 @@ body {
     background-position: 0% 50%;
   }
 } 
-
+#home{
+  width: 100%;
+  height: 100%;
+}
 #barra {
   display: flex;
   flex-direction: row;
@@ -101,6 +106,7 @@ hr {
   position: relative;
   left: 320px;
   top: 190px;
+  width: 25px;
 
 }
 
@@ -112,13 +118,23 @@ select {
 
 .filterSelect {
   display: flex;
+  
   flex-direction: row;
   justify-content: space-around;
+
 }
 
 #glasses {
   align-self: baseline;
   left: 10px;
+}
+
+#buho{
+  width:5%;
+  display: flex;
+  position: relative;
+  left: 10px;
+  
 }
 
 #box {
@@ -187,6 +203,7 @@ p {
   margin-right: 10%;
   align-items: center;
   background-color: #b2c033d8;
+  margin-bottom: 10%;
 }
 
 h3 {
@@ -207,6 +224,7 @@ h3 {
   margin-left: 5%;
   margin-right: 5px;
   z-index: 1;
+  margin-bottom: 10%;
 }
 
 .card {
@@ -263,6 +281,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 #arrow {
@@ -331,7 +350,7 @@ h3 {
   display: flex;
   position: relative;
   top: 100px;
-  left: 250px;
+  left: 200px;
   width: 16%;
   height: 1%;
   color: #fff;
@@ -362,38 +381,49 @@ h3 {
 @media only screen and (min-width:320px) and (max-width:768px) {
  body{
   margin-bottom: 5px;
+  background-size: 100%;
+ }
+ #barra{
+  display:flexbox;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 100px;
  }
   h1{
 
-    font-size: 20px;
-    flex-direction: row;
+    font-size: 28px;
     margin-right: 0;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 0px;
-    bottom: 80px;
-    left:120px;
-    top: 0;
-
+    left:10px;
+    top: 26px;
+    
   }
 
   #logo{
-    width: 15%;
-    height: 10%;
+    width: auto;
+    height: 55px;
     margin-top: 15px;
-    margin-left:30px;
+    margin-left:20px;
   }
   
   .select{
     display: flex;
     position: relative;
     font-size: 7px;
-    top: 70px;
-    right: 700px;
+    top: 77px;
 
+  }
+  .filterSelect{
+    display: flex;
+    position: relative;
+    right: 137%;
+    bottom: 100px;
+  align-items: center;
   }
   select{
     width: auto;
-    height: 20px;
+    height: 10px;
     display: flex;
     position: relative;
 
@@ -401,27 +431,27 @@ h3 {
 #search{
   display: flex;
   position: relative;
-  left: 25px;
+  left: 90px;
   width: 150px;
   height: 15px;
-  top: 110px;
+  top:45px;
 }
 hr{
   height: 2px;
 }
 #raya{
 
-  height: 10px;
+  height: 0;
 }
 #lupa{
-  left: 0px;
-  top: 87px;
-  height: 22%;
-  width: 10%;
+  left: 245px;
+  top: 27px;
+  width: 18px;
 }
 #buho{
   height: 6%;
   width: 10%;
+  
 }
 #glasses{
 
@@ -430,10 +460,10 @@ hr{
 
 }
 #foto{
-  width: 25%;
-  height: 25%;
+  width: 28%;
+  height: 28%;
   margin-right: 5%;
-  margin-top: 20%;
+  margin-top: 30%;
 }
 #paragraph{
   font-size: 20px;
@@ -441,7 +471,8 @@ hr{
 
 }
 #hibrido{
-  top: 180px;
+  top: 200px;
+  left: 30px;
 }
 .subtitles{
   font-size: 20px;
@@ -476,8 +507,13 @@ h3{
 } 
 .btnPrincipal{
   left: 0;
+  right: 0;
   top: 40px;
   font-size: 10px;
   width: auto;
+  margin: 0;
+}
+hr{
+  height: 2px;
 }
 }
