@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2D2F4F;
+    text-align: center;
+}
+
+h1 {
+    color: #F7BA17;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    margin: 30px;
+    padding: 20px;
+}
+
+#containerPokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+   
+}
+.pokemonCard {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    border-style: solid;
+    border-color: #F7BA17;
+    border-radius: 10px;
+    border-width: 6px;
+    width: 180px;
+    height: 230px;
+    padding: 10px;
+}
+
+p.name {
+    text-align: left;
+    margin-left: 10%;
+    line-height : 25px;
+    padding-top: 10%;
+
+}
+
+p.number {
+    text-align: left;
+    margin-left: 10%;
+    line-height : 25px;
+}
+
+
+
+
+
+
