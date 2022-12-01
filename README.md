@@ -28,6 +28,8 @@ A partir de estos bocetos solicitamos feedback a compañeras y coaches, con lo q
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png)
 - **Prototipo de alta fidelidad**
 https://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?t=6cW6PKH4WbPAVmmA-6
+![image](https://user-images.githubusercontent.com/113317909/205078707-c5f0ef10-e6c8-444a-88b5-3f9ba4840637.png)
+
 - **Objetivo de la interfaz**
 El diseño debe representar el ideal de tu solución. Digamos que es lo que desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu diseño debe seguir los fundamentos de visual design.
 Mencionar paleta de colores y elección de fuente
