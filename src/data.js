@@ -10,16 +10,23 @@ export const operaciones = {
     return peliculas;
   },
 
-    //ordenar por año
-    peliculasOrdenadasPorAno(peliculas) {
-      peliculas = peliculas.sort((a, b) => {
-        a = a.release_date.toLowerCase();
-        b = b.release_date.toLowerCase();
-        return a < b ? -1 : a > b ? 1 : 0;
-      });
-      return peliculas;
-    },
-  
+  //ordenar por año
+  peliculasOrdenadasPorAno(peliculas) {
+    peliculas = peliculas.sort((a, b) => {
+       a = a.release_date.toLowerCase();
+       b = b.release_date.toLowerCase();
+      return a < b ? -1 : a > b ? 1 : 0;
+    });
+     return peliculas;
+  },
+
+  //funcion de filtrado
+  filtradoPorDirectores(peliculas){
+  peliculas=peliculas.filter((functionfiltradoPorDirectores(director.peliculas)) => {
+     return a < b ? -1 : a > b ? 1 : 0;
+   }); 
+    return peliculas;
+   },  
 };
 
   

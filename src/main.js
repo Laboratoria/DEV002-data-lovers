@@ -71,11 +71,19 @@ function verDetallePelicula() {
   alert("cualquier vaina" + this.id);
 }
 
+//Filtrar peliculas
+
+function filtradoPorDirectores () {
+  let peliculasFiltradas = operaciones.filtradoPorDirectores(data.films);
+  dibujarCard(peliculasOrdenadas);
+}
+
 function lanzadera(){
   //pintarDirectores();
   pintarCard();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
+  document.getElementById("btnfiltrar").addEventListener("click", filtrar);
 }
 
 
