@@ -40,95 +40,100 @@
             <img class="ubi2" src="data/pokemon/Imagenes/R (2).png">
             <input type="button" value="Región Johto" class="johto text-white" id="bJohto">
           </div>
+        </div>
+      </div>
     </section>
   </div>
 
   <!--Segunda Pantalla-->
-  <div class="divViewHeaderTwo">
-    <header class="Filtros">
-      <div class="Ordenar">
-        <select name="selectOption">
-          <option value="defaultOption" selected>Ordenar por</option>
-          <option value="aZOrder">A - Z</option>
-          <option value="zAOrder">Z - A</option>
-          <option value="numAsc"># ASC - # DESC</option>
-          <option value="numDes"># DESC - # ASC</option>
-        </select>
-      </div>
-      <div class="Tipo">
-        <select name="selectTipe">
-          <option value="defaultTipe" selected>Tipo</option>
-          <option value="0">Acero</option>
-          <option value="1">Agua</option>
-          <option value="2">Bicho</option>
-          <option value="3">Dragón</option>
-          <option value="4">Eléctrico</option>
-          <option value="5">Fantasma</option>
-          <option value="6">Fuego</option>
-          <option value="7">Hada</option>
-          <option value="8">Hielo</option>
-          <option value="9">Lucha</option>
-          <option value="10">Normal</option>
-          <option value="11">Planta</option>
-          <option value="12">Psíquico</option>
-          <option value="13">Roca</option>
-          <option value="14">Siniestro</option>
-          <option value="15">Tierra</option>
-          <option value="16">Veneno</option>
-          <option value="17">Volador</option>
-        </select>
-      </div>
-      <div class="Debilidades">
-        <select name="selectDeb">
-          <option value="defaultDeb" selected>Debilidades</option>
-          <option value="0">Acero</option>
-          <option value="1">Agua</option>
-          <option value="2">Bicho</option>
-          <option value="3">Dragón</option>
-          <option value="4">Eléctrico</option>
-          <option value="5">Fantasma</option>
-          <option value="6">Fuego</option>
-          <option value="7">Hada</option>
-          <option value="8">Hielo</option>
-          <option value="9">Lucha</option>
-          <option value="10">Normal</option>
-          <option value="11">Planta</option>
-          <option value="12">Psíquico</option>
-          <option value="13">Roca</option>
-          <option value="14">Siniestro</option>
-          <option value="15">Tierra</option>
-          <option value="16">Veneno</option>
-          <option value="17">Volador</option>
-        </select>
-      </div>
-      <div class="Resistencia">
-        <select name="selectRes">
-          <option value="defaultRes" selected>Resistencia</option>
-          <option value="0">Acero</option>
-          <option value="1">Agua</option>
-          <option value="2">Bicho</option>
-          <option value="3">Dragón</option>
-          <option value="4">Eléctrico</option>
-          <option value="5">Fantasma</option>
-          <option value="6">Fuego</option>
-          <option value="7">Hada</option>
-          <option value="8">Hielo</option>
-          <option value="9">Lucha</option>
-          <option value="10">Normal</option>
-          <option value="11">Planta</option>
-          <option value="12">Psíquico</option>
-          <option value="13">Roca</option>
-          <option value="14">Siniestro</option>
-          <option value="15">Tierra</option>
-          <option value="16">Veneno</option>
-          <option value="17">Volador</option>
-        </select>
-      </div>
-    </header>
-    <input type="button" onclick="history.back(-1)" value="VOLVER" class="volver">
+    <div class="divViewHeaderTwo">
+      <header class="Filtros">
+        <div class="Ordenar">
+          <select name="selectOption" id="botonOrdenarPor">
+            <option value="defaultOption" selected>Ordenar por</option>
+            <option value="aZOrder">A - Z</option>
+            <option value="zAOrder">Z - A</option>
+            <option value="numAsc"># ASC - # DESC</option>
+            <option value="numDes"># DESC - # ASC</option>
+          </select>
+        </div>
+        <div class="Tipo">
+          <select name="selectTipe" id="botonTipo">
+            <option value="defaultTipe" selected>Tipo</option>
+            <option value="0">Acero</option>
+            <option value="1">Agua</option>
+            <option value="2">Bicho</option>
+            <option value="3">Dragón</option>
+            <option value="4">Eléctrico</option>
+            <option value="5">Fantasma</option>
+            <option value="fire">Fuego</option>
+            <option value="7">Hada</option>
+            <option value="8">Hielo</option>
+            <option value="9">Lucha</option>
+            <option value="10">Normal</option>
+            <option value="11">Planta</option>
+            <option value="12">Psíquico</option>
+            <option value="13">Roca</option>
+            <option value="14">Siniestro</option>
+            <option value="15">Tierra</option>
+            <option value="16">Veneno</option>
+            <option value="17">Volador</option>
+          </select>
+        </div>
+        <div class="Debilidades">
+          <select name="selectDeb" id="botonDebilidades">
+            <option value="defaultDeb" selected>Debilidades</option>
+            <option value="0">Acero</option>
+            <option value="1">Agua</option>
+            <option value="2">Bicho</option>
+            <option value="3">Dragón</option>
+            <option value="4">Eléctrico</option>
+            <option value="5">Fantasma</option>
+            <option value="fire">Fuego</option>
+            <option value="7">Hada</option>
+            <option value="8">Hielo</option>
+            <option value="9">Lucha</option>
+            <option value="10">Normal</option>
+            <option value="11">Planta</option>
+            <option value="12">Psíquico</option>
+            <option value="13">Roca</option>
+            <option value="14">Siniestro</option>
+            <option value="15">Tierra</option>
+            <option value="16">Veneno</option>
+            <option value="17">Volador</option>
+          </select>
+        </div>
+        <div class="Resistencia">
+          <select name="selectRes" id="botonResistencia">
+            <option value="defaultRes" selected>Resistencia</option>
+            <option value="0">Acero</option>
+            <option value="1">Agua</option>
+            <option value="2">Bicho</option>
+            <option value="3">Dragón</option>
+            <option value="4">Eléctrico</option>
+            <option value="5">Fantasma</option>
+            <option value="fire">Fuego</option>
+            <option value="7">Hada</option>
+            <option value="8">Hielo</option>
+            <option value="9">Lucha</option>
+            <option value="10">Normal</option>
+            <option value="11">Planta</option>
+            <option value="12">Psíquico</option>
+            <option value="13">Roca</option>
+            <option value="14">Siniestro</option>
+            <option value="15">Tierra</option>
+            <option value="16">Veneno</option>
+            <option value="17">Volador</option>
+          </select>
+        </div>
+      </header>
+      <a href="index.html" class="volver">
+        VOLVER
+      </a> 
 
-    <div id="listaPokemon"></div>
-  </div>
+      <div id="listaPokemon"></div>
+    </div>
+
 
 
 
