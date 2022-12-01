@@ -11,7 +11,7 @@ html {
 }
 
 body{
-    background-color: black;
+    background-color: gray(61, 59, 59);
     background-image: url("./images/wallpaper3.webp");
     background-size: cover;
     font-family: 'Harry Potter', sans-serif;   
@@ -75,4 +75,18 @@ button[type=button] {
 #cargarAPI:hover {
     background-color: #000;
     color: #f6f6f6;
+}
+@media only screen and (max-width: 788px) {
+    body {
+        background-color: aqua;
+    }
+    .title {
+        width: 25rem;
+        height: 9rem;
+    }
+   @media only screen and (min-width: 789px) {
+    body {
+        background-color:#eeba30;
+    }
+}
 }
