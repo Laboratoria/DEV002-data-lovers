@@ -58,6 +58,15 @@ function ordenarPorDirector() {
   dibujarCard(peliculasOrdenadas);
 }
 
+//Ordenar la data por año
+function ordenarPorAno() {
+  let peliculasOrdenadas = operaciones.peliculasOrdenadasPorAno(
+    data.films
+  );
+  
+  dibujarCard(peliculasOrdenadas);
+}
+
 function verDetallePelicula() {
   alert("cualquier vaina" + this.id);
 }
@@ -66,6 +75,8 @@ function lanzadera(){
   //pintarDirectores();
   pintarCard();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
+  document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
 }
+
 
 window.onload = lanzadera;
