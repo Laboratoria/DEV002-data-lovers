@@ -68,7 +68,9 @@ const mostrar = (pokemones)=>{
                                  
                                  <div class="botonesTarjeta">
                                    <button id="btnStats" class="bntS"> Stats </button>
-                                   <button id="btnResistencia" class="btnR">Characteristics</button>
+                                    
+                                   <button id="btnResistencia" class="btnR">Characteristics
+                                   </button>
                                  </div>
                                                       
                                  </div>  `                        
@@ -89,10 +91,12 @@ botonFiltrar.addEventListener('click',()=>{
     let seleccionTipoPokemon =document.getElementById('tipoPokemones').value;
     if (seleccionTipoPokemon == "") {
       mostrar(pokemon.pokemon);
-    } else {
+    } 
+    else {
+      contenedor.innerHTML=''; 
       const dataTipoPokemon = filtrarTipo(todoslosPokemones, seleccionTipoPokemon);     
       mostrar(dataTipoPokemon);
-       
+     
       
     }
   
