@@ -1,3 +1,40 @@
+body {
+    background-image: url("fondo.jpg.webp");
+    font-family: 'Black Han Sans', sans-serif;
+}
+.ghibli {
+    width: 500px;
+    padding: 10px;
+    margin: 20px;
+    position: sticky;
+    margin: 5px 700px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: JejuHallasan;
+    background-position: center;
+    font-size: 50px;
+    margin: 70px 600px;
+}
+
+#peliculas {
+    border-radius: 50px;
+    font-family: 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(208, 230, 199);
+    padding: 20px;
+    border: 1px solid #151618;
+    margin: 90px 800px;
+    width: 15%; 
+}
+
+
+
+
 .director {
     font-size: large;
     font-weight: 200;
