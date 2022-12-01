@@ -19,6 +19,7 @@ export const operaciones = {
       });
       return peliculas;
     },
+    
   
 };
 
