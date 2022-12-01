@@ -1,9 +1,15 @@
-// estas funciones son de ejemplo
+export const operaciones = {
 
-export const example = () => {
-  return 'example';
+  //ordenar por directores
+  peliculasOrdenadasPorDirector(peliculas) {
+    peliculas = peliculas.sort((a, b) => {
+      a = a.director.toLowerCase();
+      b = b.director.toLowerCase();
+      return a < b ? -1 : a > b ? 1 : 0;
+    });
+    return peliculas;
+  },
+  
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+

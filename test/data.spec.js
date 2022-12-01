@@ -1,23 +1,13 @@
-import { example, anotherExample } from '../src/data.js';
+import { operaciones } from '../src/data.js';
+import data from "../src/data/ghibli/ghibli.js";
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('test by operaciones', () => {
+  it('should by a function', () => {
+    expect(typeof operaciones.peliculasOrdenadasPorDirector).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('should return array', () => {
+    expect(Array.isArray(operaciones.peliculasOrdenadasPorDirector(data.films))).toBe(true)
   });
 });
+
