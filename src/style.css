@@ -17,7 +17,7 @@ body {
     height: 108px;
     left: -9px;
     top: 0px;
-    background: rgba(28, 15, 106, 0.82);
+    background: #1C0F6A;
     border: 1px solid #000000;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
@@ -63,7 +63,7 @@ body {
     height: 55px;
     left: 119px;
     top: 129px;
-    background: rgba(28, 15, 106, 0.67);
+    background: #1C0F6A;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -89,7 +89,7 @@ body {
     height: 490px;
     left: -15px;
     top: 55px;
-    background: rgba(234, 184, 10, 0.48);
+    background: #EAB80A;
 }
 
 .fondocaja2 {
@@ -99,42 +99,55 @@ body {
     height: 530px;
     left: 50px;
     top: 0px;
-    background: rgba(28, 15, 106, 0.71);
+    background: #1C0F6A;
 }
 
 .kanto {
     display: block;
     position: absolute;
-    border-radius: 50%;
+    border-radius: 30%;
     width: 100px;
     height: 100px;
     left: 707px;
     top: 55px;
     font-family: 'Nerko One', cursive;
-    background: rgba(234, 184, 10, 0.48);
+    background: #EAB80A;
     box-shadow: inset 0px 4px 4px #000000;
-    font-size: 100%;
+    text-align: justify;
     cursor: pointer;
-    
+
+
 
 }
 
 .text-white {
     color: rgb(255, 255, 255);
+
+
+
+}
+
+
+
+.font-size {
+    font-size: 15px;
+    
+
 }
 
 .johto {
     display: block;
     position: absolute;
-    border-radius: 50%;
+    border-radius: 30%;
     width: 100px;
     height: 100px;
     left: 1055px;
     top: 55px;
     font-family: 'Nerko One', cursive;
-    background: rgba(28, 15, 106, 0.82);
+    background: #1C0F6A;
     box-shadow: inset 0px 4px 4px #000000;
-    font-size: 100%;
+
+    cursor: pointer;
 
 }
 
@@ -172,7 +185,7 @@ body {
     height: 50px;
     left: -9px;
     top: 0px;
-    background: rgba(28, 15, 106, 0.82);
+    background: #1C0F6A;
     border: 1px solid #000000;
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
@@ -213,10 +226,22 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-    left: 29px;
-    top: 683px;
-    background: rgba(234, 10, 10, 0.48);
+    left: 1310px;
+    top: 120px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.35);
+    background: #EA0A0A;
 }
+
+.refrescar {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 1310px;
+    top: 238px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.35);
+    background: #EA0A0A;
+}
+
 
 .contenedor {
     display: flex;
@@ -238,14 +263,49 @@ body {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: center;
-    background: rgba(28, 15, 106, 0.82);
+    justify-content: space-around;
+    background: #F8E8B2;
     border-radius: 30px;
+    height: 284px;
     float: left;
-    width: 80%;
-}
+    width: 70%;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.35);}
+
+
+  .pokemon:hover{
+    transform: rotateY(180deg);
+  }
+
+  .frente{
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .respaldo{
+    position: absolute;
+    width: 67%;
+    height: 70%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+
+  .contenido{
+
+    
+    background-color: #EAB80A;
+    justify-content: space-around;
+  }
+
+
 
 .imagen {
-    height: 150px;
+    height: 110px;
     margin: 25px;
 }
+
+
+
+
+
+
+

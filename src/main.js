@@ -9,18 +9,25 @@ const botonOrdenarPor = document.getElementById('botonOrdenarPor');
 const botonTipo = document.getElementById('botonTipo');
 const botonDebilidades = document.getElementById('botonDebilidades');
 const botonResistencia = document.getElementById('botonResistencia');
+const botonBorrarFiltros= document.getElementById('borrarFiltros');
+const selectResistencia = document.getElementById('botonResistencia');
+const selectOrdenarPor = document.getElementById('botonOrdenarPor');
+const selectDebilidades = document.getElementById('botonDebilidades');
+const selectTipo = document.getElementById('botonTipo');
 
 bKanto.addEventListener('click', () => {
   headerViewOne.style.display = 'none';
   headerViewTwo.style.display = 'block';
   filtrados = listarPokemon('kanto');
   pintarLista();
+  regiones="kanto"; 
 });
 bJohto.addEventListener('click', () => {
   headerViewOne.style.display = 'none';
   headerViewTwo.style.display = 'block';
   filtrados = listarPokemon('johto');
   pintarLista();
+  regiones="johto";
 });
 botonOrdenarPor.addEventListener('change', () => {
   filtrados = ordenarPor(botonOrdenarPor.value, filtrados);
@@ -38,20 +45,32 @@ botonResistencia.addEventListener('change', () => {
   filtrados = resistencia(botonResistencia.value, filtrados);
   pintarLista();
 });
+botonBorrarFiltros.addEventListener('click',() => {
+  headerViewOne.style.display = 'none';
+  headerViewTwo.style.display = 'block';
+  filtrados = listarPokemon(regiones);
+  pintarLista();
+  selectResistencia.value = 'defaultRes';
+  selectOrdenarPor.value = 'defaultOption';
+  selectDebilidades.value = 'defaultDeb';
+  selectTipo.value = 'defaultTipe';
+
+})
 
 
 headerViewTwo.style.display = 'none';
 let filtrados;
+let regiones;
 
 // Por cada pokemon añade el return 
 let pokemon = (nombre, numero, tipo, imagen) => {
-  return `<div class="contenedor">
-    <div class="pokemon">
+  return `<div class="contenedor" onclick>
+    <div class="pokemon" class="frente" >
       <img src="${imagen}" class="imagen" />
-      <div>
-        <p>${nombre}</p>
-        <p>#${numero}</p>
-        <p>${tipo}</p>
+      <div class="contenido">
+        <h4>${nombre}</h4>
+        <h4>#${numero}</h4>
+        <h5>${tipo}</h5>
       </div>
     </div>
   </div>`

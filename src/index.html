@@ -36,9 +36,9 @@
             <li>
             </li>
             <img class="ubi1" src="data/pokemon/Imagenes/R (2).png">
-            <input type="button" value="Región  Kanto" class="kanto text-white" id="bKanto">
+            <input type="button" value="Región Kanto" class="kanto text-white font-size" id="bKanto">
             <img class="ubi2" src="data/pokemon/Imagenes/R (2).png">
-            <input type="button" value="Región Johto" class="johto text-white" id="bJohto">
+            <input type="button" value="Región Johto" class="johto text-white font-size" id="bJohto">
           </div>
         </div>
       </div>
@@ -46,93 +46,99 @@
   </div>
 
   <!--Segunda Pantalla-->
-    <div class="divViewHeaderTwo">
-      <header class="Filtros">
-        <div class="Ordenar">
-          <select name="selectOption" id="botonOrdenarPor">
-            <option value="defaultOption" selected>Ordenar por</option>
-            <option value="aZOrder">A - Z</option>
-            <option value="zAOrder">Z - A</option>
-            <option value="numAsc"># ASC - # DESC</option>
-            <option value="numDes"># DESC - # ASC</option>
-          </select>
-        </div>
-        <div class="Tipo">
-          <select name="selectTipe" id="botonTipo">
-            <option value="defaultTipe" selected>Tipo</option>
-            <option value="0">Acero</option>
-            <option value="1">Agua</option>
-            <option value="2">Bicho</option>
-            <option value="3">Dragón</option>
-            <option value="4">Eléctrico</option>
-            <option value="5">Fantasma</option>
-            <option value="fire">Fuego</option>
-            <option value="7">Hada</option>
-            <option value="8">Hielo</option>
-            <option value="9">Lucha</option>
-            <option value="10">Normal</option>
-            <option value="11">Planta</option>
-            <option value="12">Psíquico</option>
-            <option value="13">Roca</option>
-            <option value="14">Siniestro</option>
-            <option value="15">Tierra</option>
-            <option value="16">Veneno</option>
-            <option value="17">Volador</option>
-          </select>
-        </div>
-        <div class="Debilidades">
-          <select name="selectDeb" id="botonDebilidades">
-            <option value="defaultDeb" selected>Debilidades</option>
-            <option value="0">Acero</option>
-            <option value="1">Agua</option>
-            <option value="2">Bicho</option>
-            <option value="3">Dragón</option>
-            <option value="4">Eléctrico</option>
-            <option value="5">Fantasma</option>
-            <option value="fire">Fuego</option>
-            <option value="7">Hada</option>
-            <option value="8">Hielo</option>
-            <option value="9">Lucha</option>
-            <option value="10">Normal</option>
-            <option value="11">Planta</option>
-            <option value="12">Psíquico</option>
-            <option value="13">Roca</option>
-            <option value="14">Siniestro</option>
-            <option value="15">Tierra</option>
-            <option value="16">Veneno</option>
-            <option value="17">Volador</option>
-          </select>
-        </div>
-        <div class="Resistencia">
-          <select name="selectRes" id="botonResistencia">
-            <option value="defaultRes" selected>Resistencia</option>
-            <option value="0">Acero</option>
-            <option value="1">Agua</option>
-            <option value="2">Bicho</option>
-            <option value="3">Dragón</option>
-            <option value="4">Eléctrico</option>
-            <option value="5">Fantasma</option>
-            <option value="fire">Fuego</option>
-            <option value="7">Hada</option>
-            <option value="8">Hielo</option>
-            <option value="9">Lucha</option>
-            <option value="10">Normal</option>
-            <option value="11">Planta</option>
-            <option value="12">Psíquico</option>
-            <option value="13">Roca</option>
-            <option value="14">Siniestro</option>
-            <option value="15">Tierra</option>
-            <option value="16">Veneno</option>
-            <option value="17">Volador</option>
-          </select>
-        </div>
-      </header>
-      <a href="index.html" class="volver">
-        VOLVER
-      </a> 
 
-      <div id="listaPokemon"></div>
-    </div>
+<div class="divViewHeaderTwo">
+   
+    <header class="Filtros">
+      <div class="Ordenar">
+        <select name="selectOption" id="botonOrdenarPor">
+          <option value="defaultOption" selected>Ordenar por</option>
+          <option value="aZOrder">A - Z</option>
+          <option value="zAOrder">Z - A</option>
+          <option value="numAsc"># ASC - # DESC</option>
+          <option value="numDes"># DESC - # ASC</option>
+        </select>
+      </div>
+
+
+
+      <div class="Tipo">
+        <select name="selectTipe" id="botonTipo">
+          <option value="defaultTipe" selected>Tipo</option>
+          <option value="steel">Acero</option>
+          <option value="water">Agua</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ghost">Fantasma</option>
+          <option value="fire">Fuego</option>
+          <option value="fairy">Hada</option>
+          <option value="ice">Hielo</option>
+          <option value="fighting">Lucha</option>
+          <option value="normal">Normal</option>
+          <option value="grass">Planta</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="dark">Siniestro</option>
+          <option value="ground">Tierra</option>
+          <option value="poison">Veneno</option>
+          <option value="flying">Volador</option>
+        </select>
+      </div>
+      <div class="Debilidades">
+        <select name="selectDeb" id="botonDebilidades">
+          <option value="defaultDeb" selected>Debilidades</option>
+          <option value="steel">Acero</option>
+          <option value="water">Agua</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ghost">Fantasma</option>
+          <option value="fire">Fuego</option>
+          <option value="fairy">Hada</option>
+          <option value="ice">Hielo</option>
+          <option value="fighting">Lucha</option>
+          <option value="normal">Normal</option>
+          <option value="grass">Planta</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="dark">Siniestro</option>
+          <option value="ground">Tierra</option>
+          <option value="poison">Veneno</option>
+          <option value="flying">Volador</option>
+        </select>
+      </div>
+      <div class="Resistencia">
+        <select name="selectRes" id="botonResistencia">
+          <option value="defaultRes" selected>Resistencia</option>
+          <option value="steel">Acero</option>
+          <option value="water">Agua</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ghost">Fantasma</option>
+          <option value="fire">Fuego</option>
+          <option value="fairy">Hada</option>
+          <option value="ice">Hielo</option>
+          <option value="fighting">Lucha</option>
+          <option value="normal">Normal</option>
+          <option value="grass">Planta</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="dark">Siniestro</option>
+          <option value="ground">Tierra</option>
+          <option value="poison">Veneno</option>
+          <option value="flying">Volador</option>
+        </select>
+      </div>
+    </header>
+
+    <input type="button" value="Volver" class="volver" onclick="location.reload()" />
+    <input type="button" value="Borrar Filtros" class="refrescar" name="borrar filtros" id="borrarFiltros"/>
+
+    <div id="listaPokemon"></div>
+  
+  </div>
 
 
 
