@@ -1,5 +1,6 @@
 body {
     background-image: url("fondo.jpg.webp");
+    background-size: 100%;
     font-family: 'Black Han Sans', sans-serif;
 }
 .ghibli {
