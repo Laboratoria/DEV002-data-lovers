@@ -1,5 +1,5 @@
 
-import { anotherExample, filtro } from './data.js';
+//import { anotherExample, filtro } from './data.js';
 // import data from './data/lol/lol.js';
 //import data from './data/harrypotter/data.js';
 // import data from './data/rickandmorty/rickandmorty.js';
