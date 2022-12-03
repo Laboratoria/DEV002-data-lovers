@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no", maximum-scale="1.0", minimum-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" maximum-scale="1.0" minimum-scale="1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -24,15 +24,15 @@
 
       </div>
     <div class="cajaAutores">
-      <p class = autores> by: Adriana Zambrano - Erika Suesca 2022</p> 
+      <p class="autores"> by: Adriana Zambrano - Erika Suesca 2022</p> 
     </div>
       
     </footer>
   </section>
 
     <!-- PAGINA DE POKEMONES-->
-    <section class="filtrosBusqueda">
-      <div  class="opcionesFiltros" >
+      <section class="filtrosBusqueda">
+        <div  class="opcionesFiltros" >
         <h3>Type</h3>
         <select  id="tipoPokemones" placeholder="type">
           
@@ -99,33 +99,26 @@
           <option value="water">Water</option>
         </select>
         
-
-      </div>
-
-      <button id="btn-filtrar"> Filtrar </button>
-
-      
-    </section>
-     
-     
-    <section id="seccionPokemones" >
-    
-      <div id="resistencias">
-            
-         <ul class="menu-btn2" role="menu" id="resistencias">
-          <li id="" onmouseover="ver(1)" onmouseout="ocultar(1)">
-            <a href="#">Resistant</a>
-            <div id="resistenciasPokemon">
-              
-               </div>
-          </li>
-          
-        </ul>
        
       </div>
+      <button id="btn-filtrar"> Filtrar </button>
+      </section>
 
+      <section class="tiposInput">
+       
+        <input type="text" placeholder="Buscar por nombre" id="inputBuscarNombre"> 
+        <select id =  "ordenPokemonAz">
+        <input type="button" value="ordenarAZ↓" id="buttonAZ">
+        <input type="button" value="ordenarZA↑" id="buttonZA"> 
+      </select>   
+      </section> 
+
+     
       
-      
+     
+      <section id="seccionPokemones" >
+    
+
       </section>
 
 
