@@ -169,10 +169,17 @@ body{
     margin-top: 15px;
 }
 
-.filtrosBusqueda {
+.filtrosBusqueda{
     display: none;
 }
 
+.tiposInput{
+    display: none;
+}
+
+/*.inputFiltroBuscador {
+    display: none;
+}*/
 /* Estilos pagina Estadisticas*/ 
 
 .paginaEstadistica{
