@@ -1,5 +1,8 @@
 *{
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -132,8 +135,7 @@ body{
 
 .nombreP {
     color: #343b59;
-    margin:0px;
-    font-family: 'Montserrat', sans-serif;
+     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
    /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
     text-transform: capitalize;
@@ -162,9 +164,6 @@ body{
     transform: rotateY(180deg)
 }
 
-/*.descripcionTarjeta{
-}*/
-
 .botonesTarjeta{
     margin-top: 15px;
 }
@@ -172,6 +171,77 @@ body{
 .filtrosBusqueda {
     display: none;
 }
+/*  caja de resistencias y debilidades:  */
+.cajaResydebi{
+    width: min-content;
+    height: min-content;
+}
+.contenedorListas{
+    display: flex;
+    margin-left: 7px;
+     justify-content: center;
+    width: min-content;
+    height: min-content;
+
+}
+.listaResistencia, .listaDebilidades{
+    margin: 0px 5px;
+     padding: 0.1em 1em 0.5em 1em; 
+    background-color: #7c779c; 
+    border-radius: 10%;
+    width:min-content ;
+    height: min-content;
+    float: left;
+    list-style-type: none;
+     position: relative;
+ }
+
+.listaResistencia > h2 , .listaDebilidades > h2 {
+    margin: 5px;
+      font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: rgb(16, 20, 49);  
+}
+ 
+ .cajaResydebi li:hover{
+    background-color: #990033;
+ }
+ 
+ #contenedorResistencia, #contenedorDebilidades{
+    position: absolute; 
+    vertical-align: middle;
+    width: 100px;
+    top: 100%; 
+    left: 0px;  
+    background-color: #41338b; 
+    font:normal 0.8em arial;  
+    padding: 0.2em 0.5em ; 
+    display: none;
+
+ }
+
+ .listaResistencia:hover  #contenedorResistencia {
+    display: block;
+ }
+ 
+ .listaDebilidades:hover #contenedorDebilidades {
+    display: block;
+ }
+
+ .debiyresis{
+     background-color: #C9D6FF;
+     width: 130px;
+    height:min-content;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: initial;
+white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+      
+ }
+
+
 
 /* Estilos pagina Estadisticas*/ 
 

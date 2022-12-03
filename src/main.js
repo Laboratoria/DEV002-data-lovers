@@ -23,8 +23,8 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
 });
 
 
-  const seccion = document.getElementById('seccionPokemones');
-  seccion.setAttribute('class', 'paginaPokemones');
+ const seccion = document.getElementById('seccionPokemones');
+ seccion.setAttribute('class', 'paginaPokemones');
  const contenedorPadre= document.createElement('div');
  contenedorPadre.setAttribute('class','contenedorP');
  const contenedor = document.createElement('div');
@@ -46,8 +46,9 @@ seccion.appendChild(contenedorPadre);
 
 const mostrar = (pokemones)=>{
     pokemones.forEach(pokemon => {
-         
-            
+        
+ 
+           
        contenedor.innerHTML+=  
        
        ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
@@ -65,20 +66,53 @@ const mostrar = (pokemones)=>{
                                    <p id="weightPokemon" class="sizeP"> weight: ${pokemon.size.weight}</p>
                                  
                                  </div>
-                                 
-                                 <div class="botonesTarjeta">
-                                   <button id="btnStats" class="bntS"> Stats </button>
+
+                                 <div id="contenedorResydebi" class="cajaResydebi">
+            
+                                 <ul class="contenedorListas"  >
+                                   <li class="listaResistencia ">
+                                    <h2 class='tituloLista'>Resistant<h2>
+                                     <div id="contenedorResistencia">
+                                        <p class='debiyresis'>${pokemon.resistant  } </p>
                                     
-                                   <button id="btnResistencia" class="btnR">Characteristics
-                                   </button>
-                                 </div>
+                                                                                 
+                                       </div>
+                                   </li>
+                                                                      
+                                    <li class="listaDebilidades" >
+                                    <h2  class='tituloLista'>Weaknesses</h2>
+                                    <div id="contenedorDebilidades">
+                                        <p class='debiyresis'>  ${pokemon.weaknesses}</p>
+                                      </div>
+                                    </li> 
+                         
+                                   
+                                   
+                                 </ul>
+                               
+                         
+                                    </div>
+                                 
+                                 
+
                                                       
-                                 </div>  `                        
+                             </div>  `                        
      
     
-    });
+    
+      
+  
+  });
 } 
+
+
 mostrar(pokemon.pokemon);
+
+
+
+// Ocultar y mostrar resistencias y debilidades pokemones:
+
+
  
 // Mostrar pokemones Filtrados:
 const todoslosPokemones= pokemon.pokemon;
