@@ -40,3 +40,8 @@ h1{
     font-size: large;
     font-weight: 200;
 }
+
+#card{
+    margin: 20px solid black;
+    background-color: aliceblue;
+}
