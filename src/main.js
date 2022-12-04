@@ -11,12 +11,22 @@ const prueba = document.getElementById("prueba")
 //<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
 //<img src="${data.films[0].poster}" />`
 
+let cards = document.getElementById("cards")
+
 data.films.forEach(element => {
-    prueba.innerHTML += ` 
-    <div class= "prueba"> Director: ${element.director} Título: ${element.title} ${element.description} ${element.release_date} ${element.rt_score}</div>
-    <img src="${element.poster}"/>`
-
-
+    
+    let newDiv = document.createElement("div")
+    newDiv.id = "card"
+    cards.appendChild(newDiv) 
+    
+    newDiv.innerHTML += `
+    <article id="title" class="title"> Título: ${element.title} </article>
+    <article id="director"> Director: ${element.director} </article>
+    <article id="releaseDate"> Año: ${element.releaseDate} </article>
+    <article id="rtScore"> Puntaje: ${element.rt_score}</article>
+    <article id="description"> Descripción ${element.description}</article>
+    <img id="poster" src="${element.poster}"/>
+    `
 
 })
 
