@@ -33,6 +33,14 @@ h1{
     width: 15%; 
 }
 
+.cards {
+    width: 100%;
+    display: flex;
+    gap: 50 px;
+    padding: 20px ;
+}
+
+
 
 
 
