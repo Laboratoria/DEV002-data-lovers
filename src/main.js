@@ -12,13 +12,16 @@ const prueba = document.getElementById("prueba")
 //<img src="${data.films[0].poster}" />`
 
 let cards = document.getElementById("cards")
+document.getElementById("pantalla1").style.visibility = "visible";
+//document.getElementById("pantalla2").style.visibility = "hidden";
+
 
 data.films.forEach(element => {
-    
+
     let newDiv = document.createElement("div")
     newDiv.className = "card"
-    cards.appendChild(newDiv) 
-    
+    cards.appendChild(newDiv)
+
     newDiv.innerHTML += `
     <article id="title" class="title"> Título: ${element.title} </article>
     <article id="director"> Director: ${element.director} </article>
@@ -30,13 +33,11 @@ data.films.forEach(element => {
 
 })
 
-let inicio = document.getElementById("peliculas");
+/*/let inicio = document.getElementById("peliculas");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
-    let pantalla1 = document.getElementById("pantalla1")
-    pantalla1.style.display = "none";
-    let pantalla2 = document.getElementById("pantalla2");
-    pantalla2.style.display = "inline-flex";
+    document.getElementById("pantalla1").style.visibility = "hidden"
+    document.getElementById("pantalla2").style.visibility = "visible"
 }
 
 //console.log (data.films.forEach(element => console.log(element)))
