@@ -69,6 +69,31 @@ const mostrar = (pokemones) => {
               <button id="btnStats" class="bntS"> Stats </button>
               <button id="btnResistencia" class="btnR">Characteristics</button>
             </div>
+            <div id="contenedorResydebi" class="cajaResydebi">
+            
+                                 <ul class="contenedorListas"  >
+                                   <li class="listaResistencia ">
+                                    <h2 class='tituloLista'>Resistant<h2>
+                                     <div id="contenedorResistencia">
+                                        <p class='debiyresis'>${pokemon.resistant  } </p>
+                                    
+                                                                                 
+                                       </div>
+                                   </li>
+                                                                      
+                                    <li class="listaDebilidades" >
+                                    <h2  class='tituloLista'>Weaknesses</h2>
+                                    <div id="contenedorDebilidades">
+                                        <p class='debiyresis'>  ${pokemon.weaknesses}</p>
+                                      </div>
+                                    </li> 
+                         
+                                   
+                                   
+                                 </ul>
+                               
+                         
+                                    </div>
           </div>  `
     });
 } 
