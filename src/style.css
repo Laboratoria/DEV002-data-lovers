@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+/* font-family: 'Delius Unicase', cursive;
+font-family: 'Mitr', sans-serif; 
+Delius Unicase: 400;700
+Mitr: 200;300;400;500;600;700*/
+
+body {
+    background-color: #344D67;
+    color: #ADE792;
+    /*font-family: ;
+    font-size: 28px;*/
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    /* position: absolute; 
+    width: 276px;
+    height: 36px;*/
+    /* left: 42px;
+    top: 119px; */
+    
+    font-family: 'Delius Unicase';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30pt;
+    line-height: 31px;
+    text-align: center;
+    
+    color: #F3ECB0;
+}
+
+
+.contenedor {
+    /*background-color: blueviolet;
+    border-color: #ADE792;
+    border-radius: 50px;
+    border: 10px;*/
+    /* box-sizing: border-box; */
+
+    /*position: absolute;*/
+    max-width: 90%;
+    height: 300px;
+   /* left: 19px;
+    top: 193px; */
+    margin: auto;
+    background: #344D67;
+    border: 2px solid #6ECCAF;
+    border-radius: 10px;  
+    align-items: center;
+
+}
+
+.imagen {
+    width: 30%;
+    /* background-color: blue; */
+    float: left;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+
+img {
+    position: left;
+    /* width: 114.77px;
+    height: 108px; */
+    border-radius: 10px;
+
+    
+    background-color: yellow;
+}
+
+figure {
+    margin: 0;
+}
+
+.texto {
+    width: 70%;
+    /* background-color: orange; */
+    float: right;
+    text-align: left;  
+    
+}
+
+#titulo {
+   /*  position: absolute;
+    width: 174px;
+    height: 102px;
+    left: 155px;
+    top: 206px; */
+    /* background-color: rgb(238, 130, 130); */
+    
+    font-family: 'Mitr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26pt;
+    line-height: 75pt;
+    display: flex;
+    align-items: center;
+    
+    color: #ADE792;
+    margin: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+}
+
+#datos {
+    /* background-color: rgb(255, 0, 0); */
+   
+   /*  position: absolute;
+    width: 174px;
+    height: 102px;
+    left: 155px;
+    top: 206px; */
+    font-family: 'Mitr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22pt;
+    
+    line-height: 34pt;
+    display: flex;
+    align-items: left;
+    
+    color: #ADE792;
+    margin: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+   
+}
