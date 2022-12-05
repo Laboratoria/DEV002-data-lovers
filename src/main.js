@@ -659,3 +659,18 @@ document.getElementById("btnPotions").addEventListener("click", () => {
 
 
 });
+
+let filtrar = document.addEventListener('keyup', e => {
+  const x = document.querySelector(".test")
+    x.innerHTML = ""
+  if (e.target.matches('#search')) {
+
+    let inputSearch = (e.target.value).toLowerCase();
+    console.log(inputSearch);
+    let dios = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
+
+    console.log(dios)
+
+  }
+})
+console.log(filtrar)
