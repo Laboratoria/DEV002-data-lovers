@@ -1,7 +1,8 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-image: linear-gradient(125deg, #3d2a52, #764082, #a85d84, #8d4887, #58B19F);
   animation: bganimation 15s;
@@ -10,8 +11,8 @@ body {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 30px;
-  background-repeat:repeat-y;
-  
+  background-repeat: repeat-y;
+
 }
 
 @keyframes bganimation {
@@ -26,11 +27,13 @@ body {
   100% {
     background-position: 0% 50%;
   }
-} 
-#home{
+}
+
+#home {
   width: 100%;
   height: 100%;
 }
+
 #barra {
   display: flex;
   flex-direction: row;
@@ -53,7 +56,7 @@ body {
 
 h1 {
   font-family: 'Island Moments', cursive;
-  font-size:700% ;
+  font-size: 700%;
   left: 450px;
   right: 60px;
   bottom: 20px;
@@ -118,7 +121,7 @@ select {
 
 .filterSelect {
   display: flex;
-  
+
   flex-direction: row;
   justify-content: space-around;
 
@@ -129,12 +132,12 @@ select {
   left: 10px;
 }
 
-#buho{
-  width:5%;
+#buho {
+  width: 5%;
   display: flex;
   position: relative;
   left: 10px;
-  
+
 }
 
 #box {
@@ -299,7 +302,7 @@ h3 {
 
 
 #cardConteiner {
-  
+
   margin: 50px;
 }
 
@@ -379,141 +382,162 @@ h3 {
 }
 
 @media only screen and (min-width:320px) and (max-width:768px) {
- body{
-  margin-bottom: 5px;
-  background-size: 100%;
- }
- #barra{
-  display:flexbox;
-  flex-wrap: wrap;
-  margin: 0;
-  height: 100px;
- }
-  h1{
+  body {
+    margin-bottom: 5px;
+    background-size: 100%;
+  }
+
+  #barra {
+    display: flexbox;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 100px;
+  }
+
+  h1 {
 
     font-size: 28px;
     margin-right: 0;
     margin-top: 5px;
     margin-left: 0px;
-    left:10px;
+    left: 10px;
     top: 26px;
-    
+
   }
 
-  #logo{
+  #logo {
     width: auto;
     height: 55px;
     margin-top: 15px;
-    margin-left:20px;
+    margin-left: 20px;
   }
-  
-  .select{
+
+  .select {
     display: flex;
     position: relative;
     font-size: 7px;
     top: 77px;
 
   }
-  .filterSelect{
+
+  .filterSelect {
     display: flex;
     position: relative;
     right: 137%;
     bottom: 100px;
-  align-items: center;
+    align-items: center;
   }
-  select{
+
+  select {
     width: auto;
     height: 10px;
     display: flex;
     position: relative;
 
   }
-#search{
-  display: flex;
-  position: relative;
-  left: 90px;
-  width: 150px;
-  height: 15px;
-  top:45px;
-}
-hr{
-  height: 2px;
-}
-#raya{
 
-  height: 0;
-}
-#lupa{
-  left: 245px;
-  top: 27px;
-  width: 18px;
-}
-#buho{
-  height: 6%;
-  width: 10%;
-  
-}
-#glasses{
+  #search {
+    display: flex;
+    position: relative;
+    left: 90px;
+    width: 150px;
+    height: 15px;
+    top: 45px;
+  }
 
-  height: 0%;
-  width: 00%;
+  hr {
+    height: 2px;
+  }
 
-}
-#foto{
-  width: 28%;
-  height: 28%;
-  margin-right: 5%;
-  margin-top: 30%;
-}
-#paragraph{
-  font-size: 20px;
-  margin-right: 5%;
+  #raya {
 
-}
-#hibrido{
-  top: 200px;
-  left: 30px;
-}
-.subtitles{
-  font-size: 20px;
-  top: 80px;
-  left: 20px;
-}
-p{
-  font-size: 12px;
-  margin-right: 55px;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-h3{
-  font-size: 25px;
-}
-.card{
-  width:50px;
-  height: 70px;
-  margin-right: 0;
-  margin-top: 5px;
-  margin-left: 2px;
-}
-#cardConteiner{
-  margin:15px;
-}
-#infoAboutHouses {
-  font-size: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-} 
-.btnPrincipal{
-  left: 0;
-  right: 0;
-  top: 40px;
-  font-size: 10px;
-  width: auto;
-  margin: 0;
-}
-hr{
-  height: 2px;
-}
+    height: 0;
+  }
+
+  #lupa {
+    left: 245px;
+    top: 27px;
+    width: 18px;
+  }
+
+  #buho {
+    height: 6%;
+    width: 10%;
+
+  }
+
+  #glasses {
+
+    height: 0%;
+    width: 00%;
+
+  }
+
+  #foto {
+    width: 28%;
+    height: 28%;
+    margin-right: 5%;
+    margin-top: 30%;
+  }
+
+  #paragraph {
+    font-size: 20px;
+    margin-right: 5%;
+
+  }
+
+  #hibrido {
+    top: 200px;
+    left: 30px;
+  }
+
+  .subtitles {
+    font-size: 20px;
+    top: 80px;
+    left: 20px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-right: 55px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .card {
+    width: 50px;
+    height: 70px;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-left: 2px;
+  }
+
+  #cardConteiner {
+    margin: 15px;
+  }
+
+  #infoAboutHouses {
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+
+  .btnPrincipal {
+    left: 0;
+    right: 0;
+    top: 40px;
+    font-size: 10px;
+    width: auto;
+    margin: 0;
+  }
+
+  hr {
+    height: 2px;
+  }
 }

@@ -3,28 +3,20 @@ import data from './harrydata.js';
 
 
 const test1 = document.querySelector('.test');
-console.log(test1)
 
 const selectCharacters = document.querySelector('#chooseCharacters');
-console.log(selectCharacters)
-
 
 const selectSpells = document.querySelector('#segundoSelect');
-console.log(selectSpells)
-
 
 const selectBooks = document.querySelector('#tercerSelect');
-console.log(selectBooks)
 
 const selectPotions = document.querySelector('#cuartoSelect')
-console.log(selectPotions)
 
 // Filtramos  a los personajes   --------------------------------
 
 selectCharacters.addEventListener('change', () => {
   let valorOption = selectCharacters.value;
-  console.log(valorOption)
-
+  
   if (valorOption == 'a-z') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -33,9 +25,8 @@ selectCharacters.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const filtro = aToZ(data.characters)
-    console.log(filtro)
+    
 
     filtro.forEach(element => {
       const createElement = document.createElement("div")
@@ -44,11 +35,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -73,8 +64,6 @@ selectCharacters.addEventListener('change', () => {
 
     const filterzToA = zToA(data.characters)
 
-    console.log(filterzToA)
-
     filterzToA.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -82,11 +71,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -105,7 +94,7 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const alive = charactersAlive(data.characters)
-    console.log(alive)
+    
     alive.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -113,12 +102,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
-            <p class="data">Status: ${element.alive}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -137,7 +125,7 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const dead = charactersDead(data.characters);
-    console.log(dead)
+
     dead.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -146,12 +134,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
-            <p class="data">Status: ${element.alive}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -169,7 +156,7 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHuman(data.characters)
-    console.log(aaa)
+  
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -177,11 +164,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -199,7 +186,7 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHalfGiant(data.characters)
-    console.log(aaa)
+    
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -207,11 +194,11 @@ selectCharacters.addEventListener('change', () => {
       <div id="template">
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -267,7 +254,6 @@ selectSpells.addEventListener('change', () => {
   x.innerHTML = ""
 
   let valorOption = selectSpells.value;
-  console.log(valorOption)
 
   if (valorOption == 'spellsa-z') {
     const accederAlDom = document.getElementById('home')
@@ -283,11 +269,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
         <img  class="imagen" src="imag/magic.png">
          <div class="caja">
-          <p class="data">Id: ${element.id}</p>
-          <p class="data">Name: ${element.name}</p>
-          <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Pronunciation: ${element.pronunciation}</p>
-          <p class="data">Etymology: ${element.etymology}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
         </div>
      </div>
       `;
@@ -306,8 +291,6 @@ selectSpells.addEventListener('change', () => {
 
     const bb = spellsZToA(data.spells)
 
-    console.log(bb)
-
     bb.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -315,11 +298,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
       <img  class="imagen" src="imag/magic.png">
          <div class="caja">
-          <p class="data">Id: ${element.id}</p>
-          <p class="data">Name: ${element.name}</p>
-          <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Pronunciation: ${element.pronunciation}</p>
-          <p class="data">Etymology: ${element.etymology}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -339,8 +321,6 @@ selectSpells.addEventListener('change', () => {
 
     const encanto = spellsCharm(data.spells)
 
-    console.log(encanto)
-
     encanto.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -348,11 +328,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
         <img class='imagen' src=imag/charmSpell.jpg>
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -372,8 +351,6 @@ selectSpells.addEventListener('change', () => {
 
     const dd = spellsHex(data.spells)
 
-    console.log(dd)
-
     dd.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -381,11 +358,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
       <img class='imagen' src=imag/hex.jpg>
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -405,8 +381,6 @@ selectSpells.addEventListener('change', () => {
 
     const maleficio = spellsJinx(data.spells)
 
-    console.log(maleficio)
-
     maleficio.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -414,11 +388,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
       <img class='imagen' src=imag/jinx.jpg>
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -426,7 +399,7 @@ selectSpells.addEventListener('change', () => {
       test1.appendChild(createElement);
       return
     });
-    // Filtramos los hechizos de tipo tranportación
+    // Filtramos los hechizos de tipo transportación
   } else if (valorOption == 'spellTypeTransportation') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -438,8 +411,6 @@ selectSpells.addEventListener('change', () => {
 
     const escoba = spellsTransportation(data.spells)
 
-    console.log(escoba)
-
     escoba.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -447,11 +418,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
       <img class='imagen' src=imag/transportación.png>
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -474,7 +444,7 @@ document.getElementById("btnSpells").addEventListener("click", () => {
 
   const spells = data.spells;
   spells.forEach(element => {
-    let img = element.image !== "" ? element.image : "imag/incognito.jpg";
+
     const createElement = document.createElement("div")
     createElement.setAttribute("class", 'contenedorCard');
     const templateTest = `
@@ -483,7 +453,7 @@ document.getElementById("btnSpells").addEventListener("click", () => {
          <div class="caja">
          <h4 class="data"> ${element.name}</h4>
           <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Descriptiom: ${element.descriptiontion}</p>
+          <p class="data">Description: ${element.description}</p>
           <p class="data">Etymology: ${element.etymology}</p>
         </div>
      </div>
@@ -498,8 +468,6 @@ document.getElementById("btnSpells").addEventListener("click", () => {
 //Mostramos los libros del mas antiguo
 selectBooks.addEventListener('change', () => {
   let valorOption = selectBooks.value;
-  console.log(valorOption)
-
   if (valorOption == 'recently') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -510,7 +478,6 @@ selectBooks.addEventListener('change', () => {
 
 
     const libros = data.books
-    console.log(libros)
 
     libros.forEach(element => {
       const createElement = document.createElement("div")
@@ -519,7 +486,7 @@ selectBooks.addEventListener('change', () => {
       <div id="template">
       <img  class="imagenB" src="${element.img}">
          <div class="caja">
-            <p class="data">Tittle: ${element.title}</p>
+         <h4 class="data"> ${element.title}</h4>
             <p class="data">Release Day: ${element.releaseDay}</p>
             <p class="data">Autor: ${element.autor}</p>
             <p class="data">Description: ${element.description}</p>
@@ -542,7 +509,6 @@ selectBooks.addEventListener('change', () => {
 
 
     const oldest = alReves(data.books)
-    console.log(oldest)
 
     oldest.forEach(element => {
       const createElement = document.createElement("div")
@@ -551,7 +517,7 @@ selectBooks.addEventListener('change', () => {
       <div id="template">
       <img  class="imagenB" src="${element.img}">
          <div class="caja">
-            <p class="data">Tittle: ${element.title}</p>
+         <h4 class="data"> ${element.title}</h4>
             <p class="data">Release Day: ${element.releaseDay}</p>
             <p class="data">Author: ${element.author}</p>
             <p class="data">Description: ${element.description}</p>
@@ -601,7 +567,6 @@ document.getElementById("btnBooks").addEventListener("click", () => {
 //Mostrar filtro posiones
 selectPotions.addEventListener('change', () => {
   let valorOption = selectPotions.value;
-  console.log(valorOption)
   if (valorOption == 'ascendiente') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -610,10 +575,8 @@ selectPotions.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const pociones = data.potions
-    console.log(pociones)
-
+  
     pociones.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -640,10 +603,8 @@ selectPotions.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const pociones = alReves(data.potions)
-    console.log(pociones)
-
+  
     pociones.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');

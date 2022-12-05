@@ -11736,7 +11736,7 @@ const data = {
       "author": "J. K. Rowling",
       "description": "Harry Potter and the sophomores investigate a malevolent threat to their Hogwarts classmates, a menacing beast that hides within the castle.",
       "img": "imag/Books/Libro2.jpg"
-    
+
     },
     {
       "id": 3,
@@ -11762,7 +11762,7 @@ const data = {
       "author": "J. K. Rowling",
       "description": "In his fifth year at Hogwarts, Harry discovers that many members of the wizarding community do not know the truth about his encounter with Lord Voldemort. Cornelius Fudge, Minister of Magic, appoints Dolores Umbridge as Defense Against the Dark Arts teacher because he believes that Professor Dumbledore plans to take over her job. But his teachings are inadequate, so Harry prepares the students to defend the school against evil.",
       "img": "imag/Books/Libro5.jpg"
-    
+
     },
     {
       "id": 6,
@@ -11771,7 +11771,7 @@ const data = {
       "author": "J. K. Rowling",
       "description": "Harry discovers a powerful book and, while trying to discover its origins, collaborates with Dumbledore in the search for a series of magical objects that will aid in the destruction of Lord Voldemort.",
       "img": "imag/Books/Libro6.jpg"
-    
+
     },
     {
       "id": 7,
