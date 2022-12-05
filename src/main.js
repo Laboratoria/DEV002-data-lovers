@@ -13,7 +13,7 @@ const prueba = document.getElementById("prueba")
 
 let cards = document.getElementById("cards")
 document.getElementById("pantalla1").style.visibility = "visible";
-//document.getElementById("pantalla2").style.visibility = "hidden";
+document.getElementById("pantalla2").style.visibility = "hidden";
 
 
 data.films.forEach(element => {
@@ -33,7 +33,7 @@ data.films.forEach(element => {
 
 })
 
-/*/let inicio = document.getElementById("peliculas");
+let inicio = document.getElementById("peliculas");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
     document.getElementById("pantalla1").style.visibility = "hidden"
