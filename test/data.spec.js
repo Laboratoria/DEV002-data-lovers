@@ -1,26 +1,24 @@
 
-import { filtrarData, sortData,computeStats } from '../src/data.js';
+import { aToZ} from '../src/data.js';
+import data from '../src/harrydata';
 
-
-describe('filtarData', () => {
+describe('aToZ', () => {
   it('is a function', () => {
-    expect(typeof filtrarData).toBe('function');
+    expect(typeof aToZ).toBe('function');
   });
 
-  it('returns `150 nombres de pociones`', () => {
-    expect(filtrarData(todos)).toBe('');
+  it('returns  en un array los `403 characters`', () => {
+    // expect(typeof
   });
-
-  it('returns')
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });

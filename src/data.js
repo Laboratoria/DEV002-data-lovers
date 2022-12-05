@@ -92,6 +92,10 @@ export const alReves = (arr) => {
   return arr.reverse(data.id)
 };
 
-// export const anotherExample = () => {
-//   return 'OMG';
+// export const buscar = (data) => {
+//   return data.matches(tarjetas => tarjetas.characters);
 // };
+
+
+// zToA,computeStats ,charactersAlive,charactersDead,speciesHuman,speciesHalfGiant,spellsZToA,spellsCharm,spellsHex,spellsJinx,spellsTransportation,alReves
+//

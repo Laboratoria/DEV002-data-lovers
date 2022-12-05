@@ -147,35 +147,6 @@ const data = {
       "image": "https://hp-api.herokuapp.com/images/mcgonagall.jpg"
     },
     {
-      "name": "Cedric Diggory",
-      "alternate_names": [
-
-      ],
-      "species": "human",
-      "gender": "male",
-      "house": "Hufflepuff",
-      "dateOfBirth": "",
-      "yearOfBirth": 1977,
-      "wizard": true,
-      "ancestry": "",
-      "eyeColour": "grey",
-      "hairColour": "brown",
-      "wand": {
-        "wood": "ash",
-        "core": "unicorn hair",
-        "length": 12.25
-      },
-      "patronus": "",
-      "hogwartsStudent": true,
-      "hogwartsStaff": false,
-      "actor": "Robert Pattinson",
-      "alternate_actors": [
-
-      ],
-      "alive": false,
-      "image": "https://hp-api.herokuapp.com/images/cedric.png"
-    },
-    {
       "name": "Cho Chang",
       "alternate_names": [
 
@@ -203,6 +174,35 @@ const data = {
       ],
       "alive": true,
       "image": "https://hp-api.herokuapp.com/images/cho.jpg"
+    },
+    {
+      "name": "Cedric Diggory",
+      "alternate_names": [
+
+      ],
+      "species": "human",
+      "gender": "male",
+      "house": "Hufflepuff",
+      "dateOfBirth": "",
+      "yearOfBirth": 1977,
+      "wizard": true,
+      "ancestry": "",
+      "eyeColour": "grey",
+      "hairColour": "brown",
+      "wand": {
+        "wood": "ash",
+        "core": "unicorn hair",
+        "length": 12.25
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Robert Pattinson",
+      "alternate_actors": [
+
+      ],
+      "alive": false,
+      "image": "https://hp-api.herokuapp.com/images/cedric.png"
     },
     {
       "name": "Severus Snape",

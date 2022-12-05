@@ -5,27 +5,21 @@ import data from './harrydata.js';
 
 
 const test1 = document.querySelector('.test');
-console.log(test1)
 
 const selectCharacters = document.querySelector('#chooseCharacters');
-console.log(selectCharacters)
 
 
 const selectSpells = document.querySelector('#segundoSelect');
-console.log(selectSpells)
 
 
 const selectBooks = document.querySelector('#tercerSelect');
-console.log(selectBooks)
 
 const selectPotions = document.querySelector('#cuartoSelect')
-console.log(selectPotions)
 
 // Filtramos  a los personajes   --------------------------------
 
 selectCharacters.addEventListener('change', () => {
   let valorOption = selectCharacters.value;
-  console.log(valorOption)
 
   if (valorOption == 'a-z') {
     const x = document.querySelector(".test")
@@ -37,7 +31,6 @@ selectCharacters.addEventListener('change', () => {
 
 
     const filtro = aToZ(data.characters)
-    console.log(filtro)
 
     filtro.forEach(element => {
       const createElement = document.createElement("div")
@@ -77,7 +70,6 @@ selectCharacters.addEventListener('change', () => {
 
     const filterzToA = zToA(data.characters)
 
-    console.log(filterzToA)
 
     filterzToA.forEach(element => {
       const createElement = document.createElement("div")
@@ -111,7 +103,6 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const alive = charactersAlive(data.characters)
-    console.log(alive)
     alive.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -145,7 +136,6 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const dead = charactersDead(data.characters);
-    console.log(dead)
     dead.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -179,7 +169,6 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHuman(data.characters)
-    console.log(aaa)
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -211,7 +200,6 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHalfGiant(data.characters)
-    console.log(aaa)
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -245,7 +233,6 @@ selectSpells.addEventListener('change', () => {
   x.innerHTML = ""
 
   let valorOption = selectSpells.value;
-  console.log(valorOption)
 
   if (valorOption == 'spellsa-z') {
     const accederAlDom = document.getElementById('home')
@@ -285,7 +272,6 @@ selectSpells.addEventListener('change', () => {
 
     const bb = spellsZToA(data.spells)
 
-    console.log(bb)
 
     bb.forEach(element => {
       const createElement = document.createElement("div")
@@ -319,7 +305,6 @@ selectSpells.addEventListener('change', () => {
 
     const encanto = spellsCharm(data.spells)
 
-    console.log(encanto)
 
     encanto.forEach(element => {
       const createElement = document.createElement("div")
@@ -354,7 +339,6 @@ selectSpells.addEventListener('change', () => {
 
     const dd = spellsHex(data.spells)
 
-    console.log(dd)
 
     dd.forEach(element => {
       const createElement = document.createElement("div")
@@ -388,7 +372,6 @@ selectSpells.addEventListener('change', () => {
 
     const maleficio = spellsJinx(data.spells)
 
-    console.log(maleficio)
 
     maleficio.forEach(element => {
       const createElement = document.createElement("div")
@@ -423,7 +406,6 @@ selectSpells.addEventListener('change', () => {
 
     const escoba = spellsTransportation(data.spells)
 
-    console.log(escoba)
 
     escoba.forEach(element => {
       const createElement = document.createElement("div")
@@ -452,7 +434,6 @@ selectSpells.addEventListener('change', () => {
 
 selectBooks.addEventListener('change', () => {
   let valorOption = selectBooks.value;
-  console.log(valorOption)
 
   if (valorOption == 'recently') {
     const x = document.querySelector(".test")
@@ -464,7 +445,6 @@ selectBooks.addEventListener('change', () => {
 
 
     const libros = data.books
-    console.log(libros)
 
     libros.forEach(element => {
       const createElement = document.createElement("div")
@@ -498,7 +478,6 @@ selectBooks.addEventListener('change', () => {
 
 
     const oldest = alReves(data.books)
-    console.log(oldest)
 
     oldest.forEach(element => {
       const createElement = document.createElement("div")
@@ -527,7 +506,6 @@ selectBooks.addEventListener('change', () => {
 
 selectPotions.addEventListener('change', () => {
   let valorOption = selectPotions.value;
-  console.log(valorOption)
   if (valorOption == 'ascendiente') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -538,7 +516,6 @@ selectPotions.addEventListener('change', () => {
 
 
     const pociones = data.potions
-    console.log(pociones)
 
     pociones.forEach(element => {
       const createElement = document.createElement("div")
@@ -560,7 +537,7 @@ selectPotions.addEventListener('change', () => {
 
       return
     });
-  }else if(valorOption=='descendiente'){
+  } else if (valorOption == 'descendiente') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
     const accederAlDom = document.getElementById('home')
@@ -570,7 +547,6 @@ selectPotions.addEventListener('change', () => {
 
 
     const pociones = alReves(data.potions)
-    console.log(pociones)
 
     pociones.forEach(element => {
       const createElement = document.createElement("div")
@@ -592,5 +568,19 @@ selectPotions.addEventListener('change', () => {
 
       return
     });
+  }
+})
+
+let filtrar = document.addEventListener('keyup', e => {
+  const x = document.querySelector(".test")
+    x.innerHTML = ""
+  if (e.target.matches('#search')) {
+
+    let inputSearch = (e.target.value).toLowerCase();
+    console.log(inputSearch);
+    let dios = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
+
+    console.log(dios)
+
   }
 })
