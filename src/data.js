@@ -32,5 +32,7 @@ export const operaciones = {
         }
       }
       return todosLosProductores;
-  }
+  }, 
+
+  
 }
