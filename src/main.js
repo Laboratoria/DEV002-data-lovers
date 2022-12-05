@@ -71,11 +71,37 @@ function verDetallePelicula() {
   alert("cualquier vaina" + this.id);
 }
 
+//pintar productores
+function llamarProductores() {
+  document.getElementById("directoresproductoresdiv").innerHTML = "<h2>Productores</h2>";
+
+  //se crea el ul con javascript
+  let newul = document.createElement("ul");
+
+  //CAMBIAR A llamarProductores
+  let arregloProducer = operaciones.llamarProductores(data.films);
+
+  for (let i = 0; i < arregloProducer.length; i++) {
+
+     //se crea el li con javascript
+    let newli = document.createElement("li");
+    newli.setAttribute("id", arregloProducer[i]);
+    newli.innerHTML = newli.id;
+
+    //mete los cucos (li) en la caja (ul)
+    newul.appendChild(newli);
+  }
+
+  document.getElementById("directoresproductoresdiv").appendChild(newul);
+}
+
 function lanzadera(){
   //pintarDirectores();
+ 
   pintarCard();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
+  document.getElementById("btnmostrarproductores").addEventListener("click", llamarProductores);
 }
 
 

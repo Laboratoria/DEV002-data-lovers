@@ -9,6 +9,7 @@ describe('test by operaciones', () => {
   it('should return array', () => {
     expect(Array.isArray(operaciones.peliculasOrdenadasPorDirector(data.films))).toBe(true)
   });
+
   describe('test by operaciones', () => {
     it('should by a function', () => {
       expect(typeof operaciones.peliculasOrdenadasPorAno).toBe('function');
