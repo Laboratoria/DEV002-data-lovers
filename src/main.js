@@ -86,6 +86,10 @@ function llamarProductores() {
      //se crea el li con javascript
     let newli = document.createElement("li");
     newli.setAttribute("id", arregloProducer[i]);
+    newli.addEventListener("click", filtrarPorProductor);
+    
+
+
     newli.innerHTML = newli.id;
 
     //mete los cucos (li) en la caja (ul)
@@ -95,14 +99,22 @@ function llamarProductores() {
   document.getElementById("directoresproductoresdiv").appendChild(newul);
 }
 
+//filtrar por productor(
+function filtrarPorProductor(){
+  let peliculasPorProductor=operaciones.filtrarPorProductor(data.films, this.id );
+
+    dibujarCard(peliculasPorProductor);
+}
+
 function lanzadera(){
   //pintarDirectores();
  
   pintarCard();
+  llamarProductores();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
-  document.getElementById("btnmostrarproductores").addEventListener("click", llamarProductores);
+  //document.getElementById("producer").addEventListener("click", filtrarPorProductor);
+  
 }
-
 
 window.onload = lanzadera;
