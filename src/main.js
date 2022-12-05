@@ -2,8 +2,6 @@ import { aToZ, zToA, charactersAlive, charactersDead, speciesHuman, speciesHalfG
 import data from './harrydata.js';
 
 
-
-
 const test1 = document.querySelector('.test');
 
 const selectCharacters = document.querySelector('#chooseCharacters');
@@ -29,23 +27,21 @@ selectCharacters.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const filtro = aToZ(data.characters)
+
 
     filtro.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -76,15 +72,13 @@ selectCharacters.addEventListener('change', () => {
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -103,21 +97,19 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const alive = charactersAlive(data.characters)
+
     alive.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
-            <p class="data">Status: ${element.alive}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -136,22 +128,20 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const dead = charactersDead(data.characters);
+
     dead.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
 
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
-            <p class="data">Status: ${element.alive}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -169,20 +159,19 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHuman(data.characters)
+
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -200,20 +189,19 @@ selectCharacters.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const aaa = speciesHalfGiant(data.characters)
+
     aaa.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Ancestry: ${element.species}</p>
+        <p class="data">Gender: ${element.gender}</p>
+         <p class="data">Alive: ${element.alive}</p>
+         <p class="data">Specie: ${element.species}</p>
           </div>
      </div>`;
 
@@ -224,6 +212,42 @@ selectCharacters.addEventListener('change', () => {
   }
 });
 
+// Mostrar la data en los botones de personajes
+document.getElementById("btnCharac").addEventListener("click", () => {
+
+  const x = document.querySelector(".test")
+    x.innerHTML = ""
+  const accederAlDom = document.getElementById('home')
+  accederAlDom.style.display = 'none';
+  const cardConteiner = document.getElementById('cardConteiner');
+  cardConteiner.style.display = 'block';
+
+  const characters = data.characters;
+  characters.forEach(element => {
+    let img = element.image !== "" ? element.image : "imag/incognito.jpg";
+    const createElement = document.createElement("div")
+    createElement.setAttribute("class", 'contenedorCard');
+    const templateTest = `
+    <div id="template">
+
+      <img  class="imagen" src="${img}">
+       <div class="caja">
+       <h4 class="data"> ${element.name}</h4>
+        <p class="data">Ancestry: ${element.species}</p>
+       <p class="data">Gender: ${element.gender}</p>
+        <p class="data">Alive: ${element.alive}</p>
+        <p class="data">Specie: ${element.species}</p>
+      </div>
+   </div>
+
+    `;
+    createElement.innerHTML = templateTest;
+    test1.appendChild(createElement);
+
+  });
+
+
+});
 
 // seleccionamos los HECHIZOS de la A-Z  -----------------------------------
 
@@ -248,12 +272,10 @@ selectSpells.addEventListener('change', () => {
       <div id="template">
         <img  class="imagen" src="imag/magic.png">
          <div class="caja">
-          <p class="data">Id: ${element.id}</p>
-          <p class="data">Name: ${element.name}</p>
-          <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Pronunciation: ${element.pronunciation}</p>
-          <p class="data">Etymology: ${element.etymology}</p>
-
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
         </div>
      </div>
       `;
@@ -272,20 +294,17 @@ selectSpells.addEventListener('change', () => {
 
     const bb = spellsZToA(data.spells)
 
-
     bb.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
       <img  class="imagen" src="imag/magic.png">
          <div class="caja">
-          <p class="data">Id: ${element.id}</p>
-          <p class="data">Name: ${element.name}</p>
-          <p class="data">Other name: ${element.other_name}</p>
-          <p class="data">Pronunciation: ${element.pronunciation}</p>
-          <p class="data">Etymology: ${element.etymology}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -305,21 +324,17 @@ selectSpells.addEventListener('change', () => {
 
     const encanto = spellsCharm(data.spells)
 
-
     encanto.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
         <img class='imagen' src=imag/charmSpell.jpg>
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -339,20 +354,17 @@ selectSpells.addEventListener('change', () => {
 
     const dd = spellsHex(data.spells)
 
-
     dd.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
       <img class='imagen' src=imag/hex.jpg>
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -372,21 +384,17 @@ selectSpells.addEventListener('change', () => {
 
     const maleficio = spellsJinx(data.spells)
 
-
     maleficio.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
       <img class='imagen' src=imag/jinx.jpg>
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -394,7 +402,7 @@ selectSpells.addEventListener('change', () => {
       test1.appendChild(createElement);
       return
     });
-    // Filtramos los hechizos de tipo tranportación
+    // Filtramos los hechizos de tipo transportación
   } else if (valorOption == 'spellTypeTransportation') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -406,21 +414,17 @@ selectSpells.addEventListener('change', () => {
 
     const escoba = spellsTransportation(data.spells)
 
-
     escoba.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
       <img class='imagen' src=imag/transportación.png>
-
          <div class="caja">
-            <p class="data">Name: ${element.name}</p>
-            <p class="data">Species: ${element.species}</p>
-            <p class="data">Gender: ${element.gender}</p>
-            <p class="data">Ancestry: ${element.ancestry}</p>
-            <p class="data">Actor: ${element.actor}</p>
+         <h4 class="data"> ${element.name}</h4>
+         <p class="data">Other name: ${element.other_name}</p>
+         <p class="data">Description: ${element.description}</p>
+         <p class="data">Etymology: ${element.etymology}</p>
           </div>
      </div>`;
 
@@ -431,10 +435,42 @@ selectSpells.addEventListener('change', () => {
   }
 
 });
+// Mostrar la data en los botones de hechizos
+document.getElementById("btnSpells").addEventListener("click", () => {
 
+  const x = document.querySelector(".test")
+    x.innerHTML = ""
+  const accederAlDom = document.getElementById('home')
+  accederAlDom.style.display = 'none';
+  const cardConteiner = document.getElementById('cardConteiner');
+  cardConteiner.style.display = 'block';
+
+  const spells = data.spells;
+  spells.forEach(element => {
+
+    const createElement = document.createElement("div")
+    createElement.setAttribute("class", 'contenedorCard');
+    const templateTest = `
+    <div id="template">
+        <img  class="imagen" src="imag/Spell.jpg">
+         <div class="caja">
+         <h4 class="data"> ${element.name}</h4>
+          <p class="data">Other name: ${element.other_name}</p>
+          <p class="data">Description: ${element.description}</p>
+          <p class="data">Etymology: ${element.etymology}</p>
+        </div>
+     </div>
+      `;
+    createElement.innerHTML = templateTest;
+    test1.appendChild(createElement);
+
+  });
+
+
+});
+//Mostramos los libros del mas antiguo
 selectBooks.addEventListener('change', () => {
   let valorOption = selectBooks.value;
-
   if (valorOption == 'recently') {
     const x = document.querySelector(".test")
     x.innerHTML = ""
@@ -451,11 +487,9 @@ selectBooks.addEventListener('change', () => {
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
-        ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
+      <img  class="imagenB" src="${element.img}">
          <div class="caja">
-            <p class="data">Tittle: ${element.title}</p>
+         <h4 class="data"> ${element.title}</h4>
             <p class="data">Release Day: ${element.releaseDay}</p>
             <p class="data">Autor: ${element.autor}</p>
             <p class="data">Description: ${element.description}</p>
@@ -484,11 +518,9 @@ selectBooks.addEventListener('change', () => {
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
-        ${element.image !== "" ? `<img class='imagen' src=${element.image}>` : `<img class='imagen' src='imag/incógnito.jpg'>`}
-
+      <img  class="imagenB" src="${element.img}">
          <div class="caja">
-            <p class="data">Tittle: ${element.title}</p>
+         <h4 class="data"> ${element.title}</h4>
             <p class="data">Release Day: ${element.releaseDay}</p>
             <p class="data">Author: ${element.author}</p>
             <p class="data">Description: ${element.description}</p>
@@ -503,7 +535,39 @@ selectBooks.addEventListener('change', () => {
     });
   }
 })
+//Mostrar la data en el boton de libros
+document.getElementById("btnBooks").addEventListener("click", () => {
 
+  const x = document.querySelector(".test")
+    x.innerHTML = ""
+  const accederAlDom = document.getElementById('home')
+  accederAlDom.style.display = 'none';
+  const cardConteiner = document.getElementById('cardConteiner');
+  cardConteiner.style.display = 'block';
+
+  const books = data.books;
+  books.forEach(element => {
+    const createElement = document.createElement("div")
+    createElement.setAttribute("class", 'contenedorCard');
+    const templateTest = `
+    <div id="template">
+        <img  class="imagenB" src="${element.img}">
+         <div class="caja">
+         <h4 class="data"> ${element.title}</h4>
+          <p class="data">Release Day: ${element.releaseDay}</p>
+          <p class="data">Description: ${element.description}</p>
+          <p class="data">Author: ${element.author}</p>
+        </div>
+     </div>
+      `;
+    createElement.innerHTML = templateTest;
+    test1.appendChild(createElement);
+
+  });
+
+
+});
+//Mostrar filtro posiones
 selectPotions.addEventListener('change', () => {
   let valorOption = selectPotions.value;
   if (valorOption == 'ascendiente') {
@@ -514,7 +578,6 @@ selectPotions.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const pociones = data.potions
 
     pociones.forEach(element => {
@@ -522,12 +585,10 @@ selectPotions.addEventListener('change', () => {
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
-      <img  class="imagen" src="imag/potions.png">
+      <img  class="imagen" src="imag/Pociones.jpg">
          <div class="caja">
-         <p class="data">Id: ${element.id}</p>
-         <p class="data">Name: ${element.name}</p>
-         <p class="data">Description: ${element.description}</p>
+         <h4 class="data"> ${element.name}</h4>
+          <p class="data">Description: ${element.description}</p>
          </div>
      </div>`;
 
@@ -545,7 +606,6 @@ selectPotions.addEventListener('change', () => {
     const cardConteiner = document.getElementById('cardConteiner');
     cardConteiner.style.display = 'block';
 
-
     const pociones = alReves(data.potions)
 
     pociones.forEach(element => {
@@ -553,12 +613,10 @@ selectPotions.addEventListener('change', () => {
       createElement.setAttribute("class", 'contenedorCard');
       const templateTest = `
       <div id="template">
-
-      <img  class="imagen" src="imag/potions.png">
+      <img  class="imagen" src="imag/Pociones.jpg">
          <div class="caja">
-         <p class="data">Id: ${element.id}</p>
-         <p class="data">Name: ${element.name}</p>
-         <p class="data">Description: ${element.description}</p>
+         <h4 class="data"> ${element.name}</h4>
+          <p class="data">Description: ${element.description}</p>
          </div>
      </div>`;
 
@@ -570,17 +628,34 @@ selectPotions.addEventListener('change', () => {
     });
   }
 })
+//Mostrar la data en el boton de posiones
+document.getElementById("btnPotions").addEventListener("click", () => {
 
-let filtrar = document.addEventListener('keyup', e => {
   const x = document.querySelector(".test")
     x.innerHTML = ""
-  if (e.target.matches('#search')) {
+  const accederAlDom = document.getElementById('home')
+  accederAlDom.style.display = 'none';
+  const cardConteiner = document.getElementById('cardConteiner');
+  cardConteiner.style.display = 'block';
 
-    let inputSearch = (e.target.value).toLowerCase();
-    console.log(inputSearch);
-    let dios = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
+  const potions = data.potions;
+  potions.forEach(element => {
+    const createElement = document.createElement("div")
+    createElement.setAttribute("class", 'contenedorCard');
+    const templateTest = `
+    <div id="template">
+        <img  class="imagen" src="imag/Pociones.jpg">
+         <div class="caja">
+         <h4 class="data"> ${element.name}</h4>
+          <p class="data">Description: ${element.description}</p>
 
-    console.log(dios)
+        </div>
+     </div>
+      `;
+    createElement.innerHTML = templateTest;
+    test1.appendChild(createElement);
 
-  }
-})
+  });
+
+
+});

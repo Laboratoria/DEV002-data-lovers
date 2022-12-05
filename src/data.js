@@ -18,7 +18,7 @@ export const aToZ = (arr) => {
 
 }
 
-// Filtar persoanjes de la Z-A
+// Filtrar persoanjes de la Z-A
 
 export const zToA = (arr) => {
   return arr.sort((nombre, otroNombre) => {
@@ -33,7 +33,6 @@ export const zToA = (arr) => {
   })
 
 }
-
 
 // Filtrar por personajes vivos
 
@@ -84,10 +83,6 @@ export const spellsTransportation = (spells) => {
 
 
 // Filtramos los libros del más reciente al más viejo.
-// export const recentlyBooks = (arr) => {
-//   return arr.reverse((a,b)=> a-b);
-// };
-
 export const alReves = (arr) => {
   return arr.reverse(data.id)
 };
