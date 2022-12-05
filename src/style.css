@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    
+
+    padding: 20px;
+    margin: 0;
+    background: white;
+    min-width: 100%; 
+    min-height: 100%;    
+    
+}
+ .paginaPrincipal{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+ }
+
+.Botones {
+   display: flex;
+   flex-direction: column;
+   width: max-content;
+   position: absolute;
+   top: 60% ;
+}
+
+.btn {
+    margin: 3%;
+    width:160px ;
+    font-size: 14px;
+    word-wrap: break-word;
+    font-weight: bolder;
+    background-color: #03071e;
+    opacity: 0.7;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+ }
+
+ .btn:hover{
+    background: rgb(188, 214, 41); ;
+  }
+
+
+ footer {   
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #0e153c;
+    opacity: 0.7;
+ }
+
+ .redesSociales{
+   margin: auto;
+   
+ }
+
+ .redes{
+   
+    width: 40px;
+    height:40px;
+    margin: 7px;
+
+ }
+.cajaAutores{
+    margin:auto ;
+    width: 30%;
+    height:40px;
+     
+}
+ .autores {
+    position: center;
+    text-align: center;
+    color: white;
+    top: 90%;
+    font-weight: 100;
+    font-size: 13px;
+    right: 5%;
+ }
+
+/* Estilos pagina pokemones*/ 
+.paginaPokemones{
+    width: 100%;
+    height: 100%;
+   display: none;
+}
+.contenedorP{
+    background-image: url(img/30090587.jpg);
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.contenedorFiltros{
+    background-color: blue;
+    order: 1;
+    width: 250px;
+    height: 600px;
+    margin-right: 15px;
+}
+.contenedorTarjetas{
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    order: 2;
+   }
+
+.tarjetaPokemones{
+   background: linear-gradient(90deg, #C9D6FF,#E2E2E2);  
+  
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    /*width: min-content;
+    height: 300px*/
+    justify-self: stretch;
+    align-self: stretch;
+    border-radius: 7px;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
+} 
+
+.nombreP {
+    color: #343b59;
+    margin:0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+   /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
+    text-transform: capitalize;
+}
+
+.textoh3, .sizeP {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        margin: 7px;
+        color: rgb(16, 20, 49);    
+        text-transform: capitalize;
+}
+
+.encabezadoTarjeta{
+    display: flex;
+}
+
+.imgPokemon{
+    width: 120px;
+    height: 120px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.imgPokemon:hover{
+    transform: rotateY(180deg)
+}
+
+/*.descripcionTarjeta{
+}*/
+
+.botonesTarjeta{
+    margin-top: 15px;
+}
+
+.filtrosBusqueda{
+    display: none;
+}
+
+.tiposInput{
+    display: none;
+}
+
+/*.inputFiltroBuscador {
+    display: none;
+}*/
+
+/*  caja de resistencias y debilidades:  */
+.cajaResydebi{
+    width: min-content;
+    height: min-content;
+}
+.contenedorListas{
+    display: flex;
+    margin-left: 7px;
+     justify-content: center;
+    width: min-content;
+    height: min-content;
+
+}
+.listaResistencia, .listaDebilidades{
+    margin: 0px 5px;
+     padding: 0.1em 1em 0.5em 1em; 
+    background-color: #7c779c; 
+    border-radius: 10%;
+    width:min-content ;
+    height: min-content;
+    float: left;
+    list-style-type: none;
+     position: relative;
+ }
+
+.listaResistencia > h2 , .listaDebilidades > h2 {
+    margin: 5px;
+      font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: rgb(16, 20, 49);  
+}
+ 
+ .cajaResydebi li:hover{
+    background-color: #990033;
+ }
+ 
+ #contenedorResistencia, #contenedorDebilidades{
+    position: absolute; 
+    vertical-align: middle;
+    width: 100px;
+    top: 100%; 
+    left: 0px;  
+    background-color: #41338b; 
+    font:normal 0.8em arial;  
+    padding: 0.2em 0.5em ; 
+    display: none;
+
+ }
+
+ .listaResistencia:hover  #contenedorResistencia {
+    display: block;
+ }
+ 
+ .listaDebilidades:hover #contenedorDebilidades {
+    display: block;
+ }
+
+ .debiyresis{
+     background-color: #C9D6FF;
+     width: 130px;
+    height:min-content;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: initial;
+white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+      
+ }
+/* Estilos pagina Estadisticas*/ 
+
+.paginaEstadistica{
+    display: none;
+}
