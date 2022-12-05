@@ -95,6 +95,12 @@ function llamarProductores() {
   document.getElementById("directoresproductoresdiv").appendChild(newul);
 }
 
+//filtrar por productor(
+function filtrarPorProductor(){
+  let peliculasPorProductor = operaciones.filtrarPorProductor(data.films);
+dibujarCard(filtrarPorProductor);
+}
+
 function lanzadera(){
   //pintarDirectores();
  
@@ -102,7 +108,6 @@ function lanzadera(){
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
   document.getElementById("btnmostrarproductores").addEventListener("click", llamarProductores);
+  document.getElementById("producer").addEventListener("change",(e)=>{filtrarPorProductor(e.target.value)})
 }
-
-
-window.onload = lanzadera;
+  window.onload = lanzadera;
