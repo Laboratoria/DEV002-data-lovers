@@ -23,13 +23,15 @@ data.films.forEach(element => {
     cards.appendChild(newDiv)
 
     newDiv.innerHTML += `
+    <div><img id="poster" src="${element.poster}"/></div>
+    <div>
     <article id="title" class="title"> Título: ${element.title} </article>
     <article id="director"> Director: ${element.director} </article>
     <article id="releaseDate"> Año: ${element.releaseDate} </article>
     <article id="rtScore"> Puntaje: ${element.rt_score}</article>
     <article id="description"> Descripción ${element.description}</article>
-    <img id="poster" src="${element.poster}"/>
-    `
+    </div>
+     `
 
 })
 

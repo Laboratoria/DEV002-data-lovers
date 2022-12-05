@@ -41,11 +41,19 @@ h1{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 15px;
 }
 
 .card{
-    margin: 50px solid black;
+    display: flex;
+    border: 2px solid pink;
     padding: 10px;
-    background-color: rgb(221, 48, 129);
-    width: 250px;
+    background-color: #ffffff;
+    width: 350px;
+}
+
+.img {
+    width: 100px;
+    height: 150px;
+    border-radius: 50%;
 }
