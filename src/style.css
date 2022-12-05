@@ -32,8 +32,9 @@ h1{
     margin: 90px 800px;
     width: 15%; 
 }
-.director {
+#director {
     font-size: large;
+    color: blue;
     font-weight: 200;
 }
 
@@ -44,16 +45,35 @@ h1{
     gap: 15px;
 }
 
+.imgDatos {
+    display: flex;
+    flex-direction: row;
+}
+
 .card{
     display: flex;
+    flex-direction: column;
     border: 2px solid pink;
     padding: 10px;
     background-color: #ffffff;
     width: 350px;
 }
 
-.img {
+#poster {
     width: 100px;
     height: 150px;
     border-radius: 50%;
+}
+
+.parrafos{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+.parrafo{
+    padding: 4px;
+    margin: 15px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

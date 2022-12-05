@@ -23,13 +23,17 @@ data.films.forEach(element => {
     cards.appendChild(newDiv)
 
     newDiv.innerHTML += `
-    <div><img id="poster" src="${element.poster}"/></div>
-    <div>
-    <article id="title" class="title"> Título: ${element.title} </article>
-    <article id="director"> Director: ${element.director} </article>
-    <article id="releaseDate"> Año: ${element.releaseDate} </article>
-    <article id="rtScore"> Puntaje: ${element.rt_score}</article>
-    <article id="description"> Descripción ${element.description}</article>
+    <div class ="imgDatos">
+    <div class="poster"><img id="poster" src="${element.poster}"/></div>
+    <div class ="parrafos">
+    <p class ="parrafo" id="title" class="title"> Título: ${element.title} </p>
+    <p class ="parrafo" id="director"> Director: ${element.director} </p>
+    <p class ="parrafo" id="releaseDate"> Año: ${element.release_date} </p>
+    <p class ="parrafo" id="rtScore"> Puntaje: ${element.rt_score}</p>
+    </div>
+    </div>
+    <div class = "description">
+    <p id="description"> Descripción ${element.description}</p>
     </div>
      `
 
@@ -38,7 +42,7 @@ data.films.forEach(element => {
 let inicio = document.getElementById("peliculas");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
-    document.getElementById("pantalla1").style.visibility = "hidden"
+    document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.visibility = "visible"
 }
 
