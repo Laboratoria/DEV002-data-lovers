@@ -1,23 +1,25 @@
-import { example, anotherExample } from '../src/data.js';
+//npm test data.spec.js
 
+import { getAllCharacters, sortingCharacters } from "../src/data"
+import data from "../src/data_api/data.json"
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+// test fetch con mock del mismo y de la API
+global.fetch = jest.fn(() =>
+    Promise.resolve({
+    json: () => Promise.resolve(data),
+    })
+);
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+it("prueba de retorno de información al llamado de la API", async () =>{
+    const dataAPI = await getAllCharacters()
+    expect(dataAPI[0]["name"]).toBe("Harry Potter")
+    expect(fetch).toHaveBeenCalledTimes(1)
+})
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+// test de .sort()
+describe('sortingCharacter', () => {
+    it(`Debería ordenar [{name: 'Harry'},{name: 'Barry'}] a - z`, () => {
+        const result = sortingCharacters([{name: 'Harry'},{name: 'Barry'}])
+        expect(JSON.stringify(result)).toBe( JSON.stringify([{name: 'Barry'},{name: 'Harry'}]));
+    });
 });
