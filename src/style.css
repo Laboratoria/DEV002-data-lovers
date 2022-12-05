@@ -41,7 +41,13 @@ h1{
     font-weight: 200;
 }
 
-#card{
-    margin: 20px solid black;
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    margin: 50px solid black;
+    padding: 10px;
     background-color: aliceblue;
 }

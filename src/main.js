@@ -16,7 +16,7 @@ let cards = document.getElementById("cards")
 data.films.forEach(element => {
     
     let newDiv = document.createElement("div")
-    newDiv.id = "card"
+    newDiv.className = "card"
     cards.appendChild(newDiv) 
     
     newDiv.innerHTML += `
