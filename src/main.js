@@ -6,7 +6,7 @@ import data from './data/ghibli/ghibli.js';
 //console.log(example, data);
 //console.log (data.films[0].poster)
 
-const prueba = document.getElementById("prueba")
+//const prueba = document.getElementById("prueba")
 //prueba.innerHTML = ` 
 //<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
 //<img src="${data.films[0].poster}" />`
@@ -24,12 +24,14 @@ data.films.forEach(element => {
 
     newDiv.innerHTML += `
     <div><img id="poster" src="${element.poster}"/></div>
+    <div class="parrafos">
+    <p id="title" class="title"> Título: ${element.title} </p>
+    <p id="director"> Director: ${element.director} </p>
+    <p id="releaseDate"> Año: ${element.releaseDate} </p>
+    <p id="rtScore"> Puntaje: ${element.rt_score}</p>
+    </div>
     <div>
-    <article id="title" class="title"> Título: ${element.title} </article>
-    <article id="director"> Director: ${element.director} </article>
-    <article id="releaseDate"> Año: ${element.releaseDate} </article>
-    <article id="rtScore"> Puntaje: ${element.rt_score}</article>
-    <article id="description"> Descripción ${element.description}</article>
+    <p id="description"> Descripción ${element.description}</p>
     </div>
      `
 
@@ -38,7 +40,7 @@ data.films.forEach(element => {
 let inicio = document.getElementById("peliculas");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
-    document.getElementById("pantalla1").style.visibility = "hidden"
+    document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.visibility = "visible"
 }
 
