@@ -3,7 +3,7 @@
 
 //IMPORTACIÓN DE MÓDULOS
 import { buscarPorInput, buscarPorTipo } from './data.js';
-import { visualizarPokemones,closeModal } from './js/componentes.js';
+import { visualizarPokemones,closeModal} from './js/componentes.js';
 import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
 
@@ -13,24 +13,26 @@ visualizarPokemones(pokemones);
 /*const clickPokemonCard = document.querySelector('pokemon')
 clickPokemonCard.addEventListener('click',(e=>{console.log(e)}))  */
 
-//funcion visualizarModalPokemon al hacer clic a un pokemon-item
+//funcion cerrar modal al hacer clic en el boton
 const closeModalPokemon = document.getElementById('botonCloseModal')
 closeModalPokemon.addEventListener('click', closeModal) 
+
+//funcion crear modal al hacer clic en el boton
 
 
 //funcion buscar por imput de texto de nombre del pokemon
 const inputSearch = document.getElementById('searchName')
 inputSearch.addEventListener('input', (e)=>{
-    const pokemonFilterName=buscarPorInput(e.target.value, pokemones)
-    visualizarPokemones(pokemonFilterName);
+const pokemonFilterName=buscarPorInput(e.target.value, pokemones)
+visualizarPokemones(pokemonFilterName);
 
 })
 
 //funcion buscar por imput select de tipo del pokemon
 const typeSearch= document.getElementById('select-tipos')
 typeSearch.addEventListener("change",(e)=>{
-    const pokemonFilterType=buscarPorTipo(e.target.value, pokemones)
-    visualizarPokemones(pokemonFilterType);
+const pokemonFilterType=buscarPorTipo(e.target.value, pokemones)
+visualizarPokemones(pokemonFilterType);
 })
 
 
