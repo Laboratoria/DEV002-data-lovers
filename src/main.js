@@ -23,21 +23,23 @@ data.films.forEach(element => {
     cards.appendChild(newDiv)
 
     newDiv.innerHTML += `
-    <div><img id="poster" src="${element.poster}"/></div>
-    <div class="parrafos">
-    <p id="title" class="title"> Título: ${element.title} </p>
-    <p id="director"> Director: ${element.director} </p>
-    <p id="releaseDate"> Año: ${element.releaseDate} </p>
-    <p id="rtScore"> Puntaje: ${element.rt_score}</p>
+    <div class ="imgDatos">
+    <div class="poster"><img id="poster" src="${element.poster}"/></div>
+    <div class ="parrafos">
+    <p class ="parrafo" id="title" class="title"> Título: ${element.title} </p>
+    <p class ="parrafo" id="director"> Director: ${element.director} </p>
+    <p class ="parrafo" id="releaseDate"> Año: ${element.release_date} </p>
+    <p class ="parrafo" id="rtScore"> Puntaje: ${element.rt_score}</p>
     </div>
-    <div>
+    </div>
+    <div class = "description">
     <p id="description"> Descripción ${element.description}</p>
     </div>
      `
 
 })
 
-let inicio = document.getElementById("peliculas");
+let inicio = document.getElementById("boton");
 inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
     document.getElementById("pantalla1").style.display = "none"

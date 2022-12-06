@@ -1,41 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url("fondo.jpg.webp");
+    background-image: url("studio-ghibli-history-7.jpg");
     background-size: 100%;
     font-family: 'Black Han Sans', sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.ghibli {
-    width: 500px;
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    max-height: 220px;
+    align-items: center;
+    object-fit: contain;
+
+}
+
+.logo {
+    width: 300px;
     padding: 10px;
     margin: 20px;
     position: sticky;
-    margin: 5px 700px;
+    margin: 0 auto;
+        
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
     font-family: JejuHallasan;
     background-position: center;
     font-size: 50px;
     margin: 70px 600px;
+    padding: 250px 70px 200px 70px;
 }
 
-#peliculas {
+#boton {
     border-radius: 50px;
     font-family: 'Helvetica', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     color: black;
     background-color: rgb(208, 230, 199);
-    padding: 20px;
+    font-size: 20px;
+    padding: 0.5em 1em;
     border: 1px solid #151618;
-    margin: 90px 800px;
-    width: 15%; 
+    margin: 70px 900px;
+    width: 15%;
 }
 
-.director {
+.funciones{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    max-height: 150px;
+    align-items: center;
+    object-fit: contain;
+}
+
+.input{
+    margin: 0 auto;
+}
+
+#director {
     font-size: large;
+    color: blue;
     font-weight: 200;
+}
+
+.header-peliculas{
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+#mejores-peliculas {
+    font-size: 20px;
+    padding: 0.5em 1em;
+    border: 1px solid #151618;
+    border-radius: 50px;
+    max-height: 60px;
+    margin: auto;
+
 }
 
 .cards {
@@ -43,18 +102,40 @@ h1{
     flex-wrap: wrap;
     flex-direction: row;
     gap: 15px;
+    width: fit-content;
+    justify-content: center;
 }
 
-.card{
+.imgDatos {
     display: flex;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
     border: 2px solid pink;
     padding: 10px;
     background-color: #ffffff;
     width: 350px;
 }
 
-.img {
+#poster {
     width: 100px;
     height: 150px;
     border-radius: 50%;
 }
+
+.parrafos {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+.parrafo {
+    padding: 4px;
+    margin: 15px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
