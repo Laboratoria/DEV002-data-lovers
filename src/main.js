@@ -18,6 +18,13 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
     document.querySelector('.filtrosBusqueda').style.display= 'none';
 });
 
+// funcion para mostrar opciones de filtros:
+
+document.getElementById('clickmostrarFiltros').addEventListener('click',()=>{
+  document.querySelector('.container-Filtros').style.display='block'
+
+})
+
 const todoslosPokemones = pokemon.pokemon;
 const inputBuscarNombre = document.getElementById('inputBuscarNombre');
 const botonFiltrar = document.getElementById('btn-filtrar');
@@ -33,24 +40,45 @@ contenedorPadre.setAttribute('class', 'contenedorP');
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class', 'contenedorTarjetas');
 
-const filtros = document.createElement('div');
-filtros.setAttribute('class', 'contenedorFiltros');
+// const filtros = document.createElement('div');
+// filtros.setAttribute('class', 'contenedorFiltros');
 
 contenedorPadre.appendChild(contenedor);
-contenedorPadre.appendChild(filtros);
+//contenedorPadre.appendChild(filtros);
 seccion.appendChild(contenedorPadre);
 
-// const tipoEmoticon= {
+//  const tipoEmoticon= {
+//   bug: '🦗',
+//   dark: '⚫',
+//   dragon: '🐉',
+//   electric: '⚡',
+//   fighting: '🤼',
+//   flying: '🌪️',
+//   ghost: '👻', 
+//   grass: '🌱', 
+//   ground: '🐍',
+//   ice: '❄️',
+//   normal: '⚪',
+//   poison: '🧴',
+//   psychic: '🌫️',
+//   rock: '🥌',
+//   steel: '⚙️',
+//   water: '💦',
 
-//   grass:'😉',
-//   water:'💖',
-//   poison:'🦢',
-
-// };
+//  };
 
 const mostrar = (pokemones) => {
 
   pokemones.forEach((pokemon) => {
+    
+    const resistencias= pokemon.resistant.forEach((r) =>{
+     let res = [];
+     return res += r 
+   
+    return res.join(' ')
+     
+    });
+ 
     contenedor.innerHTML +=  
         ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
              <h2 id="nombrePokemon" class="nombreP">${pokemon.name} </h2>
@@ -65,17 +93,14 @@ const mostrar = (pokemones) => {
               <p id="heightPokemon" class="sizeP"> height: ${pokemon.size.height}</p>
               <p id="weightPokemon" class="sizeP"> weight: ${pokemon.size.weight}</p>
             </div>
-            <div class="botonesTarjeta">
-              <button id="btnStats" class="bntS"> Stats </button>
-              <button id="btnResistencia" class="btnR">Characteristics</button>
-            </div>
+            
             <div id="contenedorResydebi" class="cajaResydebi">
             
-                                 <ul class="contenedorListas"  >
-                                   <li class="listaResistencia ">
+                                 <ul class="contenedorListas">
+                                   <li class="listaResistencia">
                                     <h2 class='tituloLista'>Resistant<h2>
-                                     <div id="contenedorResistencia">
-                                        <p class='debiyresis'>${pokemon.resistant  } </p>
+                                     <div id="contenedorResistencia" class='contenedorRyD'>
+                                        <p class='debiyresis'>${resistencias}</p>
                                     
                                                                                  
                                        </div>
@@ -83,7 +108,7 @@ const mostrar = (pokemones) => {
                                                                       
                                     <li class="listaDebilidades" >
                                     <h2  class='tituloLista'>Weaknesses</h2>
-                                    <div id="contenedorDebilidades">
+                                    <div id="contenedorDebilidades" class='contenedorRyD'>
                                         <p class='debiyresis'>  ${pokemon.weaknesses}</p>
                                       </div>
                                     </li> 

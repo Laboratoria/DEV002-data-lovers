@@ -48,7 +48,24 @@ body{
  .btn:hover{
     background: rgb(188, 214, 41); ;
   }
+/* bonton para filtros: */
+  .btn-filtros{
+    background-image: url(img/filtro.png);
+    background-size:contain;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
+  .container-Filtros{
+    margin: 10px;
+    padding: 10px;
+    border:solid 2px #03071e; 
+    width: max-content;
+    height: max-content;
+    display: none;
+  }
 
  footer {   
     display: flex;
@@ -101,19 +118,20 @@ body{
     width: 100%;
     height: 100%;
 }
-.contenedorFiltros{
+/* .contenedorFiltros{
     background-color: blue;
     order: 1;
     width: 250px;
     height: 600px;
     margin-right: 15px;
-}
+} */
 .contenedorTarjetas{
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 25px;
-    order: 2;
+    /* order: 2; */
+    padding:5%;
    }
 
 .tarjetaPokemones{
@@ -182,6 +200,10 @@ body{
 }*/
 
 /*  caja de resistencias y debilidades:  */
+.contenedorRyD{
+    padding: 3px;
+    margin: 3px;
+}
 .cajaResydebi{
     width: min-content;
     height: min-content;
@@ -240,12 +262,9 @@ body{
 
  .debiyresis{
      background-color: #C9D6FF;
-     width: 130px;
+    
     height:min-content;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: initial;
-white-space: nowrap;
+  
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
       
