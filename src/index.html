@@ -2,11 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Ghibli Lover's</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="logo">
+        <a id="G-logo" href="index.html">Ghibli</a>
+        <a id="L-logo" href="index.html">Lover's</a>
+      </div>
+      <!-- logo -->
+      <nav>
+        <a id="Filmografía" href="algún-lado">Filmografía</a>
+        <a id="Cronología" href="otro-lado">Cronología</a>
+        <!--Filmografía-->
+        <!--Cronología-->
+      </nav>
+    </header>
+    
+    <main> 
+      <h1>Películas</h1>
+      <!--<p>Total #</p> -->
+      <section id="barra-cyr">
+        <div class="contador">Total XX</div>
+        <div class="resultado">Resultado Isao Takahata</div>
+      </section>
+      <!-- Tarjetas -->
+      <div class="contenedor"> 
+          <section class="imagen"><figure id="poster"></figure></section>
+          <section class="texto">
+            <p id="titulo"></p>
+            <p id="datos"></p>
+          </section>
+        <!--para mostrar tarjeta de cada película-->
+      </div>
+    </main>
+    
+    <footer>
+      <!--Botón menú -->
+      <div id="botones">
+        <div id="boton-m">
+          <button id="btn-m"><img id="menu" src="/imagenes/menu.png"></button>
+        </div>
+          <!--Botón inicio -->
+          <div id="boton-i">
+          <button id="bnt-i"><img id="inicio" src="/imagenes/inicio.png"></button>
+        </div>
+     </div>
+    </footer>
+
+
+    <!-- <div id="root"></div> -->
     <script src="main.js" type="module"></script>
   </body>
 </html>
