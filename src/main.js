@@ -216,7 +216,7 @@ selectCharacters.addEventListener('change', () => {
 document.getElementById("btnCharac").addEventListener("click", () => {
 
   const x = document.querySelector(".test")
-    x.innerHTML = ""
+  x.innerHTML = ""
   const accederAlDom = document.getElementById('home')
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
@@ -439,7 +439,7 @@ selectSpells.addEventListener('change', () => {
 document.getElementById("btnSpells").addEventListener("click", () => {
 
   const x = document.querySelector(".test")
-    x.innerHTML = ""
+  x.innerHTML = ""
   const accederAlDom = document.getElementById('home')
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
@@ -539,7 +539,7 @@ selectBooks.addEventListener('change', () => {
 document.getElementById("btnBooks").addEventListener("click", () => {
 
   const x = document.querySelector(".test")
-    x.innerHTML = ""
+  x.innerHTML = ""
   const accederAlDom = document.getElementById('home')
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
@@ -632,7 +632,7 @@ selectPotions.addEventListener('change', () => {
 document.getElementById("btnPotions").addEventListener("click", () => {
 
   const x = document.querySelector(".test")
-    x.innerHTML = ""
+  x.innerHTML = ""
   const accederAlDom = document.getElementById('home')
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
@@ -660,17 +660,37 @@ document.getElementById("btnPotions").addEventListener("click", () => {
 
 });
 
-let filtrar = document.addEventListener('keyup', e => {
+// Dandole funcionalidad a la barra de búsqueda
+document.addEventListener('keyup', e => {
   const x = document.querySelector(".test")
-    x.innerHTML = ""
+  x.innerHTML = ""
+
+  const o = document.querySelector("#home")
+  o.innerHTML = ""
+
+
   if (e.target.matches('#search')) {
 
     let inputSearch = (e.target.value).toLowerCase();
     console.log(inputSearch);
-    let dios = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
+    // dios contiene el nuevo array
+    let buscarPersonajes = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
 
-    console.log(dios)
+    buscarPersonajes.forEach(element => {
 
+      const createElement = document.createElement("div")
+      createElement.setAttribute("class", 'contenedorCard');
+      const templateTest = `
+      <div id="template">
+          <img  class="imagen" src="imag/incógnito.jpg">
+           <div class="caja">
+           <h4 class="data"> ${element.name}</h4>
+          </div>
+       </div>
+        `;
+      createElement.innerHTML = templateTest;
+      test1.appendChild(createElement);
+
+    });
   }
 })
-console.log(filtrar)
