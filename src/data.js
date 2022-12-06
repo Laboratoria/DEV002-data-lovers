@@ -1,7 +1,6 @@
-// estas funciones son de ejemplo
-
-export const filtro = (arr = []) => {
-  return arr.filter((element) => element.house === 'Gryffindor');
+export const filtro = (arr = [], casa) => {
+  console.log('filtrando');
+  return arr.filter((element) => element.house === casa);
 };
 
 export const anotherExample = () => {
