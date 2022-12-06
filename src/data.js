@@ -36,7 +36,11 @@ export const operaciones = {
 
   //funcion de filtrar por productor
   filtrarPorProductor(typeProducer){
-    return peliculas.filter(peli => peli.producer.includes(typeProducer));
+    return peliculas.filter("peli", (e) => peli.producer.includes(typeProducer));
   }
   }
-  
+
+
+//   //funcion buscar por imput select de tipo del pokemon
+// const typeSearch= document.getElementById('select-tipos')
+// typeSearch.addEventListener("change",(e)=>{buscarPorTipo(e.target.value)})
