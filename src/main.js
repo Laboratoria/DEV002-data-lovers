@@ -1,5 +1,6 @@
 import { anotherExample, filtro, obtenerDatos } from './data.js';
 // console.log(anotherExample, data);
+
 let datos = [];
 
 const cargarAPIhp = document.querySelector('#cargarAPI');
@@ -45,3 +46,4 @@ function mostrarHTML(datosAMostrar) {
   });
   contenido.innerHTML = html;
 }
+
