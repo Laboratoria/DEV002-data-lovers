@@ -1,0 +1,29 @@
+.flex-cont {
+    background: #fcff80;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 900px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-count: 5;
+}
+
+.flex-box {
+    background-color: white;
+    color:black;
+    width: 200px;
+    height: 200px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;  
+    
+}
+
+/*displeyCard{
+flex-flow: row wrap;
+justify-content: space-between;
+column-count: 5;
+}
+
