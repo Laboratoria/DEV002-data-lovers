@@ -34,18 +34,17 @@ const ordenPokemonZa = document.getElementById('buttonZA');
 const seccion = document.getElementById('seccionPokemones');
 seccion.setAttribute('class', 'paginaPokemones');
 
-const contenedorPadre = document.createElement('div');
-contenedorPadre.setAttribute('class', 'contenedorP');
+// const contenedorPadre = document.createElement('div');
+// contenedorPadre.setAttribute('class', 'contenedorP');
 
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class', 'contenedorTarjetas');
 
-// const filtros = document.createElement('div');
-// filtros.setAttribute('class', 'contenedorFiltros');
 
-contenedorPadre.appendChild(contenedor);
+document.getElementById('contenedor3TJ').appendChild(contenedor);
+//contenedorPadre.appendChild(contenedor);
 //contenedorPadre.appendChild(filtros);
-seccion.appendChild(contenedorPadre);
+//seccion.appendChild(contenedorPadre);
 
 //  const tipoEmoticon= {
 //   bug: '🦗',

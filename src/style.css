@@ -58,6 +58,16 @@ body{
     cursor: pointer;
   }
 
+  .imagenPokemon{
+    width: 30%;
+    height: 60%;
+ 
+  }
+.contenedor1{
+    display: flex;
+    justify-content: center;
+    
+}
   .container-Filtros{
     margin: 10px;
     padding: 10px;
@@ -112,7 +122,7 @@ body{
     height: 100%;
    display: none;
 }
-.contenedorP{
+.contenedor3{
     background-image: url(img/30090587.jpg);
     display: flex;
     width: 100%;
