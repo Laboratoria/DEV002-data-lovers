@@ -1,24 +1,4 @@
 /*mis funciones para obtener, procesar y manipular datos*/
-// estas funciones son de ejemplo
-
-import { visualizarPokemones } from "./js/componentes.js";
-import { pokemones } from "./js/store.js";
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-//ejemplo para testear agregado por nosotras
-export function suma(a, b) {
-  a=1.5;
-  b=1.5;
-  return a + b;
-}
-
 
 /*filterData(data, condition):
 esta función filter o filtrar recibiría la data, y nos retornaría aquellos datos que sí cumplan con la condición.
@@ -30,14 +10,17 @@ sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres par�
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la
  data proporcionada.*/
 
-  export const buscarPorInput = (e) => {
-  const textoIngresado = e.target.value;//para obtener el valor del imput
-  const pokemonesFiltrados = pokemones.filter(pokemon => pokemon.name.includes(textoIngresado))
-  visualizarPokemones(pokemonesFiltrados)
+  export const buscarPorInput = (e, data) => {
+   return data.filter(pokemon => pokemon.name.includes(e));
 }
 
-export const buscarPorTipo=(e)=>{
-  const tipoIngresado = e.target.value;//para obtener el tipo seleccionado
-  const pokemonesFiltradosPorTipo = pokemones.filter(pokemon => pokemon.type.includes(tipoIngresado))
-  visualizarPokemones(pokemonesFiltradosPorTipo)
+
+export const buscarPorTipo=(e,data)=>{
+  return data.filter(pokemon => pokemon.type.includes(e));
+
 };
+
+export const filterPokemonByNumber= (numPokemon,data) =>{
+  return data.filter(pokemon => pokemon.num==numPokemon);
+}
+

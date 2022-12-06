@@ -6,54 +6,55 @@
   <title>Data Lovers Ale y Jhoa</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-      <img class="logo" src="img/JohalePokedexHeader.jpeg" alt="loguito">
-    <h1 class="titulo">MUNDO POKÉMON</h1>
+    <img class="logo" src="img/JohalePokedexHeader.jpeg" alt="loguito">
   </header>
+
+  <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon" maxlenght="30"
+    autocomplete="off">
+  <h2>pokemones</h2>
+
+  <select name="tipos" id="select-tipos">
+    <option value="" disabled selected>Selecciona tipo</option>
+    <option value="bug">Bug</option>
+    <option value="dark">Dark</option>
+    <option value="dragon">Dragon</option>
+    <option value="electric">Electric</option>
+    <option value="fairy">Fairy</option>
+    <option value="fighting">Fighting</option>
+    <option value="fire">Fire</option>
+    <option value="flying">Flying</option>
+    <option value="ghost">Ghost</option>
+    <option value="grass">Grass</option>
+    <option value="ground">Ground</option>
+    <option value="ice">Ice</option>
+    <option value="normal">Normal</option>
+    <option value="poison">Poison</option>
+    <option value="psychic">Psychic</option>
+    <option value="rock">Rock</option>
+    <option value="steel">Steel</option>
+    <option value="water">Water</option>
+  </select>
+  <!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
+  <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
+
   <div id="container-pokemones">
     <!-- (Abuelo) caparazón de mi listado, aquí irán los filtros y el paginador(presentación de modales)-->
-    <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon" maxlenght="30"
-      autocomplete="off">
-    <h2>pokemones</h2>
-
-    <select name="tipos" id="select-tipos">
-      <option value="" disabled selected>Selecciona tipo</option>
-      <option value="bug">Bug</option>
-      <option value="dark">Dark</option>
-      <option value="dragon">Dragon</option>
-      <option value="electric">Electric</option>
-      <option value="fairy">Fairy</option>
-      <option value="fighting">Fighting</option>
-      <option value="fire">Fire</option>
-      <option value="flying">Flying</option>
-      <option value="ghost">Ghost</option>
-      <option value="grass">Grass</option>
-      <option value="ground">Ground</option>
-      <option value="ice">Ice</option>
-      <option value="normal">Normal</option>
-      <option value="poison">Poison</option>
-      <option value="psychic">Psychic</option>
-      <option value="rock">Rock</option>
-      <option value="steel">Steel</option>
-      <option value="water">Water</option>
-    </select>
-<!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
- <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
-<div id="listado-pokemones"></div> <!-- (Padre) será rellenado por las tarjetas de los pokemones-->
+    <div id="listado-pokemones"></div> <!-- (Padre) será rellenado por las tarjetas de los pokemones-->
   </div>
 
+
   <div class="modal" id="modalAdd">
-    <div class="modal-container">
-      <div class="close-modal" id="botonCloseModal">X</div>
+    <div class="close-modal" id="botonCloseModal">X</div>
+    <div class="modal-container" id="modalContainerPokemon">
       <h2>Pokemon</h2>
     </div>
   </div>
-
 
 
   <div id="root"></div>
