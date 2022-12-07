@@ -67,6 +67,12 @@ nav {
     margin: 2.2%;
     position: relative;
     cursor: pointer;
+    float: left;
+    -webkit-transition:  0.3s ease-out;
+}
+ 
+.logos-escuelas:hover {
+    margin-top: 2px;
 }
 
 button[type=button] { 

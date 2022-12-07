@@ -1,15 +1,21 @@
 import { anotherExample, filtro, obtenerDatos } from './data.js';
-// console.log(anotherExample, data);
+
+let datos = [];
 
 const refreshPage = document.getElementById('btn-refresh');
+const cargarAPIhp = document.querySelector('#cargarAPI');
 
 refreshPage.addEventListener("click",  () => {
     window.location.reload(true);
 })
 
-let datos = [];
+window.onload = () => {
+  obtenerDatos().then(resultado => {
+    datos = resultado;
+    
+  });
+};
 
-const cargarAPIhp = document.querySelector('#cargarAPI');
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
@@ -45,11 +51,20 @@ function mostrarHTML(datosAMostrar) {
   let html = '';
   datosAMostrar.forEach(personaje => {
     console.log(personaje);
-    const { name, house, image } = personaje;
-    html += `<p> Nombre: ${name} Casa: ${house}</p>  <img src="">`;
-    html += `<img class='foto' src="${image}">`;
+    const { name, house, species, image } = personaje;
+    html += `<p> Name: ${name} House: ${house} Species: ${species} </p>  <img src="">`;
+    // html += `<img class='foto' src="${image}">`;
 
   });
   contenido.innerHTML = html;
 }
 
+// let datos = [];
+
+// const cargarAPIhp = document.querySelector('#cargarAPI');
+// cargarAPIhp.addEventListener('click', () => {
+//   obtenerDatos().then(resultado => {
+//     datos = resultado;
+//     mostrarHTML(datos);
+//   });
+// });
