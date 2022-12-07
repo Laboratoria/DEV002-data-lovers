@@ -9,7 +9,7 @@ console.log("example esto es la data", data);
 
 //mostrar
 
-const prueba = document.getElementById("prueba")
+const cardsContainer = document.getElementById("cardsContainer")
 const dataPokemon = data.pokemon
 
 const displeyCard = (d) => {
@@ -25,7 +25,7 @@ const displeyCard = (d) => {
         </section>
 
         `
-    prueba.appendChild(cardPokemon);
+    cardsContainer.appendChild(cardPokemon);
 
   })
 }

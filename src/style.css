@@ -5,9 +5,9 @@
     align-items: flex-start;
     width: 900px;
     margin: 0 auto;
-    flex-flow: row wrap;
+    /*flex-flow: row wrap;
     justify-content: space-between;
-    column-count: 5;
+    column-count: 5;*/
 }
 
 .flex-box {
@@ -20,9 +20,13 @@
     margin: 5px;  
     
 }
+.cardsContainer{
+    display: flex;
+      
+}
 
-/*displeyCard{
-flex-flow: row wrap;
+
+/*flex-flow: row wrap;
 justify-content: space-between;
 column-count: 5;
 }
