@@ -15,19 +15,46 @@ body{
     background-repeat: no-repeat;  
     background-size: cover;                                     
 }
-.title {
-    width: 50rem;
-    height: 15rem;
-    padding: 2rem;
-    text-align: center;
-}
-.subtitulo {
-    width: 27rem;
-    height: 11rem;
-    padding: 2rem;
-    text-align: center;
+header {
+    height: 1rem;
+
 }
 
+nav {
+    position: fixed;
+    height: 3.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: lightsteelblue;
+  }
+  nav img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+.title {
+    width: 56rem;
+    height: 14rem;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.subtitle {
+    width: 50rem;
+    height: 10.5rem;
+    padding: 2rem;
+    margin-right: 33rem;
+}
+.home-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: .6rem;
+    margin-right: 96rem;
+    margin-left: 1rem;
+}
 .container {
     width: 80%;
     margin: 0 auto;
