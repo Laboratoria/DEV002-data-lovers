@@ -9,7 +9,7 @@ console.log("example esto es la data", data);
 
 //mostrar
 
-const prueba = document.getElementById("prueba")
+const cardsContainer = document.getElementById("cardsContainer")
 const dataPokemon = data.pokemon
 
 const displeyCard = (d) => {
@@ -19,13 +19,13 @@ const displeyCard = (d) => {
 
     cardPokemon.innerHTML += ` <section class= "flex-cont"> <section class= "flex-box">
         <img src ="${element.img}">
-        <p>${element.num}</p>
-        <section> <h2>${element.name}</h2></div></section>
+        <p>${element.name}</p>
+        <p>${element.num}</p></div>
         </section>
         </section>
 
         `
-    prueba.appendChild(cardPokemon);
+    cardsContainer.appendChild(cardPokemon);
 
   })
 }
