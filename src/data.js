@@ -34,13 +34,13 @@ export const operaciones = {
     return todosLosProductores;
   },
 
-  //funcion de filtrar por productor
-  filtrarPorProductor(typeProducer){
-    return peliculas.filter("peli", (e) => peli.producer.includes(typeProducer));
+  //método de filtrar por productor
+  filtrarPorProductor(peliculas,nameProducer){
+    
+    let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
+    return peliculasdelproductor;
+
   }
   }
 
 
-//   //funcion buscar por imput select de tipo del pokemon
-// const typeSearch= document.getElementById('select-tipos')
-// typeSearch.addEventListener("change",(e)=>{buscarPorTipo(e.target.value)})
