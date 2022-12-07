@@ -12,7 +12,7 @@ html {
 }
 
 body{
-    background-color: black;
+
     background-image: url(./images/tinified/background-mobile.jpeg);
     font-family: 'Harry Potter', sans-serif;   
     text-align: center; 
@@ -20,10 +20,33 @@ body{
     background-size: cover;     
     
 }
-/* @media only screen and (min-width: 700px) {
-    body {
-    background-image: url(./images/tinified/background.jpeg)
- }  */
+header {
+    height: 1rem;
+
+}
+
+nav {
+    position: fixed;
+    height: 3.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: lightsteelblue;
+  }
+  nav img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+.title {
+    width: 56rem;
+    height: 14rem;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
  .logos-escuelas {
     width: 36%;
     margin: 1rem;
@@ -32,24 +55,30 @@ body{
 }
 
 .title {
-    width: 31rem;
+    width: 29rem;
     height: 10rem;
     padding: 2rem;
     text-align: center;
-    margin-top: 1rem;
 }
-.subtitulo {
-    width: 22rem;
-    height: 8rem;
+.subtitle {
+    width: 32rem;
+    height: 8.5rem;
     padding: 2rem;
-    text-align: center;
 }
-h2 {
-    font-family: 'Courier New', Courier, monospace;    
-    text-align: left;
-    font-size: 2rem;
-    margin-left: 2rem;
+
+.home-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: .8rem;
 }
+
+
+.home-icon-div {
+    width: 4rem;
+    height: 4rem;
+    text-align: right;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;

@@ -10,34 +10,48 @@
     <link rel="shortcut icon" href="./images/tinified/favicon_io/favicon-32x32.png" type="image/x-icon">
 
   </head>
+       
   <body>
+    <header> 
+      <nav> 
+        <input type="image" class="home-icon" src="./images/tinified/homeicon.png" value="Reload Page" id="btn-refresh">
+      </nav>
+    </header>
    <div> 
     <figure> 
       <img class="title" src="./images/tinified/logo-titulo.png" alt="Colegio Hogwarts">
     </figure>
-   </div>
+   
+    <figure> 
+      <img class="subtitle" src="./images/tinified/subtitulo.png" alt="Colegio Hogwarts">
+    </figure>
+  
 
-     <figure class="container">
+      <figure class="container">
       
-
-        <img class="logos-escuelas" id="gryfindor" src="./images/tinified/gryfindor.png" alt="Logo Gryfindor" id="imgGrif">
-        <img class="logos-escuelas" id="hufflepuff" src="./images/tinified/hufflepuff.png" alt="Logo Hufflepuff" id="imgHuf">
-        <img class="logos-escuelas" id="ravenclaw" src="./images/tinified/ravenclaw.png" alt="Logo Ravenclaw" id="imgRav">
-        <img class="logos-escuelas" id="slytherin" src="./images/tinified/slytherin.png" alt="Logo Slytherin" id="imgSly">
+        <img class="logos-escuelas" id="gryfindor" src="./images/tinified/gryfindor.png" alt="Logo Gryfindor" >
+        <img class="logos-escuelas" id="hufflepuff" src="./images/tinified/hufflepuff.png" alt="Logo Hufflepuff">
+        <img class="logos-escuelas" id="ravenclaw" src="./images/tinified/ravenclaw.png" alt="Logo Ravenclaw">
+        <img class="logos-escuelas" id="slytherin" src="./images/tinified/slytherin.png" alt="Logo Slytherin">
         
 
     </figure>
         
-    </main>
+    
 
-    <div class="contenido">
-      <button type="button" id="cargarAPI">Mostrar a todos los personajes de los libros de Harry Potter</button>
-      <div id="contenido"></div>
+    <div class="tarjetas">
+      <button type="button" class= "contenido" id="cargarAPI"> Display all the characters from the Harry Potter books.</button>
     </div>
-
+  </main>
     <!-- Index 2 -->
 
-    
+    <div class="ordenarEstudiantes">
+      <header class="Filtros">
+        <div class="Ordenar">
+          <select name="selectOption" id="btn-ordenar">
+            <option value="numDes"># A-Z</option>
+          </select>
+        </div>
   
     <div id="root"></div>
     <script src="main.js" type="module"></script>
