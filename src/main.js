@@ -72,45 +72,56 @@ function verDetallePelicula() {
 }
 
 //pintar productores
-function llamarProductores() {
+function pintarProductores() {
   document.getElementById("directoresproductoresdiv").innerHTML = "<h2>Productores</h2>";
 
-  //se crea el ul con javascript
-  let newul = document.createElement("ul");
+  //se crea el select con javascript
+  let newSelectProducer = document.createElement("select");
+  newSelectProducer.setAttribute("id", "selectproductores");
+  newSelectProducer.setAttribute("aria-label", "labelproductores");
+  newSelectProducer.onchange= filtrarPorProductor;
 
   //CAMBIAR A llamarProductores
-  let arregloProducer = operaciones.llamarProductores(data.films);
+    let arregloProducer = operaciones.llamarProductores(data.films);
 
+    //Agragando la opción OTROS
+     let newOptionProducer = document.createElement("option");
+    newOptionProducer.setAttribute("value","Todos los productores");
+    newOptionProducer.setAttribute("label", "Todos los productores");
+    //mete las opciones (nombre de los productores)  en la el combo para seleccionar (select)
+    newSelectProducer.appendChild(newOptionProducer);
+    //agrega al html
+    newOptionProducer.innerHTML = newOptionProducer.id;
   for (let i = 0; i < arregloProducer.length; i++) {
-
-     //se crea el li con javascript
-    let newli = document.createElement("li");
-    newli.setAttribute("id", arregloProducer[i]);
-    newli.addEventListener("click", filtrarPorProductor);
-    
-
-
-    newli.innerHTML = newli.id;
-
-    //mete los cucos (li) en la caja (ul)
-    newul.appendChild(newli);
+     //se crea las opciones con javascript
+    let newOptionProducer = document.createElement("option");
+    newOptionProducer.setAttribute("value", arregloProducer[i]);
+    newOptionProducer.setAttribute("label", arregloProducer[i]);
+    //mete las opciones (nombre de los productores)  en la el combo para seleccionar (select)
+    newSelectProducer.appendChild(newOptionProducer);
+    //agrega al html
+    newOptionProducer.innerHTML = newOptionProducer.id;
   }
 
-  document.getElementById("directoresproductoresdiv").appendChild(newul);
+  document.getElementById("directoresproductoresdiv").appendChild(newSelectProducer);
 }
 
 //filtrar por productor(
 function filtrarPorProductor(){
-  let peliculasPorProductor=operaciones.filtrarPorProductor(data.films, this.id );
-
+   if(this.value =="Todos los productores"){
+    pintarCard()
+  }
+  else {
+    let peliculasPorProductor=operaciones.filtrarPorProductor(data.films, this.value );
     dibujarCard(peliculasPorProductor);
+  }
 }
 
 function lanzadera(){
   //pintarDirectores();
  
   pintarCard();
-  llamarProductores();
+  pintarProductores();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
   //document.getElementById("producer").addEventListener("click", filtrarPorProductor);

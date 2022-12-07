@@ -38,9 +38,16 @@ export const operaciones = {
   filtrarPorProductor(peliculas,nameProducer){
     
     let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
-    return peliculasdelproductor;
+    return peliculasdelproductor
 
-  }
+  },
+  // realizarCalculo(peliculas,rt_score){
+
+  //   let realizandoelcalculo=
+
+  // },
+
+
 
 }
   
