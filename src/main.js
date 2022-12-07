@@ -37,11 +37,11 @@ const displeyCard = (d) => {
 let generationI = dataPokemon.filter ((dataPokemon) => {
     return dataPokemon.num <= 151;
 });
-//console.log(generationI)
+
 
 let generationII = dataPokemon.filter ((dataPokemon) => {
       return dataPokemon.num > 151;
 });
-//console.log(generationII)
+
 displeyCard(generationI)
 
