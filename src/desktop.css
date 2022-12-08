@@ -10,10 +10,10 @@ html {
 }
 
 body{
-    background-color: black;
+    background-color: #f6f6f6;
     background-image: url(./images/tinified/background.jpeg);
     background-repeat: no-repeat;  
-    background-size: cover;                                     
+    background-size: contain;                                     
 }
 header {
     height: 1rem;
@@ -68,11 +68,11 @@ nav {
     position: relative;
     cursor: pointer;
     float: left;
-    -webkit-transition:  0.3s ease-out;
+    transition:  0.3s ease-out;
 }
  
 .logos-escuelas:hover {
-    margin-top: 2px;
+    top: -5px;
 }
 
 button[type=button] { 

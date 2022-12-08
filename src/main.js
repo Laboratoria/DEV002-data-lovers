@@ -5,9 +5,14 @@ let datos = [];
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
 
-refreshPage.addEventListener("click",  () => {
-    window.location.reload(true);
+refreshPage.addEventListener("click", () => {
+  window.location.reload(true);
 })
+window.onload = () => {
+  obtenerDatos().then(resultado => {
+    datos = resultado;
+  })
+}
 
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
@@ -51,7 +56,7 @@ function mostrarHTML(datosAMostrar) {
 
     divCard.className = "card";
     // imgCard.style.width = '100%';
-    divContent.className= "containerCard";
+    divContent.className = "infoCard";
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
     hSpecie.innerHTML = personaje.species;

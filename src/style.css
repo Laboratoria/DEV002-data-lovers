@@ -106,6 +106,15 @@ button[type=button] {
     background-color: #000;
     color: #f6f6f6;
 }
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px ;
+    grid-template-rows: 75px 75px 75px;
+    place-content: center;
+    color: black;
+    width: auto;
+    height: fit-content;
+}
 
 .card {
     box-shadow: 0 4px 8px 0 #1d5dab57;
@@ -120,7 +129,7 @@ button[type=button] {
 }
 
 /* Add some padding inside the card container */
-.containerCard {
+.infoCard {
     padding: 2px 16px;
 }
 
