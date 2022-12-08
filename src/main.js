@@ -9,13 +9,6 @@ refreshPage.addEventListener("click",  () => {
     window.location.reload(true);
 })
 
-// window.onload = () => {
-//   obtenerDatos().then(resultado => {
-//     datos = resultado;
-    
-//   });
-// };
-
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
@@ -47,7 +40,7 @@ btnSly.addEventListener('click', () => {
 function mostrarHTML(datosAMostrar) {
   console.log(datosAMostrar);
   const contenido = document.getElementById('cards');
-  contenido.innerHTML = '';
+  contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
     let divCard = document.createElement("div");
     // let imgCard = document.createElement("img");
@@ -73,12 +66,3 @@ function mostrarHTML(datosAMostrar) {
   });
 }
 
-// let datos = [];
-
-// const cargarAPIhp = document.querySelector('#cargarAPI');
-// cargarAPIhp.addEventListener('click', () => {
-//   obtenerDatos().then(resultado => {
-//     datos = resultado;
-//     mostrarHTML(datos);
-//   });
-// });
