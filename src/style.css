@@ -123,6 +123,7 @@ h1 {
 
     /*position: absolute;*/
     max-width: 90%;
+    /* width: fit-content; */
     height: 300px;
    /* left: 19px;
     top: 193px; */
@@ -208,13 +209,14 @@ figure {
 }
 
 footer {
-    background-color: #ececec;
+    background-color: #6ECCAF;
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 8%;
+    min-height: 8%;
+    /* max-height: 15%; */
 }
 
 #botones{
@@ -224,20 +226,40 @@ footer {
     margin: auto;
     align-items: center;
 }
+#bnt-i, #btn-m {
+    background-color: #6ECCAF;
+    border: none;
+}
+/*sólo para ver si funciona el botón*/
+#bnt-i:hover, #btn-m:hover {
+    background-color: #ae6ecc;
+    border: none;
+}
 
 #boton-m, #boton-i {
     /* width: 40%;
     margin: 0;
     background-color: aqua; */
-    width: 41%; 
+    /* width: 41%; */
+    width: 50%; 
 }
 
 #menu, #inicio {
-    /* width: 13%;
-    padding-top: 1%;
-    padding-bottom: 1%; */
+    /* width: 13%; */
+    padding-top: 2%; /*estaba en 3*/
+    padding-bottom: 1%;
     width: 34%;
     /* background-color: #6ECCAF; */
+}
+
+#menu {
+    padding-right: 35%;
+    width: 27%;
+}
+
+#inicio {
+    padding-left: 35%;
+    width: 27%;
 }
 
 #boton-m {
