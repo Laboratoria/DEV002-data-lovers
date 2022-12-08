@@ -8,7 +8,11 @@ const cargarAPIhp = document.querySelector('#cargarAPI');
 refreshPage.addEventListener("click",  () => {
     window.location.reload(true);
 })
-
+window.onload = () => {
+  obtenerDatos().then(resultado => {
+    datos = resultado;
+  })
+}
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
