@@ -1,5 +1,6 @@
 export const filtro = (arr = [], casa) => {
   console.log('filtrando');
+  // console.log(arr);
   return arr.filter((element) => element.house === casa);
 };
 

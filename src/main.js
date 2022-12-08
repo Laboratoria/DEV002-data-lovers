@@ -1,4 +1,4 @@
-import { anotherExample, filtro, obtenerDatos } from './data.js';
+import { filtro, obtenerDatos } from './data.js';
 
 let datos = [];
 
@@ -9,12 +9,12 @@ refreshPage.addEventListener("click",  () => {
     window.location.reload(true);
 })
 
-window.onload = () => {
-  obtenerDatos().then(resultado => {
-    datos = resultado;
+// window.onload = () => {
+//   obtenerDatos().then(resultado => {
+//     datos = resultado;
     
-  });
-};
+//   });
+// };
 
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
@@ -46,17 +46,31 @@ btnSly.addEventListener('click', () => {
 
 function mostrarHTML(datosAMostrar) {
   console.log(datosAMostrar);
-  const contenido = document.querySelector('.tarjetas');
-  console.log(contenido);
-  let html = '';
-  datosAMostrar.forEach(personaje => {
-    console.log(personaje);
-    const { name, house, species, image } = personaje;
-    html += `<p> Name: ${name} House: ${house} Species: ${species} </p>  <img src="">`;
-    // html += `<img class='foto' src="${image}">`;
+  const contenido = document.getElementById('cards');
+  contenido.innerHTML = '';
+  datosAMostrar.forEach((personaje) => {
+    let divCard = document.createElement("div");
+    // let imgCard = document.createElement("img");
+    let divContent = document.createElement("div");
+    let hName = document.createElement("h2");
+    let hHouse = document.createElement("h2");
+    let hSpecie = document.createElement("h2");
+
+    divCard.className = "card";
+    // imgCard.style.width = '100%';
+    divContent.className= "containerCard";
+    hName.innerHTML = personaje.name;
+    hHouse.innerHTML = personaje.house;
+    hSpecie.innerHTML = personaje.species;
+
+    contenido.appendChild(divCard);
+    // divCard.appendChild(imgCard);
+    divCard.appendChild(divContent);
+    divContent.appendChild(hName);
+    divContent.appendChild(hHouse);
+    divContent.appendChild(hSpecie);
 
   });
-  contenido.innerHTML = html;
 }
 
 // let datos = [];
