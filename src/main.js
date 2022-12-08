@@ -41,33 +41,54 @@ btnSly.addEventListener('click', () => {
 });
 
 
+
 function mostrarHTML(datosAMostrar) {
   console.log(datosAMostrar);
   const contenido = document.getElementById('cards');
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
     let divCard = document.createElement("div");
-    // let imgCard = document.createElement("img");
     let divContent = document.createElement("div");
     let hName = document.createElement("h2");
     let hHouse = document.createElement("h2");
     let hSpecie = document.createElement("h2");
+    let hatIcon = document.createElement("img");
 
     divCard.className = "card";
-    // imgCard.style.width = '100%';
-    divContent.className= "containerCard";
+    divContent.className= "infoCard";
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
     hSpecie.innerHTML = personaje.species;
+    hatIcon.src = "./images/tinified/haticon.png";
+    hatIcon.className = "hat-icon";
 
+
+    switch (personaje.house) {
+      case "Gryffindor":
+        hHouse.style.color = "#740001";
+        break;
+      case "Slytherin":
+        hHouse.style.color = "#2A623D";
+        break;
+        case "Hufflepuff":
+          hHouse.style.color = "#F0C75E";
+        break;
+        case "Ravenclaw":
+          hHouse.style.color = "#728DDA"
+
+      default:
+        break;
+
+    }
     contenido.appendChild(divCard);
-    // divCard.appendChild(imgCard);
     divCard.appendChild(divContent);
+    divContent.appendChild(hatIcon);
     divContent.appendChild(hName);
     divContent.appendChild(hHouse);
     divContent.appendChild(hSpecie);
 
+  
   });
 }
-
+    
 

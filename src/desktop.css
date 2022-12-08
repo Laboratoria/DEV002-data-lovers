@@ -10,10 +10,10 @@ html {
 }
 
 body{
-    background-color: black;
+    background-color: rgb(29, 29, 31);
     background-image: url(./images/tinified/background.jpeg);
     background-repeat: no-repeat;  
-    background-size: cover;                                     
+    background-size: cover;                                    
 }
 header {
     height: 1rem;
@@ -68,11 +68,12 @@ nav {
     position: relative;
     cursor: pointer;
     float: left;
-    -webkit-transition:  0.3s ease-out;
+    transition:  0.3s ease-out;
 }
  
 .logos-escuelas:hover {
-    margin-top: 2px;
+    top: -5px;
+    transition:  0.3s ease-out;
 }
 
 button[type=button] { 
@@ -93,6 +94,25 @@ button[type=button] {
 #cargarAPI:hover {
     background-color: lightslategray;
     color: #f6f6f6;
+}
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    padding: 1rem;
+    place-content: center;
+    color: black;
+}
+.card {
+    box-shadow: 0 4px 8px 0 #1d5dab57;
+    transition: 0.3s;
+    padding: 1rem;
+    border-radius: 5px; /* 5px rounded corners */
+    display:inline-table;
+    margin: 10px;
+  }
+  .hat-icon {
+    width: 6rem;
+    height: 7rem;
 }
 
 
