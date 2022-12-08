@@ -106,38 +106,43 @@ button[type=button] {
     background-color: #000;
     color: #f6f6f6;
 }
+
 .cardsContainer {
     display: grid;
-    grid-template-columns: 150px 150px 150px 150px 150px ;
-    grid-template-rows: 75px 75px 75px;
+    grid-template-columns: 140px 140px;
+    padding: 1rem;
     place-content: center;
     color: black;
-    width: auto;
-    height: fit-content;
+    font-size: .8rem;
+    margin: 5px;
+
 }
 
 .card {
+    background-color: gainsboro;
+    margin: 5px;
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
+    padding: 1rem;
     border-radius: 5px; /* 5px rounded corners */
     display:inline-table;
   }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
 }
 
-/* Add some padding inside the card container */
 .infoCard {
     padding: 2px 16px;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 img {
     border-radius: 5px 5px 0 0;
   }
-
+.hat-icon {
+    width: 6rem;
+    height: 7rem;
+}
 
 
 

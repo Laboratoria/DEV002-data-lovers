@@ -53,6 +53,7 @@ function mostrarHTML(datosAMostrar) {
     let hName = document.createElement("h2");
     let hHouse = document.createElement("h2");
     let hSpecie = document.createElement("h2");
+    let hatIcon = document.createElement("img");    
 
     divCard.className = "card";
     // imgCard.style.width = '100%';
@@ -60,15 +61,52 @@ function mostrarHTML(datosAMostrar) {
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
     hSpecie.innerHTML = personaje.species;
+    hatIcon.src = "./images/tinified/haticon.png";
+    hatIcon.className = "hat-icon";
+
+    //Asigna el color de texto en función de la casa del personaje
+
+    switch (personaje.house) {
+      case "Gryffindor":
+        hHouse.style.color = "#740001";
+        break;
+      case "Slytherin":
+        hHouse.style.color = "#2A623D";
+        break;
+        case "Hufflepuff":
+          hHouse.style.color = "#F0C75E";
+        break;
+        case "Ravenclaw":
+          hHouse.style.color = "#728DDA"
+      // Agrega más casos para las demás casas
+      default:
+        break;
+
+    }
 
     contenido.appendChild(divCard);
     // divCard.appendChild(imgCard);
     divCard.appendChild(divContent);
+    divContent.appendChild(hatIcon);
     divContent.appendChild(hName);
     divContent.appendChild(hHouse);
     divContent.appendChild(hSpecie);
+    
 
-  });
-}
+  })};
+
+  // if (personaje.house == "gryffindor") {
+  //   hHouse.style.color = "#740001";
+  // } else if (personaje.house == "Hufflepuff") {
+  //   hHouse.style.color = "#F0C75E";
+  // } else if (personaje.house == "Slytherin") {
+  //   hHouse.style.color = "#2A623D";
+  // } else if (personaje.house == "Ravenclaw") {
+  //   hHouse.style.color = "#728DDA";
+  // } else {
+  //   hHouse.style.color = "gray";
+  // }
+
+
 
 

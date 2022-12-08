@@ -15,3 +15,5 @@ export async function obtenerDatos() {
   const resultado = await respuesta.json();
   return resultado.characters;//.characters, porque en esta ocasion estoy trayendo solo los personajes por la carpeta json
 }
+
+

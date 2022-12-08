@@ -95,6 +95,45 @@ button[type=button] {
     color: #f6f6f6;
 }
 
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    padding: 1rem;
+    place-content: center;
+    color: black;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 #1d5dab57;
+    transition: 0.3s;
+    padding: 1rem;
+    border-radius: 5px; /* 5px rounded corners */
+    display:inline-table;
+    margin: 10px;
+  }
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
+}
+
+.infoCard {
+    padding: 2px 16px;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+  }
+.hat-icon {
+    width: 6rem;
+    height: 7rem;
+}
+
+
+
+
+
+
 
 /* @media only screen and (max-width: 788px) { 
 	body { 
