@@ -1,12 +1,15 @@
 // estas funciones son de ejemplo
 export const filtrarTipo = (todoslosPokemones,seleccionTipoPokemon ) => {
   return todoslosPokemones.filter(pokemonTipo=>pokemonTipo.type[0] === seleccionTipoPokemon)  
-};
+}
 
-export const buquedaPorNombre = (todoslosPokemones, nombrePokemon) => {
-  console.log(nombrePokemon);
-  console.log(todoslosPokemones);
-};
+
+// Esta función se encarga de buscar por nombre de pokemon
+export const buscarPorNombre = (pokemones, nombrePokemon) => {
+  return pokemones.filter((pokemon) => {
+    return pokemon.name.toLowerCase().indexOf(nombrePokemon.toLowerCase()) > -1;
+  });
+}
 
 export const ordenarData = (todoslosPokemones, key, orden) => { 
   
@@ -23,3 +26,6 @@ export const ordenarData = (todoslosPokemones, key, orden) => {
     }
 });
 };
+
+
+

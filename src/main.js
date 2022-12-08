@@ -1,5 +1,5 @@
 import pokemon from './data/pokemon/pokemon.js';
-import { filtrarTipo,  ordenarData, buquedaPorNombre} from './data.js';
+import { filtrarTipo,  ordenarData, buscarPorNombre} from './data.js';
 
 // Funciones para visualizar las secciones del html: 
  document.getElementById("btnPokemones").addEventListener("click", () => {
@@ -94,30 +94,21 @@ const mostrar = (pokemones) => {
             </div>
             
             <div id="contenedorResydebi" class="cajaResydebi">
-            
-                                 <ul class="contenedorListas">
-                                   <li class="listaResistencia">
-                                    <h2 class='tituloLista'>Resistant<h2>
-                                     <div id="contenedorResistencia" class='contenedorRyD'>
-                                        <p class='debiyresis'>${resistencias}</p>
-                                    
-                                                                                 
-                                       </div>
-                                   </li>
-                                                                      
-                                    <li class="listaDebilidades" >
-                                    <h2  class='tituloLista'>Weaknesses</h2>
-                                    <div id="contenedorDebilidades" class='contenedorRyD'>
-                                        <p class='debiyresis'>  ${pokemon.weaknesses}</p>
-                                      </div>
-                                    </li> 
-                         
-                                   
-                                   
-                                 </ul>
-                               
-                         
-                                    </div>
+              <ul class="contenedorListas">
+                <li class="listaResistencia">
+                <h2 class='tituloLista'>Resistant<h2>
+                  <div id="contenedorResistencia" class='contenedorRyD'>
+                    <p class='debiyresis'>${resistencias}</p>                                 
+                    </div>
+                </li>           
+                <li class="listaDebilidades" >
+                <h2  class='tituloLista'>Weaknesses</h2>
+                <div id="contenedorDebilidades" class='contenedorRyD'>
+                    <p class='debiyresis'>  ${pokemon.weaknesses}</p>
+                  </div>
+                </li> 
+              </ul>
+            </div>
           </div>  `
     });
 } 
@@ -150,5 +141,6 @@ ordenPokemonZa.addEventListener("click", () => {
 });
 
 inputBuscarNombre.addEventListener("input",() => {
-  buquedaPorNombre (todoslosPokemones,inputBuscarNombre.value );
+  contenedor.innerHTML = '';
+  mostrar(buscarPorNombre(pokemon.pokemon , inputBuscarNombre.value));
 });
