@@ -13,6 +13,7 @@ const cardsContainer = document.getElementById("cardsContainer")
 const dataPokemon = data.pokemon
 
 const displeyCard = (d) => {
+    cardsContainer.innerHTML = '';
   d.forEach(element => {
 
     const cardPokemon = document.createElement("div")
@@ -43,5 +44,16 @@ let generationII = dataPokemon.filter ((dataPokemon) => {
       return dataPokemon.num > 151;
 });
 
-displeyCard(generationI)
+
+const buttonPrimera = document.getElementById("primera")
+buttonPrimera.addEventListener('click',()=> {
+    displeyCard(generationI)
+})
+
+const buttonSegunda = document.getElementById("segunda")
+buttonSegunda.addEventListener('click',()=> {
+    displeyCard(generationII)
+})
+
+//displeyCard(generationI)
 
