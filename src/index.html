@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" maximum-scale="1.0" minimum-scale="1.0">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-   
-      <section class="paginaPrincipal">
-    <div class="Botones"> 
-      
-        <button type="button" id="btnPokemones" class = "btn"  >POKEMONES</button>
-        <button type="button" id="btnEstadistica" class = "btn" >ESTADISTICAS</button>
-     
-         </div>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" maximum-scale="1.0" minimum-scale="1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <section class="paginaPrincipal">
+    <div class="Botones">
+
+      <button type="button" id="btnPokemones" class="btn">POKEMONES</button>
+      <button type="button" id="btnEstadistica" class="btn">ESTADISTICAS</button>
+
+    </div>
 
     <footer>
       <div class="redesSociales">
@@ -24,140 +26,128 @@
         <img src="img/youtube.png" alt="" class="redes">
 
       </div>
-    <div class="cajaAutores">
-      <p class="autores"> by: Adriana Zambrano - Erika Suesca 2022</p> 
-    </div>
-      
+      <div class="cajaAutores">
+        <p class="autores"> by: Adriana Zambrano - Erika Suesca 2022</p>
+      </div>
+
     </footer>
   </section>
-  <section id="seccionPokemones" >
-  <div class="todoelContenido">
-    <!-- PAGINA DE POKEMONES-->
-   <div class="contenedor1">
-    <section class="filtrosBusqueda">
-   
-      <button class="btn-filtros" id="clickmostrarFiltros"> 
-      <div class="container-Filtros">
-      <div  class="opcionesFiltros" >
-      <h3>Type</h3>
-      <select  id="tipoPokemones" placeholder="type">
-        
-        <option value="bug">Bug</option>
-        <option value="dark" selected>Dark</option>
-        <option value="dragon">Dragon</option>
-        <option value="electric">Electric</option>
-        <option value="fighting">Fighting</option>
-        <option value="flying">Flying</option>
-        <option value="ghost">Ghost</option>
-        <option value="grass">Grass</option>
-        <option value="ground">Ground</option>
-        <option value="ice">Ice</option>
-        <option value="normal">Normal</option>
-        <option value="poison">Poison</option>
-        <option value="psychic">Psychic</option>
-        <option value="rock">Rock</option>
-        <option value="steel">Steel</option>
-        <option value="water">Water</option>
-      </select>
+  <section id="seccionPokemones">
+    <div class="todoelContenido">
+      <!-- PAGINA DE POKEMONES-->
+      <div class="contenedor1">
+        <section class="filtrosBusqueda">
 
-    </div>
-    <div  class="opcionesFiltros">
-      <h3>Resistant</h3>
-      <select id="debilidadPokemon">                  
-        <option value="bug">Bug</option>
-        <option value="dark" selected>Dark</option>
-        <option value="dragon">Dragon</option>
-        <option value="electric">Electric</option>
-        <option value="fighting">Fighting</option>
-        <option value="flying">Flying</option>
-        <option value="ghost">Ghost</option>
-        <option value="grass">Grass</option>
-        <option value="ground">Ground</option>
-        <option value="ice">Ice</option>
-        <option value="normal">Normal</option>
-        <option value="poison">Poison</option>
-        <option value="psychic">Psychic</option>
-        <option value="rock">Rock</option>
-        <option value="steel">Steel</option>
-        <option value="water">Water</option>
-      </select>
+          <button class="btn-filtros" id="clickmostrarFiltros">
+            <div class="container-Filtros">
+              <div class="opcionesFiltros">
+                <h3>Type</h3>
+                <select id="tipoPokemones" placeholder="type">
+
+                  <option value="bug">Bug</option>
+                  <option value="dark" selected>Dark</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="electric">Electric</option>
+                  <option value="fighting">Fighting</option>
+                  <option value="flying">Flying</option>
+                  <option value="ghost">Ghost</option>
+                  <option value="grass">Grass</option>
+                  <option value="ground">Ground</option>
+                  <option value="ice">Ice</option>
+                  <option value="normal">Normal</option>
+                  <option value="poison">Poison</option>
+                  <option value="psychic">Psychic</option>
+                  <option value="rock">Rock</option>
+                  <option value="steel">Steel</option>
+                  <option value="water">Water</option>
+                </select>
+
+              </div>
+              <div class="opcionesFiltros">
+                <h3>Resistant</h3>
+                <select id="debilidadPokemon">
+                  <option value="bug">Bug</option>
+                  <option value="dark" selected>Dark</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="electric">Electric</option>
+                  <option value="fighting">Fighting</option>
+                  <option value="flying">Flying</option>
+                  <option value="ghost">Ghost</option>
+                  <option value="grass">Grass</option>
+                  <option value="ground">Ground</option>
+                  <option value="ice">Ice</option>
+                  <option value="normal">Normal</option>
+                  <option value="poison">Poison</option>
+                  <option value="psychic">Psychic</option>
+                  <option value="rock">Rock</option>
+                  <option value="steel">Steel</option>
+                  <option value="water">Water</option>
+                </select>
 
 
-    </div>
-    <div  class="opcionesFiltros" >
-      <h3>Weaknesses</h3>
-      <select id="fortalezaPokemon">                  
-        <option value="bug">Bug</option>
-        <option value="dark" selected>Dark</option>
-        <option value="dragon">Dragon</option>
-        <option value="electric">Electric</option>
-        <option value="fighting">Fighting</option>
-        <option value="flying">Flying</option>
-        <option value="ghost">Ghost</option>
-        <option value="grass">Grass</option>
-        <option value="ground">Ground</option>
-        <option value="ice">Ice</option>
-        <option value="normal">Normal</option>
-        <option value="poison">Poison</option>
-        <option value="psychic">Psychic</option>
-        <option value="rock">Rock</option>
-        <option value="steel">Steel</option>
-        <option value="water">Water</option>
-      </select>
-      
-     
-           </div>
-          </div>
-          <button id="btn-filtrar"> Filtrar </button>
-        </button>
-   
-    </section>
+              </div>
+              <div class="opcionesFiltros">
+                <h3>Weaknesses</h3>
+                <select id="fortalezaPokemon">
+                  <option value="bug">Bug</option>
+                  <option value="dark" selected>Dark</option>
+                  <option value="dragon">Dragon</option>
+                  <option value="electric">Electric</option>
+                  <option value="fighting">Fighting</option>
+                  <option value="flying">Flying</option>
+                  <option value="ghost">Ghost</option>
+                  <option value="grass">Grass</option>
+                  <option value="ground">Ground</option>
+                  <option value="ice">Ice</option>
+                  <option value="normal">Normal</option>
+                  <option value="poison">Poison</option>
+                  <option value="psychic">Psychic</option>
+                  <option value="rock">Rock</option>
+                  <option value="steel">Steel</option>
+                  <option value="water">Water</option>
+                </select>
 
-    <img src="img/pokemongo.png" alt="" class="imagenPokemon">
 
-   </div>
-     
+              </div>
+            </div>
+            <button id="btn-filtrar"> Filtrar </button>
+          </button>
+
+        </section>
+
+        <img src="img/pokemongo.png" alt="" class="imagenPokemon">
+
+      </div>
+
       <div class="contenedor2">
 
-      <section class="tiposInput">
-       
-        <input type="text" placeholder="Buscar por nombre" id="inputBuscarNombre"> 
-        <select id =  "ordenPokemonAz">
-        <input type="button" value="ordenarAZ↓" id="buttonAZ">
-        <input type="button" value="ordenarZA↑" id="buttonZA"> 
-      </select>   
-      </section> 
+        <section class="tiposInput">
 
-    
-    </div>
-
-    <div class="contenedor3" id="contenedor3TJ">
-     
-      <!-- contenedor de las tarjetas pokemones cargadas del main.js -->
-
-    </div>
-
-  </div>
-        
-
-      </section>
-
-    
-
-    
-   <!-- PAGINA DE ESTADISTICAS-->      
+          <input type="text" placeholder="Buscar por nombre" id="inputBuscarNombre">
+          <select id="ordenPokemonAz">
+            <input type="button" value="ordenarAZ↓" id="buttonAZ">
+            <input type="button" value="ordenarZA↑" id="buttonZA">
+          </select>
+        </section>
 
 
-   <section class="paginaEstadistica">
-    <div class="estadisticas">
+      </div>
 
+      <div class="contenedor3" id="contenedor3TJ">
+
+        <!-- contenedor de las tarjetas pokemones cargadas del main.js -->
+
+      </div>
     </div>
   </section>
 
+  <!-- PAGINA DE ESTADISTICAS-->
+  <section class="paginaEstadistica">
+    <div class="estadisticas">
+      
+    </div>
+  </section>
+  <script src="main.js" type="module"></script>
+</body>
 
-
-
-    <script src="main.js" type="module"></script>
-  
-  </body>
 </html>
