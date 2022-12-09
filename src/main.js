@@ -84,7 +84,7 @@ function pintarProductores() {
   //CAMBIAR A llamarProductores
     let arregloProducer = operaciones.llamarProductores(data.films);
 
-    //Agragando la opción OTROS
+    //Agregando la opción OTROS
      let newOptionProducer = document.createElement("option");
     newOptionProducer.setAttribute("value","Todos los productores");
     newOptionProducer.setAttribute("label", "Todos los productores");

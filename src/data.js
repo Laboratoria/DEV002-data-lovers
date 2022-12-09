@@ -40,15 +40,17 @@ export const operaciones = {
     let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
     return peliculasdelproductor
 
-  },
-  // realizarCalculo(peliculas,rt_score){
+ },
 
-  //   let realizandoelcalculo=
+//  //realizar calculo agregado
+//   realizarCalculo(peliculas,rt_score){
 
-  // },
+//     let realizandoelcalculo=
+
+//   },
 
 
-  }
-  }
+  } 
+
 
 
