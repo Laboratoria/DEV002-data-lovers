@@ -1,5 +1,5 @@
 import pokemon from './data/pokemon/pokemon.js';
-import { filtrarTipo,  ordenarData, buscarPorNombre} from './data.js';
+import { filtrarTipo,  ordenarData, buscarPorNombre, obtenerTopDiezHuida} from './data.js';
 
 // Funciones para visualizar las secciones del html: 
  document.getElementById("btnPokemones").addEventListener("click", () => {
@@ -30,6 +30,8 @@ const inputBuscarNombre = document.getElementById('inputBuscarNombre');
 const botonFiltrar = document.getElementById('btn-filtrar');
 const ordenPokemonAz = document.getElementById('buttonAZ');
 const ordenPokemonZa = document.getElementById('buttonZA');
+const estadisticas = document.getElementById('btnEstadistica');
+
 
 const seccion = document.getElementById('seccionPokemones');
 seccion.setAttribute('class', 'paginaPokemones');
@@ -69,14 +71,13 @@ document.getElementById('contenedor3TJ').appendChild(contenedor);
 const mostrar = (pokemones) => {
 
   pokemones.forEach((pokemon) => {
-    
-    const resistencias= pokemon.resistant.forEach((r) =>{
-     let res = [];
-     return res += r 
-   
-    return res.join(' ')
+
      
-    });
+    /*const resistencias= pokemon.resistant.forEach((r) =>{
+     let res = [];
+     return res += r    
+     
+    });*/
  
     contenedor.innerHTML +=  
         ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
@@ -98,7 +99,7 @@ const mostrar = (pokemones) => {
                 <li class="listaResistencia">
                 <h2 class='tituloLista'>Resistant<h2>
                   <div id="contenedorResistencia" class='contenedorRyD'>
-                    <p class='debiyresis'>${resistencias}</p>                                 
+                    <p class='debiyresis'>${pokemon.resistant}</p>                                 
                     </div>
                 </li>           
                 <li class="listaDebilidades" >
@@ -142,5 +143,14 @@ ordenPokemonZa.addEventListener("click", () => {
 
 inputBuscarNombre.addEventListener("input",() => {
   contenedor.innerHTML = '';
-  mostrar(buscarPorNombre(pokemon.pokemon , inputBuscarNombre.value));
+  mostrar(buscarPorNombre(todoslosPokemones , inputBuscarNombre.value));
 });
+
+// Obtener TOP 10
+estadisticas.addEventListener("click", () => {
+  contenedor.innerHTML = '';
+  console.log(obtenerTopDiezHuida(todoslosPokemones))
+  mostrar(obtenerTopDiezHuida(todoslosPokemones));
+}
+);
+
