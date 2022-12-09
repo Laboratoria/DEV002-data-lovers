@@ -1,4 +1,4 @@
-# Data Lovers
+# PokéLovers
 
 ## Índice
 
@@ -31,6 +31,9 @@ usuario necesita.
 
 Pokémon GO es un videojuego de realidad aumentada basado en la localización para dispositivos iOS y Android.​ De esta manera, en 2022  se registraron más de 23 millones de descargas. Por otro lado, no solo existen fans de este videojuego sino también de las diferentes versiones de Nintendo, de la serie y de los artículos físicos vendidos como los álbumes. 
 Adicionalmente, este año Ash Ketchum se coronó como campeón mundial de Pokémon. Por esta razón, las autoras del presente proyecto crearán una página web dedicada a los fans de Pokémon y especialmente los de las primeras generaciones para rememorarlas. 
+
+![ash-campeón](./src/img/Ash_Ketchum_World_Champion.jpg)
+
 
 ## 4. Objetivos
 
