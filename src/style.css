@@ -22,7 +22,18 @@ body{
 }
 header {
     height: 1rem;
+}
 
+.home-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: .8rem;
+}
+
+.home-icon-div {
+    width: 4rem;
+    height: 4rem;
+    text-align: right;
 }
 
 nav {
@@ -66,26 +77,12 @@ nav {
     padding: 2rem;
 }
 
-.home-icon {
-    width: 2rem;
-    height: 2rem;
-    margin: .8rem;
-}
-
-
-.home-icon-div {
-    width: 4rem;
-    height: 4rem;
-    text-align: right;
-}
-
 .container {
     width: 80%;
     margin: 0 auto;
     display: inline-block;
     gap: 1rem;
 }
-
 
 button[type=button] { 
     font-size: 12px;
@@ -98,10 +95,12 @@ button[type=button] {
     border-radius: 1.3rem;
     margin: 3rem 2% 1rem
  }
+
  button[type=button]:hover {
     background-color: #000;
     color: #f6f6f6;
  }
+
 #cargarAPI:hover {
     background-color: #000;
     color: #f6f6f6;
@@ -120,7 +119,6 @@ button[type=button] {
     color: black;
     font-size: .8rem;
     margin: 5px;
-
 }
 
 .card {
@@ -140,14 +138,14 @@ button[type=button] {
 .infoCard {
     padding: 2px 16px;
 }
-
-img {
-    border-radius: 5px 5px 0 0;
-  }
 .hat-icon {
     width: 6rem;
     height: 7rem;
 }
+img {
+    border-radius: 5px 5px 0 0;
+  }
+
 
 
 

@@ -17,7 +17,14 @@ body{
 }
 header {
     height: 1rem;
+}
 
+.home-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: .6rem;
+    margin-right: 90%;
+    margin-left: 1rem;
 }
 
 nav {
@@ -48,13 +55,7 @@ nav {
     padding: 2rem;
     margin-right: 33rem;
 }
-.home-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: .6rem;
-    margin-right: 90%;
-    margin-left: 1rem;
-}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -120,55 +121,16 @@ button[type=button] {
     padding: 2px 16px;
 }
 
-img {
-    border-radius: 5px 5px 0 0;
-  }
-  
 .hat-icon {
     width: 6rem;
     height: 7rem;
 }
 
+img {
+    border-radius: 5px 5px 0 0;
+  }
+  
 
-
-
-
-
-
-/* @media only screen and (max-width: 788px) { 
-	body { 
-		background-image: url(./images/tinified/background-mobile.jpeg); 
-	}   
-    .title {
-        width: 25rem;
-        height: 9rem;
-    }
-    .logos-escuelas {
-        margin: 4rem;
-    }
-   
-   @media only screen and (min-width: 789px) { 
-	body { 
-		background-image: url(./images/tinified/background.jpeg); 
-	}   
-}
-} */
-
-/* @media (max-width: 480px) { 
-	body { 
-		background-image: url(./images/tinified/background-mobile.jpeg); 
-	}   
-}
-@media (min-width: 768px) { 
-	body { 
-		background-image: url(./images/tinified/background.jpeg); 
-	}   
-} 
-@media (min-width: 1024px) { 
-	body { 
-		background-image: url(./images/tinified/background.jpeg); 
-	}   
-}*/
 
 
 

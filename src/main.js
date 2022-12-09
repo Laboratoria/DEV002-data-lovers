@@ -3,9 +3,13 @@ import { filtro, obtenerDatos, orderAZ } from './data.js';
 let datos = [];
 let iconoOrderAZ = document.getElementById('orderAZ');
 
-
+const btnSly = document.getElementById('slytherin');
+const btnRav = document.getElementById('ravenclaw');
+const btnHuf = document.getElementById('hufflepuff');
+const btnGrif = document.getElementById('gryfindor');
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
+
 
 refreshPage.addEventListener("click", () => {
   window.location.reload(true);
@@ -15,6 +19,7 @@ window.onload = () => {
     datos = resultado;
   })
 };
+
 
 iconoOrderAZ.addEventListener("click", () => {
   mostrarHTML(orderAZ(datos))
@@ -29,30 +34,29 @@ cargarAPIhp.addEventListener('click', () => {
   });
 });
 
-const btnGrif = document.getElementById('gryfindor');
+
 btnGrif.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Gryffindor'));
 });
 
-const btnHuf = document.getElementById('hufflepuff');
 btnHuf.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Hufflepuff'));
 });
 
-const btnRav = document.getElementById('ravenclaw');
 btnRav.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Ravenclaw'));
 });
 
-const btnSly = document.getElementById('slytherin');
 btnSly.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Slytherin'));
 });
+
 
 orderAZ.addEventListener("click", () => {
   cards.innerHTML = "";
   printElements(filterAscendent(charactersNameHouse));
 });
+
 
 function mostrarHTML(datosAMostrar) {
   console.log(datosAMostrar);
@@ -93,7 +97,6 @@ function mostrarHTML(datosAMostrar) {
 
     }
 
-
     contenido.appendChild(divCard);
     divCard.appendChild(divContent);
     divContent.appendChild(hatIcon);
@@ -105,18 +108,6 @@ function mostrarHTML(datosAMostrar) {
   })};
 
 
-  
-  // if (personaje.house == "gryffindor") {
-  //   hHouse.style.color = "#740001";
-  // } else if (personaje.house == "Hufflepuff") {
-  //   hHouse.style.color = "#F0C75E";
-  // } else if (personaje.house == "Slytherin") {
-  //   hHouse.style.color = "#2A623D";
-  // } else if (personaje.house == "Ravenclaw") {
-  //   hHouse.style.color = "#728DDA";
-  // } else {
-  //   hHouse.style.color = "gray";
-  // }
 
 
 
