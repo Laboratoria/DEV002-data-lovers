@@ -73,11 +73,7 @@ const mostrar = (pokemones) => {
   pokemones.forEach((pokemon) => {
 
      
-    /*const resistencias= pokemon.resistant.forEach((r) =>{
-     let res = [];
-     return res += r    
-     
-    });*/
+  
  
     contenedor.innerHTML +=  
         ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
