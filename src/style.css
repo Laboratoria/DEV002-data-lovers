@@ -66,15 +66,59 @@ body{
 .contenedor1{
     display: flex;
     justify-content: center;
+    margin-top: 5%;
     
 }
+.contenedor2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+#inputBuscarNombre{
+    width:30%;
+    height:auto;
+}
+.contenedorOpciones{
+    margin-top: 5%;
+    display: flex;
+   
+    justify-content: center;
+   
+}
+.selector{
+ width: 100%;
+ height: 40%;
+}
+
+.opcionesFiltros{
+    display: flex;
+    align-items: center;
+    bottom:0;
+  
+}
+
+.btn-ordenar{
+    width: max-content;
+    align-self: flex-end;
+    
+}
+#buttonAZ{
+    margin-right:30px;
+}
+.contenedor3{
+    background-image: url(img/30090587.jpg);
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
   .container-Filtros{
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
     border:solid 2px #03071e; 
     width: max-content;
     height: max-content;
-    display: none;
+    
   }
 
  footer {   
@@ -122,12 +166,7 @@ body{
     height: 100%;
    display: none;
 }
-.contenedor3{
-    background-image: url(img/30090587.jpg);
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
+
 /* .contenedorFiltros{
     background-color: blue;
     order: 1;
@@ -138,7 +177,7 @@ body{
 .contenedorTarjetas{
     width: max-content;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 25px;
     /* order: 2; */
     padding:5%;
@@ -150,8 +189,8 @@ body{
     display: flex;
     padding: 15px;
     flex-direction: column;
-    /*width: min-content;
-    height: 300px*/
+    /* width: min-content;
+    height: 300px */
     justify-self: stretch;
     align-self: stretch;
     border-radius: 7px;
@@ -220,8 +259,7 @@ body{
 }
 .contenedorListas{
     display: flex;
-    margin-left: 7px;
-     justify-content: center;
+   justify-content: space-between;
     width: min-content;
     height: min-content;
 
