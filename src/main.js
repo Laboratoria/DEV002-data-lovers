@@ -48,7 +48,6 @@ function mostrarHTML(datosAMostrar) {
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
     let divCard = document.createElement("div");
-    // let imgCard = document.createElement("img");
     let divContent = document.createElement("div");
     let hName = document.createElement("h2");
     let hHouse = document.createElement("h2");
@@ -56,7 +55,6 @@ function mostrarHTML(datosAMostrar) {
     let hatIcon = document.createElement("img");    
 
     divCard.className = "card";
-    // imgCard.style.width = '100%';
     divContent.className = "infoCard";
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
@@ -64,8 +62,7 @@ function mostrarHTML(datosAMostrar) {
     hatIcon.src = "./images/tinified/haticon.png";
     hatIcon.className = "hat-icon";
 
-    //Asigna el color de texto en función de la casa del personaje
-
+    
     switch (personaje.house) {
       case "Gryffindor":
         hHouse.style.color = "#740001";
@@ -78,14 +75,13 @@ function mostrarHTML(datosAMostrar) {
         break;
         case "Ravenclaw":
           hHouse.style.color = "#728DDA"
-      // Agrega más casos para las demás casas
+
       default:
         break;
 
     }
 
     contenido.appendChild(divCard);
-    // divCard.appendChild(imgCard);
     divCard.appendChild(divContent);
     divContent.appendChild(hatIcon);
     divContent.appendChild(hName);

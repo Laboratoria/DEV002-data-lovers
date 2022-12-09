@@ -96,7 +96,7 @@ button[type=button] {
     border-width: 2px;
     border-color: lightsteelblue;
     border-radius: 1.3rem;
-    margin: 4rem 10% 4rem;
+    margin: 3rem 2% 1rem
  }
  button[type=button]:hover {
     background-color: #000;
@@ -105,6 +105,10 @@ button[type=button] {
 #cargarAPI:hover {
     background-color: #000;
     color: #f6f6f6;
+}
+
+.icono-AZ {
+    width: 3rem;
 }
 
 .cardsContainer {

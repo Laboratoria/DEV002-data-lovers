@@ -13,7 +13,7 @@ body{
     background-color: #f6f6f6;
     background-image: url(./images/tinified/background.jpeg);
     background-repeat: no-repeat;  
-    background-size: contain;                                     
+    background-size: cover;                                     
 }
 header {
     height: 1rem;
@@ -97,18 +97,17 @@ button[type=button] {
 
 .cardsContainer {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px;
     padding: 1rem;
     place-content: center;
     color: black;
-
 }
 
 .card {
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
     padding: 1rem;
-    border-radius: 5px; /* 5px rounded corners */
+    border-radius: 5px; 
     display:inline-table;
     margin: 10px;
   }
@@ -124,6 +123,7 @@ button[type=button] {
 img {
     border-radius: 5px 5px 0 0;
   }
+  
 .hat-icon {
     width: 6rem;
     height: 7rem;
