@@ -1,0 +1,148 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+
+    background-image: url(./images/tinified/background-mobile.jpeg);
+    font-family: 'Harry Potter', sans-serif;   
+    text-align: center; 
+    background-repeat: no-repeat;  
+    background-size: cover;     
+    
+}
+header {
+    height: 1rem;
+}
+
+.home-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: .8rem;
+}
+
+.home-icon-div {
+    width: 4rem;
+    height: 4rem;
+    text-align: right;
+}
+
+nav {
+    position: fixed;
+    height: 3.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: lightsteelblue;
+  }
+  nav img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+.title {
+    width: 56rem;
+    height: 14rem;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+ .logos-escuelas {
+    width: 36%;
+    margin: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.title {
+    width: 29rem;
+    height: 10rem;
+    padding: 2rem;
+    text-align: center;
+}
+.subtitle {
+    width: 32rem;
+    height: 8.5rem;
+    padding: 2rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: inline-block;
+    gap: 1rem;
+}
+
+button[type=button] { 
+    font-size: 12px;
+    cursor:pointer;
+    padding: .4rem;
+    width: 48%;
+    margin-bottom: 2rem;
+    border-width: 2px;
+    border-color: lightsteelblue;
+    border-radius: 1.3rem;
+    margin: 3rem 2% 1rem
+ }
+
+ button[type=button]:hover {
+    background-color: #000;
+    color: #f6f6f6;
+ }
+
+#cargarAPI:hover {
+    background-color: #000;
+    color: #f6f6f6;
+}
+
+.icono-AZ {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    padding: 1rem;
+    place-content: center;
+    color: black;
+    font-size: .8rem;
+    margin: 5px;
+}
+
+.card {
+    background-color: gainsboro;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 #1d5dab57;
+    transition: 0.3s;
+    padding: 1rem;
+    border-radius: 5px; /* 5px rounded corners */
+    display:inline-table;
+  }
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
+}
+
+.infoCard {
+    padding: 2px 16px;
+}
+.hat-icon {
+    width: 6rem;
+    height: 7rem;
+}
+
+
+
+
+

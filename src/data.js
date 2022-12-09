@@ -12,4 +12,12 @@ export async function obtenerDatos() {
   return resultado.characters;//.characters, porque en esta ocasion estoy trayendo solo los personajes por la carpeta json
 }
 
+export const orderAZ = (arr) => {
+    let ascendent = arr.sort(function(a, b) {
+      return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
+      console.log("orderAZ")
+    })
+  return ascendent;
+}
+
 
