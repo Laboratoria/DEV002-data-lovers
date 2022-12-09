@@ -22,10 +22,21 @@ body{
     border-radius:110%;  
     flex-wrap:wrap;
     justify-content:right;
+    margin-bottom: 30px;
 
 }
 
 .cardsContainer{
     display:flex;
     flex-flow: row wrap;
+    width: 1150px;
+    margin: auto;
+    justify-content:right;
+      
 }
+
+
+
+
+
+
