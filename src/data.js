@@ -4,10 +4,6 @@ export const filtro = (arr = [], casa) => {
   return arr.filter((element) => element.house === casa);
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 export async function obtenerDatos() {
   // const url = 'https://hp-api.herokuapp.com/api/characters';
   const url = './data/harrypotter/harry.json';
@@ -15,3 +11,5 @@ export async function obtenerDatos() {
   const resultado = await respuesta.json();
   return resultado.characters;//.characters, porque en esta ocasion estoy trayendo solo los personajes por la carpeta json
 }
+
+
