@@ -1,0 +1,40 @@
+.titulo{
+    font-family: Lucida sans-serif
+
+
+}
+
+.flex-cont {
+    background: #fcff80;
+    padding:2px;
+    display: flex;
+    width: 220px;
+        
+}
+
+.flex-box {
+    background-color: whitesmoke;
+    width: 190px;
+    height: 190px;
+    text-align: center;
+    /*margin: 0px;*/
+    border-radius: 100%;   
+
+}
+
+.cardsContainer{
+    display:flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: auto;
+   
+}
+.filtro{
+    display: none;
+}
+
+
+
+
+
+
