@@ -10,3 +10,4 @@ export const anotherExample = () => {
 
 
 let saludo;
+let otroSaludo;
