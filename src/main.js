@@ -1,6 +1,8 @@
-import { filtro, obtenerDatos } from './data.js';
+import { filtro, obtenerDatos, orderAZ } from './data.js';
 
 let datos = [];
+let iconoOrderAZ = document.getElementById('orderAZ');
+
 
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
@@ -12,7 +14,13 @@ window.onload = () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
   })
-}
+};
+
+iconoOrderAZ.addEventListener("click", () => {
+  mostrarHTML(orderAZ(datos))
+  console.log("click se ejecutó")
+})
+
 
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
@@ -41,6 +49,10 @@ btnSly.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Slytherin'));
 });
 
+orderAZ.addEventListener("click", () => {
+  cards.innerHTML = "";
+  printElements(filterAscendent(charactersNameHouse));
+});
 
 function mostrarHTML(datosAMostrar) {
   console.log(datosAMostrar);
@@ -62,7 +74,7 @@ function mostrarHTML(datosAMostrar) {
     hatIcon.src = "./images/tinified/haticon.png";
     hatIcon.className = "hat-icon";
 
-    
+
     switch (personaje.house) {
       case "Gryffindor":
         hHouse.style.color = "#740001";
@@ -81,6 +93,7 @@ function mostrarHTML(datosAMostrar) {
 
     }
 
+
     contenido.appendChild(divCard);
     divCard.appendChild(divContent);
     divContent.appendChild(hatIcon);
@@ -91,6 +104,8 @@ function mostrarHTML(datosAMostrar) {
 
   })};
 
+
+  
   // if (personaje.house == "gryffindor") {
   //   hHouse.style.color = "#740001";
   // } else if (personaje.house == "Hufflepuff") {

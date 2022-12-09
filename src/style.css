@@ -109,6 +109,7 @@ button[type=button] {
 
 .icono-AZ {
     width: 3rem;
+    cursor: pointer;
 }
 
 .cardsContainer {
@@ -147,6 +148,8 @@ img {
     width: 6rem;
     height: 7rem;
 }
+
+
 
 
 

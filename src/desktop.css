@@ -84,7 +84,7 @@ button[type=button] {
     border-width: 2px;
     border-color: lightsteelblue;
     border-radius: 1.3rem;
-    margin: 9rem 15% 7rem;
+    margin: 3rem 2% 1rem
  }
  button[type=button]:hover {
     background-color: lightslategrey;

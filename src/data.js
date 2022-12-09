@@ -17,3 +17,13 @@ export async function obtenerDatos() {
 }
 
 
+
+export const orderAZ = (arr) => {
+
+    let ascendent = arr.sort(function(a, b) {
+      return((a.name < b.name)? -1: ((a.name > b.name)? 1: 0));
+      console.log("orderAZ")
+    })
+  return ascendent;
+}
+
