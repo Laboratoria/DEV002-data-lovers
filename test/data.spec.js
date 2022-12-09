@@ -85,7 +85,7 @@ const resultadoBusqueda = [
 }]
 
 describe('La funcion filtrarTipo retorna por tipo de pokemon', () => {
-  it('deberia ser una funcion', () => {
+  it('filtrarTipo deberia ser una funcion', () => {
     expect(typeof filtrarTipo).toBe('function');
   });
 
@@ -103,7 +103,7 @@ describe('La funcion filtrar retorna por nombre', () => {
     expect(typeof buscarPorNombre).toBe('function');
   });
 
-  it('Debería retorna el nombre del pokemon', () => {
+  it('buscarPorNombre debería retorna el nombre del pokemon', () => {
     const seleccion = "bulbasaur";
     const resultado = buscarPorNombre(resultadoBusqueda, seleccion);
     expect(resultado).toStrictEqual(resultadoBusqueda);
@@ -111,7 +111,7 @@ describe('La funcion filtrar retorna por nombre', () => {
 });
 
 describe('La funcion ordenarData me devuelve los pokemones de AZ Y ZA', () => {
-  it('deberia ser una funcion', () => {
+  it(' ordenarData deberia ser una funcion', () => {
     expect(typeof ordenarData).toBe('function');
   });
 
@@ -122,7 +122,7 @@ describe('La funcion ordenarData me devuelve los pokemones de AZ Y ZA', () => {
 });
 
 describe('La funcion obtenerTopDiezHuida me devuelve el array de mayor a menor', () => {
-  it('deberia ser una funcion', () => {
+  it('obtenerTopDiezHuida deberia ser una funcion', () => {
     expect(typeof obtenerTopDiezHuida).toBe('function');
   });
 

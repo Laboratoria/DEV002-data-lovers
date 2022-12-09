@@ -149,7 +149,6 @@ inputBuscarNombre.addEventListener("input",() => {
 // Obtener TOP 10
 estadisticas.addEventListener("click", () => {
   contenedor.innerHTML = '';
-  console.log(obtenerTopDiezHuida(todoslosPokemones))
   mostrar(obtenerTopDiezHuida(todoslosPokemones));
 }
 );
