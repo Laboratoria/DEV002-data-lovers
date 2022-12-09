@@ -15,6 +15,7 @@ fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src
 
     });
 
+
 //Función para crear/darle forma a las tarjetas
 function createCard(pokemon){
     //Crear el contenedor div de la tarjeta
