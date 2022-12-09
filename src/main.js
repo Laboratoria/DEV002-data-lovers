@@ -31,7 +31,7 @@ const displeyCard = (d) => {
   })
 }
 
-//displeyCard(dataPokemon)
+ displeyCard(dataPokemon)
 
 //filter
 
