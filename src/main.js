@@ -7,7 +7,7 @@ import { filtrarTipo,  ordenarData, buscarPorNombre, obtenerTopDiezHuida} from '
     document.querySelector('.paginaEstadistica').style.display= 'none';
     document.querySelector('.paginaPokemones').style.display= 'block';
     document.querySelector('.tiposInput').style.display= 'block';
-    document.querySelector('.filtrosBusqueda').style.display= 'block'; 
+   // document.querySelector('.filtrosBusqueda').style.display= 'block'; 
 });
 
 document.getElementById("btnEstadistica").addEventListener("click", () => {
@@ -15,15 +15,15 @@ document.getElementById("btnEstadistica").addEventListener("click", () => {
     document.querySelector('.paginaEstadistica').style.display= 'block';
     document.querySelector('.paginaPokemones').style.display= 'none';
     document.querySelector('.tiposInput').style.display= 'none';
-    document.querySelector('.filtrosBusqueda').style.display= 'none';
+   // document.querySelector('.filtrosBusqueda').style.display= 'none';
 });
 
 // funcion para mostrar opciones de filtros:
 
-document.getElementById('clickmostrarFiltros').addEventListener('click',()=>{
-  document.querySelector('.container-Filtros').style.display='block'
+// document.getElementById('clickmostrarFiltros').addEventListener('click',()=>{
+//   document.querySelector('.container-Filtros').style.display='block'
 
-})
+// })
 
 const todoslosPokemones = pokemon.pokemon;
 const inputBuscarNombre = document.getElementById('inputBuscarNombre');
@@ -73,7 +73,22 @@ const mostrar = (pokemones) => {
   pokemones.forEach((pokemon) => {
 
      
-  
+    const obteniendoResistencias= (resis)=>{
+      let r = '';
+      resis.forEach( (res) =>{
+              r+= ` <p class='debiyresis'>${res}</p> `;  
+          
+            } );
+        return r
+    }  
+
+    const obteniendoDebilidades= (debi)=>{
+      let d = '';
+      debi.forEach( (debilidades) =>{
+              d+= ` <p class='debiyresis'>${debilidades}</p> `;  
+                    } );
+              return d
+    }  
  
     contenedor.innerHTML +=  
         ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
@@ -95,13 +110,13 @@ const mostrar = (pokemones) => {
                 <li class="listaResistencia">
                 <h2 class='tituloLista'>Resistant<h2>
                   <div id="contenedorResistencia" class='contenedorRyD'>
-                    <p class='debiyresis'>${pokemon.resistant}</p>                                 
+                    <p class='debiyresis'>${obteniendoResistencias(pokemon.resistant)}</p>                                 
                     </div>
                 </li>           
                 <li class="listaDebilidades" >
                 <h2  class='tituloLista'>Weaknesses</h2>
                 <div id="contenedorDebilidades" class='contenedorRyD'>
-                    <p class='debiyresis'>  ${pokemon.weaknesses}</p>
+                    <p class='debiyresis'>  ${obteniendoDebilidades(pokemon.weaknesses)}</p>
                   </div>
                 </li> 
               </ul>
@@ -113,7 +128,7 @@ const mostrar = (pokemones) => {
 
 mostrar(todoslosPokemones);
 
-botonFiltrar.addEventListener('click', () => {
+//botonFiltrar.addEventListener('click', () => {
   document.getElementById("tipoPokemones").addEventListener("change", () => {
     let seleccionTipoPokemon = document.getElementById('tipoPokemones').value;
     if (seleccionTipoPokemon == "") {
@@ -125,7 +140,7 @@ botonFiltrar.addEventListener('click', () => {
       mostrar(dataTipoPokemon);
     }
   });
-});
+//});
 
 ordenPokemonAz.addEventListener("click", () => {
  contenedor.innerHTML = '';
