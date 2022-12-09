@@ -28,14 +28,15 @@ body{
 }
 
 .cardsContainer{
-    display: flex;
+    display:flex;
     flex-flow: row wrap;
     width: 1150px;
     margin:auto;
     justify-content:right;
-    
-
-   
+      
+}
+.filtro{
+    display: none;
 }
 
 
