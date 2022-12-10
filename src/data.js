@@ -37,17 +37,22 @@ export const operaciones = {
   //método de filtrar por productor
   filtrarPorProductor(peliculas,nameProducer){
     
-    let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
-    return peliculasdelproductor
+    let peliculasProductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
+    return peliculasProductor
 
   },
-  // realizarCalculo(peliculas,rt_score){
+  //método de mostrar detalle de película
+  filtrarPorId(peliculas,idPelicula){
+    let peliculasDetalle= peliculas.filter(pelicula =>pelicula.id===idPelicula);
+    return peliculasDetalle[0];
+  },
+  
+  realizarCalculo(peliculas){
 
-  //   let realizandoelcalculo=
+    
 
-  // },
+   },
 
 
 
 }
-  
