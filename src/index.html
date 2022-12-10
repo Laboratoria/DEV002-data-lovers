@@ -16,11 +16,11 @@
   </div>
 
   <div class="topnav">
-    <a class="active">Página de inicio</a>
-    <a href="#news">Búsqueda por nombre</a>
-    <a href="#contact">Filtros para búsqueda</a>
-    <a href="#about">Ordenar datos</a>
-    <a href="#about">TOP 10</a>
+    <a class="active" id="opcionPaginaInicio">Página de inicio</a>
+    <a id="opcionBusquedaPokemon" >Búsqueda por nombre</a>
+    <a id="opcionFiltroPokemon">Filtros para búsqueda</a>
+    <a id="opcionOrdenarPokemon">Ordenar datos</a>
+    <a id="opcionTopDiez">TOP 10 de Huida</a>
   </div>
   <section id="seccionPokemones"></section>
   <section id="elementosParaBusqueda" class="barra-busqueda">
@@ -95,18 +95,13 @@
         </select>
       </div>
     </div>
-    <div id="ordenarDatos" class="btn-ordenar">
+    <div id="ordenarDatos" class="container-botones-ordenar">
       <input type="button" value="ordenarAZ↓" id="buttonAZ">
       <input type="button" value="ordenarZA↑" id="buttonZA">
     </div>
     <div id="Top10">
     </div>
   </section>
-
-
-
-
-
   <div class="contenedor3" id="contenedor3TJ">
     <!-- contenedor de las tarjetas pokemones cargadas del main.js -->
   </div>

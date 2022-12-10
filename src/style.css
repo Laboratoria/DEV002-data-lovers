@@ -105,9 +105,10 @@ body {
 
 }
 
-.btn-ordenar {
+.container-botones-ordenar {
     width: max-content;
     align-self: flex-end;
+    display: none;
 }
 
 #buttonAZ {
@@ -127,6 +128,7 @@ body {
     width: max-content;
     height: max-content;
     align-items: center;
+    display: none;
 }
 
 footer {
