@@ -55,5 +55,5 @@ buttonSegunda.addEventListener('click',()=> {
     displeyCard(generationII)
 })
 
-//displeyCard(generationI)
+displeyCard(generationI)
 
