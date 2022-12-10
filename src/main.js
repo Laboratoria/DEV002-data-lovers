@@ -117,6 +117,12 @@ function filtrarPorProductor(){
   }
 }
 
+//cálculo agregado
+function haciendoElCalculo(peliculas){
+  let peliculasCalculadas=operaciones.realizarCalculo(data.films,peliculas)
+}
+  console.log(peliculasCalculadas)
+
 function lanzadera(){
   //pintarDirectores();
  
