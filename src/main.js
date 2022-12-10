@@ -23,7 +23,7 @@ window.onload = () => {
 
 iconoOrderAZ.addEventListener("click", () => {
   mostrarHTML(orderAZ(datos))
-  console.log("click se ejecutó")
+  //console.log("click se ejecutó")
 })
 
 
@@ -51,15 +51,8 @@ btnSly.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Slytherin'));
 });
 
-
-orderAZ.addEventListener("click", () => {
-  cards.innerHTML = "";
-  printElements(filterAscendent(charactersNameHouse));
-});
-
-
 function mostrarHTML(datosAMostrar) {
-  console.log(datosAMostrar);
+  //console.log(datosAMostrar);
   const contenido = document.getElementById('cards');
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
@@ -91,8 +84,6 @@ function mostrarHTML(datosAMostrar) {
         break;
         case "Ravenclaw":
           hHouse.style.color = "#728DDA"
-
-      default:
         break;
 
     }
@@ -105,7 +96,7 @@ function mostrarHTML(datosAMostrar) {
     divContent.appendChild(hSpecie);
     
 
-  })};
+  })}
 
 
 
