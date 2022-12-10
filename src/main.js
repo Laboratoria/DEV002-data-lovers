@@ -1,19 +1,24 @@
-import { example } from './data.js';
+import { filter } from './data.js';
+
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 //Llama a la primera coincidencia con el id containerPokemon del archivo HTML
 const container = document.querySelector("#containerPokemon");
+const search = document.querySelector("#searchInput");
 
 //Función para llamar al set de datos de la API de Pokémon
 fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src/data/pokemon/pokemon.json")
     .then(response => response.json())
     .then(data => {
-        data.pokemon.map(pokemon =>
-            createCard(pokemon));
-
-    });
+        data.pokemon.map(pokemon => {
+            createCard(pokemon)
+        });
+    searchPokemon(data.pokemon);
+    })
+    
+    
 
 const colors = {
     grass: '#5AE97B',
@@ -38,7 +43,7 @@ const colors = {
 
 
 //Función para crear/darle forma a las tarjetas
-function createCard(pokemon){
+function createCard(pokemon) {
     //Crear el contenedor div de la tarjeta
     const card = document.createElement('div');
     card.classList.add('pokemonCard');
@@ -73,6 +78,17 @@ function createCard(pokemon){
     card.style.backgroundColor = cardColor;
 }
 
+//Función para buscar los pokemones
+function searchPokemon(pokemon) {
+    search.addEventListener("keyup", () => {
+        const newArray = filter(pokemon,search.value);
+        // console.log(newArray);
+        container.innerHTML = "";
+        newArray.forEach(element => {
+            createCard(element)
+        });
+    });
+}
 
 
 // console.log(example, data);
