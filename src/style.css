@@ -1,17 +1,21 @@
+/* Enlaces para llamar a las fuentes de la librería de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
- * {
+/* Formatear el estilo HTML */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Dar estilos al body */
 body {
     background-color: #2D2F4F;
     text-align: center;
 }
 
+/* Dar estilos al encabezado h1 */
 h1 {
     color: #F7BA17;
     font-family: 'Press Start 2P', cursive;
@@ -20,6 +24,7 @@ h1 {
     padding: 20px;
 }
 
+/* Dar estilos al contenedor de Pokemon */
 #containerPokemon {
     display: flex;
     flex-wrap: wrap;
@@ -29,8 +34,10 @@ h1 {
     margin-right: auto;
     margin-left: auto;
     width: 80%;
-   
+
 }
+
+/* Dar estilos a las tarjetas */
 .pokemonCard {
     font-family: 'VT323', monospace;
     font-size: 25px;
@@ -43,22 +50,16 @@ h1 {
     padding: 10px;
 }
 
+/* Dar estilos a la descripción de las tarjetas */
 p.name {
     text-align: left;
     margin-left: 10%;
-    line-height : 25px;
-    padding-top: 10%;
+    line-height: 25px;
 
 }
 
-p.number {
+/* p.number {
     text-align: left;
     margin-left: 10%;
-    line-height : 25px;
-}
-
-
-
-
-
-
+    line-height: 23px;
+} */

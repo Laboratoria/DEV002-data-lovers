@@ -1,4 +1,4 @@
-import { filter } from './data.js';
+import { filter, sortUpward, sortDownward } from './data.js';
 
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
@@ -7,6 +7,8 @@ import { filter } from './data.js';
 //Llama a la primera coincidencia con el id containerPokemon del archivo HTML
 const container = document.querySelector("#containerPokemon");
 const search = document.querySelector("#searchInput");
+const buttonUpward = document.querySelector("#buttonUpward");
+const buttonDownward = document.querySelector("#buttonDownward");
 
 //Función para llamar al set de datos de la API de Pokémon
 fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src/data/pokemon/pokemon.json")
@@ -15,11 +17,13 @@ fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src
         data.pokemon.map(pokemon => {
             createCard(pokemon)
         });
-    searchPokemon(data.pokemon);
+        searchPokemon(data.pokemon);
+        nameUpward(data.pokemon);
+        nameDownward(data.pokemon);
     })
-    
-    
 
+
+//Crear variable/objeto que almacenará los colores según el tipo
 const colors = {
     grass: '#5AE97B',
     fire: '#FF9C54',
@@ -58,7 +62,7 @@ function createCard(pokemon) {
 
     //Crear un contenedor de tipo párrafo para el numero
     const number = document.createElement('p');
-    number.classList.add('number');
+    number.classList.add('name');
     number.textContent = `${pokemon.num}`;
     //Crear un contenedor de tipo párrafo para el nombre
     const name = document.createElement('p');
@@ -81,7 +85,7 @@ function createCard(pokemon) {
 //Función para buscar los pokemones
 function searchPokemon(pokemon) {
     search.addEventListener("keyup", () => {
-        const newArray = filter(pokemon,search.value);
+        const newArray = filter(pokemon, search.value);
         // console.log(newArray);
         container.innerHTML = "";
         newArray.forEach(element => {
@@ -90,5 +94,28 @@ function searchPokemon(pokemon) {
     });
 }
 
+//Crear función que ordene ascendentemente por nombre
+function nameUpward(pokemon) {
+    buttonUpward.addEventListener("click", () => {
+        const newArray = sortUpward(pokemon, 'name');
+        console.log(newArray)
+        container.innerHTML = "";
+        newArray.forEach(element => {
+            createCard(element);
+        })
+    })
+}
+
+//Crear función que ordene descendentemente por nombre
+function nameDownward(pokemon) {
+    buttonDownward.addEventListener("click", () => {
+        const newArray = sortDownward(pokemon, 'name');
+        console.log(newArray)
+        container.innerHTML = "";
+        newArray.forEach(element => {
+            createCard(element);
+        })
+    })
+}
 
 // console.log(example, data);
