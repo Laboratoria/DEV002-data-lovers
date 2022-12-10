@@ -6,9 +6,7 @@ function pintarCard() {
 }
 
 function dibujarCard(peliculas) {
-  
   document.getElementById("llamarImagenesdiv").innerHTML = "";
-  //llamarImagenesdiv.innerHTML = "";
 
   for (let i = 0; i < peliculas.length; i++) {
     let pelicula;
@@ -68,7 +66,10 @@ function ordenarPorAno() {
 }
 
 function verDetallePelicula() {
-  alert("cualquier vaina" + this.id);
+  let micc= this.id
+  let pelicula= operaciones.filtrarPorId(data.films,micc);
+  document.getElementById("MostrarDetalle").innerHTML = "";
+  pelicula
 }
 
 //pintar productores
@@ -84,7 +85,7 @@ function pintarProductores() {
   //CAMBIAR A llamarProductores
     let arregloProducer = operaciones.llamarProductores(data.films);
 
-    //Agregando la opción OTROS
+    //Agragando la opción OTROS
      let newOptionProducer = document.createElement("option");
     newOptionProducer.setAttribute("value","Todos los productores");
     newOptionProducer.setAttribute("label", "Todos los productores");
@@ -116,22 +117,20 @@ function filtrarPorProductor(){
     dibujarCard(peliculasPorProductor);
   }
 }
-
-// //cálculo agregado
-// function haciendoElCalculo(peliculas){
-//   let peliculasCalculadas=operaciones.realizarCalculo(data.films,peliculas)
-// }
-//   console.log(peliculasCalculadas)
+function haciendoelcalculo(){
+  let peliculasCalculadas = operaciones.realizarCalculo(
+    data.films)
+    document.getElementById("resultado").innerHTML=
+    "promedio puntuación:" +peliculasCalculadas
+}
 
 function lanzadera(){
-  //pintarDirectores();
- 
   pintarCard();
   pintarProductores();
+  haciendoelcalculo();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
-  //document.getElementById("producer").addEventListener("click", filtrarPorProductor);
-  
+
 }
 
 window.onload = lanzadera;

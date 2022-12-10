@@ -38,20 +38,24 @@ export const operaciones = {
   filtrarPorProductor(peliculas,nameProducer){
     let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
     return peliculasdelproductor
-
  },
 
- 
-//  //realizar cálculo agregado
-//   realizarCalculo(peliculas){
-//     let realizandoElCalculo=0, summ=0, peliculasLen=peliculas.length;
-//     while(i<peliculasLen){
-//       summ=summ+peliculas[i++]  
-//     }
-//     return summ/peliculasLen;
-//   },
-
-  } 
-
-
-
+ //realizar cálculo agregado
+  realizarCalculo(peliculas){
+    
+    let puntuacion=0;
+    let pelicula;
+    for (let i = 0; i < peliculas.length; i++) {
+      pelicula=peliculas[i];
+      puntuacion+=parseFloat(pelicula.rt_score);
+    }
+    puntuacion=puntuacion/peliculas.length;
+   
+    return(puntuacion);
+  },
+  //método de mostrar detalle de película
+  filtrarPorId(peliculas,idPelicula){
+    let peliculasDetalle= peliculas.filter(pelicula =>pelicula.id===idPelicula);
+    return peliculasDetalle[0];
+  },
+}
