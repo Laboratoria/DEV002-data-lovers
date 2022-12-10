@@ -96,7 +96,7 @@ function mostrarHTML(datosAMostrar) {
     divContent.appendChild(hSpecie);
     
 
-  })}
+  })};
 
 
 
