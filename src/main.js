@@ -1,43 +1,27 @@
 import pokemon from './data/pokemon/pokemon.js';
-import { filtrarTipo,  ordenarData, buscarPorNombre, obtenerTopDiezHuida} from './data.js';
+import { filtrarTipo, filtrarResistencia, filtrarDebilidades, /*obtenerTopDiezHuida,*/  ordenarData, buscarPorNombre} from './data.js';
 
 // Funciones para visualizar las secciones del html: 
- document.getElementById("btnPokemones").addEventListener("click", () => {
-    document.querySelector('.paginaPrincipal').style.display= 'none';
-    document.querySelector('.paginaEstadistica').style.display= 'none';
-    document.querySelector('.paginaPokemones').style.display= 'block';
-    document.querySelector('.tiposInput').style.display= 'block';
-   // document.querySelector('.filtrosBusqueda').style.display= 'block'; 
-});
 
-document.getElementById("btnEstadistica").addEventListener("click", () => {
-    document.querySelector('.paginaPrincipal').style.display= 'none';
-    document.querySelector('.paginaEstadistica').style.display= 'block';
-    document.querySelector('.paginaPokemones').style.display= 'none';
-    document.querySelector('.tiposInput').style.display= 'none';
-   // document.querySelector('.filtrosBusqueda').style.display= 'none';
-});
+// document.querySelector('.paginaPrincipal').style.display = 'block';
+// document.querySelector('.paginaEstadistica').style.display = 'block';
+// document.querySelector('.paginaPokemones').style.display = 'block';
+// document.querySelector('.tiposInput').style.display = 'block'; 
 
-// funcion para mostrar opciones de filtros:
 
-// document.getElementById('clickmostrarFiltros').addEventListener('click',()=>{
-//   document.querySelector('.container-Filtros').style.display='block'
 
-// })
 
-const todoslosPokemones = pokemon.pokemon;
+const dataPokemon = pokemon.pokemon;
 const inputBuscarNombre = document.getElementById('inputBuscarNombre');
-const botonFiltrar = document.getElementById('btn-filtrar');
+const menuTipo = document.getElementById('tipoPokemones');
+const menuResistencias= document.getElementById('resistenciaPokemon');
+const menuDebilidades = document.getElementById('debilidadPokemon');
 const ordenPokemonAz = document.getElementById('buttonAZ');
 const ordenPokemonZa = document.getElementById('buttonZA');
-const estadisticas = document.getElementById('btnEstadistica');
-
 
 const seccion = document.getElementById('seccionPokemones');
 seccion.setAttribute('class', 'paginaPokemones');
 
-// const contenedorPadre = document.createElement('div');
-// contenedorPadre.setAttribute('class', 'contenedorP');
 
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class', 'contenedorTarjetas');
@@ -68,30 +52,28 @@ document.getElementById('contenedor3TJ').appendChild(contenedor);
 
 //  };
 
+// Esta es la función que se encarga de cargar todos los pokemones con sus tarjetas
 const mostrar = (pokemones) => {
-
   pokemones.forEach((pokemon) => {
 
-     
-    const obteniendoResistencias= (resis)=>{
+    const obteniendoResistencias = (resis) => {
       let r = '';
-      resis.forEach( (res) =>{
-              r+= ` <p class='debiyresis'>${res}</p> `;  
-          
-            } );
-        return r
-    }  
+      resis.forEach((res) => {
+        r += ` <p class='debiyresis'>${res}</p> `;
+      });
+      return r
+    }
 
-    const obteniendoDebilidades= (debi)=>{
+    const obteniendoDebilidades = (debi) => {
       let d = '';
-      debi.forEach( (debilidades) =>{
-              d+= ` <p class='debiyresis'>${debilidades}</p> `;  
-                    } );
-              return d
-    }  
- 
-    contenedor.innerHTML +=  
-        ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
+      debi.forEach((debilidades) => {
+        d += ` <p class='debiyresis'>${debilidades}</p> `;
+      });
+      return d
+    }
+
+    contenedor.innerHTML +=
+      ` <div class="tarjetaPokemones" id="tarjetaPokemones" >
              <h2 id="nombrePokemon" class="nombreP">${pokemon.name} </h2>
              <h3 id="numeroPokemon" class="textoh3">${pokemon.num} </h3>
               <div class="encabezadoTarjeta">                     
@@ -122,45 +104,67 @@ const mostrar = (pokemones) => {
               </ul>
             </div>
           </div>  `
-    });
-} 
-
-
-mostrar(todoslosPokemones);
-
-//botonFiltrar.addEventListener('click', () => {
-  document.getElementById("tipoPokemones").addEventListener("change", () => {
-    let seleccionTipoPokemon = document.getElementById('tipoPokemones').value;
-    if (seleccionTipoPokemon == "") {
-      mostrar(pokemon.pokemon);
-    }
-    else {
-      contenedor.innerHTML = '';
-      const dataTipoPokemon = filtrarTipo(todoslosPokemones, seleccionTipoPokemon);
-      mostrar(dataTipoPokemon);
-    }
   });
-//});
+}
 
+mostrar(dataPokemon);
+
+// Esta es la función para el menú de filtro por tipo de pokemones
+menuTipo.addEventListener("change", () => {
+  contenedor.innerHTML = '';
+  if (document.getElementById('tipoPokemones').value == "empty") {
+    mostrar(dataPokemon);
+  }
+  else {
+    mostrar(filtrarTipo(dataPokemon, document.getElementById('tipoPokemones').value));
+  }
+})
+
+// Esta es la función para el menú de filtro por resistencias de pokemones
+menuResistencias.addEventListener("change", () => {
+  contenedor.innerHTML = '';
+ if (document.getElementById('resistenciaPokemon').value == "empty") {
+    mostrar(dataPokemon);
+  }
+  else {
+    mostrar(filtrarResistencia(dataPokemon, document.getElementById('resistenciaPokemon').value));
+  }
+})
+
+// Esta es la función para el menú de filtro por debilidades de pokemones
+menuDebilidades.addEventListener("change", () => {
+  contenedor.innerHTML = '';
+ if (document.getElementById('debilidadPokemon').value == "empty") {
+    mostrar(dataPokemon);
+  }
+  else {
+    mostrar(filtrarDebilidades(dataPokemon, document.getElementById('debilidadPokemon').value));
+  }
+})
+
+// Esta es la función del botón ORDEN AZ
 ordenPokemonAz.addEventListener("click", () => {
- contenedor.innerHTML = '';
- mostrar(ordenarData(todoslosPokemones, 'name', 'asc'));
+  contenedor.innerHTML = '';
+  mostrar(ordenarData(dataPokemon, 'name', 'asc'));
 });
 
+// Esta es la función del botón ORDEN ZA
 ordenPokemonZa.addEventListener("click", () => {
   contenedor.innerHTML = '';
-  mostrar(ordenarData(todoslosPokemones, 'name', 'desc'));
+  mostrar(ordenarData(dataPokemon, 'name', 'desc'));
 });
 
-inputBuscarNombre.addEventListener("input",() => {
+// Esta es la función del Input para la búsqueda por nombre
+inputBuscarNombre.addEventListener("input", () => {
   contenedor.innerHTML = '';
-  mostrar(buscarPorNombre(todoslosPokemones , inputBuscarNombre.value));
+  mostrar(buscarPorNombre(dataPokemon, inputBuscarNombre.value));
 });
 
-// Obtener TOP 10
-estadisticas.addEventListener("click", () => {
+// Esta es la función para mostrar el TOP 10
+/*estadisticas.addEventListener("click", () => {
   contenedor.innerHTML = '';
-  mostrar(obtenerTopDiezHuida(todoslosPokemones));
+  contenedor.style.display = "flex";
+  mostrar(obtenerTopDiezHuida(dataPokemon.encounter["base-flee-rate"]));
 }
-);
+);*/
 

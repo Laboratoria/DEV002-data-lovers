@@ -1,4 +1,4 @@
-import { filtrarTipo, ordenarData, buscarPorNombre, obtenerTopDiezHuida} from '../src/data.js';
+import { filtrarTipo, filtrarResistencia, filtrarDebilidades, ordenarData, buscarPorNombre, obtenerTopDiezHuida} from '../src/data.js';
 
 const informacionPokemon = [
   {
@@ -9,9 +9,22 @@ const informacionPokemon = [
       "grass",
       "poison",
     ],
+    "resistant": [
+      "water",
+      "electric",
+      "grass",
+      "fighting",
+      "fairy"
+    ],
+    "weaknesses": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
     "encounter": {
       "base-flee-rate": "0.1"
-    },
+    },  
   },
   {
     "num": "006",
@@ -20,16 +33,38 @@ const informacionPokemon = [
       "fire",
       "flying"
     ],
+    "resistant": [
+      "fire",
+      "grass",
+      "fighting",
+      "bug",
+      "steel"
+    ],
+    "weaknesses": [
+      "water",
+      "electric",
+      "rock"
+    ],
     "encounter": {
       "base-flee-rate": "0.05"
     },
-  },
+   },
   {
     "num": "007",
     "name": "squirtle",
 
     "type": [
       "water"
+    ],
+    "resistant": [
+      "fire",
+      "water",
+      "ice",
+      "steel"
+    ],
+    "weaknesses": [
+      "electric",
+      "grass"
     ],
     "encounter": {
       "base-flee-rate": "0.1"
@@ -83,7 +118,7 @@ const resultadoBusqueda = [
     "poison"
   ]
 }]
-
+ 
 describe('La funcion filtrarTipo retorna por tipo de pokemon', () => {
   it('filtrarTipo deberia ser una funcion', () => {
     expect(typeof filtrarTipo).toBe('function');
@@ -97,6 +132,25 @@ describe('La funcion filtrarTipo retorna por tipo de pokemon', () => {
   });
 });
 
+describe('La funcion filtrarResistencia retorna resistencias del pokemon', () => {
+  it('filtrarResistencia deberia ser una funcion', () => {
+    expect(typeof filtrarResistencia).toBe('function');
+  });
+
+  it('Debería retorna los pokemones con la resistencia electric', () => {
+    expect(filtrarResistencia(informacionPokemon, "electric")).toHaveLength(0);
+  });
+});
+
+describe('La funcion filtrarDebilidades retorna debilidades del pokemon', () => {
+  it('filtrarDebilidades deberia ser una funcion', () => {
+    expect(typeof filtrarDebilidades).toBe('function');
+  });
+
+  it('Debería retorna los pokemones con la debilidad grass', () => {
+    expect(filtrarDebilidades(informacionPokemon, "grass")).toHaveLength(0);
+  });
+});
 
 describe('La funcion filtrar retorna por nombre', () => {
   it('deberia ser una funcion', () => {

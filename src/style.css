@@ -1,38 +1,35 @@
-*{
+* {
     box-sizing: border-box
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body{
-    
-
+body {
     padding: 20px;
     margin: 0;
     background: white;
-    min-width: 100%; 
-    min-height: 100%;    
-    
+    min-width: 100%;
+    min-height: 100%;
 }
- .paginaPrincipal{
+
+.paginaPrincipal {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
-
- }
+}
 
 .Botones {
-   display: flex;
-   flex-direction: column;
-   width: max-content;
-   position: absolute;
-   top: 60% ;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    position: absolute;
+    top: 60%;
 }
 
 .btn {
     margin: 3%;
-    width:160px ;
+    width: 160px;
     font-size: 14px;
     word-wrap: break-word;
     font-weight: bolder;
@@ -43,114 +40,115 @@ body{
     padding: 7px 20px;
     text-transform: uppercase;
     cursor: pointer;
- }
+}
 
- .btn:hover{
-    background: rgb(188, 214, 41); ;
-  }
-/* bonton para filtros: */
-  .btn-filtros{
-    background-image: url(img/filtro.png);
-    background-size:contain;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.btn:hover {
+    background: rgb(188, 214, 41);
+}
 
-  .imagenPokemon{
+
+/**/
+.imagenPokemon {
+    width: 15%;
+    height: 30%;
+    display: block;
+    margin:auto;
+    margin-bottom: 2%;
+
+}
+
+
+
+#inputBuscarNombre {
     width: 30%;
-    height: 60%;
- 
-  }
-.contenedor1{
+    height: auto;
+    display: none;
+}
+
+.contenedorOpciones {
+    margin-top: 5%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
-    
+
 }
-.contenedor2{
+
+.selector {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-}
-#inputBuscarNombre{
-    width:30%;
-    height:auto;
-}
-.contenedorOpciones{
-    margin-top: 5%;
-    display: flex;
-   
-    justify-content: center;
-   
-}
-.selector{
- width: 100%;
- height: 40%;
+    height: 40%;
 }
 
-.opcionesFiltros{
+.opcionesFiltros {
     display: flex;
+    width: max-content;
     align-items: center;
-    bottom:0;
-  
+    bottom: 0;
+    align-items: center;
 }
 
-.btn-ordenar{
+.barra-busqueda{
+    margin:auto;
+    margin-top: 2%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-ordenar {
     width: max-content;
     align-self: flex-end;
-    
 }
-#buttonAZ{
-    margin-right:30px;
+
+#buttonAZ {
+    margin-right: 30px;
 }
-.contenedor3{
+
+.contenedor3 {
     background-image: url(img/30090587.jpg);
     display: flex;
     width: 100%;
     height: 100%;
 }
-  .container-Filtros{
+
+.container-Filtros {
     display: flex;
-    justify-content: space-between;
-    border:solid 2px #03071e; 
+    justify-content: center;
     width: max-content;
     height: max-content;
-    
-  }
+    align-items: center;
+}
 
- footer {   
+footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: 5%;
     background-color: #0e153c;
     opacity: 0.7;
- }
+}
 
- .redesSociales{
-   margin: auto;
-   
- }
+.redesSociales {
+    margin: auto;
 
- .redes{
-   
+}
+
+.redes {
+
     width: 40px;
-    height:40px;
+    height: 40px;
     margin: 7px;
 
- }
-.cajaAutores{
-    margin:auto ;
-    width: 30%;
-    height:40px;
-     
 }
- .autores {
+
+.cajaAutores {
+    margin: auto;
+    width: 30%;
+    height: 40px;
+
+}
+
+.autores {
     position: center;
     text-align: center;
     color: white;
@@ -158,34 +156,27 @@ body{
     font-weight: 100;
     font-size: 13px;
     right: 5%;
- }
-
-/* Estilos pagina pokemones*/ 
-.paginaPokemones{
-    width: 100%;
-    height: 100%;
-   display: none;
 }
 
-/* .contenedorFiltros{
-    background-color: blue;
-    order: 1;
-    width: 250px;
-    height: 600px;
-    margin-right: 15px;
-} */
-.contenedorTarjetas{
+/* Estilos pagina pokemones*/
+.paginaPokemones {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contenedorTarjetas {
     width: max-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 25px;
     /* order: 2; */
-    padding:5%;
-   }
+    padding: 5%;
+}
 
-.tarjetaPokemones{
-   background: linear-gradient(90deg, #C9D6FF,#E2E2E2);  
-  
+.tarjetaPokemones {
+    background: linear-gradient(90deg, #C9D6FF, #E2E2E2);
+
     display: flex;
     padding: 15px;
     flex-direction: column;
@@ -195,52 +186,53 @@ body{
     align-self: stretch;
     border-radius: 7px;
     box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
-} 
+}
 
 .nombreP {
     color: #343b59;
-    margin:0px;
+    margin: 0px;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-   /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
+    /* text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;*/
     text-transform: capitalize;
 }
 
-.textoh3, .sizeP {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 15px;
-        margin: 7px;
-        color: rgb(16, 20, 49);    
-        text-transform: capitalize;
+.textoh3,
+.sizeP {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 7px;
+    color: rgb(16, 20, 49);
+    text-transform: capitalize;
 }
 
-.encabezadoTarjeta{
+.encabezadoTarjeta {
     display: flex;
 }
 
-.imgPokemon{
+.imgPokemon {
     width: 120px;
     height: 120px;
     transition: transform 0.8s ease;
     transform-style: preserve-3d;
 }
 
-.imgPokemon:hover{
+.imgPokemon:hover {
     transform: rotateY(180deg)
 }
 
 /*.descripcionTarjeta{
 }*/
 
-.botonesTarjeta{
+.botonesTarjeta {
     margin-top: 15px;
 }
 
-.filtrosBusqueda{
+.filtrosBusqueda {
     display: none;
 }
 
-.tiposInput{
+.tiposInput {
     display: none;
 }
 
@@ -249,76 +241,113 @@ body{
 }*/
 
 /*  caja de resistencias y debilidades:  */
-.contenedorRyD{
+.contenedorRyD {
     padding: 3px;
     margin: 3px;
 }
-.cajaResydebi{
+
+.cajaResydebi {
     width: min-content;
     height: min-content;
 }
-.contenedorListas{
+
+.contenedorListas {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
     width: min-content;
     height: min-content;
 
 }
-.listaResistencia, .listaDebilidades{
+
+.listaResistencia,
+.listaDebilidades {
     margin: 0px 5px;
-     padding: 0.1em 1em 0.5em 1em; 
-    background-color: #7c779c; 
+    padding: 0.1em 1em 0.5em 1em;
+    background-color: #7c779c;
     border-radius: 10%;
-    width:min-content ;
+    width: min-content;
     height: min-content;
     float: left;
     list-style-type: none;
-     position: relative;
- }
-
-.listaResistencia > h2 , .listaDebilidades > h2 {
-    margin: 5px;
-      font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: rgb(16, 20, 49);  
+    position: relative;
 }
- 
- .cajaResydebi li:hover{
+
+.listaResistencia>h2,
+.listaDebilidades>h2 {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: rgb(16, 20, 49);
+}
+
+.cajaResydebi li:hover {
     background-color: #990033;
- }
- 
- #contenedorResistencia, #contenedorDebilidades{
-    position: absolute; 
+}
+
+#contenedorResistencia,
+#contenedorDebilidades {
+    position: absolute;
     vertical-align: middle;
     width: 100px;
-    top: 100%; 
-    left: 0px;  
-    background-color: #41338b; 
-    font:normal 0.8em arial;  
-    padding: 0.2em 0.5em ; 
+    top: 100%;
+    left: 0px;
+    background-color: #41338b;
+    font: normal 0.8em arial;
+    padding: 0.2em 0.5em;
     display: none;
 
- }
+}
 
- .listaResistencia:hover  #contenedorResistencia {
+.listaResistencia:hover #contenedorResistencia {
     display: block;
- }
- 
- .listaDebilidades:hover #contenedorDebilidades {
-    display: block;
- }
+}
 
- .debiyresis{
-     background-color: #C9D6FF;
-    
-    height:min-content;
-  
+.listaDebilidades:hover #contenedorDebilidades {
+    display: block;
+}
+
+.debiyresis {
+    background-color: #C9D6FF;
+
+    height: min-content;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-      
- }
-/* Estilos pagina Estadisticas*/ 
 
-.paginaEstadistica{
+}
+
+/* Estilos pagina Estadisticas*/
+
+.paginaEstadistica {
     display: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #071877;
+    color: white;
 }
