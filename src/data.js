@@ -20,7 +20,7 @@ export const operaciones = {
     return peliculas;
   },
 
-  //método para distingir los productores
+  //funcion para distingir los productores
   llamarProductores(peliculas) {
     let pelicula;
     let todosLosProductores = [];
@@ -36,10 +36,23 @@ export const operaciones = {
 
   //método de filtrar por productor
   filtrarPorProductor(peliculas,nameProducer){
-    
-    let peliculasProductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
-    return peliculasProductor
+    let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
+    return peliculasdelproductor
 
+ },
+
+ //realizar cálculo agregado
+  realizarCalculo(peliculas){
+    
+    let puntuacion=0;
+    let pelicula;
+    for (let i = 0; i < peliculas.length; i++) {
+      pelicula=peliculas[i];
+      puntuacion+=parseFloat(pelicula.rt_score);
+    }
+    puntuacion=puntuacion/peliculas.length;
+   
+    return(puntuacion);
   },
   //método de mostrar detalle de película
   filtrarPorId(peliculas,idPelicula){
@@ -47,11 +60,8 @@ export const operaciones = {
     return peliculasDetalle[0];
   },
   
-  realizarCalculo(peliculas){
 
-    
-
-   },
+   
 
 
 

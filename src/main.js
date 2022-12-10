@@ -66,11 +66,12 @@ function ordenarPorAno() {
 }
 
 function verDetallePelicula() {
-  let mostrarDetallePelicula= this.id
-  let pelicula= operaciones.filtrarPorId(data.films,mostrarDetallePelicula);
-  console.log(pelicula);
-  document.getElementById("MostrarDetalle").innerHTML = "";
+  console.log(this.id);
+  let micc= this.id
+  let pelicula= operaciones.filtrarPorId(data.films,micc);
+console.log(this.id);
   
+  document.getElementById("MostrarDetalle").innerHTML = "";
 }
 
 //pintar productores
@@ -121,17 +122,19 @@ function filtrarPorProductor(){
 function haciendoelcalculo(){
   let peliculasCalculadas = operaciones.realizarCalculo(
     data.films)
-return peliculasCalculadas
+    document.getElementById("resultado").innerHTML=
+    "promedio puntuación:" +peliculasCalculadas
 }
 
 function lanzadera(){
-  //pintarDirectores();
+ 
  
   pintarCard();
   pintarProductores();
+  haciendoelcalculo();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
-  //document.getElementById("producer").addEventListener("click", filtrarPorProductor);
+ 
   
 }
 
