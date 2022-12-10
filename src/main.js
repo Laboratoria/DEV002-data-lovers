@@ -66,8 +66,11 @@ function ordenarPorAno() {
 }
 
 function verDetallePelicula() {
+ 
   let micc= this.id
   let pelicula= operaciones.filtrarPorId(data.films,micc);
+
+  
   document.getElementById("MostrarDetalle").innerHTML = "";
   pelicula
 }
