@@ -9,6 +9,8 @@ const container = document.querySelector("#containerPokemon");
 const search = document.querySelector("#searchInput");
 const buttonUpward = document.querySelector("#buttonUpward");
 const buttonDownward = document.querySelector("#buttonDownward");
+const buttonUpNumber = document.querySelector("#buttonUpNumber");
+const buttonDownNumber = document.querySelector("#buttonDownNumber");
 
 //Función para llamar al set de datos de la API de Pokémon
 fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src/data/pokemon/pokemon.json")
@@ -20,6 +22,8 @@ fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src
         searchPokemon(data.pokemon);
         nameUpward(data.pokemon);
         nameDownward(data.pokemon);
+        numberUpward(data.pokemon);
+        numberDownward(data.pokemon);
     })
 
 
@@ -118,4 +122,26 @@ function nameDownward(pokemon) {
     })
 }
 
-// console.log(example, data);
+//Crear función que ordenen ascendentemente por número
+function numberUpward(pokemon) {
+    buttonUpNumber.addEventListener("click", () => {
+        const newArray = sortUpward(pokemon, "num");
+        // console.log(newArray);
+        container.innerHTML = "";
+        newArray.forEach(element => {
+            createCard(element);
+        })
+    })
+}
+
+//Crear función que ordenen descendentemente por número
+function numberDownward (pokemon){
+    buttonDownNumber.addEventListener("click", () => {
+        const newArray = sortDownward(pokemon,"num");
+        // console.log(newArray);
+        container.innerHTML = "";
+        newArray.forEach(element => {
+            createCard(element);
+        })
+    })
+}
