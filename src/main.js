@@ -1,17 +1,12 @@
 import pokemon from './data/pokemon/pokemon.js';
-import { filtrarTipo, filtrarResistencia, filtrarDebilidades, /*obtenerTopDiezHuida,*/  ordenarData, buscarPorNombre} from './data.js';
-
-// Funciones para visualizar las secciones del html: 
-
-// document.querySelector('.paginaPrincipal').style.display = 'block';
-// document.querySelector('.paginaEstadistica').style.display = 'block';
-// document.querySelector('.paginaPokemones').style.display = 'block';
-// document.querySelector('.tiposInput').style.display = 'block'; 
-
-
-
+import { filtrarTipo, filtrarResistencia, filtrarDebilidades, obtenerTopDiezHuida, ordenarData, buscarPorNombre} from './data.js';
 
 const dataPokemon = pokemon.pokemon;
+const menuPaginaInicio = document.getElementById('opcionPaginaInicio');
+const menuBusquedaPokemon = document.getElementById('opcionBusquedaPokemon');
+const menuFiltroPokemon = document.getElementById('opcionFiltroPokemon');
+const menuOrdenarPokemon = document.getElementById('opcionOrdenarPokemon');
+const menuTopDiez = document.getElementById('opcionTopDiez');
 const inputBuscarNombre = document.getElementById('inputBuscarNombre');
 const menuTipo = document.getElementById('tipoPokemones');
 const menuResistencias= document.getElementById('resistenciaPokemon');
@@ -160,11 +155,36 @@ inputBuscarNombre.addEventListener("input", () => {
   mostrar(buscarPorNombre(dataPokemon, inputBuscarNombre.value));
 });
 
-// Esta es la función para mostrar el TOP 10
-/*estadisticas.addEventListener("click", () => {
-  contenedor.innerHTML = '';
-  contenedor.style.display = "flex";
-  mostrar(obtenerTopDiezHuida(dataPokemon.encounter["base-flee-rate"]));
-}
-);*/
+// Esta es la función para mostrar unicamente el input para realizar búsqueda
+menuBusquedaPokemon.addEventListener("click", () => {
+  document.getElementById("inputBuscarNombre").style.display = "block";
+  document.getElementById("ordenarDatos").style.display = "none";
+  document.getElementById("filtros").style.display = "none";
+})
 
+// Esta es la función para mostrar unicamente los botones para poder ordenar AZ o ZA segun corresponda
+menuOrdenarPokemon.addEventListener("click", () => {
+  document.getElementById("inputBuscarNombre").style.display = "none";
+  document.getElementById("ordenarDatos").style.display = "block";
+  document.getElementById("filtros").style.display = "none";
+})
+
+// Esta es la función para mostrar unicamente los filtros de los pokemones
+menuFiltroPokemon.addEventListener("click", () => {
+  document.getElementById("inputBuscarNombre").style.display = "none";
+  document.getElementById("ordenarDatos").style.display = "none";
+  document.getElementById("filtros").style.display = "block";
+})
+
+// Esta es la función para cargar nuevamente la página
+menuPaginaInicio.addEventListener("click", () => {
+  location.reload();
+})
+
+// Esta es la función para mostrar el TOP 10
+menuTopDiez.addEventListener("click", () => {
+  contenedor.innerHTML = '';
+  console.log('En¿ntro');
+  mostrar(obtenerTopDiezHuida(dataPokemon));
+}
+);
