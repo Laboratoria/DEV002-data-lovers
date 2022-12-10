@@ -15,6 +15,27 @@ fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src
 
     });
 
+const colors = {
+    grass: '#5AE97B',
+    fire: '#FF9C54',
+    water: '#4E90D5',
+    electric: '#F3D23B',
+    ice: '#74CEC0',
+    poison: '#AB6AC8',
+    ground: '#D97746',
+    rock: '#C7B78B',
+    bug: '#66CDAA',
+    dragon: '#4169E1',
+    normal: '#F9F193',
+    flying: '#8FA8DD',
+    fighting: '#FF6347',
+    psychic: '#F97176',
+    ghost: '#5269AC',
+    dark: '#5A5366',
+    steel: '#5A8EA1',
+    fairy: '#EC8FE6',
+}
+
 
 //Función para crear/darle forma a las tarjetas
 function createCard(pokemon){
@@ -47,6 +68,9 @@ function createCard(pokemon){
     //Poblar al contenedor principal
     container.appendChild(card);
 
+    const type = pokemon.type;
+    const cardColor = colors[type[0]];
+    card.style.backgroundColor = cardColor;
 }
 
 
