@@ -1,16 +1,27 @@
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    padding: 20px;
-    margin: 0;
-    background: white;
-    min-width: 100%;
-    min-height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+ 
 }
+
+ .contenedorTodo{
+    position: absolute;
+    margin: 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
 
 .paginaPrincipal {
     display: flex;
@@ -170,9 +181,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 25px;
-    /* order: 2; */
-    padding: 5%;
-}
+   }
 
 .tarjetaPokemones {
     background: linear-gradient(90deg, #C9D6FF, #E2E2E2);
