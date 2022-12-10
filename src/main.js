@@ -49,7 +49,7 @@ function dibujarCard(peliculas) {
 }
 
 //Ordenar la data por directores
-function ordenarPorDirector() {idPelicula
+function ordenarPorDirector() {
   let peliculasOrdenadas = operaciones.peliculasOrdenadasPorDirector(
     data.films
   );
@@ -66,12 +66,13 @@ function ordenarPorAno() {
 }
 
 function verDetallePelicula() {
-  console.log(this.id);
+ 
   let micc= this.id
   let pelicula= operaciones.filtrarPorId(data.films,micc);
-console.log(this.id);
+
   
   document.getElementById("MostrarDetalle").innerHTML = "";
+  pelicula
 }
 
 //pintar productores
