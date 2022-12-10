@@ -41,14 +41,15 @@ export const operaciones = {
 
  },
 
- //realizar cálculo agregado
-  realizarCalculo(peliculas){
-    let realizandoElCalculo=0, summ=0, peliculasLen=peliculas.length;
-    while(i<peliculasLen){
-      summ=summ+peliculas[i++]  
-    }
-    return summ/peliculasLen;
-  },
+ 
+//  //realizar cálculo agregado
+//   realizarCalculo(peliculas){
+//     let realizandoElCalculo=0, summ=0, peliculasLen=peliculas.length;
+//     while(i<peliculasLen){
+//       summ=summ+peliculas[i++]  
+//     }
+//     return summ/peliculasLen;
+//   },
 
   } 
 
