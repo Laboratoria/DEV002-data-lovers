@@ -24,6 +24,64 @@ h1 {
     padding: 20px;
 }
 
+/*Dar estilo al contenedor de search y buttons*/
+.searchButtons {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Dar estilo a las clases hijas de searchButtons*/
+.child {
+    flex: 1;
+    border: solid;
+    border-color: #FFF;
+}
+
+.buttonsContainer{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 30px;
+}
+
+#buttonSort{
+    background-color: transparent;
+    border-color: #F7BA17;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+}
+
+.imgsort{
+    width: 30px;
+    height: 30px;
+}
+
+.buttonList {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #d0d0d0;
+    border-radius:5px;
+    width: 50px;
+}
+
+ul {
+    list-style: none;
+} 
+
+#buttonUpward, #buttonDownward, #buttonUpNumber, #buttonDownNumber{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #a19d9d;
+}
+
+.show{
+    display: block;
+}
+
 /* Dar estilos al contenedor de Pokemon */
 #containerPokemon {
     display: flex;
