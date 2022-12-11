@@ -20,17 +20,27 @@
     <h2>Pokepedia</h2>
     <!-- Contenido de la Segunda página -->
     <!-- Filtro y Botones para Ordenar -->
-    <section>
-      <input type="search" id="searchInput" placeholder="write the pokemon">
+    <section class="searchButtons">
+      <section class="searchContainer child">
+        <input type="search" id="searchInput" placeholder="write the pokemon">
+      </section>
+      <section class="buttonsContainer child">
+        <button id="buttonSort"><img src="./img/ordenar.png" alt="Sort Button" class="imgsort"></button>
+        <section class="buttonList">
+          <ul>
+            <li><button id="buttonUpward">A - Z</button></li>
+            <li><button id="buttonDownward">Z - A</button></li>
+            <li><button id="buttonUpNumber">1 - 9</button></li>
+            <li><button id="buttonDownNumber">9 - 1</button></li>
+          </ul>
+        </section>
+      </section>
     </section>
-    <button id="buttonSort"></button>
-    <section class="buttonList">
-      <ul>
-        <li><button id="buttonUpward">A - Z</button></li>
-        <li><button id="buttonDownward">Z - A</button></li>
-        <li><button id="buttonUpNumber">1 - 9</button></li>
-        <li><button id="buttonDownNumber">9 - 1</button></li>
-      </ul>
+    
+    <section class="addedCalculation">
+      <p>You're </p>
+      <p>N° Pokemones</p>
+      <P>% Pokemons</P>
     </section>
 
     <!-- Contenedor de Pokemones -->

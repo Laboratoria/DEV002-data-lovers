@@ -11,6 +11,8 @@ const buttonUpward = document.querySelector("#buttonUpward");
 const buttonDownward = document.querySelector("#buttonDownward");
 const buttonUpNumber = document.querySelector("#buttonUpNumber");
 const buttonDownNumber = document.querySelector("#buttonDownNumber");
+const buttonSort = document.querySelector("#buttonSort");
+const buttonList = document.querySelector(".buttonList");
 
 //Función para llamar al set de datos de la API de Pokémon
 fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src/data/pokemon/pokemon.json")
@@ -97,6 +99,12 @@ function searchPokemon(pokemon) {
         });
     });
 }
+
+//Darle función de visibilidad al boton Sort
+buttonSort.addEventListener("click", () => {
+    buttonList.classList.toggle("show")
+})
+
 
 //Crear función que ordene ascendentemente por nombre
 function nameUpward(pokemon) {
