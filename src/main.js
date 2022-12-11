@@ -1,7 +1,10 @@
-import { filtro, obtenerDatos, orderAZ } from './data.js';
+import { filtro, obtenerDatos, orderAZ, calcularPorcentaje } from './data.js';
 
 let datos = [];
 let iconoOrderAZ = document.getElementById('orderAZ');
+let spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
+let spanPorcentajeHombres = document.getElementById('spanPorcentajeHombres');
+
 
 const btnSly = document.getElementById('slytherin');
 const btnRav = document.getElementById('ravenclaw');
@@ -9,6 +12,18 @@ const btnHuf = document.getElementById('hufflepuff');
 const btnGrif = document.getElementById('gryfindor');
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
+
+
+
+cargarAPIhp.addEventListener('click', function() {
+  calcularPorcentaje(datos);
+
+  let porcentajeHombres = (hombres / datos.length) * 100;
+  let porcentajeMujeres = (mujeres / datos.length) * 100; 
+
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+});
 
 
 refreshPage.addEventListener("click", () => {
@@ -100,3 +115,9 @@ function mostrarHTML(datosAMostrar) {
 
 
 
+  function ocultarIconoAZ(){
+    const areSchoolsClosed = iconoOrderAZ.classList.contains('inactive')
+    if(areSchoolsClosed) {
+        iconoOrderAZ.classList.add('inactive')
+    }  
+  }

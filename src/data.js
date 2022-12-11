@@ -20,3 +20,24 @@ export const orderAZ = (arr) => {
 }
 
 
+
+export function calcularPorcentaje(datos) {
+
+  let hombres = 0;
+  let mujeres = 0;
+
+  for(let i = 0; i < datos.length; i++) {
+    if(datos[i].gender === 'Female') {
+      mujeres++; 
+    } else {
+      hombres++; 
+    }
+  }
+
+  let porcentajeHombres = (hombres / datos.length) * 100;
+  let porcentajeMujeres = (mujeres / datos.length) * 100; 
+
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+
+}
