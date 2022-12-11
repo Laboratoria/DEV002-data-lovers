@@ -1,4 +1,4 @@
-import { filter, sortUpward, sortDownward } from './data.js';
+import { filter, sortUpward, sortDownward, calculatePercentage } from './data.js';
 
 // import data from './data/lol/lol.js';
 // import data from './data/pokemon/pokemon.js';
@@ -13,6 +13,8 @@ const buttonUpNumber = document.querySelector("#buttonUpNumber");
 const buttonDownNumber = document.querySelector("#buttonDownNumber");
 const buttonSort = document.querySelector("#buttonSort");
 const buttonList = document.querySelector(".buttonList");
+const numberPokemons = document.querySelector("#numberPokemons");
+const percentagePokemons = document.querySelector("#percentagePokemons");
 
 //Función para llamar al set de datos de la API de Pokémon
 fetch("https://raw.githubusercontent.com/Laboratoria/DEV002-data-lovers/main/src/data/pokemon/pokemon.json")
@@ -97,6 +99,8 @@ function searchPokemon(pokemon) {
         newArray.forEach(element => {
             createCard(element)
         });
+        numberPokemons.innerHTML = ("N°" + newArray.length);
+        percentagePokemons.innerHTML = (calculatePercentage(pokemon, newArray) + '%');
     });
 }
 

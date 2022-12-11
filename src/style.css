@@ -39,6 +39,7 @@ h1 {
     border-color: #FFF;
 }
 
+/*Dar estilo al contenedor de los botones*/
 .buttonsContainer{
     position: relative;
     display: flex;
@@ -46,6 +47,7 @@ h1 {
     margin-bottom: 30px;
 }
 
+/*Dar estilo al botón principal*/
 #buttonSort{
     background-color: transparent;
     border-color: #F7BA17;
@@ -54,11 +56,13 @@ h1 {
     height: 40px;
 }
 
+/*Dar estilo a la imagen del botón principal*/
 .imgsort{
     width: 30px;
     height: 30px;
 }
 
+/*Dar estilo a la lista de botones secundarios*/
 .buttonList {
     display: none;
     position: absolute;
@@ -68,21 +72,60 @@ h1 {
     width: 50px;
 }
 
+/*Quitar estilos a la lista no ordenada*/
 ul {
     list-style: none;
 } 
 
+/*Dar estilo a los botones secundarios*/
 #buttonUpward, #buttonDownward, #buttonUpNumber, #buttonDownNumber{
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #a19d9d;
 }
 
+/*Crear clase ¨show¨ para que aparezcan los botones secundarios*/
 .show{
     display: block;
 }
 
-/* Dar estilos al contenedor de Pokemon */
+/*Dar estilos al contenedor de los cálculos agregados*/
+.addedCalculation{
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 25px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    border:2px solid #F7BA17;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+/*Dar estilos a los resultados de los cálculos agregados*/
+.results{
+    display: flex;
+    border-top: 2px solid;
+    border-color: #F7BA17;
+}
+
+/*Dar estilos a los contenedores hijos del contenedor de cálculos agregados*/
+.childCalculation {
+    flex: 1;
+}
+
+/*Dar estilos a la frase ¨You're watching¨*/
+#wordsWatching {
+    padding: 3px;
+}
+
+/*Dar estilos al contenedor del calculo N° de Pokemones*/
+#numberPokemons{
+    border-right: 2px solid #F7BA17;
+} 
+
+
+/* Dar estilos al contenedor de Pokemons */
 #containerPokemon {
     display: flex;
     flex-wrap: wrap;
