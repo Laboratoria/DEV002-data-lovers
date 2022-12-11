@@ -15,8 +15,8 @@ body {
     text-align: center;
 }
 
-/* Dar estilos al encabezado h1 */
-h1 {
+/* Dar estilos al encabezado h1 y h2(título de la segunda página) */
+h1, h2{
     color: #F7BA17;
     font-family: 'Press Start 2P', cursive;
     font-size: 50px;
@@ -35,8 +35,31 @@ h1 {
 /*Dar estilo a las clases hijas de searchButtons*/
 .child {
     flex: 1;
-    border: solid;
-    border-color: #FFF;
+    /* border: solid; */
+    /* border-color: #FFF; */
+}
+
+/*Dar estilo al padre(contenedor) del search input*/
+.searchContainer{
+    position: relative;
+}
+
+/*Dar estilo al search input*/
+#searchInput{
+    background-color: transparent;
+    background-image: url(./img/buscar.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    border: 2px solid #F7BA17;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: right;
+    padding-left: 20px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    position: absolute;
+    left: 0px;
 }
 
 /*Dar estilo al contenedor de los botones*/
