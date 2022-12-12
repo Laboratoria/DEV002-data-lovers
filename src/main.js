@@ -1,11 +1,10 @@
-import { filtro, obtenerDatos, orderAZ, calcularPorcentaje } from './data.js';
+import { filtro, obtenerDatos, orderAZ, calcularPorcentaje} from './data.js';
 
 let datos = [];
-let iconoOrderAZ = document.getElementById('orderAZ');
-let spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
-let spanPorcentajeHombres = document.getElementById('spanPorcentajeHombres');
-
-
+const iconoOrderAZ = document.getElementById('orderAZ');
+const spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
+const spanPorcentajeHombres = document.getElementById('spanPorcentajeHombres');
+const divPorcentaje = document.getElementById('percentageBox')
 const btnSly = document.getElementById('slytherin');
 const btnRav = document.getElementById('ravenclaw');
 const btnHuf = document.getElementById('hufflepuff');
@@ -14,17 +13,31 @@ const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
 
 
-
-cargarAPIhp.addEventListener('click', function() {
-  calcularPorcentaje(datos);
-
-  let porcentajeHombres = (hombres / datos.length) * 100;
-  let porcentajeMujeres = (mujeres / datos.length) * 100; 
-
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+cargarAPIhp.addEventListener('click', () => {
+  obtenerDatos().then(resultado => {
+    datos = resultado;
+    mostrarHTML(datos);
+  });
 });
 
+cargarAPIhp.addEventListener('click', () => {
+ iconoOrderAZ.style.display = "block";
+});
+
+cargarAPIhp.addEventListener('click', () => {
+  divPorcentaje.style.display = "block";
+})
+
+cargarAPIhp.addEventListener('click', () => {
+  calcularPorcentaje(datos);
+
+    let porcentajeHombres = (hombres / datos.length) * 100;
+    let porcentajeMujeres = (mujeres / datos.length) * 100; 
+
+    spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+    spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+
+});
 
 refreshPage.addEventListener("click", () => {
   window.location.reload(true);
@@ -38,17 +51,7 @@ window.onload = () => {
 
 iconoOrderAZ.addEventListener("click", () => {
   mostrarHTML(orderAZ(datos))
-  //console.log("click se ejecutó")
 })
-
-
-cargarAPIhp.addEventListener('click', () => {
-  obtenerDatos().then(resultado => {
-    datos = resultado;
-    mostrarHTML(datos);
-  });
-});
-
 
 btnGrif.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Gryffindor'));
@@ -114,10 +117,9 @@ function mostrarHTML(datosAMostrar) {
   })};
 
 
-
-  function ocultarIconoAZ(){
-    const areSchoolsClosed = iconoOrderAZ.classList.contains('inactive')
-    if(areSchoolsClosed) {
-        iconoOrderAZ.classList.add('inactive')
-    }  
-  }
+  // function ocultarIconoAZ(){
+  //   const areSchoolsClosed = iconoOrderAZ.classList.contains('inactive')
+  //   if(areSchoolsClosed) {
+  //       iconoOrderAZ.classList.add('inactive')
+  //   }  
+  // }

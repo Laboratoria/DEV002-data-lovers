@@ -19,8 +19,6 @@ export const orderAZ = (arr) => {
   return ascendent;
 }
 
-
-
 export function calcularPorcentaje(datos) {
 
   let hombres = 0;
@@ -33,11 +31,14 @@ export function calcularPorcentaje(datos) {
       hombres++; 
     }
   }
-
-  let porcentajeHombres = (hombres / datos.length) * 100;
+  
   let porcentajeMujeres = (mujeres / datos.length) * 100; 
-
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  porcentajeMujeres = porcentajeMujeres.toFixed(1);
+  let porcentajeHombres = (hombres / datos.length) * 100;
+  porcentajeHombres = porcentajeHombres.toFixed(1);
+  
   spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  
+};
 
-}
