@@ -1,11 +1,12 @@
 import {operaciones} from "./data.js";
-import data from "./data/ghibli/ghibli.js";
+import data from './data/ghibli/ghibli.js';
 
 function pintarCard() {
   dibujarCard(data.films);
 }
 
 function dibujarCard(peliculas) {
+  pintarPromedio(peliculas)
   document.getElementById("llamarImagenesdiv").innerHTML = "";
 
   for (let i = 0; i < peliculas.length; i++) {
@@ -120,23 +121,19 @@ function filtrarPorProductor(){
     dibujarCard(peliculasPorProductor);
   }
 }
-function haciendoelcalculo(){
+
+function pintarPromedio(peliculas){
   let peliculasCalculadas = operaciones.realizarCalculo(
-    data.films)
+    peliculas)
     document.getElementById("resultado").innerHTML=
-    "promedio puntuación:" +peliculasCalculadas
+    "promedio puntuación: " +peliculasCalculadas
 }
 
 function lanzadera(){
- 
- 
   pintarCard();
   pintarProductores();
-  haciendoelcalculo();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
- 
-  
 }
 
 window.onload = lanzadera;

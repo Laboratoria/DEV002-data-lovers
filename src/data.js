@@ -53,9 +53,14 @@ export const operaciones = {
    
     return(puntuacion);
   },
+
   //método de mostrar detalle de película
   filtrarPorId(peliculas,idPelicula){
     let peliculasDetalle= peliculas.filter(pelicula =>pelicula.id===idPelicula);
     return peliculasDetalle[0];
   },
+
+
+
 }
+
