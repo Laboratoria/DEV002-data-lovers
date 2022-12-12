@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="es">
+
   <head>
-    <meta charset="utf-8">
-    <title>LLoro si no funciona parte dos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1> esta vaina funciona o renuncio</h1>
+
+    <body>
+
+    <div id="logo">
+      <img
+        src="https://www.studioghibli.com.au/wp-content/uploads/2017/07/ghibli_logo_gold.png"
+        alt="logo"
+      />
+    </div>
+
+  <br>
+  <div class="divencabezado">
+    <button id="btnordenardirector" class="btn">Ordenar por director</button>
+    <button id="btnordenarano" class="btn">Ordenar por año</button>
+    <br>
+    <br>
+    <label id="resultado" class="lbl"></label>
+  </div>
+
+   <br>
+    
     <div id="root"></div>
+
+    <div id="directoresproductoresdiv"></div>
+
+    <div id="miniaturaspeliculasdiv"></div>
+    
+    <div class="divencabezado">
+      <div id="llamarImagenesdiv" class="row"></div>
+    </div>
+    
+    <div id="MostrarDetalle" class="row"></div>
+
     <script src="main.js" type="module"></script>
+    
   </body>
 </html>
