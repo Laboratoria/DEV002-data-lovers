@@ -1,0 +1,229 @@
+/* Enlaces para llamar a las fuentes de la librería de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Formatear el estilo HTML */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Dar estilos al body */
+body {
+    background-color: #2D2F4F;
+    text-align: center;
+}
+
+/* Dar estilos al encabezado h1 y h2(título de la segunda página) */
+h1 {
+    color: #F7BA17;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+header p {
+    padding-left: 14%;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 30px;
+}
+
+/* Dar estilo al nombre de los cálculos estáticos*/
+h2 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+/* Dar estilo al contenedor de los cálculos estáticos*/
+#staticCalculation {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    column-gap: 70px;
+    font-family: 'VT323', monospace;
+    color: #FFFF;
+}
+
+/* Dar estilo al número de los cálculos estáticos*/
+.calculation {
+    font-size: 40px;
+}
+
+/*Dar estilo al contenedor de search y buttons*/
+.searchButtons {
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Dar estilo a las clases hijas de searchButtons*/
+.child {
+    flex: 1;
+    /* border: solid; */
+    /* border-color: #FFF; */
+}
+
+/*Dar estilo al padre(contenedor) del search input*/
+.searchContainer {
+    position: relative;
+}
+
+/*Dar estilo al search input*/
+#searchInput {
+    background-color: transparent;
+    background-image: url(./img/buscar.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    border: 2px solid #F7BA17;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: right;
+    padding-left: 20px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    position: absolute;
+    left: 0px;
+    color: #FFFF;
+}
+
+/*Dar estilo al contenedor de los botones*/
+.buttonsContainer {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 30px;
+}
+
+/*Dar estilo al botón principal*/
+#buttonSort {
+    background-color: transparent;
+    border-color: #F7BA17;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+}
+
+/*Dar estilo a la imagen del botón principal*/
+.imgsort {
+    width: 30px;
+    height: 30px;
+}
+
+/*Dar estilo a la lista de botones secundarios*/
+.buttonList {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #d0d0d0;
+    border-radius: 5px;
+    width: 80px;
+    height: 90px;
+}
+
+/*Quitar estilos a la lista no ordenada*/
+ul {
+    list-style: none;
+}
+
+/*Dar estilo a los botones secundarios*/
+#buttonUpward,
+#buttonDownward,
+#buttonUpNumber,
+#buttonDownNumber {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #a19d9d;
+    font-size: 18px;
+}
+
+/*Crear clase ¨show¨ para que aparezcan los botones secundarios*/
+.show {
+    display: block;
+}
+
+/*Dar estilos al contenedor de los cálculos agregados*/
+.addedCalculation {
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 25px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid #F7BA17;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+/*Dar estilos a los resultados de los cálculos agregados*/
+.results {
+    display: flex;
+    border-top: 2px solid;
+    border-color: #F7BA17;
+}
+
+/*Dar estilos a los contenedores hijos del contenedor de cálculos agregados*/
+.childCalculation {
+    flex: 1;
+}
+
+/*Dar estilos a la frase ¨You're watching¨*/
+#wordsWatching {
+    padding: 3px;
+}
+
+/*Dar estilos al contenedor del calculo N° de Pokemones*/
+#numberPokemons {
+    border-right: 2px solid #F7BA17;
+}
+
+
+/* Dar estilos al contenedor de Pokemons */
+#containerPokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+
+}
+
+/* Dar estilos a las tarjetas */
+.pokemonCard {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    border-style: solid;
+    border-color: #F7BA17;
+    border-radius: 10px;
+    border-width: 6px;
+    width: 180px;
+    height: 230px;
+    padding: 10px;
+}
+
+/* Dar estilos a la descripción de las tarjetas */
+p.name {
+    text-align: left;
+    margin-left: 10%;
+    line-height: 25px;
+
+}
+
+@media (max-width: 768px){
+    h1 {
+        font-size: 40px;
+    }
+    header p {
+        padding-left: 19%;
+        font-size: 25px;
+    }
+}
