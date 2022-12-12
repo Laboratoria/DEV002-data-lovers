@@ -19,6 +19,13 @@ export const orderAZ = (arr) => {
   return ascendent;
 }
 
+// export const orderZA = (arr) => {
+//     let descendent = arr.sort(function(a, b) {
+//       return((a.name < b.name)? 1: ((a.name > b.name)? -1: 0));
+//       })
+//       return descendent;
+//   }
+
 export function calcularPorcentaje(datos) {
   console.log(calcularPorcentaje)
   let hombres = 0;

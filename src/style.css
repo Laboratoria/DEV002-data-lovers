@@ -11,13 +11,17 @@ html {
 }
 
 body{
-
-    background-image: url(./images/tinified/background-mobile.jpeg);
+    background-color: #1b133e;
+    /* background-image: url(./images/tinified/background-mobile.jpeg); */
     font-family: 'Harry Potter', sans-serif;   
     text-align: center; 
     background-repeat: no-repeat;  
-    background-size: cover;     
-    
+    background-size: cover;        
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
 }
 header {
     height: 1rem;
@@ -42,7 +46,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: lightsteelblue;
+    background-color: #D4D9D8;
   }
   nav img {
     position: absolute;
@@ -64,6 +68,10 @@ nav {
     cursor: pointer;
 }
 
+/* .logos-escuelas:hover {
+    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
+} */
+
 .title {
     width: 29rem;
     height: 10rem;
@@ -83,7 +91,8 @@ nav {
 }
 
 button[type=button] { 
-    font-size: 12px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 14px;
     cursor:pointer;
     padding: .4rem;
     width: 48%;
@@ -95,12 +104,11 @@ button[type=button] {
  }
 
  button[type=button]:hover {
-    background-color: #000;
+    background-color: lightslategrey;
     color: #f6f6f6;
  }
-
 #cargarAPI:hover {
-    background-color: #000;
+    background-color: lightslategray;
     color: #f6f6f6;
 }
 
@@ -108,16 +116,21 @@ button[type=button] {
     width: 3rem;
     cursor: pointer;
     display: none;
-    margin: 1% 0 1% 50%;
+    margin: 1% 0 1% 48%;
 }
 
 #percentageBox {
+    margin: 2rem;
+    font-size: 1.5rem;
     display: none;
+    color: #D4D9D8;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .cardsContainer {
     display: grid;
-    grid-template-columns: 140px 140px;
+    grid-template-columns: 170px 170px;
     padding: 1rem;
     place-content: center;
     color: black;
@@ -126,13 +139,16 @@ button[type=button] {
 }
 
 .card {
-    background-color: gainsboro;
+    background-color: #E4E0F5;
     margin: 5px;
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
     padding: 1rem;
     border-radius: 5px; /* 5px rounded corners */
     display:inline-table;
+    font-family: 'Indie Flower', cursive;
+    font-size: .9rem;
+
   }
 
 .card:hover {

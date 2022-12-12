@@ -89,7 +89,7 @@ function mostrarHTML(datosAMostrar) {
     let divCard = document.createElement("div");
     let divContent = document.createElement("div");
     let hName = document.createElement("h2");
-    let hHouse = document.createElement("h2");
+    let hHouse = document.createElement("h1");
     let hSpecie = document.createElement("h2");
     let hatIcon = document.createElement("img");    
 
@@ -109,13 +109,14 @@ function mostrarHTML(datosAMostrar) {
         hHouse.style.color = "#2A623D";
         break;
         case "Hufflepuff":
-          hHouse.style.color = "#F0C75E";
+          hHouse.style.color = "#EEBE44";
         break;
         case "Ravenclaw":
           hHouse.style.color = "#728DDA"
         break;
 
     }
+
 
     contenido.appendChild(divCard);
     divCard.appendChild(divContent);

@@ -9,8 +9,7 @@ html {
 }
 
 body{
-    background-color: #f6f6f6;
-    background-image: url(./images/tinified/background.jpeg);
+    background-color: #1b133e;
     background-repeat: no-repeat;  
     background-size: cover;                                     
 }
@@ -33,7 +32,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: lightsteelblue;
+    background-color: #D4D9D8;
   }
   nav img {
     position: absolute;
@@ -57,7 +56,7 @@ nav {
 
 .container {
     width: 80%;
-    margin: 3% auto;
+    margin: 3% auto 0;
     display: inline-block;
     gap: 1rem;
 }
@@ -76,7 +75,7 @@ nav {
 }
 
 button[type=button] { 
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     cursor:pointer;
     padding: .4rem;
     width: 28%;
@@ -86,14 +85,7 @@ button[type=button] {
     border-radius: 1.3rem;
     margin: 3rem 2% 1rem
  }
- button[type=button]:hover {
-    background-color: lightslategrey;
-    color: #f6f6f6;
- }
-#cargarAPI:hover {
-    background-color: lightslategray;
-    color: #f6f6f6;
-}
+
 
 .cardsContainer {
     display: grid;
