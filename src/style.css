@@ -1,5 +1,12 @@
 body{
-  background-color:#fcff80;  
+  background-color:#fcff80;
+
+}
+
+.cardvacia {
+  width: 190px;
+  height: 190px;
+
 }
 
 
@@ -9,11 +16,9 @@ body{
     padding: 5px;
     display: flex;
     width: 220px;
-    flex-wrap:wrap;
-    
+    flex-wrap:wrap;  
    justify-content:right;
     
-        
 }
 
 .flex-box {
@@ -35,9 +40,6 @@ body{
     margin: auto;
     justify-content:right;
       
-}
-.filtro{
-    display: none;
 }
 
 
