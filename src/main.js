@@ -1,6 +1,7 @@
 import { filtro, obtenerDatos, orderAZ, calcularPorcentaje} from './data.js';
 
 let datos = [];
+let sectionOne = document.getElementById("indexOne")
 const iconoOrderAZ = document.getElementById('orderAZ');
 const spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
 const spanPorcentajeHombres = document.getElementById('spanPorcentajeHombres');
@@ -21,7 +22,8 @@ cargarAPIhp.addEventListener('click', () => {
 });
 
 cargarAPIhp.addEventListener('click', () => {
- iconoOrderAZ.style.display = "block";
+  iconoOrderAZ.style.display = "block";
+  sectionOne.style.display = "none";
 });
 
 cargarAPIhp.addEventListener('click', () => {
@@ -29,15 +31,18 @@ cargarAPIhp.addEventListener('click', () => {
 })
 
 cargarAPIhp.addEventListener('click', () => {
-  calcularPorcentaje(datos);
-
-    let porcentajeHombres = (hombres / datos.length) * 100;
-    let porcentajeMujeres = (mujeres / datos.length) * 100; 
-
-    spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-    spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-
+  const { porcentajeMujeres, porcentajeHombres } = calcularPorcentaje(datos);
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
 });
+
+// cargarAPIhp.addEventListener('click', () => {
+//   mostrarHTML(calcularPorcentaje(datos));
+  
+//     spanPorcentajeHombres.innerHTML = spanPorcentajeHombres + "%";
+//     spanPorcentajeMujeres.innerHTML = spanPorcentajeMujeres + "%";
+
+// });
 
 refreshPage.addEventListener("click", () => {
   window.location.reload(true);
@@ -55,22 +60,29 @@ iconoOrderAZ.addEventListener("click", () => {
 
 btnGrif.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Gryffindor'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnHuf.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Hufflepuff'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnRav.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Ravenclaw'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnSly.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Slytherin'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 function mostrarHTML(datosAMostrar) {
-  //console.log(datosAMostrar);
   const contenido = document.getElementById('cards');
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
@@ -88,7 +100,6 @@ function mostrarHTML(datosAMostrar) {
     hSpecie.innerHTML = personaje.species;
     hatIcon.src = "./images/tinified/haticon.png";
     hatIcon.className = "hat-icon";
-
 
     switch (personaje.house) {
       case "Gryffindor":
@@ -114,12 +125,5 @@ function mostrarHTML(datosAMostrar) {
     divContent.appendChild(hSpecie);
     
 
-  })};
+  })}
 
-
-  // function ocultarIconoAZ(){
-  //   const areSchoolsClosed = iconoOrderAZ.classList.contains('inactive')
-  //   if(areSchoolsClosed) {
-  //       iconoOrderAZ.classList.add('inactive')
-  //   }  
-  // }

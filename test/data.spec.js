@@ -1,4 +1,4 @@
-import { obtenerDatos, filtro, orderAZ } from '../src/data.js';
+import { obtenerDatos, filtro, orderAZ, calcularPorcentaje } from '../src/data.js';
 
 describe('obtenerDatos', () => {
   it('es una función', () => {
@@ -67,6 +67,10 @@ describe('orderAZ', () => {
   });
 });
 
+describe('calcularPorcentaje', () => {
+  it('es una función', () => {
+    expect(typeof calcularPorcentaje).toBe('function');
+  })});
   
 //   it('returns `example`', () => {
 //     expect(example()).toBe('example');

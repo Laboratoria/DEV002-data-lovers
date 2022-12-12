@@ -78,9 +78,8 @@ nav {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 3% auto;
     display: inline-block;
-    gap: 1rem;
 }
 
 button[type=button] { 
