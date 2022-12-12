@@ -128,12 +128,15 @@ function haciendoelcalculo(){
 }
 
 function lanzadera(){
+ 
+ 
   pintarCard();
   pintarProductores();
   haciendoelcalculo();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
-
+ 
+  
 }
 
 window.onload = lanzadera;
