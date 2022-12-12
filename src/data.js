@@ -40,6 +40,5 @@ export function calcularPorcentaje(datos) {
 
   return { porcentajeMujeres, porcentajeHombres };
 
-  
-}
+  }
 
