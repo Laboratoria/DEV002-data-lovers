@@ -16,33 +16,41 @@ body {
 }
 
 /* Dar estilos al encabezado h1 y h2(título de la segunda página) */
-h1, h2{
+h1 {
     color: #F7BA17;
     font-family: 'Press Start 2P', cursive;
     font-size: 50px;
     margin: 30px;
     padding: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+header p {
+    padding-left: 14%;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 30px;
+}
+
+/* Dar estilo al nombre de los cálculos estáticos*/
+h2 {
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 /* Dar estilo al contenedor de los cálculos estáticos*/
-#staticCalculation{
+#staticCalculation {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     column-gap: 70px;
     font-family: 'VT323', monospace;
     color: #FFFF;
 }
 
-/* Dar estilo al nombre de los cálculos estáticos*/
-h3 {
-    font-size: 30px;
-    font-weight: lighter;
-}
-
 /* Dar estilo al número de los cálculos estáticos*/
-.calculation{
+.calculation {
     font-size: 40px;
 }
 
@@ -62,12 +70,12 @@ h3 {
 }
 
 /*Dar estilo al padre(contenedor) del search input*/
-.searchContainer{
+.searchContainer {
     position: relative;
 }
 
 /*Dar estilo al search input*/
-#searchInput{
+#searchInput {
     background-color: transparent;
     background-image: url(./img/buscar.png);
     background-size: 20px 20px;
@@ -86,7 +94,7 @@ h3 {
 }
 
 /*Dar estilo al contenedor de los botones*/
-.buttonsContainer{
+.buttonsContainer {
     position: relative;
     display: flex;
     justify-content: right;
@@ -94,7 +102,7 @@ h3 {
 }
 
 /*Dar estilo al botón principal*/
-#buttonSort{
+#buttonSort {
     background-color: transparent;
     border-color: #F7BA17;
     border-radius: 7px;
@@ -103,7 +111,7 @@ h3 {
 }
 
 /*Dar estilo a la imagen del botón principal*/
-.imgsort{
+.imgsort {
     width: 30px;
     height: 30px;
 }
@@ -114,42 +122,47 @@ h3 {
     position: absolute;
     top: 40px;
     background-color: #d0d0d0;
-    border-radius:5px;
-    width: 50px;
+    border-radius: 5px;
+    width: 80px;
+    height: 90px;
 }
 
 /*Quitar estilos a la lista no ordenada*/
 ul {
     list-style: none;
-} 
+}
 
 /*Dar estilo a los botones secundarios*/
-#buttonUpward, #buttonDownward, #buttonUpNumber, #buttonDownNumber{
+#buttonUpward,
+#buttonDownward,
+#buttonUpNumber,
+#buttonDownNumber {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #a19d9d;
+    font-size: 18px;
 }
 
 /*Crear clase ¨show¨ para que aparezcan los botones secundarios*/
-.show{
+.show {
     display: block;
 }
 
 /*Dar estilos al contenedor de los cálculos agregados*/
-.addedCalculation{
+.addedCalculation {
     font-family: 'VT323', monospace;
     color: white;
     font-size: 25px;
     width: 40%;
     margin-right: auto;
     margin-left: auto;
-    border:2px solid #F7BA17;
+    border: 2px solid #F7BA17;
     border-radius: 7px;
     margin-bottom: 30px;
 }
 
 /*Dar estilos a los resultados de los cálculos agregados*/
-.results{
+.results {
     display: flex;
     border-top: 2px solid;
     border-color: #F7BA17;
@@ -166,9 +179,9 @@ ul {
 }
 
 /*Dar estilos al contenedor del calculo N° de Pokemones*/
-#numberPokemons{
+#numberPokemons {
     border-right: 2px solid #F7BA17;
-} 
+}
 
 
 /* Dar estilos al contenedor de Pokemons */
@@ -205,8 +218,12 @@ p.name {
 
 }
 
-/* p.number {
-    text-align: left;
-    margin-left: 10%;
-    line-height: 23px;
-} */
+@media (max-width: 768px){
+    h1 {
+        font-size: 40px;
+    }
+    header p {
+        padding-left: 19%;
+        font-size: 25px;
+    }
+}
