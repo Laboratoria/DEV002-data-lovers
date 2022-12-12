@@ -24,6 +24,28 @@ h1, h2{
     padding: 20px;
 }
 
+/* Dar estilo al contenedor de los cálculos estáticos*/
+#staticCalculation{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    column-gap: 70px;
+    font-family: 'VT323', monospace;
+    color: #FFFF;
+}
+
+/* Dar estilo al nombre de los cálculos estáticos*/
+h3 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+/* Dar estilo al número de los cálculos estáticos*/
+.calculation{
+    font-size: 40px;
+}
+
 /*Dar estilo al contenedor de search y buttons*/
 .searchButtons {
     display: flex;
@@ -60,6 +82,7 @@ h1, h2{
     font-size: 25px;
     position: absolute;
     left: 0px;
+    color: #FFFF;
 }
 
 /*Dar estilo al contenedor de los botones*/
