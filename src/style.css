@@ -11,9 +11,9 @@ html {
 }
 
 body{
-    background-color: #1b133e;
+    background-color: #22184E;
     /* background-image: url(./images/tinified/background-mobile.jpeg); */
-    font-family: 'Harry Potter', sans-serif;   
+    /* font-family: 'Harry Potter', sans-serif;    */
     text-align: center; 
     background-repeat: no-repeat;  
     background-size: cover;        
@@ -61,6 +61,12 @@ nav {
     text-align: center;
     margin-top: 2rem;
 }
+h4 {
+    color: #D4D9D8;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
  .logos-escuelas {
     width: 36%;
     margin: 1rem;
@@ -86,7 +92,7 @@ nav {
 
 .container {
     width: 80%;
-    margin: 3% auto;
+    margin: 9% auto;
     display: inline-block;
 }
 
@@ -125,9 +131,12 @@ button[type=button] {
     display: none;
     color: #D4D9D8;
     font-family: 'Raleway', sans-serif;
-
 }
+#spanPorcentajeMujeres:hover {
 
+        box-shadow: 0 3px 8px 0 rgba(192, 235, 37, 0.915);
+    
+}
 .cardsContainer {
     display: grid;
     grid-template-columns: 170px 170px;
@@ -140,11 +149,10 @@ button[type=button] {
 
 .card {
     background-color: #E4E0F5;
-    margin: 5px;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
-    padding: 1rem;
-    border-radius: 5px; /* 5px rounded corners */
+    border-radius: 25px; 
     display:inline-table;
     font-family: 'Indie Flower', cursive;
     font-size: .9rem;
@@ -156,7 +164,7 @@ button[type=button] {
 }
 
 .infoCard {
-    padding: 2px 16px;
+    padding: 2px;
 }
 .hat-icon {
     width: 6rem;

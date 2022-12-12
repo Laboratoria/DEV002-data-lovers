@@ -55,7 +55,7 @@ window.onload = () => {
 
 
 iconoOrderAZ.addEventListener("click", () => {
-  mostrarHTML(orderAZ(datos))
+  mostrarHTML(orderAZ(datos));
 })
 
 btnGrif.addEventListener('click', () => {

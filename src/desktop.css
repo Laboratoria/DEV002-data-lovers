@@ -16,7 +16,11 @@ body{
 header {
     height: 1rem;
 }
-
+h4 {
+    color: #D4D9D8;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 2.5rem;
+}
 .home-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -48,7 +52,7 @@ nav {
     margin-top: 2rem;
 }
 .subtitle {
-    width: 50rem;
+    width: 58rem;
     height: 10.5rem;
     padding: 2rem;
     margin-right: 33rem;
@@ -99,7 +103,7 @@ button[type=button] {
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
     padding: 1rem;
-    border-radius: 5px; 
+    border-radius: 25px; 
     display:inline-table;
     margin: 10px;
   }
