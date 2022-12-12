@@ -1,5 +1,18 @@
+
+*{
+  width: 30;
+  height: 100;
+  /*margin: 0%;
+  padding: 0%;*/
+  box-sizing: border-box;
+}
 body{
   background-color:#fcff80;
+
+}
+.img1{
+  width:70%;
+  height:30px;
 
 }
 
