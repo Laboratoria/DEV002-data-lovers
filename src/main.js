@@ -1,8 +1,11 @@
-import { filtro, obtenerDatos, orderAZ } from './data.js';
+import { filtro, obtenerDatos, orderAZ, calcularPorcentaje} from './data.js';
 
 let datos = [];
-let iconoOrderAZ = document.getElementById('orderAZ');
-
+let sectionOne = document.getElementById("indexOne")
+const iconoOrderAZ = document.getElementById('orderAZ');
+const spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
+const spanPorcentajeHombres = document.getElementById('spanPorcentajeHombres');
+const divPorcentaje = document.getElementById('percentageBox')
 const btnSly = document.getElementById('slytherin');
 const btnRav = document.getElementById('ravenclaw');
 const btnHuf = document.getElementById('hufflepuff');
@@ -10,6 +13,36 @@ const btnGrif = document.getElementById('gryfindor');
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
 
+
+cargarAPIhp.addEventListener('click', () => {
+  obtenerDatos().then(resultado => {
+    datos = resultado;
+    mostrarHTML(datos);
+  });
+});
+
+cargarAPIhp.addEventListener('click', () => {
+  iconoOrderAZ.style.display = "block";
+  sectionOne.style.display = "none";
+});
+
+cargarAPIhp.addEventListener('click', () => {
+  divPorcentaje.style.display = "block";
+})
+
+cargarAPIhp.addEventListener('click', () => {
+  const { porcentajeMujeres, porcentajeHombres } = calcularPorcentaje(datos);
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+});
+
+// cargarAPIhp.addEventListener('click', () => {
+//   mostrarHTML(calcularPorcentaje(datos));
+  
+//     spanPorcentajeHombres.innerHTML = spanPorcentajeHombres + "%";
+//     spanPorcentajeMujeres.innerHTML = spanPorcentajeMujeres + "%";
+
+// });
 
 refreshPage.addEventListener("click", () => {
   window.location.reload(true);
@@ -23,43 +56,33 @@ window.onload = () => {
 
 iconoOrderAZ.addEventListener("click", () => {
   mostrarHTML(orderAZ(datos))
-  console.log("click se ejecutó")
 })
-
-
-cargarAPIhp.addEventListener('click', () => {
-  obtenerDatos().then(resultado => {
-    datos = resultado;
-    mostrarHTML(datos);
-  });
-});
-
 
 btnGrif.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Gryffindor'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnHuf.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Hufflepuff'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnRav.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Ravenclaw'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
 
 btnSly.addEventListener('click', () => {
   mostrarHTML(filtro(datos, 'Slytherin'));
+  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";
 });
-
-
-orderAZ.addEventListener("click", () => {
-  cards.innerHTML = "";
-  printElements(filterAscendent(charactersNameHouse));
-});
-
 
 function mostrarHTML(datosAMostrar) {
-  console.log(datosAMostrar);
   const contenido = document.getElementById('cards');
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
   datosAMostrar.forEach((personaje) => {
@@ -78,7 +101,6 @@ function mostrarHTML(datosAMostrar) {
     hatIcon.src = "./images/tinified/haticon.png";
     hatIcon.className = "hat-icon";
 
-
     switch (personaje.house) {
       case "Gryffindor":
         hHouse.style.color = "#740001";
@@ -91,8 +113,6 @@ function mostrarHTML(datosAMostrar) {
         break;
         case "Ravenclaw":
           hHouse.style.color = "#728DDA"
-
-      default:
         break;
 
     }
@@ -105,7 +125,5 @@ function mostrarHTML(datosAMostrar) {
     divContent.appendChild(hSpecie);
     
 
-  })};
-
-
+  })}
 

@@ -78,9 +78,8 @@ nav {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 3% auto;
     display: inline-block;
-    gap: 1rem;
 }
 
 button[type=button] { 
@@ -105,9 +104,15 @@ button[type=button] {
     color: #f6f6f6;
 }
 
-.icono-AZ {
+.orderAZ {
     width: 3rem;
     cursor: pointer;
+    display: none;
+    margin: 1% 0 1% 50%;
+}
+
+#percentageBox {
+    display: none;
 }
 
 .cardsContainer {
@@ -141,8 +146,5 @@ button[type=button] {
     width: 6rem;
     height: 7rem;
 }
-
-
-
 
 
