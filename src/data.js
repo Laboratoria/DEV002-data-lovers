@@ -1,3 +1,4 @@
+import data from './data/ghibli/ghibli.js';
 export const operaciones = {
 
   //ordenar por directores
@@ -38,7 +39,6 @@ export const operaciones = {
   filtrarPorProductor(peliculas,nameProducer){
     let peliculasdelproductor= peliculas.filter(pelicula =>pelicula.producer===nameProducer);
     return peliculasdelproductor
-
  },
 
  //realizar cálculo agregado
@@ -54,15 +54,14 @@ export const operaciones = {
    
     return(puntuacion);
   },
+
   //método de mostrar detalle de película
   filtrarPorId(peliculas,idPelicula){
     let peliculasDetalle= peliculas.filter(pelicula =>pelicula.id===idPelicula);
     return peliculasDetalle[0];
   },
-  
-
-   
 
 
 
 }
+

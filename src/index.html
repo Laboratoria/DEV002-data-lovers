@@ -3,13 +3,13 @@
 <html lang="es">
 
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+    <body>
 
     <div id="logo">
       <img
@@ -19,20 +19,24 @@
     </div>
 
   <br>
+  <div class="divencabezado">
+    <button id="btnordenardirector" class="btn">Ordenar por director</button>
+    <button id="btnordenarano" class="btn">Ordenar por año</button>
+    <br>
+    <br>
+    <label id="resultado" class="lbl"></label>
+  </div>
 
-    <button id="btnordenardirector">Ordenar por director</button>
-
-    <button id="btnordenarano">Ordenar por año</button>
-    <label id="resultado"></label>
-    
     <div id="root"></div>
 
     <div id="directoresproductoresdiv"></div>
 
     <div id="miniaturaspeliculasdiv"></div>
-
-    <div id="llamarImagenesdiv" class="row"></div>
-
+    
+    <div class="divencabezado">
+      <div id="llamarImagenesdiv" class="row"></div>
+    </div>
+    
     <div id="MostrarDetalle" class="row"></div>
 
     <script src="main.js" type="module"></script>

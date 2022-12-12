@@ -9,7 +9,6 @@ body {
     background-color: #acd4e9;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -21,7 +20,8 @@ body {
 /* 4 columnas de lado a lado */
 .column {
     float: left;
-    width: 20%;
+    /*width: 20%;*/
+    width: 200px;
     padding: 10px 10px;
 }
 
@@ -58,7 +58,7 @@ body {
     }
 }
 
-/* Estilo de las cartas de contador */
+/* Estilo de las card */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
@@ -70,6 +70,7 @@ body {
     border-radius: 4px;
     width: 130px;
     height: 194px;
+    object-fit: contain;
 }
 
 h3 {
@@ -83,37 +84,37 @@ h5 {
 /* The Modal (background) */
 .modal {
     display: none;
-    /* Hidden by default */
+    /* Oculto por defecto */
     position: fixed;
-    /* Stay in place */
+    /* Permanezca en su lugar */
     z-index: 1;
     /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
+    /* el ancho */
     height: 100%;
-    /* Full height */
+    /* Alto */
     overflow: auto;
-    /* Enable scroll if needed */
+    /* Habilitar el desplazamiento de ser necesario*/
     background-color: rgb(0, 0, 0);
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Estilo para lo que va dentro del modal */
 .modal-content {
     background-color: #6f9cb2;
     margin: 15% auto;
-    /* 15% from the top and centered */
+    /* 15% Desde arriba y centrado */
     padding: 20px;
     border: 1px solid rgb(92, 26, 61);
     width: 80%;
-    /* Could be more or less, depending on screen size */
+    /* Podría ser, dependiendo del tamaño de la pantalla */
 }
 
-/* The Close Button */
+/* El estilo para el botón de cerrado */
 .close {
     color: #aaa;
     float: right;
@@ -129,7 +130,9 @@ h5 {
 }
 
 /*boton ordenar por director*/
-#btnordenardirector {
+
+
+.btn {
     box-shadow: inset 0px 1px 0px 0px #54a3f7;
     background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
     background-color: #007dc1;
@@ -144,41 +147,20 @@ h5 {
     text-decoration: none;
     text-shadow: 0px 1px 0px #154682;
     text-align: center;
-    margin-left: 37%;
+    width: 168px;
 }
 
-
-
-#btnordenardirector:hover {
+.btn:hover {
     background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
     background-color: #0061a7;
 }
 
-/*boton ordenar por año*/
-#btnordenarano {
-    box-shadow: inset 0px 1px 0px 0px #54a3f7;
-    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
-    background-color: #007dc1;
-    border-radius: 3px;
-    border: 1px solid #124d77;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 13px;
-    padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #154682;
+.divencabezado {
     text-align: center;
-
+    position: relative;
 }
 
-#btnordenarano:hover {
-    background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-    background-color: #0061a7;
-}
-
-/*select*/
+/*Diseño del botón de selecciones*/
 #directoresproductoresdiv {
     text-align: center;
     padding-top: 20px;
@@ -186,4 +168,11 @@ h5 {
     font-family: Arial;
     font-size: 13px;
     color: #ffffff;
+}
+
+.lbl {
+    font-family: Arial;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
 }

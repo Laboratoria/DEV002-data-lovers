@@ -1,5 +1,5 @@
 import {operaciones} from "./data.js";
-import data from "./data/ghibli/ghibli.js";
+import data from './data/ghibli/ghibli.js';
 
 function pintarCard() {
   dibujarCard(data.films);
@@ -120,11 +120,12 @@ function filtrarPorProductor(){
     dibujarCard(peliculasPorProductor);
   }
 }
-function haciendoelcalculo(){
+
+function pintarPromedio(){
   let peliculasCalculadas = operaciones.realizarCalculo(
     data.films)
     document.getElementById("resultado").innerHTML=
-    "promedio puntuación:" +peliculasCalculadas
+    "promedio puntuación: " +peliculasCalculadas
 }
 
 function lanzadera(){
@@ -132,7 +133,7 @@ function lanzadera(){
  
   pintarCard();
   pintarProductores();
-  haciendoelcalculo();
+  pintarPromedio();
   document.getElementById("btnordenardirector").addEventListener("click", ordenarPorDirector);
   document.getElementById("btnordenarano").addEventListener("click", ordenarPorAno);
  
