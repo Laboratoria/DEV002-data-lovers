@@ -28,27 +28,27 @@ data.films.forEach(element => {
 
   let newDiv = document.createElement("div")
   newDiv.className = "card"
-  cards.appendChild(newDiv)
-
+  
   newDiv.innerHTML += `
-    <div class ="imgDatos">
+    <div class ="imgDatos" id="imgDatos">
     <img id="poster" src="${element.poster}"/>
     <div class ="parrafos">
     <p class ="parrafo" id="title" class="title"> Título: ${element.title} </p>
     <p class ="parrafo" id="director"> Director: ${element.director} </p>
     <p class ="parrafo" id="releaseDate"> Año: ${element.release_date} </p>
     <p class ="parrafo" id="rtScore"> Puntaje: ${element.rt_score}</p>
-    <button id="open" class="open"> descripción </button>
+    <button value="${element.id}" class="open"> descripción </button>
     </div>
     </div>
-    <div class ="modalContainer" id = "${element.id}">
-    <div class ="modal" id="modal">
+    <div class ="modalContainer" id = "modalContainer">
+    <div class ="modal" id="${element.id}">
     <h2 class ="modalTitle"> Descripción </h2>
     <p id="description"  class = "description">${element.description}</p>
     <button id="close"= class="close"> volver </button>
     </div>
     </div>
     `
+    cards.appendChild(newDiv)
 })
 
 let description = document.querySelector(".modal")
@@ -56,11 +56,13 @@ console.log(description)
 const open = document.querySelector(".open");
 const close = document.querySelector(".close");
 
-open.addEventListener('click', () => {
+open.addEventListener('click', (e) => {
+  e.target.value
   modalContainer.classList.add('show');
 });
 
-close.addEventListener('click', () => {
+close.addEventListener('click', (e) => {
+  e.target.value
   modalContainer.classList.remove('show');
 });
 
