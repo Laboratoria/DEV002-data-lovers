@@ -80,4 +80,4 @@ describe('calcularPorcentaje', () => {
     expect (calcularPorcentaje(arr)).toEqual({porcentajeMujeres: '50.0', porcentajeHombres: '50.0'});
   })
  
-});
+})});
