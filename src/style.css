@@ -38,7 +38,7 @@ header {
     object-fit: contain;
 }
 
-/*h1 {
+h1 {
     color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
@@ -46,7 +46,7 @@ header {
     font-size: 50px;
     margin: 70px 600px;
     padding: 250px 70px 200px 70px;
-}*/
+}
 
 #boton {
     border-radius: 50px;
@@ -114,14 +114,14 @@ header {
     padding: 2%;
 }
 
-.card:hover{
+/*.card:hover{
     background-color: gray;
     transform: scale(1.2)
-}
+}*/
 
-.cards:hover{
+/*.cards:hover{
     background-image: url("vecino-totoro.jpg");
-}
+}*/
 .imgDatos {
     display: flex;
     flex-direction: row;

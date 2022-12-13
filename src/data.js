@@ -1,6 +1,6 @@
 // estas funciones son de ejemplo
 
-export const filtrarpeliculas = (data,value) => {
+/*export const filtrarpeliculas = (data,value) => {
   let nuevaData=data.filter(movie=>{
     return movie.tittle()
   })
@@ -9,5 +9,5 @@ export const filtrarpeliculas = (data,value) => {
 
 export const prueba = (dataGhibli, cards) => {
   return dataGhibli;
-};
+};*/
  
