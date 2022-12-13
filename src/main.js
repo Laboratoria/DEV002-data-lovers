@@ -2,7 +2,10 @@
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-//let dataGhibli = data.films
+let dataGhibli = data.films
+//let search = document.getElementById("search").value
+let search = dataGhibli[0].title
+console.log(search)
 //console.log(dataGhibli);
 //console.log (data.films[0].poster)
 
@@ -55,7 +58,7 @@ data.films.forEach(element => {
 //displayCard(dataGhibli)
 
 let description = document.querySelector(".modal")
-console.log(description)
+//console.log(description)
 const open = document.querySelector(".open");
 const close = document.querySelector(".close");
 
