@@ -5,17 +5,6 @@ describe('obtenerDatos', () => {
     expect(typeof obtenerDatos).toBe('function');
   });
 
-
-//   it('obtiene los datos correctamente', () => {
-//   const resultado = obtenerDatos();
-//   expect(resultado.characters).toEqual([
-//         {id: 587,name: "Hermione Granger", gender: "Female", house: "Gryffindor"},
-//         {id: 117,name: "Cedric Diggory",gender: "Male", house: "Hufflepuff"},
-//         {id: 266,name: "Abraxas Malfoy", gender: "Male", house: "Slytherin"},
-//         {id: 566,name: "Fawcett", gender: "Female", house: "Ravenclaw"},]);
-// });
- })
-
   
 describe('filtro', () => {
   it('es una función', () => {
@@ -68,6 +57,7 @@ describe('orderAZ', () => {
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
       { name: "Zoo director", gender: "Male", house: "null"}
+
     ]);
   });
 });
@@ -77,29 +67,17 @@ describe('calcularPorcentaje', () => {
     expect(typeof calcularPorcentaje).toBe('function');
   })
   
-  it('Calcula el porcentaje de mujeres', () => {
-    const datos = [
-      {
-        gender: 'Female',
-      }
+  it('Calcular el porcentaje de mujeres y hombres', () => {
+    const arr = [
+      { name: "Cadwallader", gender: "Male", house: "Hufflepuff" },
+      { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
+      { name: "Hetty Bayliss", gender: "Female", house: "null" },
+      { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
+      { name: "Zoo director", gender: "Male", house: "null"},
+      { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
     ];
 
-    const resultadoEsperado = calcularPorcentaje("Females")
-    expect (calcularPorcentaje(datos)).toBe(resultadoEsperado);
-  })});
-  
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
-
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-//})})
+    expect (calcularPorcentaje(arr)).toEqual({porcentajeMujeres: '50.0', porcentajeHombres: '50.0'});
+  })
+ 
+});
