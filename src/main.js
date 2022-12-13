@@ -32,17 +32,12 @@ cargarAPIhp.addEventListener('click', () => {
 
 cargarAPIhp.addEventListener('click', () => {
   const { porcentajeMujeres, porcentajeHombres } = calcularPorcentaje(datos);
+  console.log(calcularPorcentaje(datos));
   spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
   spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
 });
 
-// cargarAPIhp.addEventListener('click', () => {
-//   mostrarHTML(calcularPorcentaje(datos));
-  
-//     spanPorcentajeHombres.innerHTML = spanPorcentajeHombres + "%";
-//     spanPorcentajeMujeres.innerHTML = spanPorcentajeMujeres + "%";
 
-// });
 
 refreshPage.addEventListener("click", () => {
   window.location.reload(true);
