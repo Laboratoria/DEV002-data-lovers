@@ -131,6 +131,8 @@ Nuestras Historias de Usuario fueron 3:
 
 * Prototipo de baja fidelidad
 
+![img]
+
 * Prototipo de alta fidelidad
 
 ## iv. Proyectos desplegados
