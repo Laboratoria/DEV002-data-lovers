@@ -1,11 +1,13 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filtrarpeliculas = (dataGhibli,search) => {
+  let nuevaData=dataGhibli.filter(movie=>{
+     movie.title === search 
+  })
+  return nuevaData
 };
-
-export const anotherExample = () => {
-  return 'OMG';
+console.log(nuevaData)
+export const prueba = (dataGhibli, cards) => {
+  return dataGhibli;
 };
-
 
