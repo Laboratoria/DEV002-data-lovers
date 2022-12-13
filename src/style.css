@@ -1,40 +1,35 @@
-
 *{
-  width: 30;
-  height: 100;
-  /*margin: 0%;
-  padding: 0%;*/
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body{
-  background-color:#fcff80;
-
-}
-.img1{
-  width:70%;
-  height:30px;
-
+  background-color: #fcff80;
 }
 
-.cardvacia {
+ .cardvacia {
   width: 190px;
   height: 190px;
+} 
 
-}
 
 
-.flex-cont {
-   /* width: 900px;*/
+ .flex-cont {
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+    
     background: #fcff80;
     padding: 5px;
-    display: flex;
+    display: flexbox;
     width: 220px;
     flex-wrap:wrap;  
    justify-content:right;
-    
 }
 
 .flex-box {
+    
     background-color:white;
     width: 190px;
     height: 190px;
@@ -43,16 +38,27 @@ body{
     flex-wrap:wrap;
     justify-content:right;
     margin-bottom: 30px;
-
 }
 
 .cardsContainer{
-    display:flex;
-    flex-flow: row wrap;
-    width: 1150px;
-    margin: auto;
-    justify-content:right;
-      
+  display:flex;
+  flex-flow: row wrap;
+  width: 1150px;
+  justify-content:right;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+ /* width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;*/
+
+ 
+  
+
+ 
+  
+  
 }
 
 
