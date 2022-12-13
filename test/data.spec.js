@@ -4,15 +4,18 @@ describe('obtenerDatos', () => {
   it('es una función', () => {
     expect(typeof obtenerDatos).toBe('function');
   });
-//   it('obtiene los datos correctamente', async () => {
-//   const resultado = await obtenerDatos();
-//   expect(resultado).toEqual([
-//         {id: 587, name: "Hermione Granger", gender: "Female", house: "Gryffindor"},
+
+
+//   it('obtiene los datos correctamente', () => {
+//   const resultado = obtenerDatos();
+//   expect(resultado.characters).toEqual([
+//         {id: 587,name: "Hermione Granger", gender: "Female", house: "Gryffindor"},
 //         {id: 117,name: "Cedric Diggory",gender: "Male", house: "Hufflepuff"},
 //         {id: 266,name: "Abraxas Malfoy", gender: "Male", house: "Slytherin"},
 //         {id: 566,name: "Fawcett", gender: "Female", house: "Ravenclaw"},]);
 // });
-});
+ })
+
   
 describe('filtro', () => {
   it('es una función', () => {
@@ -53,6 +56,7 @@ describe('orderAZ', () => {
       { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
       { name: "Hetty Bayliss", gender: "Female", house: "null" },
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
+      { name: "Zoo director", gender: "Male", house: "null"},
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
     ];
 
@@ -62,7 +66,8 @@ describe('orderAZ', () => {
       { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
       { name: "Hetty Bayliss", gender: "Female", house: "null" },
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
-      { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" }
+      { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
+      { name: "Zoo director", gender: "Male", house: "null"}
     ]);
   });
 });
@@ -70,6 +75,17 @@ describe('orderAZ', () => {
 describe('calcularPorcentaje', () => {
   it('es una función', () => {
     expect(typeof calcularPorcentaje).toBe('function');
+  })
+  
+  it('Calcula el porcentaje de mujeres', () => {
+    const datos = [
+      {
+        gender: 'Female',
+      }
+    ];
+
+    const resultadoEsperado = calcularPorcentaje("Females")
+    expect (calcularPorcentaje(datos)).toBe(resultadoEsperado);
   })});
   
 //   it('returns `example`', () => {

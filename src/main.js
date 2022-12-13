@@ -104,16 +104,28 @@ function mostrarHTML(datosAMostrar) {
     switch (personaje.house) {
       case "Gryffindor":
         hHouse.style.color = "#740001";
-        break;
+      break;
+      case "Gryffindor (possibly)":
+        hHouse.style.color = "#740001";
+      break;
       case "Slytherin":
         hHouse.style.color = "#2A623D";
-        break;
-        case "Hufflepuff":
+      break;
+      case "Slytherin (possibly)":
+        hHouse.style.color = "#2A623D";
+      break;
+      case "Hufflepuff":
           hHouse.style.color = "#EEBE44";
-        break;
-        case "Ravenclaw":
-          hHouse.style.color = "#728DDA"
-        break;
+      break;
+      case "Hufflepuff (likely)":
+          hHouse.style.color = "#EEBE44";
+      break;
+      case "Ravenclaw":
+          hHouse.style.color = "#5E7DD4"
+      break;
+      case "Ravenclaw (possibly)":
+          hHouse.style.color = "#5E7DD4"
+      break;
 
     }
 

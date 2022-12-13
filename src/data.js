@@ -1,6 +1,5 @@
 export const filtro = (arr = [], casa) => {
   
-  console.log('filtrando');
   return arr.filter((element) => element.house === casa);
 };
 
@@ -20,7 +19,7 @@ export const orderAZ = (arr) => {
 }
 
 export function calcularPorcentaje(datos) {
-  console.log(calcularPorcentaje)
+
   let hombres = 0;
   let mujeres = 0;
 
@@ -36,7 +35,7 @@ export function calcularPorcentaje(datos) {
   porcentajeMujeres = porcentajeMujeres.toFixed(1);
   let porcentajeHombres = (hombres / datos.length) * 100;
   porcentajeHombres = porcentajeHombres.toFixed(1);
-  console.log(porcentajeMujeres)
+
 
   return { porcentajeMujeres, porcentajeHombres };
 

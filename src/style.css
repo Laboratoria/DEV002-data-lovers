@@ -11,7 +11,7 @@ html {
 }
 
 body{
-    background-color: #22184E;
+    background-color: #140D30;
     /* background-image: url(./images/tinified/background-mobile.jpeg); */
     /* font-family: 'Harry Potter', sans-serif;    */
     text-align: center; 
@@ -28,8 +28,8 @@ header {
 }
 
 .home-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.7rem;
+    height: 2.7rem;
     margin: .8rem;
 }
 
@@ -41,31 +41,31 @@ header {
 
 nav {
     position: fixed;
-    height: 3.5rem;
+    height: 4rem;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     background-color: #D4D9D8;
   }
-  nav img {
+nav img {
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px;
   }
 .title {
-    width: 56rem;
-    height: 14rem;
+    width: 41rem;
+    height: 13.5rem;
     padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 h4 {
     color: #D4D9D8;
     font-family: 'Indie Flower', sans-serif;
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 2rem;
+    padding: 1.2rem;
 }
  .logos-escuelas {
     width: 36%;
@@ -74,16 +74,6 @@ h4 {
     cursor: pointer;
 }
 
-/* .logos-escuelas:hover {
-    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
-} */
-
-.title {
-    width: 29rem;
-    height: 10rem;
-    padding: 2rem;
-    text-align: center;
-}
 .subtitle {
     width: 32rem;
     height: 8.5rem;
@@ -98,6 +88,7 @@ h4 {
 
 button[type=button] { 
     font-family: 'Indie Flower', cursive;
+    color: #22184E;
     font-size: 14px;
     cursor:pointer;
     padding: .4rem;
@@ -134,7 +125,7 @@ button[type=button] {
 }
 #spanPorcentajeMujeres:hover {
 
-        box-shadow: 0 3px 8px 0 rgba(192, 235, 37, 0.915);
+    box-shadow: 0 3px 8px 0 rgba(192, 235, 37, 0.915);
     
 }
 .cardsContainer {
