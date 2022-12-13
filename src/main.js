@@ -8,10 +8,10 @@ const tarjetas = document.getElementById("tarjetas");
 data.films.forEach(element => {
     const tarjeta = `
     <div class="contenedor"> 
-          <section class="imagen"><figure><img src="${element.poster}"</figure></section>
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
           <section class="texto">
-            <p id="titulo"></p>
-            <p id="datos"></p>
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
           </section>
     </div>
     `
