@@ -11,21 +11,25 @@ html {
 }
 
 body{
-
-    background-image: url(./images/tinified/background-mobile.jpeg);
-    font-family: 'Harry Potter', sans-serif;   
+    background-color: #140D30;
+    /* background-image: url(./images/tinified/background-mobile.jpeg); */
+    /* font-family: 'Harry Potter', sans-serif;    */
     text-align: center; 
     background-repeat: no-repeat;  
-    background-size: cover;     
-    
+    background-size: cover;        
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
 }
 header {
     height: 1rem;
 }
 
 .home-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.7rem;
+    height: 2.7rem;
     margin: .8rem;
 }
 
@@ -37,25 +41,31 @@ header {
 
 nav {
     position: fixed;
-    height: 3.5rem;
+    height: 4rem;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: lightsteelblue;
+    background-color: #D4D9D8;
   }
-  nav img {
+nav img {
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px;
   }
 .title {
-    width: 56rem;
-    height: 14rem;
+    width: 41rem;
+    height: 13.5rem;
     padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
+}
+h4 {
+    color: #D4D9D8;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 2rem;
+    padding: 1.2rem;
 }
  .logos-escuelas {
     width: 36%;
@@ -64,12 +74,6 @@ nav {
     cursor: pointer;
 }
 
-.title {
-    width: 29rem;
-    height: 10rem;
-    padding: 2rem;
-    text-align: center;
-}
 .subtitle {
     width: 32rem;
     height: 8.5rem;
@@ -78,12 +82,14 @@ nav {
 
 .container {
     width: 80%;
-    margin: 3% auto;
+    margin: 9% auto;
     display: inline-block;
 }
 
 button[type=button] { 
-    font-size: 12px;
+    font-family: 'Indie Flower', cursive;
+    color: #22184E;
+    font-size: 14px;
     cursor:pointer;
     padding: .4rem;
     width: 48%;
@@ -95,12 +101,11 @@ button[type=button] {
  }
 
  button[type=button]:hover {
-    background-color: #000;
+    background-color: lightslategrey;
     color: #f6f6f6;
  }
-
 #cargarAPI:hover {
-    background-color: #000;
+    background-color: lightslategray;
     color: #f6f6f6;
 }
 
@@ -108,16 +113,24 @@ button[type=button] {
     width: 3rem;
     cursor: pointer;
     display: none;
-    margin: 1% 0 1% 50%;
+    margin: 1% 0 1% 48%;
 }
 
 #percentageBox {
+    margin: 2rem;
+    font-size: 1.5rem;
     display: none;
+    color: #D4D9D8;
+    font-family: 'Raleway', sans-serif;
 }
+#spanPorcentajeMujeres:hover {
 
+    box-shadow: 0 3px 8px 0 rgba(192, 235, 37, 0.915);
+    
+}
 .cardsContainer {
     display: grid;
-    grid-template-columns: 140px 140px;
+    grid-template-columns: 170px 170px;
     padding: 1rem;
     place-content: center;
     color: black;
@@ -126,13 +139,15 @@ button[type=button] {
 }
 
 .card {
-    background-color: gainsboro;
-    margin: 5px;
+    background-color: #E4E0F5;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 #1d5dab57;
     transition: 0.3s;
-    padding: 1rem;
-    border-radius: 5px; /* 5px rounded corners */
+    border-radius: 25px; 
     display:inline-table;
+    font-family: 'Indie Flower', cursive;
+    font-size: .9rem;
+
   }
 
 .card:hover {
@@ -140,7 +155,7 @@ button[type=button] {
 }
 
 .infoCard {
-    padding: 2px 16px;
+    padding: 2px;
 }
 .hat-icon {
     width: 6rem;

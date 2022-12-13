@@ -4,7 +4,7 @@ describe('obtenerDatos', () => {
   it('es una función', () => {
     expect(typeof obtenerDatos).toBe('function');
   });
-});
+
   
 describe('filtro', () => {
   it('es una función', () => {
@@ -56,7 +56,8 @@ describe('orderAZ', () => {
       { name: "Hetty Bayliss", gender: "Female", house: "null" },
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
-      { name: "Zoo director", gender: "Male", house: "null"},
+      { name: "Zoo director", gender: "Male", house: "null"}
+
     ]);
   });
 });
