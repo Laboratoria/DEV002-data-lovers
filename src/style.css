@@ -132,6 +132,7 @@ h1 {
     border: 2px solid #6ECCAF;
     border-radius: 10px;  
     align-items: center;
+    box-sizing: border-box;
 }
 
 .imagen {
@@ -143,7 +144,7 @@ h1 {
     margin: auto; 
 }
 
-img {
+#poster {
     position: left;
     /* width: 114.77px;
     height: 108px; */
@@ -261,6 +262,10 @@ footer {
     padding-left: 35%;
     width: 27%;
 }
+
+/* #menu:hover, #inicio:hover {
+    background-color: #88ff00;
+} */
 
 #boton-m {
     float: left;
