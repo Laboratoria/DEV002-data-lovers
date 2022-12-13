@@ -40,37 +40,40 @@ data.films.forEach(element => {
     <p class ="parrafo" id="director"> Director: ${element.director} </p>
     <p class ="parrafo" id="releaseDate"> Año: ${element.release_date} </p>
     <p class ="parrafo" id="rtScore"> Puntaje: ${element.rt_score}</p>
-    <button class="open"> descripción </button>
+    <button value="open" class="open ${element.id}"> descripción </button>
     </div>
     </div>
-    <div class ="modalContainer" id = "modalContainer">
-    <div class ="modal" id="${element.id}">
+    <div class ="modalContainer" id = "${element.id}">
+    <div class ="modal" id="modal">
     <h2 class ="modalTitle"> Descripción </h2>
     <p id="description"  class = "description">${element.description}</p>
-    <button id="close"= class="close"> volver </button>
+    <button id="close"= class="close ${element.id}"> volver </button>
     </div>
     </div>
     `
-
-    cards.appendChild(newDiv)
+  cards.appendChild(newDiv)
 })
 
-//displayCard(dataGhibli)
-
-let description = document.querySelector(".modal")
+//let description = document.querySelectorAll(".modal")
 //console.log(description)
-const open = document.querySelector(".open");
-const close = document.querySelector(".close");
 
-open.addEventListener('click', (e) => {
-    e.target.value
-    modalContainer.classList.add('show');
-});
+const open = document.querySelectorAll(".open");
+console.log(open)
+const close = document.querySelectorAll(".close");
 
-close.addEventListener('click', (e) => {
-    e.target.value
-    modalContainer.classList.remove('show');
-});
+open.forEach(element => {
+  element.addEventListener('click', (e) => {
+    console.log(e.target.classList[1])
+    let modalContainer = document.getElementById(e.target.classList[1])
+    modalContainer.classList.add("show");
+    console.log(modalContainer)
+  });
+})
 
-
-//console.log (data.films.forEach(element => console.log(element)))
+close.forEach(element => {
+  element.addEventListener('click', (e) => {
+    console.log(e.target.classList[1])
+    let modalContainer = document.getElementById(e.target.classList[1])
+    modalContainer.classList.remove("show");
+  });
+})

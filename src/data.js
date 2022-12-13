@@ -10,4 +10,4 @@ console.log(nuevaData)
 export const prueba = (dataGhibli, cards) => {
   return dataGhibli;
 };
- 
+
