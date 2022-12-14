@@ -11,7 +11,7 @@ html {
 }
 
 body{
-    background-color: #812e2e;
+    background-color: #6a2727;
     text-align: center; 
     background-repeat: no-repeat;  
     background-size: cover;   
@@ -140,7 +140,7 @@ button[type=button] {
 }
 
 .card {
-    background-color: #e1cbacd9;
+    background-color: #fffffe;
     margin: 10px;
     box-shadow: 0 4px 8px 0 #b3891fec;
     transition: 0.3s;

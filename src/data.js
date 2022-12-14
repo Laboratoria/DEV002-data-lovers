@@ -1,11 +1,8 @@
 export const filtro = (arr = [], casa) => {
-  
-  console.log('filtrando');
   return arr.filter((element) => element.house === casa);
 };
 
 export async function obtenerDatos() {
-  console.log('llamando API');
   const url = './data/harrypotter/harry.json';
   const respuesta = await fetch(url);
   const resultado = await respuesta.json();
@@ -28,11 +25,11 @@ export const orderZA = (arr) => {
 return descendent;
 }
 
+
 export function calcularPorcentaje(datos) {
   console.log(calcularPorcentaje)
   let hombres = 0;
   let mujeres = 0;
-
   for(let i = 0; i < datos.length; i++) {
     if(datos[i].gender === 'Female') {
       mujeres++; 
@@ -45,8 +42,6 @@ export function calcularPorcentaje(datos) {
   porcentajeMujeres = porcentajeMujeres.toFixed(1);
   let porcentajeHombres = (hombres / datos.length) * 100;
   porcentajeHombres = porcentajeHombres.toFixed(1);
-  console.log(porcentajeMujeres)
-
   return { porcentajeMujeres, porcentajeHombres };
 
   }
