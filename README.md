@@ -5,7 +5,7 @@
 * [i. Acerca de "Magical Hogwarts Adventures"](#1-acerca-de-Magical_Hogwarts-Adventures)
 * [ii. Historias de Usuario](#2-historias-de-usuario)
 * [iii. Prototipos](#3-prototipos)
-* [4. Consideraciones generales](#4-consideraciones-generales)
+* [iv. Consideraciones generales](#4-consideraciones-generales)
 
 
 ***

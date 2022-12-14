@@ -41,3 +41,25 @@ export function calcularPorcentaje(datos) {
 
   }
 
+  export function calcularPorcentajeEscuelas(datos, escuelas) {
+    
+    // Crea un objeto para almacenar el porcentaje de hombres y mujeres de cada escuela
+    const resultados = {};
+  
+    // Itera sobre cada escuela
+    for (const escuela of escuelas) {
+      // Obtiene un array con todos los personajes de la escuela actual
+      const personajes = filtro(datos, escuela);
+  
+      // Calcula el porcentaje de hombres y mujeres de la escuela actual
+      const porcentajes = calcularPorcentaje(personajes);
+  
+      // Guarda los resultados en el objeto resultados
+      resultados[escuela] = porcentajes;
+    }
+  
+    // Devuelve los resultados
+    return resultados;
+  }
+  
+
