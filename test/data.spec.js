@@ -1,4 +1,4 @@
-import { obtenerDatos, filtro, orderAZ, calcularPorcentaje } from '../src/data.js';
+import { obtenerDatos, filtro, orderAZ, orderZA, calcularPorcentaje } from '../src/data.js';
 
 describe('obtenerDatos', () => {
   it('es una función', () => {
@@ -58,6 +58,33 @@ describe('orderAZ', () => {
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
       { name: "Zoo director", gender: "Male", house: "null"}
 
+    ]);
+  });
+});
+
+describe('orderZA', () => {
+  it('es una función', () => {
+      expect(typeof orderZA).toBe('function');
+  });
+
+  it('ordena el array de manera ascendente según el nombre de cada elemento', () => {
+    const arr = [
+      { name: "Cadwallader", gender: "Male", house: "Hufflepuff" },
+      { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
+      { name: "Hetty Bayliss", gender: "Female", house: "null" },
+      { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
+      { name: "Zoo director", gender: "Male", house: "null"},
+      { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
+    ];
+
+    let result = orderZA(arr);
+    expect(result).toEqual([
+      { name: "Zoo director", gender: "Male", house: "null"},
+      { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
+      { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
+      { name: "Hetty Bayliss", gender: "Female", house: "null" },
+      { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
+      { name: "Cadwallader", gender: "Male", house: "Hufflepuff" }
     ]);
   });
 });

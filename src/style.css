@@ -11,13 +11,13 @@ html {
 }
 
 body{
-    background-color: #140D30;
-    /* background-image: url(./images/tinified/background-mobile.jpeg); */
-    /* font-family: 'Harry Potter', sans-serif;    */
+    background-color: #6a2727;
     text-align: center; 
     background-repeat: no-repeat;  
-    background-size: cover;        
+    background-size: cover;   
+         
 }
+
 
 h1 {
     font-size: 2em;
@@ -87,46 +87,47 @@ h4 {
 }
 
 button[type=button] { 
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower';
     color: #22184E;
     font-size: 14px;
     cursor:pointer;
-    padding: .4rem;
     width: 48%;
     margin-bottom: 2rem;
     border-width: 2px;
-    border-color: lightsteelblue;
+    border-color: rgb(212, 132, 82);
     border-radius: 1.3rem;
     margin: 3rem 2% 1rem
  }
 
  button[type=button]:hover {
-    background-color: lightslategrey;
-    color: #f6f6f6;
+    background-color: rgb(33, 114, 124);
+    color: #ffffff;
  }
+
 #cargarAPI:hover {
-    background-color: lightslategray;
-    color: #f6f6f6;
+    background-color: #133d4857;
+    color: #fafafa;
+    
 }
 
 .orderAZ {
     width: 3rem;
     cursor: pointer;
     display: none;
-    margin: 1% 0 1% 48%;
+    margin: 2% 0 1% 50%;
 }
 
 #percentageBox {
-    margin: 2rem;
+    margin: 1% 42% 1% 42%;
+    padding: .4%;
+    width: auto;
     font-size: 1.5rem;
     display: none;
     color: #D4D9D8;
     font-family: 'Raleway', sans-serif;
-}
-#spanPorcentajeMujeres:hover {
+    box-shadow: 0 2px 15px 0 rgba(232, 175, 43, 0.915); 
+    border-radius: 15px; 
 
-    box-shadow: 0 3px 8px 0 rgba(192, 235, 37, 0.915);
-    
 }
 .cardsContainer {
     display: grid;
@@ -139,19 +140,19 @@ button[type=button] {
 }
 
 .card {
-    background-color: #E4E0F5;
+    background-color: #fffffe;
     margin: 10px;
-    box-shadow: 0 4px 8px 0 #1d5dab57;
+    box-shadow: 0 4px 8px 0 #b3891fec;
     transition: 0.3s;
     border-radius: 25px; 
     display:inline-table;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower';
     font-size: .9rem;
 
   }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
+    box-shadow: 0 8px 16px 0 rgba(215, 168, 30, 0.915);
 }
 
 .infoCard {
@@ -161,5 +162,4 @@ button[type=button] {
     width: 6rem;
     height: 7rem;
 }
-
 
