@@ -84,7 +84,7 @@ button[type=button] {
     width: 28%;
     margin-bottom: 2rem;
     border-width: 2px;
-    border-color: lightsteelblue;
+    border-color: rgb(15, 56, 110);
     border-radius: 1.3rem;
     margin: 3rem 2% 1rem
  }
@@ -104,11 +104,11 @@ button[type=button] {
     padding: 1rem;
     border-radius: 25px; 
     display:inline-table;
-    margin: 10px;
+    margin: 10px; 
   }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(192, 235, 37, 0.915);
+    box-shadow: 0 8px 16px 0 rgba(201, 169, 28, 0.915);
 }
 
 .infoCard {

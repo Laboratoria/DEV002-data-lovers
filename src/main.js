@@ -1,6 +1,12 @@
-import { filtro, obtenerDatos, orderAZ, calcularPorcentaje} from './data.js';
+import { filtro, obtenerDatos, orderAZ, orderZA, calcularPorcentaje} from './data.js';
 
+// Guarda el universo (todos los personajes)
 let datos = [];
+// Guarda datos por casa en caso de estar filtrado (esta variable es la que se va a mostrar en pantalla)
+let datosFiltrados = [];
+// Guarda el status del ordenamiento (estados posibles '', 'asc', 'des')
+let order = '';
+
 let sectionOne = document.getElementById("indexOne")
 const iconoOrderAZ = document.getElementById('orderAZ');
 const spanPorcentajeMujeres = document.getElementById('spanPorcentajeMujeres');
@@ -13,74 +19,90 @@ const btnGrif = document.getElementById('gryfindor');
 const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
 
-
-cargarAPIhp.addEventListener('click', () => {
-  obtenerDatos().then(resultado => {
-    datos = resultado;
-    mostrarHTML(datos);
-  });
-});
-
-cargarAPIhp.addEventListener('click', () => {
-  iconoOrderAZ.style.display = "block";
-  sectionOne.style.display = "none";
-});
-
-cargarAPIhp.addEventListener('click', () => {
-  divPorcentaje.style.display = "block";
-})
-
-cargarAPIhp.addEventListener('click', () => {
-  const { porcentajeMujeres, porcentajeHombres } = calcularPorcentaje(datos);
-  console.log(calcularPorcentaje(datos));
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-});
-
-
-
-refreshPage.addEventListener("click", () => {
-  window.location.reload(true);
-})
+// Esta funcion se ejecuta al iniciar la pagina
 window.onload = () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
   })
 };
 
+cargarAPIhp.addEventListener('click', () => {
+  datosFiltrados = datos; // hace que los datos a mostrar sean igual que el universo
+  mostrarHTML();
+  iconoOrderAZ.style.display = "block";
+  sectionOne.style.display = "none";
+  
+});
 
+refreshPage.addEventListener("click", () => {
+  window.location.reload(true);
+})
+
+// Al dar click en ordenamiento, va a cambiar el estado. 
+// En caso de no estar ordenado (''), lo convertirá en estado ascendente ('asc')
+// En caso de estar ordenado ascendente ('asc'), lo convertirá en estado descendente ('des')
+// En caso de estar ordenado descendente ('des'), lo convertirá en estado ascendente ('asc')
 iconoOrderAZ.addEventListener("click", () => {
-  mostrarHTML(orderAZ(datos));
+  switch (order) {
+    case '':
+      order = 'asc';
+      break;
+    case 'asc':
+      order = 'des';
+      break;
+    case 'des':
+      order = 'asc';
+  }
+  mostrarHTML();
 })
 
 btnGrif.addEventListener('click', () => {
-  mostrarHTML(filtro(datos, 'Gryffindor'));
+  datosFiltrados = filtro(datos, 'Gryffindor'); // hace que los datos a mostrar sean solo los de la casa
+  mostrarHTML();
   sectionOne.style.display = "none";
   iconoOrderAZ.style.display = "block";
 });
 
 btnHuf.addEventListener('click', () => {
-  mostrarHTML(filtro(datos, 'Hufflepuff'));
+  datosFiltrados = filtro(datos, 'Hufflepuff'); // hace que los datos a mostrar sean solo los de la casa
+  mostrarHTML();
   sectionOne.style.display = "none";
   iconoOrderAZ.style.display = "block";
 });
 
 btnRav.addEventListener('click', () => {
-  mostrarHTML(filtro(datos, 'Ravenclaw'));
+  datosFiltrados = filtro(datos, 'Ravenclaw'); // hace que los datos a mostrar sean solo los de la casa
+  mostrarHTML();
   sectionOne.style.display = "none";
   iconoOrderAZ.style.display = "block";
 });
 
 btnSly.addEventListener('click', () => {
-  mostrarHTML(filtro(datos, 'Slytherin'));
+  datosFiltrados = filtro(datos, 'Slytherin'); // hace que los datos a mostrar sean solo los de la casa
+  mostrarHTML();
   sectionOne.style.display = "none";
   iconoOrderAZ.style.display = "block";
 });
 
-function mostrarHTML(datosAMostrar) {
+function mostrarHTML() {
+  divPorcentaje.style.display = "block";
+
+  const { porcentajeMujeres, porcentajeHombres } = calcularPorcentaje(datosFiltrados);
+  console.log(calcularPorcentaje(datosFiltrados));
+  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
+  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
+
   const contenido = document.getElementById('cards');
   contenido.innerHTML = '';//para que quede vacio antes de mostrar la funcion a realizar, si no se iba hasta abajo
-  datosAMostrar.forEach((personaje) => {
+  
+  if (order === 'asc') {
+    datosFiltrados = orderAZ(datosFiltrados);
+  }
+  else if (order === 'des') {
+    datosFiltrados = orderZA(datosFiltrados);
+  }
+
+  datosFiltrados.forEach((personaje) => {
     let divCard = document.createElement("div");
     let divContent = document.createElement("div");
     let hName = document.createElement("h2");
@@ -93,7 +115,7 @@ function mostrarHTML(datosAMostrar) {
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
     hSpecie.innerHTML = personaje.species;
-    hatIcon.src = "./images/tinified/haticon.png";
+    hatIcon.src = "./images/tinified/castle.png";
     hatIcon.className = "hat-icon";
 
     switch (personaje.house) {
