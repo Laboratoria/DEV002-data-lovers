@@ -15,7 +15,7 @@ header{
     width: 100%;
     min-height: 15%;
     top: 0;
-    /* z-index: auto; */
+    z-index: 2;
 }
 
 .logo {
@@ -145,7 +145,7 @@ h1 {
     border-radius: 10px;  
     align-items: center;
     box-sizing: border-box;
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .imagen {
@@ -334,6 +334,12 @@ ul, ol {
     display: block;
 } */
 
+/* AQUI QUISE SEPARAR EL MENÚ DE LA ORILLA, PERO CONTINUA CON EL COLOR DE FONDO
+#menu-principal {
+    width: 80%;
+    left: 20%;
+} */
+
 #btn-m:hover > ul {
     display: block;
 }
@@ -377,7 +383,7 @@ ul, ol {
     bottom:50%;
 }
 #dos ul {
-    right:-45%;
+    right:-61%;
     bottom:25%;
 }
 #tres ul {
