@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 
@@ -46,15 +45,14 @@ body {
     display: block;
     margin:auto;
     margin-bottom: 2%;
-
 }
+
 .barra-busqueda{
      width: 100%;
     margin:2% auto;
     display: block;
     justify-content: center;
     align-items: center;
-
 }
 
 #busquedaPorNombre{
@@ -62,14 +60,12 @@ body {
   width:40%;
    
 }
-
 #inputBuscarNombre {
     width: 100%;
     height: auto;
     display: none;
     border-radius: 5px;
     border: solid 2px rgb(44, 32, 105);
-  
 }
 
 .contenedorOpciones {
@@ -85,8 +81,7 @@ body {
     display: flex;
     width: 25%;
     bottom: 0;
-  
-    }
+}
 
 .opcionesFiltros> h3 {
     font-family: 'Quicksand', sans-serif;
@@ -105,13 +100,11 @@ body {
     font-family: 'Quicksand', sans-serif; 
 }
 
-
 .selector:hover{
     background-color: #ddd;
     cursor: pointer;
      transition: all 0.5s ease;
      color: #03071e;
-
 }
 
 .Todoslosfiltros{
@@ -126,7 +119,6 @@ body {
     height: max-content;
     display: none;
 }
-
 
 .container-botones-ordenar {
    text-align: center;
@@ -148,8 +140,8 @@ body {
     width: 12%;
     margin-right: 5%;
     cursor: pointer;
-    
 }
+
 #buttonAZ:hover{
     background-color: #ddd;
     color: #03071e;
@@ -166,7 +158,6 @@ body {
     border: 2px solid #9d9fae;
     width: 12%;
     cursor: pointer;
-  
    
 }
 #buttonZA:hover{
@@ -184,7 +175,6 @@ body {
     margin-top: 2%;
 }
 
-
 footer {
     padding: 0 10%;
     display: flex;
@@ -200,23 +190,19 @@ footer {
 .redesSociales {
     margin: auto;
     width: 45%;
-
 }
 
 .redes {
-
     width: 2rem;
     height: 2rem;;
     margin: 7px;
-
 }
 
 .cajaAutores {
    display: flex;
    align-content: center;
     margin: auto;
-    width: 45%;
-   
+    width: 45%; 
 }
 
 .autores {
@@ -325,7 +311,6 @@ footer {
     justify-content: space-between;
     width: 100%;
     height: min-content;
-
 }
 
  .listaResistencia,
@@ -354,6 +339,7 @@ footer {
 .listaDebilidades>h2:hover {
     color: #03071e;
 }
+
 .listaResistencia>h2:hover{
     color: #03071e;
 }
@@ -363,7 +349,7 @@ footer {
     background-color: #ddd;
    cursor: pointer;
     transition: all 0.5s ease;
-   }  
+}  
 
 #contenedorResistencia,
 #contenedorDebilidades {
@@ -375,7 +361,6 @@ footer {
     font: normal 0.8em arial;
     padding: 0.2em 0.5em;
     display: none;
-
 }
 
 .listaResistencia:hover #contenedorResistencia {
@@ -403,11 +388,6 @@ footer {
     transition: all 0.5s ease;
  }     
 
-/* Estilos pagina Estadisticas*/
-
-.paginaEstadistica {
-    display: none;
-}
 
 body {
     margin: 0;
@@ -449,7 +429,6 @@ body {
     display: none;
  }
 
-
 @media screen and (max-width:880px){
     .imgPokemon{
         width: 6rem;
@@ -462,9 +441,7 @@ body {
     }
 }
 
-
 @media screen and (max-width:600px){
-
           
     .Todoslosfiltros{
         
