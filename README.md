@@ -20,6 +20,7 @@ Como parte del proceso de UI realizamos las siguientes historias de usuario para
 ## Diseño de Interfaz de usuario
 Una vez que tuvimos claras las necesidades de nuestros usuarios y lo que necesitaría nuestra web para cubrirlas, procedimos a diseñar nuestra interfaz de usuario (UI.
 - **Prototipo de baja fidelidad**
+https://miro.com/app/board/uXjVPB82E2Q=/
 El primer paso fue concretar nuestras ideas en formatos de baja calidad, iniciando con unos bocetos en papel bastante básicos.
  ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-1.jpeg)
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-2.jpeg)
