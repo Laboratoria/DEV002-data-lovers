@@ -1,4 +1,3 @@
-# Proyecto Data-Lovers
 # **POKÉMON GO**
 
 ## Índice
@@ -8,6 +7,9 @@
 * [3. Objetivos del usuario en relación al producto](#3-objetivos-producto)
 * [4. Ventajas para el usuario](#4-ventajas-usuario)
 * [5. Prototipo](#5-prototipo)
+* [6. Feedback Compañeras](#6-feedback-compañeras)
+* [7. Historias de Usuario]
+
 
 ***
 
@@ -34,6 +36,10 @@ El usuario al ingresar a la página web podra:
 
 ## **5. Prototipo**
 
+### Link FIGMA ###
+
+(https://www.figma.com/file/CfvF3kRX53qId9H6ZGbRYj/PokemonLovers?node-id=0%3A1&t=ZjZjbsgUklB7UZAx-0)
+
 ### **5.1 Prototipo Móvil**
 
 ![Prototipo Blanco y Negro](./src/img/prototipoMovilbyn.jpeg)
@@ -52,4 +58,29 @@ El usuario al ingresar a la página web podra:
 
 ### **5.3 DISEÑO FINAL PROYECTO**
 
+![Pagina Principal](./src//img/paginaPrincipal.jpeg)
 
+![Buscar por nombre](./src//img/buscarPorNombre.jpeg)
+
+![Filtrar](./src//img/Filtrar.jpeg)
+
+![OrdenarDatos](./src//img/OrdenarDatos.jpeg)
+
+![TOP10](./src//img/Top10.jpeg)
+
+![Diseño Responsive](./src//img/diseñoResponsive.jpeg)
+
+
+### **6. Feedback Compañeras**
+ 
+ - Nos dieron recomedaciones acerca del prototipo inical que teniamos, el cual lo cambiamos por que por la imagen no se veía bien.
+ - Colocar todo en una sola página
+
+### **7.Historias de usuario**
+
+![Historia usuario 1](./src//img/HU1.JPG)
+![Historia usuario 2](./src//img/HU2.JPG)
+![Historia usuario 3](./src//img/HU3.JPG)
+![Historia usuario 4](./src//img/HU4.JPG)
+![Historia usuario 5](./src//img/HU5.JPG)
+![Historia usuario 6](./src//img/HU6.JPG)
