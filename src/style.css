@@ -1,0 +1,633 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+body {
+   display: flex;
+  justify-content: center;
+}
+
+ .contenedorTodo{
+    position: absolute;
+    margin: 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.contenedorImagen{
+    margin-top: 5%;
+}
+
+.paginaPrincipal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Botones {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    position: absolute;
+    top: 60%;
+}
+
+.imagenPokemon {
+    width: 15rem;
+    height: 35%;
+    display: block;
+    margin:auto;
+    margin-bottom: 2%;
+
+}
+.barra-busqueda{
+     width: 100%;
+    margin:2% auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#busquedaPorNombre{
+  margin: auto;
+  width:40%;
+   
+}
+
+#inputBuscarNombre {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 5px;
+    border: solid 2px rgb(44, 32, 105);
+  
+}
+
+.contenedorOpciones {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+
+}
+.menuResponsive {
+    width: 100%;
+}
+.opcionesFiltros {
+    display: flex;
+    width: 25%;
+    bottom: 0;
+  
+    }
+
+.opcionesFiltros> h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: right;
+    width: 70%;
+  font-size: 1rem;
+}
+
+.selector {
+    margin-left: 5%;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    background-color:rgba(60, 61, 92, 1);
+    color: #f2f2f2;
+    font-family: 'Quicksand', sans-serif; 
+}
+
+
+.selector:hover{
+    background-color: #ddd;
+    cursor: pointer;
+     transition: all 0.5s ease;
+     color: #03071e;
+
+}
+
+.Todoslosfiltros{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-Filtros {
+    margin: auto;
+     width: 100%;
+    height: max-content;
+    display: none;
+}
+
+
+.container-botones-ordenar {
+   text-align: center;
+   height: 100%;
+    width: 100%;
+    align-self: flex-end;
+    display: none;
+}
+
+#buttonAZ {
+    background-color:rgba(60, 61, 92, 1);
+    color: #f2f2f2;
+    font-weight: 550;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 0.7em;
+    border-radius: 6px;
+    border: 2px solid #9d9fae;
+    width: 12%;
+    margin-right: 5%;
+    cursor: pointer;
+    
+}
+#buttonAZ:hover{
+    background-color: #ddd;
+    color: #03071e;
+    transition: all 0.5s ease;
+}
+#buttonZA{
+    background-color:rgba(60, 61, 92, 1);
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 0.7em;
+    font-weight: 550;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: 2px solid #9d9fae;
+    width: 12%;
+    cursor: pointer;
+  
+   
+}
+#buttonZA:hover{
+    background-color: #ddd;
+    color: #03071e;
+    transition: all 0.5s ease;
+}
+
+.contenedor3 {
+    background-image: url(img/30090587.jpg);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+
+footer {
+    padding: 0 10%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #0e153c;
+    opacity: 0.7;
+}
+
+.redesSociales {
+    margin: auto;
+    width: 45%;
+
+}
+
+.redes {
+
+    width: 2rem;
+    height: 2rem;;
+    margin: 7px;
+
+}
+
+.cajaAutores {
+   display: flex;
+   align-content: center;
+    margin: auto;
+    width: 45%;
+   
+}
+
+.autores {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.8rem;
+    position: center;
+    text-align: center;
+    color: white;
+    top: 90%;
+    font-weight: 100;
+    
+}
+
+/* Estilos pagina pokemones*/
+.paginaPokemones {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contenedorTarjetas {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill,minmax(min(100%,15rem),1fr));
+    gap:1.5rem;
+   
+   }
+
+.tarjetaPokemones {
+    background: linear-gradient(90deg, #fdfdfd, #efecf3);
+    width:min-content;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8)
+}
+
+.nombreP {
+    text-align: left; 
+    font-family: 'Quicksand', sans-serif; 
+    font-weight:bold; 
+    margin: 0px;
+    font-size: 2.2rem;
+    color: #EBD758; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+    text-transform: capitalize;
+  
+}
+
+.textoh3,
+.sizeP {
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+    margin: 3% 0;
+    color: rgb(16, 20, 49);
+    text-transform: capitalize;
+}
+
+.encabezadoTarjeta {
+    display: flex;
+    width: 100%;
+}
+
+.imgPokemon {
+    width: 7rem;
+    height: 7rem;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.contenedorh3{
+    width: 50%;
+    height: auto;
+   }
+
+.imgPokemon:hover {
+    transform: rotateY(180deg)
+}
+
+.botonesTarjeta {
+    margin-top: 15px;
+}
+
+.tiposInput {
+    display: none;
+}
+
+/*  caja de resistencias y debilidades:  */
+.contenedorRyD {
+    padding: 3px;
+    margin: 3px;
+}
+
+.cajaResydebi {
+    width:100%;
+    height: min-content;
+}
+
+.contenedorListas {
+   
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: min-content;
+
+}
+
+ .listaResistencia,
+.listaDebilidades {
+   text-align: center;
+    list-style-type: none;
+    border-radius: 6px;
+    padding: 0.1em 1em 0.5em 1em;
+    background-color:rgba(60, 61, 92, 1);
+    border: 2px solid #9d9fae;
+    width: 45%;
+    float: left;
+    position: relative;
+ }
+
+.listaResistencia>h2,
+.listaDebilidades>h2 {
+    margin: 5% 0;
+    width: 100%;
+    font-weight: 550;
+    font-size: 0.85rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+}
+
+.listaDebilidades>h2:hover {
+    color: #03071e;
+}
+.listaResistencia>h2:hover{
+    color: #03071e;
+}
+
+
+.cajaResydebi li:hover {
+    background-color: #ddd;
+   cursor: pointer;
+    transition: all 0.5s ease;
+   }  
+
+#contenedorResistencia,
+#contenedorDebilidades {
+    position: absolute;
+    vertical-align: middle;
+    width: 100px;
+    top: 100%;
+    left: 0px;
+    font: normal 0.8em arial;
+    padding: 0.2em 0.5em;
+    display: none;
+
+}
+
+.listaResistencia:hover #contenedorResistencia {
+    display: block;
+}
+
+.listaDebilidades:hover #contenedorDebilidades {
+    display: block;
+}
+
+.debiyresis {
+    margin: 2% 0;
+     color: #ffffff;
+    background-color:rgba(60, 61, 92, 1);
+    font-weight: 545;
+    font-size: 1rem;    
+    height: min-content;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+      }
+     
+ .debiyresis:hover{
+    color:#03071e;
+    background-color: #ddd;
+    transition: all 0.5s ease;
+ }     
+
+/* Estilos pagina Estadisticas*/
+
+.paginaEstadistica {
+    display: none;
+}
+
+body {
+    margin: 0;
+    }
+
+.topnav {
+    margin-top:3%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: rgb(55, 56, 78);
+    border-radius: 5px;
+}
+
+.topnav a {
+    font-family: 'Quicksand', sans-serif;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.topnav a:hover {
+    transition: all 0.7s ease;
+    background-color: #ddd;
+    color: black;
+}
+
+
+.btn-hambur{
+    border-radius: 5px;
+    display: none;
+}
+ .tituloMenu{
+    display: none;
+ }
+
+
+@media screen and (max-width:960px) {
+    
+
+    
+}
+
+@media screen and (max-width:880px){
+    .imgPokemon{
+        width: 6rem;
+        height: 6rem;
+    }
+   
+    .listaResistencia>h2,
+    .listaDebilidades>h2 {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media screen and (max-width:600px){
+
+          
+    .Todoslosfiltros{
+        
+        flex-direction: column;
+        align-items: center;
+        margin:3% auto;
+        
+    }
+
+    .opcionesFiltros {
+        width: 50%;
+        margin-bottom: 2%;
+            
+        }
+       
+    .opcionesFiltros> h3 {
+        text-align: right;
+        width: 50%;
+        font-size: 0.8rem;
+        }
+        
+    .selector {
+        margin-left: 5%;
+        width: 50%;
+        height: 100%;
+       
+        }   
+        #buttonAZ {
+            width: 18%;
+            padding: 0.6rem;
+        }
+        #buttonZA {
+            width: 18%;
+            padding: 0.6rem;
+        }
+        .topnav a {
+            font-size: 0.8rem;
+            padding: 12px 10px    
+            }
+
+}
+
+@media screen and (max-width:560px){ 
+    
+    .contenedorListas{
+        justify-content: center;
+    }
+
+    .listaResistencia,
+    .listaDebilidades {
+        width: 25%;
+        margin-left: 5%;
+        
+}
+.descripcionTarjeta{
+    display: none;
+}
+
+.listaDebilidades>.tituloDebilidades{
+   font-size: 0;
+  
+}
+
+.listaDebilidades>.tituloDebilidades::after{
+    font-size: 1rem;
+    content:'D';
+}
+
+.listaResistencia>.tituloResistencia{
+    font-size: 0;
+   
+ }
+ 
+ .listaResistencia>.tituloResistencia::after{
+     font-size: 1rem;
+     content:'R';
+ }
+
+}
+
+@media screen and (max-width:480px){
+   
+    .tituloMenu{
+        display: block;
+     }
+    
+    .menuResponsive{
+        width:100%;
+        margin-top: 5%;
+        border-radius: 5px;
+        background-color: rgb(55, 56, 78);
+        color:  #ddd;
+        font-family: 'Quicksand', sans-serif;
+        padding: 1em;
+        display: flex;
+        flex-flow: row wrap;
+         justify-content: space-between;
+        align-items: center;
+
+    }
+    .menuResponsive:hover{
+        transition: all 0.7s ease;
+        background-color: #ddd;
+        color: black;
+    }
+    .svg{
+        width:2em;
+        height:2em;
+        fill:white;
+      }
+    
+    .navOpciones{
+        width: 100%;
+        height:0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: all .5s ease;
+                
+    }
+
+     nav.activo{
+        height:40vh;
+        pointer-events: auto;
+    }
+  
+
+    .btn-hambur{
+        display: block;
+        background-color: #b6bacd;
+        cursor: pointer;
+        margin-bottom: 2%;
+    }
+.topnav {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    
+}
+#busquedaPorNombre{
+    margin: auto;
+    width:60%;
+       
+  }
+  
+  #inputBuscarNombre {
+      width: 100%;
+      border-radius: 5px;
+      border: solid 2px rgb(44, 32, 105);
+      height: auto;
+      display: none;
+    
+  }
+
+  .redes {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  
+}
