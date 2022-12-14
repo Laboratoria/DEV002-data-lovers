@@ -7,6 +7,8 @@
     minimum-scale="1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,21 +17,33 @@
     <img src="img/pokemongo.png" alt="" class="imagenPokemon">
   </div>
 
+  <div class="menuResponsive">
+    <h2 class="tituloMenu">Menú</h2>
+
+  <button class="btn-hambur" onclick="ocultarOpciones()">
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </button>
+ <nav class="navOpciones " >
   <div class="topnav">
     <a class="active" id="opcionPaginaInicio">Página de inicio</a>
-    <a id="opcionBusquedaPokemon" >Búsqueda por nombre</a>
-    <a id="opcionFiltroPokemon">Filtros para búsqueda</a>
-    <a id="opcionOrdenarPokemon">Ordenar datos</a>
-    <a id="opcionTopDiez">TOP 10 de Huida</a>
+    <a  id="opcionBusquedaPokemon" >Búsqueda por nombre</a>
+    <a  id="opcionFiltroPokemon">Filtros para búsqueda</a>
+    <a  id="opcionOrdenarPokemon">Ordenar datos</a>
+    <a  id="opcionTopDiez">TOP 10 de Huida</a>
   </div>
+</nav>
+</div>
   <section id="seccionPokemones"></section>
   <section id="elementosParaBusqueda" class="barra-busqueda">
     <div id="busquedaPorNombre">
       <input type="text" placeholder="Buscar por nombre" id="inputBuscarNombre">
     </div>
     <div id="filtros" class="container-Filtros">
+      <div class="Todoslosfiltros">
       <div class="opcionesFiltros">
-        <h3>Type</h3>
+        <h3 class="textoSelectores">Type</h3>
         <select class="selector" id="tipoPokemones" placeholder="type">
           <option value="empty" selected> --- </option>
           <option value="bug">Bug</option>
@@ -94,10 +108,11 @@
           <option value="water">Water</option>
         </select>
       </div>
+      </div>
     </div>
     <div id="ordenarDatos" class="container-botones-ordenar">
-      <input type="button" value="ordenarAZ↓" id="buttonAZ">
-      <input type="button" value="ordenarZA↑" id="buttonZA">
+      <input type="button" value="AZ↓" id="buttonAZ">
+      <input type="button" value="ZA↑" id="buttonZA">
     </div>
     <div id="Top10">
     </div>

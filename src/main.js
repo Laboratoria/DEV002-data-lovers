@@ -21,6 +21,15 @@ seccion.setAttribute('class', 'paginaPokemones');
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class', 'contenedorTarjetas');
 
+const botonHambur = document.querySelector('.btn-hambur');
+const nav= document.querySelector('.navOpciones');
+
+botonHambur.addEventListener('click',()=>  {
+  
+    nav.classList.toggle('activo')
+
+})
+
 
 document.getElementById('contenedor3TJ').appendChild(contenedor);
 //contenedorPadre.appendChild(contenedor);
@@ -85,13 +94,16 @@ const mostrar = (pokemones) => {
             <div id="contenedorResydebi" class="cajaResydebi">
               <ul class="contenedorListas">
                 <li class="listaResistencia">
-                <h2 class='tituloLista'>Resistant<h2>
+                <h2 class='tituloResistencia'>Resistant<h2>
                   <div id="contenedorResistencia" class='contenedorRyD'>
                     <p class='debiyresis'>${obteniendoResistencias(pokemon.resistant)}</p>                                 
                     </div>
                 </li>           
                 <li class="listaDebilidades" >
-                <h2  class='tituloLista'>Weaknesses</h2>
+                <h2  class='tituloDebilidades'>Weaknesses
+               
+                </h2>
+
                 <div id="contenedorDebilidades" class='contenedorRyD'>
                     <p class='debiyresis'>  ${obteniendoDebilidades(pokemon.weaknesses)}</p>
                   </div>
@@ -103,6 +115,7 @@ const mostrar = (pokemones) => {
 }
 
 mostrar(dataPokemon);
+ 
 
 // Esta es la función para el menú de filtro por tipo de pokemones
 menuTipo.addEventListener("change", () => {
