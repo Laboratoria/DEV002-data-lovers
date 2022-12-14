@@ -14,41 +14,6 @@ const refreshPage = document.getElementById('btn-refresh');
 const cargarAPIhp = document.querySelector('#cargarAPI');
 
 
-btnGrif.addEventListener('click', () => {
-  // Calcula el porcentaje de hombres y mujeres de Gryffindor
-  const resultados = calcularPorcentajeEscuelas(datos, ['Gryffindor']);
-  // Obtén el porcentaje de hombres y mujeres de Gryffindor
-  const { porcentajeMujeres, porcentajeHombres } = resultados['Gryffindor'];
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-  divPorcentaje.style.display = "block";
-});
-
-btnHuf.addEventListener('click', () => {
-  const resultados = calcularPorcentajeEscuelas(datos, ['Hufflepuff']);
-  const { porcentajeMujeres, porcentajeHombres } = resultados['Hufflepuff'];
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-  divPorcentaje.style.display = "block";
-});
-
-btnRav.addEventListener('click', () => {
-  const resultados = calcularPorcentajeEscuelas(datos, ['Ravenclaw']);
-  const { porcentajeMujeres, porcentajeHombres } = resultados['Ravenclaw'];
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-  divPorcentaje.style.display = "block";
-});
-
-btnSly.addEventListener('click', () => {
-  const resultados = calcularPorcentajeEscuelas(datos, ['Slytherin']);
-  const { porcentajeMujeres, porcentajeHombres } = resultados['Slytherin'];
-  spanPorcentajeHombres.innerHTML = porcentajeHombres + "%";
-  spanPorcentajeMujeres.innerHTML = porcentajeMujeres + "%";
-  divPorcentaje.style.display = "block";
-});
-
-
 cargarAPIhp.addEventListener('click', () => {
   obtenerDatos().then(resultado => {
     datos = resultado;
