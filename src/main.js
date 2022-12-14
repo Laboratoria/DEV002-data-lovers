@@ -115,7 +115,7 @@ function mostrarHTML() {
     hName.innerHTML = personaje.name;
     hHouse.innerHTML = personaje.house;
     hSpecie.innerHTML = personaje.species;
-    hatIcon.src = "./images/tinified/castle.png";
+    hatIcon.src = "./images/tinified/castleHoghwarts.png";
     hatIcon.className = "hat-icon";
 
     switch (personaje.house) {

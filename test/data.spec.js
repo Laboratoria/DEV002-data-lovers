@@ -73,6 +73,7 @@ describe('orderZA', () => {
       { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
       { name: "Hetty Bayliss", gender: "Female", house: "null" },
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
+      { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
       { name: "Zoo director", gender: "Male", house: "null"},
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
     ];
@@ -81,6 +82,7 @@ describe('orderZA', () => {
     expect(result).toEqual([
       { name: "Zoo director", gender: "Male", house: "null"},
       { name: "Mandy Brocklehurst", gender: "Female", house: "Ravenclaw}" },
+      { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
       { name: "Katie Bell", gender: "Female", house: "Gryffindor}" },
       { name: "Hetty Bayliss", gender: "Female", house: "null" },
       { name: "Euan Abercrombie", gender: "Male", house: "Gryffindor" },
