@@ -7,8 +7,9 @@
 * [3. Objetivos del usuario en relación al producto](#3-objetivos-producto)
 * [4. Ventajas para el usuario](#4-ventajas-usuario)
 * [5. Prototipo](#5-prototipo)
-* [6. Feedback Compañeras](#5-feedback-compañeras)
-* [7. Historias de Usuario](#6-historias-de-usuario)
+* [6. Feedback Compañeras](#6-feedback-compañeras)
+* [7. Historias de Usuario]
+
 
 ***
 
@@ -34,6 +35,10 @@ El usuario al ingresar a la página web podra:
 - Conocer estadísticas acerca de los poderes 
 
 ## **5. Prototipo**
+
+### Link FIGMA ###
+
+(https://www.figma.com/file/CfvF3kRX53qId9H6ZGbRYj/PokemonLovers?node-id=0%3A1&t=ZjZjbsgUklB7UZAx-0)
 
 ### **5.1 Prototipo Móvil**
 
