@@ -57,9 +57,9 @@ El usuario al ingresar a la página web podra:
 
 ![Buscar por nombre](./src//img/buscarPorNombre.jpeg)
 
-![Filtar](./src//img/filtrar.jpeg)
+![Filtrar](./src//img/Filtrar.jpeg)
 
-![OrdenarDatos](./src//img/ordenarDatos.jpeg)
+![OrdenarDatos](./src//img/OrdenarDatos.jpeg)
 
 ![TOP10](./src//img/Top10.jpeg)
 
