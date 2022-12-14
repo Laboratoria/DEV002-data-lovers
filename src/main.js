@@ -29,8 +29,8 @@ window.onload = () => {
 cargarAPIhp.addEventListener('click', () => {
   datosFiltrados = datos; // hace que los datos a mostrar sean igual que el universo
   mostrarHTML();
-  iconoOrderAZ.style.display = "block";
-  sectionOne.style.display = "none";
+  iconoOrderAZ.style.display = "block";//cuando das click aparece el iconoAZ
+  sectionOne.style.display = "none";// oculta la seccion 1(titulo y subtitulo) al dar click 
   
 });
 
@@ -155,5 +155,5 @@ function mostrarHTML() {
     divContent.appendChild(hSpecie);
     
 
-  })}
+})}
 
