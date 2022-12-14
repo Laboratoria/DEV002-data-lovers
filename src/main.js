@@ -17,6 +17,7 @@ const ordenPokemonZa = document.getElementById('buttonZA');
 const seccion = document.getElementById('seccionPokemones');
 seccion.setAttribute('class', 'paginaPokemones');
 
+
 const contenedor = document.createElement('div');
 contenedor.setAttribute('class', 'contenedorTarjetas');
 
@@ -24,7 +25,9 @@ const botonHambur = document.querySelector('.btn-hambur');
 const nav= document.querySelector('.navOpciones');
 
 botonHambur.addEventListener('click',()=>  {
-   nav.classList.toggle('activo')
+  
+    nav.classList.toggle('activo')
+
 })
 
 document.getElementById('contenedor3TJ').appendChild(contenedor);
@@ -89,6 +92,7 @@ const mostrar = (pokemones) => {
 
 mostrar(dataPokemon);
  
+
 // Esta es la función para el menú de filtro por tipo de pokemones
 menuTipo.addEventListener("change", () => {
   contenedor.innerHTML = '';
@@ -169,6 +173,6 @@ menuPaginaInicio.addEventListener("click", () => {
 // Esta es la función para mostrar el TOP 10
 menuTopDiez.addEventListener("click", () => {
   contenedor.innerHTML = '';
-  mostrar(obtenerTopDiezHuida(dataPokemon));
+    mostrar(obtenerTopDiezHuida(dataPokemon));
 }
 );
