@@ -30,31 +30,7 @@ botonHambur.addEventListener('click',()=>  {
 
 })
 
-
 document.getElementById('contenedor3TJ').appendChild(contenedor);
-//contenedorPadre.appendChild(contenedor);
-//contenedorPadre.appendChild(filtros);
-//seccion.appendChild(contenedorPadre);
-
-//  const tipoEmoticon= {
-//   bug: '🦗',
-//   dark: '⚫',
-//   dragon: '🐉',
-//   electric: '⚡',
-//   fighting: '🤼',
-//   flying: '🌪️',
-//   ghost: '👻', 
-//   grass: '🌱', 
-//   ground: '🐍',
-//   ice: '❄️',
-//   normal: '⚪',
-//   poison: '🧴',
-//   psychic: '🌫️',
-//   rock: '🥌',
-//   steel: '⚙️',
-//   water: '💦',
-
-//  };
 
 // Esta es la función que se encarga de cargar todos los pokemones con sus tarjetas
 const mostrar = (pokemones) => {
@@ -197,7 +173,6 @@ menuPaginaInicio.addEventListener("click", () => {
 // Esta es la función para mostrar el TOP 10
 menuTopDiez.addEventListener("click", () => {
   contenedor.innerHTML = '';
-  console.log('En¿ntro');
-  mostrar(obtenerTopDiezHuida(dataPokemon));
+    mostrar(obtenerTopDiezHuida(dataPokemon));
 }
 );
