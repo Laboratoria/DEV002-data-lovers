@@ -41,7 +41,6 @@ header {
 h1 {
     color: white;
     text-align: center;
-    font-family: 'Black Han Sans', sans-serif;
     background-position: center;
     font-size: 50px;
     margin: 70px 600px;
@@ -233,4 +232,8 @@ h1 {
 
 .close:hover {
     background-color:rgb(206, 218, 206); 
+}
+
+@media (max-width: 592px){
+
 }
