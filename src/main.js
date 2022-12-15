@@ -6,7 +6,6 @@ import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
 let search = document.getElementById("search")
-let busqueda=document.getElementById("search").value
 //let search = dataGhibli[0].title
 //console.log(search)
 //console.log(dataGhibli);
@@ -24,15 +23,16 @@ document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
 
-function Mostrarpantalla2() {
+function mostrarPantallaDos() {
 
     document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.display = "inline"
+    displayCards(dataGhibli)
+}
+ inicio.addEventListener ("click", mostrarPantallaDos);
 
-
-//const displayCard = (data) => {
-    //cards.innerHTML = ""
-data.films.forEach(element => {
+const displayCards = (data) => {
+    data.forEach(element => {
     let newDiv = document.createElement("div")
     newDiv.className = "card"
 
@@ -58,7 +58,7 @@ data.films.forEach(element => {
     `
   cards.appendChild(newDiv)
 })
- }
+
 
 const open = document.querySelectorAll(".open");
 //console.log(open)
@@ -80,10 +80,10 @@ close.forEach(element => {
     modalContainer.classList.remove("show");
   });
 })
+}
 
 search.addEventListener("input",()=>{
   cards.innerHTML=""
-cards(filtrarpeliculas(dataGhibli,busqueda))
+  displayCards(filtrarpeliculas(dataGhibli,search.value))
 });
-console.log(busqueda)
-//}
+
