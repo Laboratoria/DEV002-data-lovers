@@ -138,6 +138,9 @@ Nuestras Historias de Usuario fueron 3:
 
 * Prototipo de alta fidelidad
 
+![img](./src/images/tinified/Prototipo%20alta%20fidelidad%20mobile.png)
+![img](./src/images/tinified/Prototipo%20alta%20fidelidad%20desktop.png)
+
 ## iv. Proyectos desplegados
 
 ## v. Listado de problemas que detectaste a través de tests de usabilidad
