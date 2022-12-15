@@ -1,3 +1,4 @@
+
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
 import { filtrarpeliculas } from './data.js';
@@ -15,14 +16,16 @@ let busqueda=document.getElementById("search").value
 //prueba.innerHTML = ` 
 //<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
 //<img src="${data.films[0].poster}" />`
+
 let cards = document.getElementById("cards")
 
 document.getElementById("pantalla1").style.display = "inline";
 document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
-inicio.addEventListener("click", Mostrarpantalla2);
+
 function Mostrarpantalla2() {
+
     document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.display = "inline"
 
@@ -34,6 +37,7 @@ data.films.forEach(element => {
     newDiv.className = "card"
 
     newDiv.innerHTML += `
+  
     <div class ="imgDatos" id="imgDatos">
     <img id="poster" src="${element.poster}"/>
     <div class ="parrafos">
@@ -56,9 +60,6 @@ data.films.forEach(element => {
 })
  }
 
-//let description = document.querySelectorAll(".modal")
-//console.log(description)
-
 const open = document.querySelectorAll(".open");
 //console.log(open)
 const close = document.querySelectorAll(".close");
@@ -79,6 +80,7 @@ close.forEach(element => {
     modalContainer.classList.remove("show");
   });
 })
+
 search.addEventListener("input",()=>{
   cards.innerHTML=""
 cards(filtrarpeliculas(dataGhibli,busqueda))
