@@ -1,16 +1,5 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-//console.log(example, data);
-//console.log (data.films[0].poster)
-
-//const prueba = document.getElementById("prueba")
-//prueba.innerHTML = ` 
-//<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
-//<img src="${data.films[0].poster}" />`
-
 
 let cards = document.getElementById("cards")
 
@@ -18,17 +7,16 @@ document.getElementById("pantalla1").style.display = "inline";
 document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
-inicio.addEventListener("click", Mostrarpantalla2);
+
 function Mostrarpantalla2() {
   document.getElementById("pantalla1").style.display = "none"
   document.getElementById("pantalla2").style.display = "inline"
 }
+inicio.addEventListener("click", Mostrarpantalla2);
 
 data.films.forEach(element => {
-
   let newDiv = document.createElement("div")
   newDiv.className = "card"
-
   newDiv.innerHTML += `
     <div class ="imgDatos" id="imgDatos">
     <img id="poster" src="${element.poster}"/>
@@ -51,9 +39,6 @@ data.films.forEach(element => {
   cards.appendChild(newDiv)
 })
 
-//let description = document.querySelectorAll(".modal")
-//console.log(description)
-
 const open = document.querySelectorAll(".open");
 console.log(open)
 const close = document.querySelectorAll(".close");
@@ -74,6 +59,3 @@ close.forEach(element => {
     modalContainer.classList.remove("show");
   });
 })
-
-
-//console.log (data.films.forEach(element => console.log(element)))
