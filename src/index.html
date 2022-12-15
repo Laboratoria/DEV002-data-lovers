@@ -8,19 +8,28 @@
 </head>
 
 <body>
+ 
    <div class="img">
     <img id ="img" src="media/barra-pokemon.jpeg" alt="">
   </div>
 
-  <header>
-    <nav>
-      
-      <div class=titulo id="root"></div>
-      <button id="Generation I">Generation I</button>
-      <button id="Generation II">Generation II</button>
-     
-   </nav>
- </header>
+    <header>
+      <nav>
+        <div class="nav-1">
+          <button id="Home">Home</button>
+        </div>
+       <div class="nav-2">
+        <select id="select-generation">
+          <option value="gen" >Generation I & II</option> 
+          <option value="gen-1" >Generation I</option> 
+          <option value="gen-2">Generation II</option>
+        </select>
+       <!--  <button id="Generation I">Generation I</button>
+        <button id="Generation II">Generation II</button> -->
+        <button id="Statistic">Statistic</button>
+       </div>
+      </nav>
+    </header>
   
  <main>
     <div class="cardsContainer" id="cardsContainer"></div>

@@ -45,7 +45,7 @@ let generationII = dataPokemon.filter ((dataPokemon) => {
 });
 
 
-const buttonGenerationI = document.getElementById("Generation I")
+/* const buttonGenerationI = document.getElementById("Generation I")
 buttonGenerationI.addEventListener('click',()=> {
     displeyCard(generationI)
 })
@@ -53,6 +53,17 @@ buttonGenerationI.addEventListener('click',()=> {
 const buttonGenerationII = document.getElementById("Generation II")
 buttonGenerationII.addEventListener('click',()=> {
     displeyCard(generationII)
+}) */
+
+const selectGeneration = document.getElementById('select-generation')
+selectGeneration.addEventListener('change', (event) => {
+if (event.target.value === 'gen-1') {
+  displeyCard(generationI)
+} else if (event.target.value === 'gen-2') {
+  displeyCard(generationII)
+} else {
+  displeyCard(dataPokemon)
+}
 })
 
 //displeyCard(generationI)
