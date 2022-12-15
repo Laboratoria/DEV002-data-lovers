@@ -21,10 +21,10 @@ export const buscarPorNombre = (pokemones, nombrePokemon) => {
 }
 
 // Esta función se encarga de ORDENAR de manera ascendente y descendente la Data del POKEMONES
-export const ordenarData = (todoslosPokemones, key, orden) => {
+export const ordenarData = (todoslosPokemones, name, orden) => {
   return todoslosPokemones.sort(function (a, b) {
-    var x = a[key],
-      y = b[key];
+    var x = a[name],
+      y = b[name];
 
     if (orden === 'asc') {
       return ((x < y) ? -1 : ((x > y) ? 1 : 0));
