@@ -6,8 +6,8 @@ export const filtrarpeliculas = (dataGhibli,search) => {
   })
   return nuevaData
 };
-console.log(nuevaData)
-export const prueba = (dataGhibli, cards) => {
-  return dataGhibli;
-};
+//console.log(nuevaData)
+//export const prueba = (dataGhibli, cards) => {
+ // return dataGhibli;
+//};
 

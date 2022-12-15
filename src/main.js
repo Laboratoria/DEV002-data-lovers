@@ -1,11 +1,13 @@
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
+import { filtrarpeliculas } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
-//let search = document.getElementById("search").value
-let search = dataGhibli[0].title
-console.log(search)
+let search = document.getElementById("search")
+let busqueda=document.getElementById("search").value
+//let search = dataGhibli[0].title
+//console.log(search)
 //console.log(dataGhibli);
 //console.log (data.films[0].poster)
 
@@ -23,11 +25,10 @@ inicio.addEventListener("click", Mostrarpantalla2);
 function Mostrarpantalla2() {
     document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.display = "inline"
-}
 
-/*const displayCard = (data) => {
-    cards.innerHTML = ""*/
 
+//const displayCard = (data) => {
+    //cards.innerHTML = ""
 data.films.forEach(element => {
     let newDiv = document.createElement("div")
     newDiv.className = "card"
@@ -53,27 +54,34 @@ data.films.forEach(element => {
     `
   cards.appendChild(newDiv)
 })
+ }
 
 //let description = document.querySelectorAll(".modal")
 //console.log(description)
 
 const open = document.querySelectorAll(".open");
-console.log(open)
+//console.log(open)
 const close = document.querySelectorAll(".close");
 
 open.forEach(element => {
   element.addEventListener('click', (e) => {
-    console.log(e.target.classList[1])
+    //console.log(e.target.classList[1])
     let modalContainer = document.getElementById(e.target.classList[1])
     modalContainer.classList.add("show");
-    console.log(modalContainer)
+    //console.log(modalContainer)
   });
 })
 
 close.forEach(element => {
   element.addEventListener('click', (e) => {
-    console.log(e.target.classList[1])
+    //console.log(e.target.classList[1])
     let modalContainer = document.getElementById(e.target.classList[1])
     modalContainer.classList.remove("show");
   });
 })
+search.addEventListener("input",()=>{
+  cards.innerHTML=""
+cards(filtrarpeliculas(dataGhibli,busqueda))
+});
+console.log(busqueda)
+//}
