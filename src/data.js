@@ -13,7 +13,6 @@ export const filtrarDebilidades = (todoslosPokemones, seleccion) => {
   return todoslosPokemones.filter(pokemon =>  pokemon.weaknesses[0] === seleccion)
 }
 
-
 // Esta función se encarga de buscar por nombre de POKEMON
 export const buscarPorNombre = (pokemones, nombrePokemon) => {
   return pokemones.filter((pokemon) => {

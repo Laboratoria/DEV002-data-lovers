@@ -180,7 +180,7 @@ describe('La funcion obtenerTopDiezHuida me devuelve el array de mayor a menor',
     expect(typeof obtenerTopDiezHuida).toBe('function');
   });
 
-  it('ekans debería estar en la posición 1', () => {
+  it('ekans debería estar en la posición 0', () => {
     const resultadoHuida = obtenerTopDiezHuida(huidaPokemones);
     expect(resultadoHuida[0].name).toEqual("ekans");
   });

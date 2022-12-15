@@ -79,7 +79,6 @@ const mostrar = (pokemones) => {
                 <h2  class='tituloDebilidades'>Weaknesses
                
                 </h2>
-
                 <div id="contenedorDebilidades" class='contenedorRyD'>
                     <p class='debiyresis'>  ${obteniendoDebilidades(pokemon.weaknesses)}</p>
                   </div>
