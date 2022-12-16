@@ -1,44 +1,158 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
-import { example, anotherExample, suma, filterPokemonByName, filterPokemonByType, buscarPorInput } from '../src/data.js';
+import { buscarPorTipo, buscarPorInput, filterPokemonByNumber } from '../src/data.js';
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+const pokemonArrayTest = [
+  {
+    "num": "025",
+    "name": "pikachu",
+    "pokemon-rarity": "normal",
+    "type": ["electric"]
+  },
+  {
+    "num": "027",
+    "name": "sandshrew",
+    "pokemon-rarity": "normal",
+    "type": ["ground"]
+  },
+  {
+    "num": "038",
+    "name": "ninetales",
+    "pokemon-rarity": "normal",
+    "type": ["fire"]
+  },
+  {
+    "num": "144",
+    "name": "articuno",
+    "pokemon-rarity": "legendary",
+    "type": ["ice", "flying"]
+  },
+  {
+    "num": "147",
+    "name": "dratini",
+    "pokemon-rarity": "normal",
+    "type": ["dragon"]
+  },
+  {
+    "num": "149",
+    "name": "dragonite",
+    "pokemon-rarity": "normal",
+    "type": ["dragon", "flying"]
+  },
+  {
+    "num": "172",
+    "name": "pichu",
+    "pokemon-rarity": "normal",
+    "type": ["electric"]
+  }
+];
+let resultadoPikachu = {
+  "num": "025",
+  "name": "pikachu",
+  "pokemon-rarity": "normal",
+  "type": ["electric"]
+};
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+let dragones = 
+  [{ "num": "147",
+    "name": "dratini",
+    "pokemon-rarity": "normal",
+    "type": ["dragon"]
+  },
+  {
+    "num": "149",
+    "name": "dragonite",
+    "pokemon-rarity": "normal",
+    "type": ["dragon", "flying"]
+  }]
+;
 
-
-//ejemplo del test de suma planteado por nosotras
-describe('suma', () => {
-  it('sumar 1 + 2 es igual a 3', () => {
-    expect(suma(1, 2)).toBe(3);
-  });
-})
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
+let ninetales038 = [ {
+ "num": "038",
+  "name": "ninetales",
+  "pokemon-rarity": "normal",
+  "type": ["fire"]
+  
+}];
 //TEST PRIMERAS DOS FUNCIONES
+
+describe('buscarPorInput', () => {
+  it('is a function', () => {
+    expect(typeof buscarPorInput).toBe('function');
+  });
+
+  it('should return “pikachu” with “pik”', () => {
+    expect(buscarPorInput("pik", pokemonArrayTest)).toContainEqual(resultadoPikachu);
+  });
+});
+
+//    TEST DEL INPUT BUSCAR POR TIPO
+
+describe('buscarPorTipo', () => {
+  it('is a function', () => {
+    expect(typeof buscarPorTipo).toBe('function');
+  });
+
+  it('should return "pokemon-item.type=“dragon”" with “dragon”', () => {  
+    expect(buscarPorTipo("dragon",pokemonArrayTest)).toEqual(dragones);
+  });
+});
+//    TEST DEL FILTRO POR NÚMERO
+
+
+describe('filterPokemonByNumber', () => {
+  it('is a function', () => {
+    expect(typeof buscarPorTipo).toBe('function');
+  });
+
+  it('should return ninetales038 with “038” ', () => {  
+    expect(filterPokemonByNumber("038",pokemonArrayTest)).toEqual(ninetales038);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //test de la función buscarPorInput
-describe('prueba para la función buscarPorInput', () => {
+/*describe('prueba para la función buscarPorInput', () => {
   it('is a function', () => {
     expect(typeof buscarPorInput).toBe('function');
   });
 
   it('debe return "pokemon-item.name=“pikachu” with “pik”', () => {
-    const filtrado = buscarPorInput("pik",dataTest);
+    const filtrado = buscarPorInput("pik",pokemonArrayTest);
     expect(filtrado).toEqual([{
       "num": "025",
       "name": "pikachu",
@@ -263,3 +377,5 @@ describe('prueba para la función buscarPorTipo', () => {
   }
   );
 });
+*/
+//   TEST DEL INPUT BUSCAR POR NOMBRE

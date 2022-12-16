@@ -8,19 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="https://kit.fontawesome.com/8c7af82a45.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+
 </head>
+
 
 <body>
   <header>
     <img class="logo" src="img/JohalePokedexHeader.jpeg" alt="loguito">
   </header>
 
-  <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon" maxlenght="30"
+
+
+
+  <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon..." maxlenght="30"
     autocomplete="off">
-  <h2>pokemones</h2>
 
   <select name="tipos" id="select-tipos">
     <option value="" disabled selected>Selecciona tipo</option>
+    <option value="todos">Todos</option>
     <option value="bug">Bug</option>
     <option value="dark">Dark</option>
     <option value="dragon">Dragon</option>
@@ -40,6 +49,22 @@
     <option value="steel">Steel</option>
     <option value="water">Water</option>
   </select>
+
+  <div id="numeroResultados">pokemones</div>
+  <div id="porcentajeResultados">pokemones</div>
+
+  <button type="button" id="botonSort">ordenar alfabeticamente</button>
+
+  <button type="button" id="botonGrafica">Top 10 de mas apariciones</button>
+
+  <div class="container-grafico">
+    <h1> Top 10 de spawn chances</h1>
+    <canvas id="grafica"></canvas>
+  </div>
+
+
+
+
   <!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
   <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
 
