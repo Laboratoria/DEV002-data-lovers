@@ -2,16 +2,18 @@
  registro de manejadores de eventos (event listeners o event handlers), ....*/
 
 //IMPORTACIÓN DE MÓDULOS
-import { buscarPorInput, buscarPorTipo } from './data.js';
-import { visualizarPokemones,closeModal} from './js/componentes.js';
+import { buscarPorInput, buscarPorTipo} from './data.js';
+import { visualizarPokemones,closeModal, ordenarPokemonesPorNombre, dataGrafica} from './js/componentes.js';
 import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
 
-//llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi página principal
+//llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi págigit na principal
 visualizarPokemones(pokemones);
-
+//ordenarSCPokemones(pokemones);
 /*const clickPokemonCard = document.querySelector('pokemon')
 clickPokemonCard.addEventListener('click',(e=>{console.log(e)}))  */
+
+
 
 //funcion cerrar modal al hacer clic en el boton
 const closeModalPokemon = document.getElementById('botonCloseModal')
@@ -35,8 +37,12 @@ const pokemonFilterType=buscarPorTipo(e.target.value, pokemones)
 visualizarPokemones(pokemonFilterType);
 })
 
+//funcion para ordenar alfabeticamente por nombre a las tarjetas de los pokemones
+const sortTarjetas=document.getElementById('botonSort')
+sortTarjetas.addEventListener('click', ordenarPokemonesPorNombre)
 
 
+dataGrafica();
 
 
 
