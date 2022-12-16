@@ -197,3 +197,18 @@ body {
   height: 100% !important;
   /* porcentaje de la pantalla*/
 }
+
+#botonGrafica{
+  padding:20px;
+  font-weight: bold;
+  font-size: 10px;
+  color:black;
+  background: #F8A4D8;
+  border-radius:50px;
+  border: 3px solid #6c63ff;
+  transition: all 0.9s;
+  text-align: center;
+  width:10%;
+  height:2%;
+  box-shadow: -5px 1px 3px 0px rgb(244, 0, 248);
+}
