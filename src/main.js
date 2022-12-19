@@ -4,7 +4,7 @@
 //IMPORTACIÓN DE MÓDULOS
 import { buscarPorInput, buscarPorTipo} from './data.js';
 import { visualizarPokemones,closeModal, ordenarPokemonesPorNombre, visualizarModalGrafica, closeModalGrafica} from './js/componentes.js';
-import data from "../data/pokemon/pokemon.js"
+import data from "https://jhoannar.github.io/DEV002-data-lovers/data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
 
 //llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi págigit na principal

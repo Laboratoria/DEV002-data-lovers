@@ -1,4 +1,5 @@
-import data from "../../data/pokemon/pokemon.js"
+import data from "https://jhoannar.github.io/DEV002-data-lovers/data/pokemon/pokemon.js"
+
 const pokemones = data.pokemon;
 import { filterPokemonByNumber, ordenarArrayAlfabeticamente,ordenarMayorAMenor } from "../data.js";
 
