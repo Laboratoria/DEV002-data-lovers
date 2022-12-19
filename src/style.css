@@ -115,8 +115,9 @@ body {
   border: 3px solid #F8A4D8;
   outline: none;
 }
-
-
+.botonesContainer{
+  margin: 1rem 0;
+}
 .modal {
   display: none;
   /* Hidden by default */
@@ -213,6 +214,9 @@ body {
 #information-grafic{
   width:100%;
   height: 100%;
+}
+#botonGrafica{
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width:640px) {

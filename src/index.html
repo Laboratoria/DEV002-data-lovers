@@ -4,17 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Jhoale Pokedex</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+ <!--  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 
   <script src="https://kit.fontawesome.com/8c7af82a45.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 </head>
 
 
@@ -22,8 +23,6 @@
   <header>
     <img class="logo" src="img/JohalePokedexHeader.jpeg" alt="loguito">
   </header>
-
-
 
 
   <input type="text" class="search-Pokemon" id="searchName" placeholder="nombre del pokemon..." maxlenght="30"
@@ -55,17 +54,17 @@
   <div id="numeroResultados">pokemones</div>
   <div id="porcentajeResultados">pokemones</div>
 
-  <button type="button" id="botonSort">A-Z</button>
-
-  <button type="button" id="botonGrafica">Top 10 de mas apariciones</button>
-
+  <div class="botonesContainer">
+    <button type="button" id="botonSort">A-Z</button>
+    <button type="button" id="botonGrafica">Top 10 de mas apariciones</button>
+  </div>
 
   <div class="modal" id="modalGrafica">
     <div class="modal-container" id="modalContainerGrafica">
       <div class="close-modal" id="botonCloseModalGrafica">X</div>
       <div id="information-grafic"></div>
 
-       <!--aquí insertaré el gráfico con la etiqueta canvas desde componentes.js -->
+      <!--aquí insertaré el gráfico con la etiqueta canvas desde componentes.js -->
     </div>
   </div>
 
