@@ -1,10 +1,11 @@
 
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
-import { filtrarpeliculas } from './data.js';
+import { filtrarPeliculas } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
+console.log(typeof data.films)
 let search = document.getElementById("search")
 //let search = dataGhibli[0].title
 //console.log(search)
@@ -84,6 +85,7 @@ close.forEach(element => {
 
 search.addEventListener("input",()=>{
   cards.innerHTML=""
-  displayCards(filtrarpeliculas(dataGhibli,search.value))
+  //console.log(filtrarPeliculas(dataGhibli,search.value))
+  displayCards(filtrarPeliculas(dataGhibli,search.value))
 });
 
