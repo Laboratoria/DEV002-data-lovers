@@ -379,11 +379,11 @@ ul, ol {
     position: relative;
 }
 #uno ul {
-    right:-100%;
+    right:-101%;
     bottom:50%;
 }
 #dos ul {
-    right:-61%;
+    right:-62%;
     bottom:25%;
 }
 #tres ul {
