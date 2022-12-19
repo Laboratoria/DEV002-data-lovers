@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers Ale y Jhoa</title>
+  <title>Jhoale Pokedex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,16 +55,19 @@
   <div id="numeroResultados">pokemones</div>
   <div id="porcentajeResultados">pokemones</div>
 
-  <button type="button" id="botonSort">ordenar alfabeticamente</button>
+  <button type="button" id="botonSort">A-Z</button>
 
   <button type="button" id="botonGrafica">Top 10 de mas apariciones</button>
 
-  <div class="container-grafico">
-    <h1> Top 10 de spawn chances</h1>
-    <canvas id="grafica"></canvas>
+
+  <div class="modal" id="modalGrafica">
+    <div class="modal-container" id="modalContainerGrafica">
+      <div class="close-modal" id="botonCloseModalGrafica">X</div>
+      <div id="information-grafic"></div>
+
+       <!--aquí insertaré el gráfico con la etiqueta canvas desde componentes.js -->
+    </div>
   </div>
-
-
 
 
   <!-- debo crear el evento change con el id de mi selector y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
@@ -75,9 +80,9 @@
 
 
   <div class="modal" id="modalAdd">
-    <div class="close-modal" id="botonCloseModal">X</div>
     <div class="modal-container" id="modalContainerPokemon">
-      <h2>Pokemon</h2>
+      <div class="close-modal" id="botonCloseModal">X</div>
+      <div id="information-pokemon"></div>
     </div>
   </div>
 

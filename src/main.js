@@ -3,7 +3,7 @@
 
 //IMPORTACIÓN DE MÓDULOS
 import { buscarPorInput, buscarPorTipo} from './data.js';
-import { visualizarPokemones,closeModal, ordenarPokemonesPorNombre, dataGrafica} from './js/componentes.js';
+import { visualizarPokemones,closeModal, ordenarPokemonesPorNombre, visualizarModalGrafica, closeModalGrafica} from './js/componentes.js';
 import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
 
@@ -19,7 +19,9 @@ clickPokemonCard.addEventListener('click',(e=>{console.log(e)}))  */
 const closeModalPokemon = document.getElementById('botonCloseModal')
 closeModalPokemon.addEventListener('click', closeModal) 
 
-//funcion crear modal al hacer clic en el boton
+//funcion cerrar modal al hacer clic en el boton
+const closeModalPokemonGrafica = document.getElementById('botonCloseModalGrafica')
+closeModalPokemonGrafica.addEventListener('click', closeModalGrafica)
 
 
 //funcion buscar por imput de texto de nombre del pokemon
@@ -41,8 +43,9 @@ visualizarPokemones(pokemonFilterType);
 const sortTarjetas=document.getElementById('botonSort')
 sortTarjetas.addEventListener('click', ordenarPokemonesPorNombre)
 
-
-dataGrafica();
+//funcion para abrir la modal con la gráfica del Top 10 de spawn-chances de pokemones
+const openGrafica=document.getElementById('botonGrafica')
+openGrafica.addEventListener('click',visualizarModalGrafica)
 
 
 

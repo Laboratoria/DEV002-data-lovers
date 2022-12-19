@@ -20,42 +20,31 @@ Global Styles
 
 
 header {
-
   width: 100%;
   height: auto;
-  margin: 2rem !important;
-  /*con esto le digo que es mas importante que las otras(en este caso margin)*/
-  text-align: center;
+  margin: 0 0 2rem 0;
+  align-items: center;
+  /* ya que son imagenes usamos align-item*/
 
 }
 
-header .logo {
-  width: 40%;
-  /*lo modifiqué de 80 a 40% porque estaba muy grande*/
+.logo {
+  max-width: 90%;
   height: auto;
   object-fit: fixed;
   /*adapta la imagen a mi contenedor*/
 }
 
-
 body {
-
   font-family: 'Poppins', sans-serif;
   color: #5A6170;
-  line-height: 1.5;
-  font-size: 0.875rem;
-
+  line-height: 1;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 1.5rem;
   background-color: #dadfea;
-  /* background-image: url('img/fondo.png');*/
-  background-position: center center;
-  /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
-  background-repeat: no-repeat;
-  /* Para que la imagen de fondo no se repita */
-  background-attachment: fixed;
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-  background-size: cover;
-  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador(RESPONSIVE) */
-
+  background-position: center;
 }
 
 
@@ -63,60 +52,78 @@ body {
   text-align: center;
 }
 
-
-.nombrePokemon {
-  font-size: 40px;
-}
-
-
-.search-Pokemon {
-  border: 4px solid cornflowerblue;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
-  /*estoy poniendo 1.5 de forma horizontal y 0.5 vertical*/
-  text-align: left;
-  font-family: 'Poppins light', sans-serif;
-
-}
-
-.search-Pokemon:focus {
-  border: 3px solid #F8A4D8;
-
-}
-
-#select-tipos {
-  text-align: left;
-  font-family: 'Poppins light', sans-serif;
-}
-
-
 #listado-pokemones {
-  /* background-color: aquamarine;*/
-  padding: 2rem;
-  /*espaciado entre el padre y los hijos*/
-  display: grid;
-  /*cuadrícula*/
-  grid-template-columns: 1fr 1fr 1fr;
-  /*para separar en 3 columnas al listado*/
-  gap: 2rem;
+  display: flex;
+  /*en vez de grid ya que no es responsive*/
+  order: 1;
+  flex-direction: row;
+  /*se acomoda en filas */
+  flex-wrap: wrap;
+  /*ajustará el número de elementos en las filas de acuerdo al tamaño del dispositivo*/
+  justify-content: space-between;
+  /*justifique a los lados y ajusta el tamaño entre tarjetas*/
+  align-items: center;
+  /*centra las tarjetas*/
+  align-content: center;
+  /*centra el contenido de las tarjetas*/
+  gap: 10px;
   /*el gap separa los hijos (1 rem=16px)*/
 }
 
 .pokemon-item {
   background-color: white;
-  padding: 2rem;
+  padding: .5rem;
   text-align: center;
+  position: relative;
+  /*absolute fija en un solo espacio y con relative se puede ajustar con las medias querys */
   border-radius: 10%;
-  border: #F8A4D8;
 }
+
+.search-Pokemon {
+  width: 220px;
+  height: auto;
+  text-align: left;
+  font-family: 'Poppins light', sans-serif;
+  font-size: 1rem;
+  /*el valor de rem por defecto es de 16px pero si en scale de la etiqueta meta no tiene el valor de 1 entonces se ajusta*/
+  margin: 0;
+  /*el body ya tiene un margen*/
+  border-radius: 15px;
+  padding: 0.2rem .1rem;
+  /*espacio entre el div del imput y el del select-tipos*/
+  /*estoy poniendo 0.2 de forma horizontal y 0.1 vertical*/
+}
+
+.search-Pokemon:focus {
+  border: 3px solid #F8A4D8;
+  outline: none;
+  /*para aplicar el focus*/
+}
+
+#select-tipos {
+  width: 220px;
+  height: auto;
+  text-align: left;
+  font-family: 'Poppins light', sans-serif;
+  font-size: 1rem;
+  margin: 0 .5rem 2rem .5rem;
+  padding: .3rem;
+  border-radius: 15px;
+}
+
+#select-tipos:focus {
+  border: 3px solid #F8A4D8;
+  outline: none;
+}
+
 
 .modal {
   display: none;
   /* Hidden by default */
   background: rgba(0, 0, 0, 0.4);
-  width: 100vw;
+  width: 100%;
   /* Full width */
-  height: 100vh;
+  height: 100%;
   /* Full height */
   top: 0;
   left: 0;
@@ -124,37 +131,29 @@ body {
   padding: 20px;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 2;
+  /*posicionarlo hacia el frente, por encima de todos los elementos*/
 
 }
 
 .modal-container {
-  /* Modal Content */
-  /* background-image: url('img/fondo.png');*/
-  background: rgb(238, 174, 202);
   background: linear-gradient(294deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  /*background: #fff;*/
-  max-height: 300px;
-  max-height: 600px;
   width: 90%;
-  height: 95%;
+  height: 60%;
+  font-family: 'Poppins light', sans-serif;
+  /*(sans-serif=sin) serifaslos medios impresos necesitan serifas(las puntitas de las letras que las hacen mas elegantes y que dan la impresion de estar conectadas)*/
+  font-size: .75rem;
   padding: 20px;
   border-radius: 15px;
   position: relative;
-
-  /*display: flex; */
-  align-items: center;
-  /* justify-content: center; */
-
-  /* era para seprar en columnas la modal, pero ya no lo usaremos
+  display: flex;
   flex-direction: column;
-  display: grid; /*cuadrícula
-  grid-template-columns: 1fr 1fr; /*para separar en 2 columnas al listado
-*/
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .modal-container .modal-pokemon h3 {
-
   font-weight: bold !important;
   text-align: center !important;
   font-family: 'Times New Roman' !important;
@@ -162,8 +161,6 @@ body {
   /* font-style: italic !important;
   font-weight: 700 !important;
   font-size: 2rem; */
-
-
 }
 
 .close-modal {
@@ -176,19 +173,20 @@ body {
   color: #fff;
   font-size: 1.3 rem;
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   /*absolute*/
-  right: 20px;
-  top: 20px;
+  right: 5px;
+  top: 5px;
   cursor: pointer;
 }
 
 .container-grafico {
-  width: 50%;
+  width: 100%;
   /* porcentaje del contenedor padre */
-  height: 40vh;
+  height: 100%;
   /* porcentaje de la pantalla*/
   margin: 4rem auto;
+  padding: 4rem !important;
 }
 
 .container-grafico canvas {
@@ -198,17 +196,88 @@ body {
   /* porcentaje de la pantalla*/
 }
 
-#botonGrafica{
-  padding:20px;
+#botonGrafica {
+  padding: 20px;
   font-weight: bold;
   font-size: 10px;
-  color:black;
+  color: black;
   background: #F8A4D8;
-  border-radius:50px;
+  border-radius: 50px;
   border: 3px solid #6c63ff;
   transition: all 0.9s;
   text-align: center;
-  width:10%;
-  height:2%;
+  width: 10%;
+  height: 2%;
   box-shadow: -5px 1px 3px 0px rgb(244, 0, 248);
+}
+#information-grafic{
+  width:100%;
+  height: 100%;
+}
+
+@media only screen and (max-width:640px) {
+  .logo {
+    max-width: 100%;
+  }
+
+  body {
+    margin: 2rem;
+    padding: 3rem;
+  }
+
+  .modal-container {
+    padding: 30px;
+    font-size: .75rem;
+  }
+}
+
+@media only screen and (max-width:1080px) and (min-width:640px) {
+  .logo {
+    max-width: 70%;
+  }
+
+  #listado-pokemones {
+    padding: 0 5rem 5rem 5rem;
+    /*para ajustar el margen de los lados y de abajo*/
+  }
+
+  .modal-container {
+    width: 65%;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (max-width:1920px) and (min-width:1080px) {
+  .logo {
+    max-width: 60%;
+    gap: 50px;
+  }
+
+  #listado-pokemones {
+    padding: 0 6.5rem 6.5rem 6.5rem;
+    /*para ajustar el margen de los lados y de abajo*/
+  }
+
+  .modal-container {
+    max-width: 65%;
+    height:70% ;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width:1920px) {
+  .logo {
+    max-width: 55%;
+    gap: 50px;
+  }
+
+  #listado-pokemones {
+    padding: 0 6.5rem 6.5rem 6.5rem;
+    /*para ajustar el margen de los lados y de abajo*/
+  }
+
+  .modal-container {
+    max-width: 50%;
+    font-size: .9rem;
+  }
 }

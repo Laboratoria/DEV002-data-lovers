@@ -6,34 +6,36 @@ sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres par�
  indica si se quiere ordenar de manera ascendente o descendente.
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la
  data proporcionada.*/
-  export const buscarPorInput = (e, data) => {
-   return data.filter(pokemon => pokemon.name.includes(e));
+export const buscarPorInput = (e, data) => {
+  return data.filter(pokemon => pokemon.name.includes(e));
 }
 
-export const buscarPorTipo=(e,data)=>{
-  return data.filter(pokemon => (e=="todos") ? true: pokemon.type.includes(e));  // se pone el true para desactivar el filtro
+export const buscarPorTipo = (e, data) => {
+  return data.filter(pokemon => (e == "todos") ? true : pokemon.type.includes(e));  // se pone el true para desactivar el filtro
 
 };
 
-export const filterPokemonByNumber= (numPokemon,data) =>{
-  return data.filter(pokemon => pokemon.num==numPokemon);
+export const filterPokemonByNumber = (numPokemon, data) => {
+  return data.filter(pokemon => pokemon.num == numPokemon);
 }
 
 
-export function ordenarArrayAlfabeticamente(x, y){
-  if (x.name < y.name) {return -1;}
-  if (x.name > y.name) {return 1;}
-  return 0;
+export function ordenarArrayAlfabeticamente(x, y) {
+  return ((x.name < y.name) ? -1 : ((x.name > y.name) ? 1 : 0));
 }
 
-export function ordenarMayorAMenor(x, y){
-  return y['spawn-chance']-x['spawn-chance'];
+export function ordenarMayorAMenor(x, y) {
+  return parseFloat(y['spawn-chance']) - parseFloat(x['spawn-chance']);
 }
 
 
-/*export const sortPokemonByName= (data) =>{
-  return data.sort();
-}*/
+
+
+
+
+
+
+
 
 
 

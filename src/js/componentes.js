@@ -1,8 +1,10 @@
 import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
-import { filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarMayorAMenor } from "../data.js";
+import { filterPokemonByNumber, ordenarArrayAlfabeticamente,ordenarMayorAMenor } from "../data.js";
 
 const modalAdd = document.querySelector('#modalAdd');
+const modalGrafica = document.querySelector('#modalGrafica');
+
 
 //const dragoncito = document.querySelector('#fa-solid fa-dragon');
 
@@ -80,6 +82,14 @@ export const closeModal = () => {
   modalAdd.style.display = 'none';
 }
 
+const openModalGrafica = () => {
+  modalGrafica.style.display = 'flex';
+}
+export const closeModalGrafica = () => {
+  modalGrafica.style.display = 'none';
+}
+
+
 
 
 export function visualizarModalPokemon(numerito) {
@@ -92,7 +102,7 @@ export function visualizarModalPokemon(numerito) {
 
   //console.log(pokemon)
   openModal()
-  const itemPokemon = document.getElementById('modalContainerPokemon');
+  const itemPokemon = document.getElementById('information-pokemon');
   const modalPokemon = `
   <div class="informacion-pokemon" id="modal-pokemon">    
     <h3 class="nombrePokemon">${pokemon.name} </h3>
@@ -123,13 +133,9 @@ export function ordenarPokemonesPorNombre() {
 }
 
 
-// export function ordenarPokemonesPorSpawnChance() {
-//   console.log(pokemones);
-//   const pokemonesAordenar = pokemones.filter(pokemones => parseFloat(pokemones.spawnchance) > 0);//convierte en flotantes los string (spawnchance de los pokemones)
-//   console.log(pokemonesAordenar);
-// }
 
-export const dataGrafica = () => {
+
+const dataGrafica = () => {
   let pokemonesAordenar = pokemones.filter(pokemones => parseFloat(pokemones['spawn-chance']) > 0);//convierte en flotantes los string (spawnchance de los pokemones)
   pokemonesAordenar = pokemonesAordenar.map(pokemon => ({
     name: pokemon.name,
@@ -142,13 +148,13 @@ export const dataGrafica = () => {
   console.log(pokemonesAordenar);
 
   //desde aquí es la gráfica
-  const $grafica = document.querySelector("#grafica");
+  const $grafica = document.querySelector("#graficaPokemon"); //selecciona el id de una etiqueta para insertar la gráfica
   // Las etiquetas son las que van en el eje X.
-  const etiquetas = pokemonesAordenar.map(pokemon=>pokemon.name); /*(nombre de los 10 pokemones)*/
+  const etiquetas = pokemonesAordenar.map(pokemon => pokemon.name); /*(nombre de los 10 pokemones)*/
   // Podemos tener varios conjuntos de datos. Comencemos con uno
   const datospokemones = {
     label: "Spawn chances",
-    data: pokemonesAordenar.map(pokemon=>pokemon['spawn-chance']), // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    data: pokemonesAordenar.map(pokemon => pokemon['spawn-chance']), // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
     borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
     borderWidth: 1,// Ancho del borde
@@ -175,6 +181,23 @@ export const dataGrafica = () => {
 }
 
 
+export function visualizarModalGrafica() {
+  openModalGrafica()
+  const graficaPokemon = document.getElementById('information-grafic');
+  const modalGraficaPokemon = ` 
+  <canvas id="graficaPokemon"></canvas>
+  `;
+  graficaPokemon.innerHTML = modalGraficaPokemon;
+  dataGrafica(); //contruye la gráfica a travez del id("grafica")
+
+} 
+
+
+
+
+//<canvas id="grafica"></canvas>
+// const modalPokemon = `
+// <div class="informacion-pokemon" id="modal-pokemon">
 
 
 
@@ -183,6 +206,27 @@ export const dataGrafica = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export function ordenarPokemonesPorSpawnChance() {
+//   console.log(pokemones);
+//   const pokemonesAordenar = pokemones.filter(pokemones => parseFloat(pokemones.spawnchance) > 0);//convierte en flotantes los string (spawnchance de los pokemones)
+//   console.log(pokemonesAordenar);
+// }
 
 
 

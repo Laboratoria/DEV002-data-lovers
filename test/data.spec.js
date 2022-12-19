@@ -1,5 +1,5 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
-import { buscarPorTipo, buscarPorInput, filterPokemonByNumber } from '../src/data.js';
+import { buscarPorTipo, buscarPorInput, filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarMayorAMenor} from '../src/data.js';
 
 const pokemonArrayTest = [
   {
@@ -73,7 +73,27 @@ let ninetales038 = [ {
   "type": ["fire"]
   
 }];
-//TEST PRIMERAS DOS FUNCIONES
+
+let x = 
+{
+"num": "149",
+"name": "dragonite",
+"pokemon-rarity": "normal",
+"type": ["dragon", "flying"],
+"spawn-chance": "0.02"
+};
+
+let y = 
+{ "num": "147",
+"name": "dratini",
+"pokemon-rarity": "normal",
+"type": ["dragon"],
+"spawn-chance": "0.3"
+};
+
+
+
+//TEST FUNCION BUSCAR POR INPUT DE NOMBRE
 
 describe('buscarPorInput', () => {
   it('is a function', () => {
@@ -96,9 +116,8 @@ describe('buscarPorTipo', () => {
     expect(buscarPorTipo("dragon",pokemonArrayTest)).toEqual(dragones);
   });
 });
+
 //    TEST DEL FILTRO POR NÚMERO
-
-
 describe('filterPokemonByNumber', () => {
   it('is a function', () => {
     expect(typeof buscarPorTipo).toBe('function');
@@ -109,12 +128,28 @@ describe('filterPokemonByNumber', () => {
   });
 });
 
+//    TEST ORDENAR ALFABETICAMENTE
+
+describe('ordenarArrayAlfabeticamente', () => {
+  it('is a function', () => {
+    expect(typeof ordenarArrayAlfabeticamente).toBe('function');
+  });
+  it('should return 0 al usar dos pokemones iguales', () => {  
+    expect(ordenarArrayAlfabeticamente(resultadoPikachu,resultadoPikachu)).toEqual(0);
+  });
+});
 
 
+//    TEST ORDENAR DE MAYOR A MENOR por spawn-chance
 
-
-
-
+describe('ordenarMayorAMenor', () => {
+  it('is a function', () => {
+    expect(typeof ordenarMayorAMenor).toBe('function');
+  });
+  it('should return diference betwen dratini y dragonite spawn-chances', () => {  
+    expect(ordenarMayorAMenor(x,y)).toEqual(0.27999999999999997);
+  });
+});
 
 
 
