@@ -148,9 +148,7 @@ const peliculaTotoro = [{
   ],
   "vehicles": []
 }]
-const dataPrueba = {
-  "studio": "Studio Ghibli Inc.",
-  "films": [
+const dataPrueba = [
     {
       "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
       "title": "Castle in the Sky",
@@ -827,24 +825,29 @@ const dataPrueba = {
       ],
       "vehicles": []
     },
+  
   ]
-  }
 describe('Prueba para la función filter', () => {
   it('is a function', () => {
     expect(typeof filtrarPeliculas).toBe('function');
   });
-  it('is a array', () => {
-    expect(typeof dataPrueba).toBe('array');
-  });
-  it('Debe retornar un nuevo array sin los elementos especificados', () => {
+ // it('is a array', () => {
+    //expect(dataPrueba).arrayContaining('array');
+  //});
+  it('Debe retornar un nuevo array con los elementos especificados', () => {
+  
   
     expect(filtrarPeliculas(dataPrueba,"Totoro")).toEqual(peliculaTotoro);
   });
-  //it('devuelve peliculas y director filtradas', () => {
-    //expect(filtrarpeliculas(title).length).toEqual();
+
+  it('devuelve peliculas y director filtradas', () => {
+    // console.log(filtrarPeliculas(dataPrueba,"Hulk"));
+    // expect(filtrarPeliculas(dataPrueba,"Hulk").toThrow(TypeError));
+    // expect(filtrarPeliculas(dataPrueba,"Hulk").toBe("No data"));
+    expect(filtrarPeliculas(dataPrueba, "Hulk")).toThrow(TypeError);
 
   });
-//});
+});
 
 
 /*describe('anotherExample', () => {
