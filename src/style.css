@@ -3,12 +3,19 @@
 font-family: 'Mitr', sans-serif; 
 Delius Unicase: 400;700
 Mitr: 200;300;400;500;600;700*/
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+
 header{
     position: fixed;
     background-color: #344D67;
     width: 100%;
     min-height: 15%;
     top: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -114,6 +121,10 @@ h1 {
     float: right;
 }
 
+#tarjetas {
+     margin-bottom: 18%; /*180px */
+}
+
 .contenedor {
     /*background-color: blueviolet;
     border-color: #ADE792;
@@ -123,35 +134,44 @@ h1 {
 
     /*position: absolute;*/
     max-width: 90%;
+    /* width: fit-content; */
     height: 300px;
    /* left: 19px;
     top: 193px; */
     margin: auto;
+    margin-bottom: 3%;
     background: #344D67;
     border: 2px solid #6ECCAF;
     border-radius: 10px;  
     align-items: center;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .imagen {
     width: 30%;
     /* background-color: blue; */
     float: left;
-    padding-top: 1%;
+    padding-top: 1.5%;
     padding-bottom: 1%;
     margin: auto; 
 }
 
-img {
-    position: left;
-    /* width: 114.77px;
-    height: 108px; */
-    border-radius: 10px;
-    /* background-color: yellow; */
-}
-
 figure {
     margin: 0;
+    /* width: fit-content; */
+    /* width: 200px;
+    height: 270px; */
+}
+
+#poster {
+    width: 200px;
+    height: 270px;
+    position: left;
+ 
+    border-radius: 10px;
+    /* background-color: yellow; */
+    object-fit: cover;
 }
 
 .texto {
@@ -208,13 +228,14 @@ figure {
 }
 
 footer {
-    background-color: #ececec;
-    position: fixed;
+    background-color: #6ECCAF;
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 8%;
+    min-height: 8%;
+    /* max-height: 15%; */
 }
 
 #botones{
@@ -224,21 +245,52 @@ footer {
     margin: auto;
     align-items: center;
 }
+#bnt-i, #btn-m {
+    background-color: #6ECCAF;
+    border: none;
+}
+/*sólo para ver si funciona el botón*/
+#bnt-i:hover, #btn-m:hover {
+    background-color: #ae6ecc;
+    border: none;
+}
 
 #boton-m, #boton-i {
     /* width: 40%;
     margin: 0;
     background-color: aqua; */
-    width: 41%; 
+    /* width: 41%; */
+    width: 50%; 
+    position: fixed;
+    bottom: 0;
 }
-
+#boton-m {
+    left: 0;
+}
+#boton-i {
+    right: 0;
+}
 #menu, #inicio {
-    /* width: 13%;
-    padding-top: 1%;
-    padding-bottom: 1%; */
+    /* width: 13%; */
+    padding-top: 2%; /*estaba en 3*/
+    padding-bottom: 1%;
     width: 34%;
     /* background-color: #6ECCAF; */
 }
+
+#menu {
+    padding-right: 35%;
+    width: 27%;
+}
+
+#inicio {
+    padding-left: 35%;
+    width: 27%;
+}
+
+/* #menu:hover, #inicio:hover {
+    background-color: #88ff00;
+} */
 
 #boton-m {
     float: left;
@@ -255,3 +307,90 @@ footer {
 #inicio {
     float: right;
 } */
+/* 
+ul, ol {
+    list-style: none;
+    display: none;
+    position: absolute;
+}
+
+#btn-m li {
+    background-color: #F3ECB0;
+    color: #344D67;
+    text-decoration: none;
+    padding: 10px 5px;
+    display: block;
+    text-align: left;
+   
+}
+
+#boton-m > li {
+    float: left;
+}
+#btn-m li:hover {
+    display: block;
+}
+#btn-m li > ul {
+    display: block;
+} */
+
+/* AQUI QUISE SEPARAR EL MENÚ DE LA ORILLA, PERO CONTINUA CON EL COLOR DE FONDO
+#menu-principal {
+    width: 80%;
+    left: 20%;
+} */
+
+#btn-m:hover > ul {
+    display: block;
+}
+ul, ol {
+    list-style: none;
+    display: none;
+    position: relative;
+}
+#btn-m li {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    font-size: 32pt;
+
+
+    background-color: #6ECCAF;
+    color: #344D67;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+#btn-m li:hover {
+    background-color: #344D67; 
+    color: #F3ECB0;
+}
+#btn-m > li {
+    float: left;
+}
+#btn-m li ul {
+    display:none;
+    position: absolute;
+    min-width: 45%; 
+}
+#btn-m li:hover > ul {
+    display: block;
+}
+#btn-m li ul li {
+    position: relative;
+}
+#uno ul {
+    right:-101%;
+    bottom:50%;
+}
+#dos ul {
+    right:-62%;
+    bottom:25%;
+}
+#tres ul {
+    right:-63%;
+    bottom:0;
+}
+#btn-m li ul li ul {
+    right:-140px;
+    top:0;
+}
