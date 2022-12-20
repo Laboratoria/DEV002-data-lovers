@@ -5,7 +5,7 @@ import { filtrarPeliculas } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
-console.log(typeof data.films)
+//console.log(typeof data.films)
 let search = document.getElementById("search")
 //let search = dataGhibli[0].title
 //console.log(search)

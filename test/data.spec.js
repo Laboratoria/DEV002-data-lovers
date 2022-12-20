@@ -148,7 +148,7 @@ const peliculaTotoro = [{
   ],
   "vehicles": []
 }]
-const dataPrueba = {
+const dataPrueba = [{
   "studio": "Studio Ghibli Inc.",
   "films": [
     {
@@ -828,7 +828,7 @@ const dataPrueba = {
       "vehicles": []
     },
   ]
-  }
+  }]
 describe('Prueba para la función filter', () => {
   it('is a function', () => {
     expect(typeof filtrarPeliculas).toBe('function');
@@ -836,7 +836,7 @@ describe('Prueba para la función filter', () => {
   it('is a array', () => {
     expect(typeof dataPrueba).toBe('array');
   });
-  it('Debe retornar un nuevo array sin los elementos especificados', () => {
+  it('Debe retornar un nuevo array con los elementos especificados', () => {
   
     expect(filtrarPeliculas(dataPrueba,"Totoro")).toEqual(peliculaTotoro);
   });
