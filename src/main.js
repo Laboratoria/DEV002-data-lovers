@@ -7,18 +7,7 @@ import data from './data/ghibli/ghibli.js';
 let dataGhibli = data.films
 console.log(typeof dataGhibli)
 let search = document.getElementById("search")
-//let orden = document.getElementById("ordenarPor")
-let asc = document.getElementById("asc")
-let desc = document.getElementById("desc")
-//let search = dataGhibli[0].title
-//console.log(search)
-//console.log(dataGhibli);
-//console.log (data.films[0].poster)
-
-//const prueba = document.getElementById("prueba")
-//prueba.innerHTML = ` 
-//<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
-//<img src="${data.films[0].poster}" />`
+let orden = document.getElementById("ordenarPor")
 
 let cards = document.getElementById("cards")
 
@@ -92,12 +81,15 @@ search.addEventListener("input",()=>{
   displayCards(filtrarPeliculas(dataGhibli,search.value))
 });
 
-asc.addEventListener("click",()=>{
+orden.addEventListener("change",(e)=>{
+  let seleccion = e.target.value;
+  if (seleccion === "ascendente"){
     cards.innerHTML = ""
      displayCards(ordenarAsc(dataGhibli))
+    }
+  else if (seleccion === "descendente"){
+    cards.innerHTML = ""
+    displayCards(ordenarDesc(dataGhibli))
+  }
 })
 
-desc.addEventListener("click",()=>{
-  cards.innerHTML = ""
-  displayCards(ordenarDesc(dataGhibli))
-})
