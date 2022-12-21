@@ -83,6 +83,20 @@ close.forEach(element => {
 })
 }
 
+document.getElementById("orden").addEventListener('change', function () {
+  let indice = select.selectedIndex;
+  //console.log(indice)
+  if (indice == 0) {
+    cards.innerHTML = ""
+    displayCards(ordenarAsc(dataGhibli));
+    //console.log()
+  }
+  else if (indice == 1) {
+    cards.innerHTML = ""
+    displayCards(ordenarDesc(dataGhibli))
+  }
+});
+
 search.addEventListener("input",()=>{
   cards.innerHTML=""
   //console.log(filtrarPeliculas(dataGhibli,search.value))
