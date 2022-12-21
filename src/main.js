@@ -11,7 +11,7 @@ let orden = document.getElementById("ordenarPor")
 
 let cards = document.getElementById("cards")
 
-document.getElementById("pantalla1").style.display = "inline";
+document.getElementById("pantalla1").style.display = "flex";
 document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
@@ -91,5 +91,6 @@ orden.addEventListener("change",(e)=>{
     cards.innerHTML = ""
     displayCards(ordenarDesc(dataGhibli))
   }
+
 })
 
