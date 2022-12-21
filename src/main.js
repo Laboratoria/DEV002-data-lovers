@@ -1,12 +1,15 @@
 
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
-import { filtrarPeliculas } from './data.js';
+import { filtrarPeliculas, ordenarAsc, ordenarDesc } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
 console.log(typeof dataGhibli)
 let search = document.getElementById("search")
+//let orden = document.getElementById("ordenarPor")
+let asc = document.getElementById("asc")
+let desc = document.getElementById("desc")
 //let search = dataGhibli[0].title
 //console.log(search)
 //console.log(dataGhibli);
@@ -89,3 +92,12 @@ search.addEventListener("input",()=>{
   displayCards(filtrarPeliculas(dataGhibli,search.value))
 });
 
+asc.addEventListener("click",()=>{
+    cards.innerHTML = ""
+     displayCards(ordenarAsc(dataGhibli))
+})
+
+desc.addEventListener("click",()=>{
+  cards.innerHTML = ""
+  displayCards(ordenarDesc(dataGhibli))
+})
