@@ -8,6 +8,7 @@ export const filtrarPeliculas = (dataGhibli,search) => {
   
 export const ordenarAsc = (dataGhibli) => {
   let dataOrdenada = dataGhibli.sort((a,b) => a.release_date - b.release_date);
+    console.log(dataOrdenada)
     return dataOrdenada
 }
 
