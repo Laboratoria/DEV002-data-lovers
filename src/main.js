@@ -5,7 +5,7 @@ import { filtrarPeliculas, ordenarAsc, ordenarDesc } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
-console.log(typeof dataGhibli)
+//console.log(typeof dataGhibli)
 let search = document.getElementById("search")
 let orden = document.getElementById("ordenarPor")
 
@@ -34,7 +34,7 @@ const displayCards = (data) => {
     <div class ="imgDatos" id="imgDatos">
     <img id="poster" src="${element.poster}"/>
     <div class ="parrafos">
-    <p class ="parrafo" id="title" class="title"> Título: ${element.title} </p>
+    <p class ="parrafo titulo" id="title"> Título: ${element.title} </p>
     <p class ="parrafo" id="director"> Director: ${element.director} </p>
     <p class ="parrafo" id="releaseDate"> Año: ${element.release_date} </p>
     <p class ="parrafo" id="rtScore"> Puntaje: ${element.rt_score}</p>
