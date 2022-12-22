@@ -154,7 +154,7 @@ header {
     flex-direction: row;
     width: fit-content;
     margin: 0px;
-    padding: 2em;
+    padding: 1em;
 
 }
 
@@ -163,9 +163,9 @@ header {
     flex-direction: column;
     border: 8px solid pink;
     border-radius: 10%;
-    padding: 20px;
+    padding: 0.5em;
     background-color: #FFFFFF;
-    max-width: fit-content;
+    max-width: 600px;
 }
 
 #poster {
@@ -178,18 +178,21 @@ header {
 .parrafos {
     display: flex;
     flex-direction: column;
-    line-height: 0px;
+    /*line-height: 0px;*/
     margin: 0 auto;
     font-size: 1.6vw;
+    max-width: 200px;
+    border: 1px solid red;
 }
 
 .parrafo {
     padding: 1em;
     margin: auto;
     font-weight: bold;
-    width: fit-content;
-    height: auto;
+    /*width: fit-content;*/
+    height: fit-content;
 }
+
 
 #description {
     padding: 1rem;
@@ -232,7 +235,6 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     width: 12em;
-    margin: 1em 5em;
     border: 3px solid #151618;
     color: #2b6b84;
     background-color: rgb(208, 230, 199);
@@ -305,7 +307,5 @@ header {
     .parrafos{
         font-size: 3.5vw;
     }
-
-
 
 }
