@@ -1,11 +1,10 @@
 import {
-  example
+   filterGen, filterType
 } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log("example esto es la data", data);
 
 //mostrar
 
@@ -13,7 +12,7 @@ const cardsContainer = document.getElementById("cardsContainer")
 const dataPokemon = data.pokemon
 
 const displeyCard = (d) => {
-    cardsContainer.innerHTML = `<div class="cardvacia"></div> `;
+  cardsContainer.innerHTML = ` `; 
   d.forEach(element => {
 
     const cardPokemon = document.createElement("div")
@@ -31,39 +30,39 @@ const displeyCard = (d) => {
   })
 }
 
- displeyCard(dataPokemon)
+displeyCard(dataPokemon)
 
 //filter
-
-let generationI = dataPokemon.filter ((dataPokemon) => {
-    return dataPokemon.num <= 151;
-});
-
-
-let generationII = dataPokemon.filter ((dataPokemon) => {
-      return dataPokemon.num > 151;
-});
-
-
-/* const buttonGenerationI = document.getElementById("Generation I")
-buttonGenerationI.addEventListener('click',()=> {
-    displeyCard(generationI)
-})
-
-const buttonGenerationII = document.getElementById("Generation II")
-buttonGenerationII.addEventListener('click',()=> {
-    displeyCard(generationII)
-}) */
+let generation
+let generationI = filterGen(dataPokemon, "gen-1")
+let generationII = filterGen(dataPokemon, "gen-2")
 
 const selectGeneration = document.getElementById('select-generation')
 selectGeneration.addEventListener('change', (event) => {
-if (event.target.value === 'gen-1') {
-  displeyCard(generationI)
-} else if (event.target.value === 'gen-2') {
-  displeyCard(generationII)
-} else {
-  displeyCard(dataPokemon)
-}
+  generation = event.target.value;
+  if (event.target.value === 'gen-1') {
+    displeyCard(generationI)
+  } else if (event.target.value === 'gen-2') {
+    displeyCard(generationII)
+  } else {
+    displeyCard(dataPokemon)
+  }
+})
+
+const selectType = document.getElementById('select-type')
+selectType.addEventListener('change', (event) => {
+  let typeSelected = event.target.value;
+  let filteredPokemon = filterType(dataPokemon, typeSelected)
+  if (generation === 'gen-1') {
+    let filteredTypeAndGenI = filterType(generationI, typeSelected)
+    displeyCard(filteredTypeAndGenI)
+  } else if (generation === 'gen-2') {
+    let filteredTypeAndGenII = filterType(generationII, typeSelected)
+    displeyCard(filteredTypeAndGenII)
+  } else {
+    displeyCard(filteredPokemon)
+  }
+  
 })
 
 //displeyCard(generationI)
