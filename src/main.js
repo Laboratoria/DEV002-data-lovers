@@ -43,8 +43,23 @@ data.films.forEach(element => {
 //botón Hayao
 document.getElementById("Hayao Miyazaki").addEventListener("click",function(event) { 
   console.log (event.target.id);
-  filterBy(event.target.id, data); //enviar dos argumentos
+  let hayao = filterBy(event.target.id, data); //enviar dos argumentos
   //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  hayao.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    
+    let menu = document.getElementById("menu-principal");
+    menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
 });
 
 document.getElementById("reciente").addEventListener("click",function() { 
