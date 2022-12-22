@@ -2,15 +2,20 @@
 
 export const filtrarPeliculas = (dataGhibli,search) => {
   let nuevaData = dataGhibli.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()) || movie.director.toLowerCase().includes(search.toLowerCase()))
-  console.log(nuevaData)
-  // if(nuevaData.length > 1){
+  //console.log(nuevaData)
     return nuevaData
-  // }else{
-  //   return "No data"
-  // }
- 
-    
   }
+  
+export const ordenarAsc = (dataGhibli) => {
+  let dataOrdenada = dataGhibli.sort((a,b) => a.release_date - b.release_date);
+    return dataOrdenada
+}
+
+export const ordenarDesc = (dataGhibli) => {
+  let dataOrdenada = dataGhibli.sort((a,b) => b.release_date - a.release_date);
+  //console.log("ordenar descendente", ordenarDesc, dataOrdenada)
+    return dataOrdenada
+}
 
 
 
