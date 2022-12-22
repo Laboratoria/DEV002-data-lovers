@@ -1,25 +1,17 @@
 
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
-import { filtrarPeliculas } from './data.js';
+import { filtrarPeliculas, ordenarAsc, ordenarDesc } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
 console.log(typeof dataGhibli)
 let search = document.getElementById("search")
-//let search = dataGhibli[0].title
-//console.log(search)
-//console.log(dataGhibli);
-//console.log (data.films[0].poster)
-
-//const prueba = document.getElementById("prueba")
-//prueba.innerHTML = ` 
-//<div class= "prueba"> ${data.films[0].director} ${data.films[0].title}</div>
-//<img src="${data.films[0].poster}" />`
+let orden = document.getElementById("ordenarPor")
 
 let cards = document.getElementById("cards")
 
-document.getElementById("pantalla1").style.display = "inline";
+document.getElementById("pantalla1").style.display = "flex";
 document.getElementById("pantalla2").style.display = "none";
 
 let inicio = document.getElementById("boton");
@@ -88,4 +80,17 @@ search.addEventListener("input",()=>{
   //console.log(filtrarPeliculas(dataGhibli,search.value))
   displayCards(filtrarPeliculas(dataGhibli,search.value))
 });
+
+orden.addEventListener("change",(e)=>{
+  let seleccion = e.target.value;
+  if (seleccion === "ascendente"){
+    cards.innerHTML = ""
+     displayCards(ordenarAsc(dataGhibli))
+    }
+  else if (seleccion === "descendente"){
+    cards.innerHTML = ""
+    displayCards(ordenarDesc(dataGhibli))
+  }
+
+})
 
