@@ -1,40 +1,142 @@
-.titulo{
-    font-family: Lucida sans-serif
-
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #fcff80;
+}
+
+
 .flex-cont {
-    background: #fcff80;
-    padding:2px;
-    display: flex;
-    width: 220px;
-        
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+
+  background: #fcff80;
+  padding: 5px;
+  display: flexbox;
+  width: 220px;
+  flex-wrap: wrap;
+  justify-content: right;
 }
 
 .flex-box {
-    background-color: whitesmoke;
-    width: 190px;
-    height: 190px;
-    text-align: center;
-    /*margin: 0px;*/
-    border-radius: 100%;   
+
+  background-color: white;
+  width: 190px;
+  height: 190px;
+  text-align: center;
+  border-radius: 10%;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin-bottom: 30px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1150px;
+  justify-content: right;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 
 }
 
-.cardsContainer{
-    display:flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: auto;
-   
+nav {
+  display: flex;
+  justify-content: space-around;
 }
-.filtro{
-    display: none;
+#img, #img2 {
+  width: 100%;
 }
 
+.nav-1 {
+  display: flex;
+  justify-content: flex-start;
+}
 
+.nav-2 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 18%;
+}
 
+#select-generation {
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-size: 20px;
+  margin: 4px 2px;
+}
 
+#select-type {
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-size: 20px;
+  margin: 4px 2px;
+}
 
+button {
+  border-radius: 15px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  /* margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;*/
+}
 
+#select-type,#Statistic,#select-generation {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+#select-type:hover,#Statistic:hover,#select-generation:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+@media (max-width: 500px) {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .nav-1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .nav-2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* width: 18%;*/
+  }
+
+  button,#select-type,#select-generation {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+
+  #select-generation {
+    width: 130px;
+  }
+
+  #select-type {
+    width: 130px;
+  }
+
+  botton {
+    width: 150px;
+  }
+}

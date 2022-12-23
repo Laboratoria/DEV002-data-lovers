@@ -2,38 +2,73 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title>Data Lovers</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
- 
+
+  <div class="img">
+    <img id="img" src="media/barra-pokemon.jpeg" alt="">
+  </div>
 
   <header>
     <nav>
-      
-    <div class= titulo id="root">POKETORIA</div>
-    <div>
-      <button id="Generation I">Generation I</button>
-      <button id="Generation II">Generation II</button>
-      <input type="search" placeholder="Encuentra tu Pomeón" name="Encuentra tu Pokemón" id="Encuentra tu Pokemón">
-    </div>
- 
-    
- 
-    </section>
-  </nav>
+      <!-- <div class="nav-1">-->
+        <div class="nav-2">
+          <select id="select-generation">
+            <option value="gen">Generation I &#38; II</option>
+            <option value="gen-1">Generation I</option>
+            <option value="gen-2">Generation II</option>
+          </select>
+          <select id="select-type">
+            <option value="type">SelectType</option>
+            <option value="normal">Normal</option>
+            <option value="water">Agua</option>
+            <option value="grass">Hierba</option>
+            <option value="bug">Bicho</option>
+            <option value="electric">Electrico</option>
+            <option value="fairy">Hada</option>
+            <option value="fighting">Lucha</option>
+            <option value="flying">Volador</option>
+            <option value="ghost">Fantasma</option>
+            <option value="ground">Tierra</option>
+            <option value="ice">Hielo</option>
+            <option value="fire">Fuego</option>
+            <option value="poison">Veneno</option>
+            <option value="psychic">Psiquico</option>
+            <option value="rock">Roca</option>
+            <option value="steel">Acero</option>
+            <option value="dark">Siniestro</option>
+            <option value="dragon">Dragon</option>
+          </select>
+
+         <button id="Statistic">Statistic</button> 
+        </div>
+    </nav>
   </header>
+
   <main>
     <div class="cardsContainer" id="cardsContainer"></div>
-    
   </main>
 
-  <footer></footer>
-  <!--<div class= "prueba"> ${element.num} ${element.name} ${element.type} ${element.weaknesses} 
+  <footer>
+    <div class="img">
+      <img id="img2" src="media/barra-pokemon.jpeg" alt="">
+    </div>
+  </footer>
+
+  <!--<div class= "cardsContainer"> ${element.type} ${element.weaknesses} 
   ${element.special-attack} ${element.next-evolution}</div>-->
+
   <script src="main.js" type="module"></script>
 </body>
 
 </html>
+
+
+ 
