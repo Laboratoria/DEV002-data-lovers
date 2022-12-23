@@ -79,6 +79,13 @@ nav {
   margin: 4px 2px;
 }
 
+#select-sort{
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-size: 20px;
+  margin: 4px 2px; 
+}
+
 button {
   border-radius: 15px;
   color: white;
@@ -92,13 +99,13 @@ button {
   cursor: pointer;*/
 }
 
-#select-type,#Statistic,#select-generation {
+#select-type,#Statistic,#select-generation,#select-sort {
   background-color: white;
   color: black;
   border: 2px solid #008CBA;
 }
 
-#select-type:hover,#Statistic:hover,#select-generation:hover {
+#select-type:hover,#Statistic:hover,#select-generation:hover,#select-sort:hover {
   background-color: #008CBA;
   color: white;
 }
