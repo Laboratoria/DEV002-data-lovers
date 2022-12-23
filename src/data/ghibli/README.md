@@ -71,4 +71,5 @@ La primera idea fue plasmado a papel  ,la cual fue cambiando de acuerdo a los fe
 
 Una vez todo listo con los feedbacks y conformes con el resultado propuesto se procedió a realizar el prototipo de alta para las HU
 ![Prototipo de alta tamaño de un computador](src/images/pantalla1-figma.jpg)
+![Prototipo de alta tamaño de un computador](src/images/prototipodealta.jpg)
 ![Prototipo de alta tamaño de un movil](src/images/pantalla1-figmaresponsive.jpg)
