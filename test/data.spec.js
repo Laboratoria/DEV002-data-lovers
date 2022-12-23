@@ -1,28 +1,28 @@
 import { filterGen, filterType, } from '../src/data.js';
 
 const pokemonInput = [
-  { name: 'Bulbasaur', type: ['grass', 'poison'], num:001},
-  { name: 'pikachu', type: ['electric'], num: 025 },
-  { name: 'psyduck', type: ['water'], num: 054 },
-  { name: 'charmander', type: ['fire'], num: 004 },
-  { name: 'charmeleon', type: ['fire'], num: 005 },
+  { name: 'Bulbasaur', type: ['grass', 'poison'], num: 1 },
+  { name: 'pikachu', type: ['electric'], num: 25 },
+  { name: 'psyduck', type: ['water'], num: 54 },
+  { name: 'charmander', type: ['fire'], num: 4 },
+  { name: 'charmeleon', type: ['fire'], num: 5 },
   { name: 'togepi', type: ['fairy'], num: 175 },
   { name: 'chinchou', type: ['water', 'electric'], num: 170 },
-  { name: 'charizard', type: ['fire', 'flying'], num: 006 },
+  { name: 'charizard', type: ['fire', 'flying'], num: 6 },
 ]
 
 const fireOutput = [
-  { name: 'charmander', type: ['fire'], num: 004},
-  { name: 'charmeleon', type: ['fire'], num: 005},
-  { name: 'charizard', type: ['fire', 'flying'], num: 006},
+  { name: 'charmander', type: ['fire'], num: 4},
+  { name: 'charmeleon', type: ['fire'], num: 5},
+  { name: 'charizard', type: ['fire', 'flying'], num: 6},
 ]
-const genOneOutPut = [
-  { name: 'Bulbasaur', type: ['grass', 'poison'], num: 001},
-  { name: 'pikachu', type: ['electric'], num: 025},
-  { name: 'psyduck', type: ['water'], num: 054},
-  { name: 'charmander', type: ['fire'], num: 004},
-  { name: 'charmeleon', type: ['fire'], num: 005},
-  { name: 'charizard', type: ['fire', 'flying'], num: 006},
+const genOneOutput = [
+  { name: 'Bulbasaur', type: ['grass', 'poison'], num: 1},
+  { name: 'pikachu', type: ['electric'], num: 25},
+  { name: 'psyduck', type: ['water'], num: 54},
+  { name: 'charmander', type: ['fire'], num: 4},
+  { name: 'charmeleon', type: ['fire'], num: 5},
+  { name: 'charizard', type: ['fire', 'flying'], num: 6},
 ]  
 
 const genTwoOutput = [
@@ -31,7 +31,7 @@ const genTwoOutput = [
 ]
 describe('prueba para la funcion filterType ', () => {
   it('debe ser una función', () => {
-    expect(typeof filterType).toStrictEqual('function');
+    expect(typeof filterType).toBe('function');
   });
 
   it('debe retornar un arreglo solo con tipo fuego', () => {
@@ -41,18 +41,18 @@ describe('prueba para la funcion filterType ', () => {
 
 describe('prueba para la funcion filterGen', () => {
   it('debe ser una funcion', () => {
-    expect(filterGen).toStrictEqual('function');
+    expect( typeof filterGen).toBe('function');
   });
 
-  it('debe retornar un arreglo solo con gen', () => {
-    expect(filterGen(genOneOutPut)).toStrictEqual('genOneOutput');
+  it('debe retornar un arreglo solo con gen I', () => {
+    expect(filterGen(pokemonInput, "gen-1" )).toStrictEqual(genOneOutput);
   });
 
-  it('debe retornar un arreglo solo con gen', () => {
-    expect(filterGen(genTwoOutput)).toStrictEqual('genTwoOutput');
+  it('debe retornar un arreglo solo con gen II', () => {
+    expect(filterGen(pokemonInput, "gen-2")).toStrictEqual(genTwoOutput);
   });
-  it('debe retornar un arreglo  con tipo volador ', () => {
-    expect(filterType(pokemonInput, 'flying','poison')).toStrictEqual('pokemonInput');
+  it('debe retornar un arreglo igual a entrada ', () => {
+    expect(filterGen(pokemonInput, 'test')).toStrictEqual(pokemonInput);
   });
 
 });
