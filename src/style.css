@@ -264,6 +264,9 @@ header {
     background-color: rgb(206, 218, 206);
 }
 
+.mostrarPromedios{
+    color: #FFFFFF;
+}
 
 
 @media (max-width: 592px) {

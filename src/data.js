@@ -18,6 +18,21 @@ export const ordenarDesc = (dataGhibli) => {
     return dataOrdenada
 }
 
+export const porcentajeDirector = (filtrarPeliculas) => {
+  const directoresTotal = nuevaData.length;
+  const directores = filtrarPeliculas(nuevaData).length;
+  const calculoPorcentaje = score.reduce()(directoresTotal / directores * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los directores realizaron estas peliculaas`;
+  return infoPorc
+}
+/*export const porcentajePersonajesSlytherin = (array) => {
+  const personajesTotal = array.length;
+  const personajesCasa = filtrarSlytherin(array).length;
+  const calculoPorcentaje = Math.round(personajesCasa / personajesTotal * 100);
+  const infoPorc = `Un ${calculoPorcentaje}% de los personajes pertenecen a esta casa`;
+  return infoPorc 
+}*/
+
 
 
 //console.log(nuevaData)
