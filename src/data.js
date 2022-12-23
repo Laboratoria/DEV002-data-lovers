@@ -18,6 +18,13 @@ export const ordenarDesc = (dataGhibli) => {
     return dataOrdenada
 }
 
+export const promediar = (dataGhibli) =>{
+  let suma = dataGhibli.reduce((a,b) => a + parseInt(b.rt_score), 0);
+  let promedio = suma / dataGhibli.length;
+  console.log(promedio)
+  return promedio
+};
+
 
 
 //console.log(nuevaData)

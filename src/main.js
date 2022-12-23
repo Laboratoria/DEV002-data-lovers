@@ -1,14 +1,14 @@
 
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
-import { filtrarPeliculas, ordenarAsc, ordenarDesc } from './data.js';
+import { filtrarPeliculas, ordenarAsc, ordenarDesc, promediar } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
 //console.log(typeof dataGhibli)
 let search = document.getElementById("search")
 let orden = document.getElementById("ordenarPor")
-
+let contenedorPromedio = document.getElementById("contenedorPromedio")
 let cards = document.getElementById("cards")
 
 document.getElementById("pantalla1").style.display = "flex";
@@ -21,8 +21,17 @@ function mostrarPantallaDos() {
     document.getElementById("pantalla1").style.display = "none"
     document.getElementById("pantalla2").style.display = "inline"
     displayCards(dataGhibli)
+    mostrarPromedio(dataGhibli, promediar)
 }
  inicio.addEventListener ("click", mostrarPantallaDos);
+
+const mostrarPromedio = (dataGhibli) => {
+    
+    let promedio1 = promediar(dataGhibli)
+    contenedorPromedio.innerHTML = `
+      el puntaje promedio es ${promedio1}
+    `
+}
 
 const displayCards = (data) => {
     data.forEach(element => {
