@@ -3,6 +3,8 @@ import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import { filterBy } from './data.js';
+import { sortBy } from './data.js';
+import { filterByScore } from './data.js';
 
 console.log(example, data);
 
@@ -21,7 +23,7 @@ data.films.forEach(element => {
 });
 
 if (todas) {
-  //botón todas
+// BOTÓN TODAS 
   document.getElementById("todas").addEventListener("click",function() {
   const tarjetas = document.getElementById("tarjetas");
   tarjetas.innerHTML = "";
@@ -40,13 +42,13 @@ data.films.forEach(element => {
     console.log ("Mostrar Todas");
   });
 } 
-//botón Hayao
-document.getElementById("Hayao Miyazaki").addEventListener("click",function(event) { 
+// BOTONES DIRECTORES
+document.getElementById("directores").addEventListener("click",function(event) { 
   console.log (event.target.id);
-  let hayao = filterBy(event.target.id, data); //enviar dos argumentos
+  let director = filterBy(event.target.id, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
-  hayao.forEach(element => {
+  director.forEach(element => {
     const tarjeta = `
     <div class="contenedor"> 
           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
@@ -61,10 +63,36 @@ document.getElementById("Hayao Miyazaki").addEventListener("click",function(even
     let menu = document.getElementById("menu-principal");
     menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
 });
-
-document.getElementById("reciente").addEventListener("click",function() { 
+// BOTONES LANZAMIENTO
+document.getElementById("release_date").addEventListener("click",function(event) { 
   console.log ("Muestra Más recientes");
   //enlazar función filter de data.js
+  console.log (event.target.release_date);
+  
+    let menu = document.getElementById("menu-principal");
+    menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
+
+//BOTONES SCORES
+document.getElementById("scores").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByScore(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    
+    let menu = document.getElementById("menu-principal");
+    menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
 });
 
 
