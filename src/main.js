@@ -1,5 +1,5 @@
 import {
-   filterGen, filterType
+   filterGen, filterType, sort
 } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
@@ -36,6 +36,8 @@ displeyCard(dataPokemon)
 let generation
 let generationI = filterGen(dataPokemon, "gen-1")
 let generationII = filterGen(dataPokemon, "gen-2")
+let pokemonSortAZ = sort(dataPokemon, "name", "A-Z")
+let pokemonSortZA = sort(dataPokemon,"name", "Z-A")
 
 const selectGeneration = document.getElementById('select-generation')
 selectGeneration.addEventListener('change', (event) => {
@@ -61,8 +63,21 @@ selectType.addEventListener('change', (event) => {
     displeyCard(filteredTypeAndGenII)
   } else {
     displeyCard(filteredPokemon)
+
   }
   
+})
+
+const selectSort = document.getElementById('select-sort')
+selectSort.addEventListener('change', (event) => {
+  let sort = event.target.value;
+  if (sort === 'A-Z') {
+    displeyCard(pokemonSortAZ)
+  } else if (sort === 'Z-A') {
+    displeyCard(pokemonSortZA)
+  } else {
+    displeyCard(dataPokemon)
+  }
 })
 
 //displeyCard(generationI)
