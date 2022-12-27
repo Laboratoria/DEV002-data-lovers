@@ -20,10 +20,10 @@ export const sortBy = () => {
 //   years.sort((a,b)=>a-b);  
 //   console.log(years);
 }
-// SCORE
 
+// SCORE     ***CHECAR!!!!
 export const filterByScore = (string, data) => {
-  // console.log (string, data.films)
+  console.log (string, data.films)
   const result =  data.films.filter(movie => movie.rt_score === string); // retorno implicito
   console.log(result)
   return result;

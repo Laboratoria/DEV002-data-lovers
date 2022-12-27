@@ -73,7 +73,7 @@ document.getElementById("release_date").addEventListener("click",function(event)
     menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
 });
 
-//BOTONES SCORES
+//BOTONES SCORES  ***CHECAR!!!!
 document.getElementById("scores").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
   let score = filterByScore(event.target.rt_score, data); //enviar dos argumentos
