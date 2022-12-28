@@ -1,4 +1,5 @@
 //import file from '@babel/core/lib/transformation/file/file.js';
+
 import { filtrarPeliculas, ordenarAsc, ordenarDesc, promediar } from '../src/data.js';
 
 let peliculaTotoro = [{
@@ -11,7 +12,6 @@ let peliculaTotoro = [{
   "release_date": "1988",
   "rt_score": "93",
 }]
-
 let peliculaCastle = [{
   "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
   "title": "Castle in the Sky",
@@ -32,7 +32,6 @@ let peliculaKiki = [{
   "release_date": "1989",
   "rt_score": "96",
 }]
-
 let peliculaGrave = [{
   "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
   "title": "Grave of the Fireflies",
@@ -43,7 +42,6 @@ let peliculaGrave = [{
   "release_date": "1988",
   "rt_score": "97",
 }]
-
 let peliculaOnly = [{
   "id": "4e236f34-b981-41c3-8c65-f8c9000b94e7",
   "title": "Only Yesterday",
@@ -106,11 +104,8 @@ let dataPrueba = [
       "rt_score": "100",
     },
     ]
-
 let ordenAsc = [...peliculaCastle, ...peliculaTotoro, ...peliculaGrave, ...peliculaKiki, ...peliculaOnly]
 let ordenDesc = [...peliculaOnly, ...peliculaKiki, ...peliculaTotoro, ...peliculaGrave, ...peliculaCastle]
-
-
 describe('Prueba para la función filter', () => {
   it('is a function', () => {
     expect(typeof filtrarPeliculas).toBe('function');
@@ -119,21 +114,15 @@ describe('Prueba para la función filter', () => {
     //expect(dataPrueba).arrayContaining('array');
   //});
   it('Debe retornar un nuevo array con los elementos especificados', () => {
-  
-  
     expect(filtrarPeliculas(dataPrueba,"Totoro")).toEqual(peliculaTotoro);
   });
-
   /*it('devuelve peliculas y director filtradas', () => {
     // console.log(filtrarPeliculas(dataPrueba,"Hulk"));
     // expect(filtrarPeliculas(dataPrueba,"Hulk").toThrow(TypeError));
     // expect(filtrarPeliculas(dataPrueba,"Hulk").toBe("No data"));
     expect(filtrarPeliculas(dataPrueba, "Hulk")).toThrow(TypeError);
-
   });*/
 });
-
-
 describe('Prueba para la función sortAsc', () => {
   it('is a function', () => {
     expect(typeof ordenarAsc).toBe('function');
@@ -142,7 +131,6 @@ describe('Prueba para la función sortAsc', () => {
     expect(ordenarAsc(dataPrueba)).toEqual(ordenAsc);
   });
 });
-
 describe('Prueba para la función sortDesc', () => {
   it('is a function', () => {
     expect(typeof ordenarDesc).toBe('function');

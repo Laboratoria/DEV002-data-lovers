@@ -1,7 +1,9 @@
 
 //import { filtrarpeliculas } from './data.js';
 // import data from './data/lol/lol.js';
+
 import { filtrarPeliculas, ordenarAsc, ordenarDesc, promediar } from './data.js';
+
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 let dataGhibli = data.films
@@ -100,6 +102,15 @@ orden.addEventListener("change",(e)=>{
     cards.innerHTML = ""
     displayCards(ordenarDesc(dataGhibli))
   }
-
 })
+  
+  function mostrarPromedio (data,promediar)
+    let calculo= document.createElement("div")
+  calculo.innerHTML = `promedio mejores peliculas {$element.director}`
+  mostrarPromedio.appendChild(calculo)
+  
+  
+  
+  
+
 
