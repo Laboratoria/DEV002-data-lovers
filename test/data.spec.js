@@ -1,5 +1,7 @@
 //import file from '@babel/core/lib/transformation/file/file.js';
-import { filtrarPeliculas, ordenarAsc, ordenarDesc } from '../src/data.js';
+
+import { filtrarPeliculas, ordenarAsc, ordenarDesc, promediar } from '../src/data.js';
+
 let peliculaTotoro = [{
   "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
   "title": "My Neighbor Totoro",
@@ -135,5 +137,14 @@ describe('Prueba para la función sortDesc', () => {
   });
   it('Debería retornar a la data ordenada por año en forma descendente', () => {
     expect(ordenarDesc(dataPrueba)).toEqual(ordenDesc);
+  });
+});
+
+describe('Prueba para la función promediar', () => {
+  it('is a function', () => {
+    expect(typeof promediar).toBe('function');
+  });
+  it('Debería retornar el promedio de puntuación de las películas', () => {
+    expect(promediar(dataPrueba)).toEqual(96.2);
   });
 });
