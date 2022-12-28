@@ -18,7 +18,6 @@ export const filterGen = (data, gen) => {
   return filteredData
 };
 
-
 export const sort = (data, sortBy, sortOrder) => {
   let sortData
   if (sortOrder === 'A-Z') {

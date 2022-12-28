@@ -1,12 +1,10 @@
 import {
    filterGen, filterType, sort
-} from './data.js';
-// import data from './data/lol/lol.js';
+} from './data.js';// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 
-//mostrar
+
 
 const cardsContainer = document.getElementById("cardsContainer")
 const dataPokemon = data.pokemon
@@ -32,12 +30,15 @@ const displeyCard = (d) => {
 
 displeyCard(dataPokemon)
 
+
+
+
+
 //filter
 let generation
 let generationI = filterGen(dataPokemon, "gen-1")
 let generationII = filterGen(dataPokemon, "gen-2")
-let pokemonSortAZ = sort(dataPokemon, "name", "A-Z")
-let pokemonSortZA = sort(dataPokemon,"name", "Z-A")
+
 
 const selectGeneration = document.getElementById('select-generation')
 selectGeneration.addEventListener('change', (event) => {
@@ -47,6 +48,7 @@ selectGeneration.addEventListener('change', (event) => {
   } else if (event.target.value === 'gen-2') {
     displeyCard(generationII)
   } else {
+    console.log('DOS GENERACIONES')
     displeyCard(dataPokemon)
   }
 })
@@ -70,14 +72,12 @@ selectType.addEventListener('change', (event) => {
 
 const selectSort = document.getElementById('select-sort')
 selectSort.addEventListener('change', (event) => {
-  let sort = event.target.value;
-  if (sort === 'A-Z') {
-    displeyCard(pokemonSortAZ)
-  } else if (sort === 'Z-A') {
-    displeyCard(pokemonSortZA)
-  } else {
-    displeyCard(dataPokemon)
-  }
+  let sortSelected = event.target.value;
+  let sortPokemon = sort(dataPokemon, "name", sortSelected)
+  console.log('sort pokemon', sortPokemon)
+  
+    displeyCard(sortPokemon)
+  
 })
 
-//displeyCard(generationI)
+
