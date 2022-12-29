@@ -125,121 +125,121 @@ document.getElementById("ordenDes").addEventListener("click",function(event) {
 
 //BOTONES SCORES  ***CHECAR!!!!
 
-// document.getElementById("less69").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS69(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
+document.getElementById("less69").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS69(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
 
-// document.getElementById("70-80").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS70(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
-// document.getElementById("81-85").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS81(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
-// document.getElementById("86-90").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS86(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
-// document.getElementById("91-95").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS91(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
-// document.getElementById("96-100").addEventListener("click",function(event) { 
-//   console.log (event.target.rt_score);
-//   let score = filterByS96(event.target.rt_score, data); //enviar dos argumentos
-//   //enlazar función filter de data.js
-//   tarjetas.innerHTML = "";
-//   score.forEach(element => {
-//     const tarjeta = `
-//     <div class="contenedor"> 
-//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-//           <section class="texto">
-//             <p id= "titulo"> ${element.title}</p>
-//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-//           </section>
-//     </div>
-//     `
-//     tarjetas.innerHTML += tarjeta});
-//     // let menu = document.getElementById("menu-principal");
-//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-// });
+document.getElementById("70-80").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS70(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
+document.getElementById("81-85").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS81(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
+document.getElementById("86-90").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS86(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
+document.getElementById("91-95").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS91(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
+document.getElementById("96-100").addEventListener("click",function(event) { 
+  console.log (event.target.rt_score);
+  let score = filterByS96(event.target.rt_score, data); //enviar dos argumentos
+  //enlazar función filter de data.js
+  tarjetas.innerHTML = "";
+  score.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+    // let menu = document.getElementById("menu-principal");
+    // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+});
 // document.getElementById("scores").addEventListener("click",function(event) { 
 //   console.log (event.target.rt_score);
 //   let score = filterByScore(event.target.rt_score, data); //enviar dos argumentos
