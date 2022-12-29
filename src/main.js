@@ -2,8 +2,8 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-import { filterBy } from './data.js';
-import { sortBy } from './data.js';
+import { filterBy, sortByA, sortByD, filterByS69, filterByS70, filterByS81, filterByS86, filterByS91, filterByS96 } from './data.js';
+
 // import { filterByScore } from './data.js';
 
 console.log(example, data);
@@ -64,19 +64,19 @@ document.getElementById("directores").addEventListener("click",function(event) {
     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
 });
 
-const dataOriginal =  data.films
-const cloneData = Object.assign({}, dataOriginal);
-console.log (data.films)
-console.log(cloneData)
+
 
 // BOTONES LANZAMIENTO
 document.getElementById("ordenAsc").addEventListener("click",function(event) { 
   console.log ("Muestra Más recientes");
   //enlazar función filter de data.js
- 
-  let year = sortBy(event.target.release_date, cloneData);
+  // const dataOriginal =  data.films;
+  // const cloneData = Object.assign({}, dataOriginal);
+  // console.log (data.films);
+  // console.log(cloneData);
+  let ordenar = sortByD(event.target.release_date, data);
   tarjetas.innerHTML = "";
-  year.forEach(element => {
+  ordenar.forEach(element => {
     const tarjeta = `
     <div class="contenedor"> 
           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
@@ -87,11 +87,159 @@ document.getElementById("ordenAsc").addEventListener("click",function(event) {
     </div>
     `
     tarjetas.innerHTML += tarjeta});
+}); 
+
+document.getElementById("ordenDes").addEventListener("click",function(event) { 
+  console.log ("Muestra Más antiguas");
+  //enlazar función filter de data.js
+  let ordenar = sortByA(event.target.release_date, data);
+  tarjetas.innerHTML = "";
+  ordenar.forEach(element => {
+    const tarjeta = `
+    <div class="contenedor"> 
+          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+          <section class="texto">
+            <p id= "titulo"> ${element.title}</p>
+            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+          </section>
+    </div>
+    `
+    tarjetas.innerHTML += tarjeta});
+}); 
+  // let year = sortBy(event.target.release_date, cloneData);
+  // tarjetas.innerHTML = "";
+  // year.forEach(element => {
+  //   const tarjeta = `
+  //   <div class="contenedor"> 
+  //         <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+  //         <section class="texto">
+  //           <p id= "titulo"> ${element.title}</p>
+  //           <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+  //         </section>
+  //   </div>
+  //   `
+  //   tarjetas.innerHTML += tarjeta});
     // let menu = document.getElementById("menu-principal");
     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
-});
 
-// //BOTONES SCORES  ***CHECAR!!!!
+
+//BOTONES SCORES  ***CHECAR!!!!
+
+// document.getElementById("less69").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS69(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
+
+// document.getElementById("70-80").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS70(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
+// document.getElementById("81-85").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS81(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
+// document.getElementById("86-90").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS86(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
+// document.getElementById("91-95").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS91(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
+// document.getElementById("96-100").addEventListener("click",function(event) { 
+//   console.log (event.target.rt_score);
+//   let score = filterByS96(event.target.rt_score, data); //enviar dos argumentos
+//   //enlazar función filter de data.js
+//   tarjetas.innerHTML = "";
+//   score.forEach(element => {
+//     const tarjeta = `
+//     <div class="contenedor"> 
+//           <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+//           <section class="texto">
+//             <p id= "titulo"> ${element.title}</p>
+//             <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+//           </section>
+//     </div>
+//     `
+//     tarjetas.innerHTML += tarjeta});
+//     // let menu = document.getElementById("menu-principal");
+//     // menu.style.display = "none"; //si quiero seleccionar otra cosa ya no me deja
+// });
 // document.getElementById("scores").addEventListener("click",function(event) { 
 //   console.log (event.target.rt_score);
 //   let score = filterByScore(event.target.rt_score, data); //enviar dos argumentos
