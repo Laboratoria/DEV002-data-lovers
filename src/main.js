@@ -48,7 +48,7 @@ selectGeneration.addEventListener('change', (event) => {
   } else if (event.target.value === 'gen-2') {
     displeyCard(generationII)
   } else {
-    console.log('DOS GENERACIONES')
+    
     displeyCard(dataPokemon)
   }
 })
@@ -74,7 +74,6 @@ const selectSort = document.getElementById('select-sort')
 selectSort.addEventListener('change', (event) => {
   let sortSelected = event.target.value;
   let sortPokemon = sort(dataPokemon, "name", sortSelected)
-  console.log('sort pokemon', sortPokemon)
   
     displeyCard(sortPokemon)
   
