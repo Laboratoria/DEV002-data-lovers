@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div id="pantalla1" class="pantalla1">
+      <h1>"Nada de lo que sucede se olvida, incluso si ya no lo recuerdas."</h1>
+      <button id="boton">PELÍCULAS</button>
+    </div>
+    <div id="pantalla2" class="pantalla2">
+      <header id="header">
+        <h2 class="header-peliculas">Películas</h2>
+        <div id="contenedorPromedio" class="promedio"></div>
+
+        <img src="images/logo.png" alt="logo studio ghibli" class="logo">
+      </header>
+      <section class="funciones">
+        <div class="ordenarBuscar">
+          <p class="pFunciones">Ordenar por</p>
+          <select name="ordenarPor" id="ordenarPor" class="input">
+            <option value="default"></option>
+            <option value="ascendente" id="asc">ascendente</option>
+            <option value="descendente" id="desc">descendente</option>
+          </select>
+        </div>
+        <div class="ordenarBuscar">
+          <p class="pFunciones">Buscar por</p>
+          <input type="search" id="search" class="input">
+        </div>
+      </section>
+      <div id="mostrarPromedio" class="mostrarPromedios"></div>
+      <section id="cards" class="cards">
+
+      </section>
+    </div>
+  </main>
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>

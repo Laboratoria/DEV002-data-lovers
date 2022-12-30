@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/studio-ghibli-history-7.jpg");
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Black Han Sans', sans-serif;
+    background-attachment: fixed;
+}
+
+.pantalla1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 6vw;
+    padding: 1.2em;
+    position: relative;
+    margin: auto;
+}
+#boton {
+    border-radius: 50px;
+    color: #2B6B84;
+    background-color: #FBE3E3;
+    font-size: 2.5vw;
+    font-weight: bold;
+    font-family: 'Black Han Sans', sans-serif;
+    padding: 0.5em 2em;
+    border: 0.1em solid #B2A592;
+    background-size:contain;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+#boton:hover {
+    background-color: rgb(222, 231, 222);
+}
+.pantalla2 {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 20px 0;
+    align-items: center;
+    object-fit: contain;
+}
+.header-peliculas {
+    font-size: 2em;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #2B6B84;
+}
+.logo {
+    width: 30%;
+    margin: 0 auto;
+    max-width: fit-content;;
+}
+
+.promedio {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0.5em;
+    border: 1px solid #EEBEF0;
+    border-radius: 50px;
+    margin: auto;
+    background-color: lightpink;
+    color: #2B6B84;
+}
+.funciones {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 4em 0;
+    align-items: center;
+    object-fit: contain;
+}
+
+.ordenarBuscar {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: fit-content;
+    color: #2B6B84;
+    padding: 1em;
+}
+.pFunciones {
+    font-size: 2.5vw;
+}
+.input {
+    background-color: #FBE3E3;
+    width: 30vw;
+    margin: auto;
+    border: 0.13em solid #F8EEDE;
+    border-radius: 0.5em;
+    font-size: 2vw;
+    padding: 0.3em;
+    font-weight: bold;
+    color: #2B6B84;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    gap: 20px;
+    max-width: fit-content;
+    justify-content: center;
+    padding: 0%;
+    margin: auto;
+}
+/*.card:hover{
+    background-color: gray;
+    transform: scale(1.2)
+}*/
+/*.cards:hover{
+    background-image: url("vecino-totoro.jpg");
+}*/
+.imgDatos {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0px;
+    padding: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 8px solid pink;
+    border-radius: 10%;
+    padding: 0.5em;
+    background-color: #FFFFFF;
+    max-width: 600px;
+}
+#poster {
+    width: 15vw;
+    height: auto;
+    border-radius: 10%;
+    margin: auto;
+}
+.parrafos {
+    display: flex;
+    flex-direction: column;
+    /*line-height: 0px;*/
+    margin: 0 auto;
+    font-size: 1.6vw;
+    max-width: 200px;
+}
+.parrafo {
+    padding: 1em;
+    margin: auto;
+    font-weight: bold;
+    /*width: fit-content;*/
+    height: fit-content;
+}
+#description {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modalContainer {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+.modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+.open {
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 12em;
+    border: 3px solid #151618;
+    color: #2B6B84;
+    background-color: rgb(208, 230, 199);
+    font-size: 15px;
+    padding: 0.3em;
+}
+
+.open:hover {
+    background-color: rgb(206, 218, 206);
+    ;
+}
+.close {
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    margin: 1em 5em;
+    border: 3px solid #151618;
+    color: #2B6B84;
+    background-color: rgb(208, 230, 199);
+    font-size: 15px;
+    padding: 5px
+}
+.close:hover {
+    background-color: rgb(206, 218, 206);
+}
+
+@media (max-width: 592px) {
+    body {
+        background-image: url(images/fondo-movil.png);
+    }
+    #boton {
+        font-size: 4vw;
+    }
+    #mejores-peliculas {
+        font-size: 4vw;
+    }
+    .pFunciones{
+        font-size: 4vw;
+    }
+    .funciones{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5em;
+    }
+    .input{
+        font-size: 2.5vw;
+    }
+    .ordenarBuscar{
+        padding: 0.5em;
+    }
+    #poster{
+        width: 30vw;
+        height: auto;
+    }
+    .parrafos{
+        font-size: 3.5vw;
+    }
+}
