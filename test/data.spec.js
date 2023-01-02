@@ -1,4 +1,4 @@
-import { filterGen, filterType, sort} from '../src/data.js';
+import { filterGen, filterType, sort, computeStats} from '../src/data.js';
 
 const pokemonInput = [
   { name: 'Bulbasaur', type: ['grass', 'poison'], num: 1 },
@@ -53,6 +53,8 @@ const zaOutput = [
 
 ]
 
+const statsOutput = [3, '37.50']
+
 describe('prueba para la funcion filterType ', () => {
   it('debe ser una función', () => {
     expect(typeof filterType).toBe('function');
@@ -98,4 +100,14 @@ describe('prueba para la funcion sort', () => {
     expect(sort(pokemonInput, 'name', 'test')).toStrictEqual(pokemonInput);
   });
 
+});
+
+describe('prueba para la funcion computeStats ', () => {
+  it('debe ser una función', () => {
+    expect(typeof computeStats ).toBe('function');
+  });
+
+  it('debe retornar un arreglo que contenga la cantidad y el porcentaje de tipo fuego', () => {
+    expect(computeStats(pokemonInput, 'fire', 8)).toStrictEqual(statsOutput);
+  });
 });

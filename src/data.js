@@ -48,3 +48,9 @@ export const sort = (data, sortBy, sortOrder) => {
     return data
   }
 }
+export const computeStats = (data, type, total) => {
+  const pokemon = data.filter(pokemon => pokemon.type.includes(type));
+  const numberOfPokemon = pokemon.length;
+  const percent = (numberOfPokemon / total ) * 100;
+  return [numberOfPokemon, percent.toFixed(2)]
+}
