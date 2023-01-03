@@ -1,4 +1,4 @@
-export default {
+ export default{
   "pokemon": [{
     "num": "001",
     "name": "bulbasaur",
