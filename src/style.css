@@ -92,7 +92,12 @@ button {
   
  
 }
-
+#table-container{
+  display: flex;
+  align-content: center;
+  align-self: center;
+  padding: 0 45% 0 40%;
+}
 #Statistic {
   background-color: white;
   color: black;
@@ -109,8 +114,9 @@ button {
   width: 100%;
   border: 1px solid #008CBA;
   
-  
+
 }
+
  tr, th, td {
   width: 25%;
   text-align: left;
