@@ -86,7 +86,7 @@ export const sortByD = (x, data) => {
 // SCORE     ***CHECAR!!!!
 export const filterByS69 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 69); // retorno implicito
+  const result =  data.films.filter(movie => movie.rt_score <= 69); 
   console.log(result);
   console.log("Resultado menos de 69 " + x);
   console.log("Total " + result.length);
@@ -95,7 +95,9 @@ export const filterByS69 = (x, data) => {
 } 
 export const filterByS70 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 80); // retorno implicito
+  const result =  data.films.filter(movie => {
+    return (movie.rt_score <= 80 && movie.rt_score >= 70)
+  }); 
   console.log(result);
   console.log("Resultado 70 a 80 " + x);
   console.log("Total " + result.length);
@@ -104,7 +106,9 @@ export const filterByS70 = (x, data) => {
 } 
 export const filterByS81 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 85); // retorno implicito
+  const result =  data.films.filter(movie => {
+    return (movie.rt_score <= 85 && movie.rt_score >= 81)
+  }); 
   console.log(result);
   console.log("Resultado 81 a 85 " + x);
   console.log("Total " + result.length);
@@ -113,7 +117,9 @@ export const filterByS81 = (x, data) => {
 } 
 export const filterByS86 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 90); // retorno implicito
+  const result =  data.films.filter(movie => {
+    return (movie.rt_score <= 90 && movie.rt_score >= 86)
+  }); 
   console.log(result);
   console.log("Resultado 86 a 90 " + x);
   console.log("Total " + result.length);
@@ -122,7 +128,9 @@ export const filterByS86 = (x, data) => {
 } 
 export const filterByS91 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 95); // retorno implicito
+  const result =  data.films.filter(movie => {
+    return (movie.rt_score <= 95 && movie.rt_score >= 91)
+  }); 
   console.log(result);
   console.log("Resultado 91 a 95 " + x);
   console.log("Total " + result.length);
@@ -131,7 +139,7 @@ export const filterByS91 = (x, data) => {
 } 
 export const filterByS96 = (x, data) => {
   // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score >= 96); // retorno implicito
+  const result =  data.films.filter(movie => movie.rt_score >= 96); 
   console.log(result);
   console.log("Resultado 95 a 100 " + x);
   console.log("Total " + result.length);
