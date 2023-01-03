@@ -2,12 +2,12 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-import { filterBy, sortByA, sortByD, filterByS69, filterByS70, filterByS81, filterByS86, filterByS91, filterByS96 } from './data.js';
+import { filterBy, sortByA, sortByD, filterByS } from './data.js';
 
 // import { filterByScore } from './data.js';
 
 console.log(example, data);
-
+ 
 const tarjetas = document.getElementById("tarjetas");
 data.films.forEach(element => {
     const tarjeta = `
@@ -67,14 +67,14 @@ document.getElementById("directores").addEventListener("click",function(event) {
 
 
 // BOTONES LANZAMIENTO
-document.getElementById("ordenAsc").addEventListener("click",function(event) { 
+document.getElementById("ordenAsc").addEventListener("click",function() { 
   console.log ("Muestra Más recientes");
   //enlazar función filter de data.js
   // const dataOriginal =  data.films;
   // const cloneData = Object.assign({}, dataOriginal);
   // console.log (data.films);
   // console.log(cloneData);
-  let ordenar = sortByD(event.target.release_date, data);
+  let ordenar = sortByD(data);
   tarjetas.innerHTML = "";
   ordenar.forEach(element => {
     const tarjeta = `
@@ -89,10 +89,10 @@ document.getElementById("ordenAsc").addEventListener("click",function(event) {
     tarjetas.innerHTML += tarjeta});
 }); 
 
-document.getElementById("ordenDes").addEventListener("click",function(event) { 
+document.getElementById("ordenDes").addEventListener("click",function() { 
   console.log ("Muestra Más antiguas");
   //enlazar función filter de data.js
-  let ordenar = sortByA(event.target.release_date, data);
+  let ordenar = sortByA(data);
   tarjetas.innerHTML = "";
   ordenar.forEach(element => {
     const tarjeta = `
@@ -127,7 +127,7 @@ document.getElementById("ordenDes").addEventListener("click",function(event) {
 
 document.getElementById("less69").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS69(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(0, 69, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
@@ -147,7 +147,7 @@ document.getElementById("less69").addEventListener("click",function(event) {
 
 document.getElementById("70-80").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS70(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(70, 80, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
@@ -166,7 +166,7 @@ document.getElementById("70-80").addEventListener("click",function(event) {
 });
 document.getElementById("81-85").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS81(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(81, 85, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
@@ -185,7 +185,7 @@ document.getElementById("81-85").addEventListener("click",function(event) {
 });
 document.getElementById("86-90").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS86(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(86, 90, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
@@ -204,7 +204,7 @@ document.getElementById("86-90").addEventListener("click",function(event) {
 });
 document.getElementById("91-95").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS91(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(91, 95, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
@@ -223,7 +223,7 @@ document.getElementById("91-95").addEventListener("click",function(event) {
 });
 document.getElementById("96-100").addEventListener("click",function(event) { 
   console.log (event.target.rt_score);
-  let score = filterByS96(event.target.rt_score, data); //enviar dos argumentos
+  let score = filterByS(96, 100, data); //enviar dos argumentos
   //enlazar función filter de data.js
   tarjetas.innerHTML = "";
   score.forEach(element => {
