@@ -7,6 +7,22 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+// //CALCULO
+// export const promedio = (data) => {
+//   // const result =  data.films.rt_score/20;
+//   // console.log(result);
+
+//   // const result =  data.films(movie => {
+//   //   return (movie.rt_score <= 95 && movie.rt_score >= 91)
+//   // });
+
+//   const suma = data.films.rt_score.reduce((acumulador, valorActual) => acumulador + valorActual , 0);
+//   console.log(suma)
+
+//   return suma;
+// } 
+
 // DIRECTORES
 export const filterBy = (string, data) => {
   // console.log (string, data.films)
@@ -18,8 +34,8 @@ export const filterBy = (string, data) => {
   return result;
 } 
 // LANZAMIENTO
-export const sortByA = (x, data) => {
-  const result = data.films.sort((a,b) => {
+export const sortByA = (data) => {
+  const result = [...data.films].sort((a,b) => {
     if (a.release_date === b.release_date) {
       return 0;
     }
@@ -30,13 +46,12 @@ export const sortByA = (x, data) => {
   });
     // .slice()
     // .sort((a,b) => b.release_date - a.release_date);
-    console.log(x);
     console.log(result);
     return result ;
 } 
 
-export const sortByD = (x, data) => {
-  const result = data.films.sort((a,b) => {
+export const sortByD = (data) => {
+  const result = [...data.films].sort((a,b) => {
     //Si a y b eran iguales, devolvemos 0.
     if (a.release_date === b.release_date) {
       return 0;
@@ -48,7 +63,6 @@ export const sortByD = (x, data) => {
     //Al final devolvemos 1, porque querrá decir que no eran ni iguales ni a era menor que b.
     return 1;
   });
-    console.log(x);
     console.log(result);
     return result ;
 } 
@@ -84,68 +98,68 @@ export const sortByD = (x, data) => {
 // }
 
 // SCORE     ***CHECAR!!!!
-export const filterByS69 = (x, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score <= 69); 
-  console.log(result);
-  console.log("Resultado menos de 69 " + x);
-  console.log("Total " + result.length);
-  // contador.innerHTML = result.length;
-  return result;
-} 
-export const filterByS70 = (x, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => {
-    return (movie.rt_score <= 80 && movie.rt_score >= 70)
-  }); 
-  console.log(result);
-  console.log("Resultado 70 a 80 " + x);
-  console.log("Total " + result.length);
-  // contador.innerHTML = result.length;
-  return result;
-} 
-export const filterByS81 = (x, data) => {
+// export const filterByS69 = (x, data) => {
+//   // console.log (string, data.films)
+//   const result =  data.films.filter(movie => movie.rt_score <= 69); 
+//   console.log(result);
+//   console.log("Resultado menos de 69 " + x);
+//   console.log("Total " + result.length);
+//   // contador.innerHTML = result.length;
+//   return result;
+// } 
+export const filterByS = (min, max, data) => {
   // console.log (string, data.films)
   const result =  data.films.filter(movie => {
-    return (movie.rt_score <= 85 && movie.rt_score >= 81)
+    return (movie.rt_score <= max && movie.rt_score >= min)
   }); 
   console.log(result);
-  console.log("Resultado 81 a 85 " + x);
+  console.log("Resultado", min, max )
   console.log("Total " + result.length);
   // contador.innerHTML = result.length;
   return result;
 } 
-export const filterByS86 = (x, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => {
-    return (movie.rt_score <= 90 && movie.rt_score >= 86)
-  }); 
-  console.log(result);
-  console.log("Resultado 86 a 90 " + x);
-  console.log("Total " + result.length);
-  // contador.innerHTML = result.length;
-  return result;
-} 
-export const filterByS91 = (x, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => {
-    return (movie.rt_score <= 95 && movie.rt_score >= 91)
-  }); 
-  console.log(result);
-  console.log("Resultado 91 a 95 " + x);
-  console.log("Total " + result.length);
-  // contador.innerHTML = result.length;
-  return result;
-} 
-export const filterByS96 = (x, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.rt_score >= 96); 
-  console.log(result);
-  console.log("Resultado 95 a 100 " + x);
-  console.log("Total " + result.length);
-  // contador.innerHTML = result.length;
-  return result;
-} 
+// export const filterByS81 = (x, data) => {
+//   // console.log (string, data.films)
+//   const result =  data.films.filter(movie => {
+//     return (movie.rt_score <= 85 && movie.rt_score >= 81)
+//   }); 
+//   console.log(result);
+//   console.log("Resultado 81 a 85 " + x);
+//   console.log("Total " + result.length);
+//   // contador.innerHTML = result.length;
+//   return result;
+// } 
+// export const filterByS86 = (x, data) => {
+//   // console.log (string, data.films)
+//   const result =  data.films.filter(movie => {
+//     return (movie.rt_score <= 90 && movie.rt_score >= 86)
+//   }); 
+//   console.log(result);
+//   console.log("Resultado 86 a 90 " + x);
+//   console.log("Total " + result.length);
+//   // contador.innerHTML = result.length;
+//   return result;
+// } 
+// export const filterByS91 = (x, data) => {
+//   // console.log (string, data.films)
+//   const result =  data.films.filter(movie => {
+//     return (movie.rt_score <= 95 && movie.rt_score >= 91)
+//   }); 
+//   console.log(result);
+//   console.log("Resultado 91 a 95 " + x);
+//   console.log("Total " + result.length);
+//   // contador.innerHTML = result.length;
+//   return result;
+// } 
+// export const filterByS96 = (x, data) => {
+//   // console.log (string, data.films)
+//   const result =  data.films.filter(movie => movie.rt_score >= 96); 
+//   console.log(result);
+//   console.log("Resultado 95 a 100 " + x);
+//   console.log("Total " + result.length);
+//   // contador.innerHTML = result.length;
+//   return result;
+// } 
 // export const filterByScore = (string, data) => {
 //   console.log (string, data.films)
 //   const result =  data.films.filter(movie => movie.rt_score === string); // retorno implicito
