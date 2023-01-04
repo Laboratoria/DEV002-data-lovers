@@ -9,22 +9,40 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
+// DIRECTORES
 export const filterBy = (string, data) => {
-  // console.log (string, data.films)
-  const result =  data.films.filter(movie => movie.director === string); // retorno implicito
-  console.log(result)
+  const result =  data.films.filter(movie => movie.director === string); 
   return result;
 } 
-
-
-//prueba de funcion filtrar
-// function filtrar(data) {
-//   for (let i = 2; data > i; i++) {
-//     if (data % i === 0) {
-//       return false;
-//     }
-//   }
-//   return data > 1;
-// }
-
-// console.log(array.filter(filtrar)); // [2, 3, 5, 7, 11, 13]
+// LANZAMIENTO
+export const sortByA = (data) => {
+  const result = [...data.films].sort((a,b) => {
+    if (a.release_date === b.release_date) {
+      return 0;
+    }
+    if (a.release_date < b.release_date) {
+      return -1;
+    }
+    return 1;
+  });
+    return result ;
+} 
+export const sortByD = (data) => {
+  const result = [...data.films].sort((a,b) => {
+    if (a.release_date === b.release_date) {
+      return 0;
+    }
+    if ( b.release_date < a.release_date ) {
+      return -1;
+    }
+    return 1;
+  });
+    return result ;
+} 
+// SCORE
+export const filterByS = (min, max, data) => {
+  const result =  data.films.filter(movie => {
+    return (movie.rt_score <= max && movie.rt_score >= min)
+  }); 
+  return result;
+} 
