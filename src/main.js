@@ -1,5 +1,4 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import { filterBy, sortByA, sortByD, filterByS } from './data.js';
@@ -11,14 +10,14 @@ console.log(example, data);
 const tarjetas = document.getElementById("tarjetas");
 data.films.forEach(element => {
     const tarjeta = `
-    <div class="contenedor"> 
-          <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
-          <section class="texto">
-            <p id= "titulo"> ${element.title}</p>
-            <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
-          </section>
-    </div>
-    `
+      <div class="contenedor"> 
+            <section class="imagen"><figure><img id="poster" src="${element.poster}"</figure></section>
+            <section class="texto">
+              <p id= "titulo"> ${element.title}</p>
+              <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
+            </section>
+      </div>
+      `
     tarjetas.innerHTML += tarjeta
 });
 
