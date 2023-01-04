@@ -42,7 +42,7 @@ data.films.forEach(element => {
 } 
 // BOTONES DIRECTORES
 document.getElementById("directores").addEventListener("click",function(event) { 
-  console.log (event.target.id);
+  //console.log (event.target.id);
   let director = filterBy(event.target.id, data); 
   tarjetas.innerHTML = "";
   director.forEach(element => {
@@ -56,8 +56,8 @@ document.getElementById("directores").addEventListener("click",function(event) {
     </div>
     `
     tarjetas.innerHTML += tarjeta});
-    let menu = document.getElementById("menu-principal");
-    menu.style.display = "none";
+    //let menu = document.getElementById("menu-principal");
+    //menu.style.display = "none";
 });
 // BOTONES LANZAMIENTO
 document.getElementById("ordenAsc").addEventListener("click",function() { 
