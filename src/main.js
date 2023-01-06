@@ -7,7 +7,7 @@ const contPorcentaje = document.getElementById("contador");
 const display = (dataGhibli) => {
   tarjetas.innerHTML = "";
   const result = calcular(dataG, dataGhibli)
-  contPorcentaje.innerHTML = `<p>Total en porcentaje: ${result}%</p>`
+  contPorcentaje.innerHTML = `<p>Total en porcentaje: ${result}%</p>` //Muestra el porcentaje
   dataGhibli.forEach(element => {
     const tarjeta = `
       <div class="contenedor"> 
@@ -28,12 +28,9 @@ document.getElementById("todas").addEventListener("click", function () {
   display(dataG)
 });
 
-
 // BOTONES DIRECTORES
 document.getElementById("directores").addEventListener("click", function (event) {
-  //console.log (event.target.id);
   let director = filterBy(event.target.id, dataG);
-  console.log(director);
   display(director)
 
 });
@@ -50,18 +47,15 @@ document.getElementById("ordenDes").addEventListener("click", function () {
 
 //BOTONES SCORES 
 document.getElementById("less69").addEventListener("click", function (event) {
-  console.log(event.target.rt_score);
   let score = filterByS(0, 69, dataG);
   display(score);
 });
 document.getElementById("70-80").addEventListener("click", function (event) {
-  console.log(event.target.rt_score);
   let score = filterByS(70, 80, dataG);
   display(score);
 });
 
 document.getElementById("81-85").addEventListener("click", function (event) {
-  console.log(event.target.rt_score);
   let score = filterByS(81, 85, dataG);
   display(score);
 });
@@ -72,7 +66,6 @@ document.getElementById("86-90").addEventListener("click", function() {
 });
 
 document.getElementById("91-95").addEventListener("click", function (event) {
-  console.log(event.target.rt_score);
   let score = filterByS(91, 95, dataG);
   display(score);
 });
@@ -82,4 +75,4 @@ document.getElementById("96-100").addEventListener("click", function() {
   display(score);
 });
 
-//MOSTRAR PORCENTAJE EN PANTALLA
+
