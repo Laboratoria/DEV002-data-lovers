@@ -1,23 +1,23 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterBy, filterByS /*sortByA, sortByD, calcular */} from '../src/data.js';
 
 
-describe('example', () => {
+describe('fil', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterBy).toBe('function');
   });
 
   it('returns `example`', () => {
-    expect(example()).toBe('example');
+    expect(filterBy()).toBe('example');
   });
 });
 
 
 describe('anotherExample', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterByS).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+    expect(filterByS()).toBe('OMG');
   });
 });

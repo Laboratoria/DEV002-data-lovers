@@ -45,7 +45,7 @@ nav{
     margin: auto; 
 }
 
-#Filmografía, #Cronología {
+#Filmografía, #Acerca-de-Ghibli {
     color: #F3ECB099;
     text-decoration-line: none;
     font-family: 'Mitr', sans-serif;
@@ -54,7 +54,7 @@ nav{
     display: flex;
 }
 
-#Filmografía:hover, #Cronología:hover {
+#Filmografía:hover, #Acerca-de-Ghibli:hover {
     color: #F3ECB0;
 }
 
@@ -62,7 +62,7 @@ nav{
     float: left;
 }
 
-#Cronología{
+#Acerca-de-Ghibli{
     float: right;
 }
 
@@ -394,3 +394,127 @@ ul, ol {
     right:-140px;
     top:0;
 }
+@media only screen and ((min-width:901px) and (max-width:1500px)){
+    header{
+        position: fixed;
+        background-color: #344D67;
+        width: 100%;
+        min-height: 15%;
+        top: 0;
+        z-index: 2;
+    }
+    
+    .logo {
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    
+    #G-logo, #L-logo {
+        font-family:'Delius Unicase', cursive;
+        font-weight: 700;
+        font-size: 60pt;
+        text-align: center;
+        text-decoration-line: none;
+    }
+    
+    #G-logo {
+        color: #6ECCAF;
+    }
+    
+    #L-logo {
+        color: #ADE792;
+    }
+    
+    nav{
+        width: 65%;
+        height: 50px;
+        margin: auto; 
+    }
+    
+    #Filmografía, #Cronología {
+        color: #F3ECB099;
+        text-decoration-line: none;
+        font-family: 'Mitr', sans-serif;
+        font-size: 25pt;
+        font-weight: 300;
+        display: flex;
+    }
+    
+    #Filmografía:hover, #Cronología:hover {
+        color: #F3ECB0;
+    }
+    
+    #Filmografía{
+        float: left;
+    }
+    
+    #Cronología{
+        float: right;
+    }
+    
+    body {
+        background-color: #344D67;
+        color: #ADE792;
+        /*font-family: ;
+        font-size: 28px;*/
+        text-align: center;
+        align-items: center;
+    }
+    
+    main{
+        margin-top: 28%;
+    }
+    
+    h1 {
+        /* position: absolute; 
+        width: 276px;
+        height: 36px;*/
+        /* left: 42px;
+        top: 119px; */
+    
+        font-family: 'Delius Unicase';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45pt;
+        text-align: center;
+        
+        color: #F3ECB0;
+        margin: 30px;
+    }
+    
+    #barra-cyr{
+        font-family: 'Mitr', sans-serif;;
+        font-weight: 400;
+        font-size: 23pt;
+        color: #F3ECB099;
+        width: 80%;
+        height: 100px;
+        margin: auto;
+    }
+    
+    .contador, .resultado {
+        margin: auto;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .contador {
+        float: left;
+        color: #F3ECB099;
+    }
+    
+    .resultado {
+        float: right;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+

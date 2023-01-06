@@ -1,22 +1,12 @@
 
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 // DIRECTORES
 export const filterBy = (string, data) => {
-  const result =  data.films.filter(movie => movie.director === string); 
+  const result = data.filter(movie => movie.director === string);
   return result;
-} 
+}
 // LANZAMIENTO
 export const sortByA = (data) => {
-  const result = [...data.films].sort((a,b) => {
+  const result = [...data].sort((a, b) => {
     if (a.release_date === b.release_date) {
       return 0;
     }
@@ -25,24 +15,35 @@ export const sortByA = (data) => {
     }
     return 1;
   });
-    return result ;
-} 
+  return result;
+}
 export const sortByD = (data) => {
-  const result = [...data.films].sort((a,b) => {
+  const result = [...data].sort((a, b) => {
     if (a.release_date === b.release_date) {
       return 0;
     }
-    if ( b.release_date < a.release_date ) {
+    if (b.release_date < a.release_date) {
       return -1;
     }
     return 1;
   });
-    return result ;
-} 
+  return result;
+}
 // SCORE
 export const filterByS = (min, max, data) => {
-  const result =  data.films.filter(movie => {
+  const result = data.filter(movie => {
     return (movie.rt_score <= max && movie.rt_score >= min)
-  }); 
+  });
   return result;
-} 
+}
+// MOSTRAR PORCENTAJE EN PANTALLA
+export const calcular = (data, peliculasEnPantalla) => {
+  let total = data.length;
+  console.log(total);
+  let actual = peliculasEnPantalla.length;
+  console.log(actual);
+  let multiplicar = (actual * 100);
+  let division = (multiplicar / total);
+  console.log(division, "total")
+  return division;
+}
