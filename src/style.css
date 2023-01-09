@@ -69,8 +69,6 @@ nav{
 body {
     background-color: #344D67;
     color: #ADE792;
-    /*font-family: ;
-    font-size: 28px;*/
     text-align: center;
     align-items: center;
 }
@@ -80,18 +78,21 @@ main{
 }
 
 h1 {
-    /* position: absolute; 
-    width: 276px;
-    height: 36px;*/
-    /* left: 42px;
-    top: 119px; */
-
     font-family: 'Delius Unicase';
     font-style: normal;
     font-weight: 400;
     font-size: 45pt;
     text-align: center;
     
+    color: #F3ECB0;
+    margin: 30px;
+}
+h3 {
+    font-family: 'Mitr', sans-serif;
+    font-style: normal;
+    font-weight: 280;
+    font-size: 18pt;
+    text-align: center;
     color: #F3ECB0;
     margin: 30px;
 }
@@ -126,18 +127,8 @@ h1 {
 }
 
 .contenedor {
-    /*background-color: blueviolet;
-    border-color: #ADE792;
-    border-radius: 50px;
-    border: 10px;*/
-    /* box-sizing: border-box; */
-
-    /*position: absolute;*/
     max-width: 90%;
-    /* width: fit-content; */
     height: 300px;
-   /* left: 19px;
-    top: 193px; */
     margin: auto;
     margin-bottom: 3%;
     background: #344D67;
@@ -150,7 +141,6 @@ h1 {
 
 .imagen {
     width: 30%;
-    /* background-color: blue; */
     float: left;
     padding-top: 1.5%;
     padding-bottom: 1%;
@@ -159,9 +149,6 @@ h1 {
 
 figure {
     margin: 0;
-    /* width: fit-content; */
-    /* width: 200px;
-    height: 270px; */
 }
 
 #poster {
@@ -170,26 +157,17 @@ figure {
     position: left;
  
     border-radius: 10px;
-    /* background-color: yellow; */
     object-fit: cover;
 }
 
 .texto {
     width: 70%;
-    /* background-color: orange; */
     float: right;
     text-align: left;  
     margin: auto;
 }
 
 #titulo {
-   /*  position: absolute;
-    width: 174px;
-    height: 102px;
-    left: 155px;
-    top: 206px; */
-    /* background-color: rgb(238, 130, 130); */
-    
     font-family: 'Mitr';
     font-style: normal;
     font-weight: 600;
@@ -197,7 +175,6 @@ figure {
     line-height: 75pt;
     display: flex;
     align-items: center;
-    
     color: #ADE792;
     margin: 15px;
     margin-bottom: auto;
@@ -205,22 +182,13 @@ figure {
 }
 
 #datos {
-    /* background-color: rgb(255, 0, 0); */
-   
-   /*  position: absolute;
-    width: 174px;
-    height: 102px;
-    left: 155px;
-    top: 206px; */
     font-family: 'Mitr';
     font-style: normal;
     font-weight: 400;
     font-size: 22pt;
-    
     line-height: 34pt;
     display: flex;
     align-items: left;
-    
     color: #ADE792;
     margin: 15px;
     margin-bottom: auto;
@@ -229,19 +197,17 @@ figure {
 
 footer {
     background-color: #6ECCAF;
-    /* position: fixed; */
     width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
     min-height: 8%;
-    /* max-height: 15%; */
+   
 }
 
 #botones{
-    /* width: 80%; */
+    
     width: 100%;
-    /* background-color: blue; */
     margin: auto;
     align-items: center;
 }
@@ -256,10 +222,6 @@ footer {
 }
 
 #boton-m, #boton-i {
-    /* width: 40%;
-    margin: 0;
-    background-color: aqua; */
-    /* width: 41%; */
     width: 50%; 
     position: fixed;
     bottom: 0;
@@ -271,11 +233,11 @@ footer {
     right: 0;
 }
 #menu, #inicio {
-    /* width: 13%; */
-    padding-top: 2%; /*estaba en 3*/
+   
+    padding-top: 2%; 
     padding-bottom: 1%;
     width: 34%;
-    /* background-color: #6ECCAF; */
+    
 }
 
 #menu {
@@ -288,10 +250,6 @@ footer {
     width: 27%;
 }
 
-/* #menu:hover, #inicio:hover {
-    background-color: #88ff00;
-} */
-
 #boton-m {
     float: left;
 }
@@ -299,47 +257,6 @@ footer {
 #boton-i {
     float: right;
 }
-/* 
-#menu {
-    float: left;
-}
-
-#inicio {
-    float: right;
-} */
-/* 
-ul, ol {
-    list-style: none;
-    display: none;
-    position: absolute;
-}
-
-#btn-m li {
-    background-color: #F3ECB0;
-    color: #344D67;
-    text-decoration: none;
-    padding: 10px 5px;
-    display: block;
-    text-align: left;
-   
-}
-
-#boton-m > li {
-    float: left;
-}
-#btn-m li:hover {
-    display: block;
-}
-#btn-m li > ul {
-    display: block;
-} */
-
-/* AQUI QUISE SEPARAR EL MENÚ DE LA ORILLA, PERO CONTINUA CON EL COLOR DE FONDO
-#menu-principal {
-    width: 80%;
-    left: 20%;
-} */
-
 #btn-m:hover > ul {
     display: block;
 }
@@ -394,119 +311,31 @@ ul, ol {
     right:-140px;
     top:0;
 }
-@media only screen and ((min-width:901px) and (max-width:1500px)){
-    header{
-        position: fixed;
-        background-color: #344D67;
-        width: 100%;
-        min-height: 15%;
-        top: 0;
-        z-index: 2;
-    }
+@media  (min-width:420px) {
+footer {
     
-    .logo {
-        margin-top: 5%;
-        margin-bottom: 2%;
-    }
+    min-height: unset;
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+}
+#btn-m  {
+    height: 20px;
+}
+#menu, #inicio {
+    height: 50px;
+    width: unset;
+}
+#tarjetas 
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     
-    #G-logo, #L-logo {
-        font-family:'Delius Unicase', cursive;
-        font-weight: 700;
-        font-size: 60pt;
-        text-align: center;
-        text-decoration-line: none;
-    }
-    
-    #G-logo {
-        color: #6ECCAF;
-    }
-    
-    #L-logo {
-        color: #ADE792;
-    }
-    
-    nav{
-        width: 65%;
-        height: 50px;
-        margin: auto; 
-    }
-    
-    #Filmografía, #Cronología {
-        color: #F3ECB099;
-        text-decoration-line: none;
-        font-family: 'Mitr', sans-serif;
-        font-size: 25pt;
-        font-weight: 300;
-        display: flex;
-    }
-    
-    #Filmografía:hover, #Cronología:hover {
-        color: #F3ECB0;
-    }
-    
-    #Filmografía{
-        float: left;
-    }
-    
-    #Cronología{
-        float: right;
-    }
-    
-    body {
-        background-color: #344D67;
-        color: #ADE792;
-        /*font-family: ;
-        font-size: 28px;*/
-        text-align: center;
-        align-items: center;
-    }
-    
-    main{
-        margin-top: 28%;
-    }
-    
-    h1 {
-        /* position: absolute; 
-        width: 276px;
-        height: 36px;*/
-        /* left: 42px;
-        top: 119px; */
-    
-        font-family: 'Delius Unicase';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 45pt;
-        text-align: center;
-        
-        color: #F3ECB0;
-        margin: 30px;
-    }
-    
-    #barra-cyr{
-        font-family: 'Mitr', sans-serif;;
-        font-weight: 400;
-        font-size: 23pt;
-        color: #F3ECB099;
-        width: 80%;
-        height: 100px;
-        margin: auto;
-    }
-    
-    .contador, .resultado {
-        margin: auto;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    .contador {
-        float: left;
-        color: #F3ECB099;
-    }
-    
-    .resultado {
-        float: right;
-    }
-
+}
+.contenedor {
+    width: 500px;  
+}
 
 
 

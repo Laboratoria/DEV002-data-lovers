@@ -14,23 +14,15 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Descripción del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes animados considerados grandes éxitos.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+Las animaciones tienen gran acogida a nivel mundial y algunas han recibido varias nominaciones y premios. De todo este fandom hay un grupo que desea poder interactuar y ver la información de las animaciones y sus personajes.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+Debido a esto, se vio la necesidad de poder elaborar un producto digital en el cual se pueda consolidar la información relacionada a los largometrajes y le permita al usuario obtener  estos datos de forma dinámica y de acuerdo a sus necesidades.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+Para este proyecto es necesario completar los objetivos de aprendizaje trabajando de manera colaborativa (dupla).  Para ello fue indispensable realizar prototipos de baja y alta fidelidad, manejo de HTML semántico, JavaScript, CSS, web APIs, control de versiones GIT-GITHUB así como testeos de usabilidad. El conjunto de estas funciones nos llevará a una interfaz donde se mostrará la data del Studio Ghibli de manera organizada y manejable para el usuario final.
 
 ## 2. Resumen del proyecto
 

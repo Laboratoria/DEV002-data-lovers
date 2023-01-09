@@ -17,6 +17,7 @@ const display = (dataGhibli) => {
               <p id= "datos"> Director: ${element.director} <br> Productor: ${element.producer} <br> Lanzamiento: ${element.release_date} <br> Score: ${element.rt_score}</p>
             </section>
       </div>
+      
       `
     tarjetas.innerHTML += tarjeta
   });
@@ -29,7 +30,7 @@ document.getElementById("todas").addEventListener("click", function () {
 });
 
 // BOTONES DIRECTORES
-document.getElementById("directores").addEventListener("click", function (event) {
+document.getElementById("directores").addEventListener("click", function () {
   let director = filterBy(event.target.id, dataG);
   display(director)
 
@@ -46,16 +47,16 @@ document.getElementById("ordenDes").addEventListener("click", function () {
 });
 
 //BOTONES SCORES 
-document.getElementById("less69").addEventListener("click", function (event) {
+document.getElementById("less69").addEventListener("click", function () {
   let score = filterByS(0, 69, dataG);
   display(score);
 });
-document.getElementById("70-80").addEventListener("click", function (event) {
+document.getElementById("70-80").addEventListener("click", function () {
   let score = filterByS(70, 80, dataG);
   display(score);
 });
 
-document.getElementById("81-85").addEventListener("click", function (event) {
+document.getElementById("81-85").addEventListener("click", function () {
   let score = filterByS(81, 85, dataG);
   display(score);
 });
@@ -65,7 +66,7 @@ document.getElementById("86-90").addEventListener("click", function() {
   display(score);
 });
 
-document.getElementById("91-95").addEventListener("click", function (event) {
+document.getElementById("91-95").addEventListener("click", function () {
   let score = filterByS(91, 95, dataG);
   display(score);
 });

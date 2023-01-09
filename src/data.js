@@ -38,12 +38,10 @@ export const filterByS = (min, max, data) => {
 }
 // MOSTRAR PORCENTAJE EN PANTALLA
 export const calcular = (data, peliculasEnPantalla) => {
-  let total = data.length;
-  console.log(total);
+  let total = data.length; 
   let actual = peliculasEnPantalla.length;
-  console.log(actual);
   let multiplicar = (actual * 100);
   let division = (multiplicar / total);
-  console.log(division, "total")
+  
   return division;
 }
