@@ -1,4 +1,5 @@
 import {
+  calcular,
   filterBy, filterByS, sortByA, sortByD/*filterByS, /*sortByA, sortByD, calcular */
   
 } from '../src/data.js';
@@ -148,6 +149,40 @@ describe('prueba de la funcion filterByS', () => {
     ]
   );
 });
-
 });
+
+describe('prueba de la funcion calcular', () => {
+  it('verfica que es funcion', () => {
+    expect(typeof calcular).toBe('function');
+  });
+
+const title = "My Neighbor Totoro"
+const calculando = calcular(filmsPrueba, title)
+  it('se calcula lo que se muestra en pantalla', () => {
+    expect(calculando).toEqual("33.00")
+    [{
+
+      "title": "My Neighbor Totoro",
+      "director": "Hayao Miyazaki",
+      "release_date": "1988",
+      "rt_score": "93",
+    },
+    {
+      "title": "Kiki's Delivery Service",
+      "director": "Hayao Miyazaki",
+      "release_date": "1989",
+      "rt_score": "96",
+    },
+    {
+      "title": "Grave of the Fireflies",
+      "director": "Isao Takahata",
+      "release_date": "1988",
+      "rt_score": "97",
+    }
       
+    ] }
+    
+    );
+  });
+
+  
