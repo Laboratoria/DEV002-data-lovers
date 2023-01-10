@@ -156,10 +156,8 @@ describe('prueba de la funcion calcular', () => {
     expect(typeof calcular).toBe('function');
   });
 
-const title = "My Neighbor Totoro"
-const calculando = calcular(filmsPrueba, title)
   it('se calcula lo que se muestra en pantalla', () => {
-    expect(calculando).toEqual("33.00")
+    expect(calcular(data, filmsPrueba)).toBe(
     [{
 
       "title": "My Neighbor Totoro",
@@ -180,9 +178,9 @@ const calculando = calcular(filmsPrueba, title)
       "rt_score": "97",
     }
       
-    ] }
+    ] 
     
     );
   });
-
+});
   
