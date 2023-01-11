@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Mitr:wght@200;300;400;500;600;700&display=swap');
+/* font-family: 'Delius Unicase', cursive;
+font-family: 'Mitr', sans-serif; 
+Delius Unicase: 400;700
+Mitr: 200;300;400;500;600;700*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    background-color: #344D67;
+    width: 100%;
+    min-height: 15%;
+    top: 0;
+    z-index: 2;
+}
+
+.logo {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#G-logo,
+#L-logo {
+    font-family: 'Delius Unicase', cursive;
+    font-weight: 700;
+    font-size: 60pt;
+    text-align: center;
+    text-decoration-line: none;
+}
+
+#G-logo {
+    color: #6ECCAF;
+}
+
+#L-logo {
+    color: #ADE792;
+}
+
+nav {
+    width: 65%;
+    height: 50px;
+    margin: auto;
+}
+
+#Filmografía,
+#Acerca-de-Ghibli {
+    color: #F3ECB099;
+    text-decoration-line: none;
+    font-family: 'Mitr', sans-serif;
+    font-size: 25pt;
+    font-weight: 300;
+    display: flex;
+}
+
+#Filmografía:hover,
+#Acerca-de-Ghibli:hover {
+    color: #F3ECB0;
+}
+
+#Filmografía {
+    float: left;
+}
+
+#Acerca-de-Ghibli {
+    float: right;
+}
+
+body {
+    background-color: #344D67;
+    color: #ADE792;
+    text-align: center;
+    align-items: center;
+}
+
+main {
+    margin-top: 28%;
+}
+
+h1 {
+    font-family: 'Delius Unicase';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45pt;
+    text-align: center;
+
+    color: #F3ECB0;
+    margin: 30px;
+}
+
+h3 {
+    font-family: 'Mitr', sans-serif;
+    font-style: normal;
+    font-weight: 280;
+    font-size: 18pt;
+    text-align: center;
+    color: #F3ECB0;
+    margin: 30px;
+}
+
+#barra-cyr {
+    font-family: 'Mitr', sans-serif;
+    ;
+    font-weight: 400;
+    font-size: 23pt;
+    color: #F3ECB099;
+    width: 80%;
+    height: 100px;
+    margin: auto;
+}
+
+.contador,
+.resultado {
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.contador {
+    float: left;
+    color: #F3ECB099;
+}
+
+#tarjetas {
+    margin-bottom: 18%;
+}
+
+.contenedor {
+    max-width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 3%;
+    background: #344D67;
+    border: 2px solid #6ECCAF;
+    border-radius: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.imagen {
+    width: 30%;
+    float: left;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    margin: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+#poster {
+    width: 200px;
+    height: 270px;
+    position: left;
+
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.texto {
+    width: 70%;
+    float: right;
+    text-align: left;
+    margin: auto;
+}
+
+#titulo {
+    font-family: 'Mitr';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22pt;
+    line-height: 42pt;
+    display: flex;
+    align-items: center;
+    color: #ADE792;
+    margin: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+#datos {
+    font-family: 'Mitr';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22pt;
+    line-height: 34pt;
+    display: flex;
+    align-items: left;
+    color: #ADE792;
+    margin: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+footer {
+    background-color: #6ECCAF;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 8%;
+
+}
+
+#botones {
+
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+#bnt-i,
+#btn-m {
+    background-color: #6ECCAF;
+    border: none;
+}
+
+/*sólo para ver si funciona el botón*/
+#bnt-i:hover,
+#btn-m:hover {
+    background-color: #ae6ecc;
+    border: none;
+}
+
+#boton-m,
+#boton-i {
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+}
+
+#boton-m {
+    left: 0;
+}
+
+#boton-i {
+    right: 0;
+}
+
+#menu,
+#inicio {
+
+    padding-top: 2%;
+    padding-bottom: 1%;
+    width: 34%;
+
+}
+
+#menu {
+    padding-right: 35%;
+    width: 27%;
+}
+
+#inicio {
+    padding-left: 35%;
+    width: 27%;
+}
+
+#boton-m {
+    float: left;
+}
+
+#boton-i {
+    float: right;
+}
+
+#btn-m:hover>ul {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+    display: none;
+    position: relative;
+}
+
+#btn-m li {
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    font-size: 32pt;
+
+
+    background-color: #6ECCAF;
+    color: #344D67;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+#btn-m li:hover {
+    background-color: #344D67;
+    color: #F3ECB0;
+}
+
+#btn-m>li {
+    float: left;
+}
+
+#btn-m li ul {
+    display: none;
+    position: absolute;
+    min-width: 45%;
+}
+
+#btn-m li:hover>ul {
+    display: block;
+}
+
+#btn-m li ul li {
+    position: relative;
+}
+
+#uno ul {
+    right: -101%;
+    bottom: 50%;
+}
+
+#dos ul {
+    right: -62%;
+    bottom: 25%;
+}
+
+#tres ul {
+    right: -63%;
+    bottom: 0;
+}
+
+#btn-m li ul li ul {
+    right: -140px;
+    top: 0;
+}
+
+
+/* AQUI COMIENZA MEDIA QUERIES */
+
+@media (min-width:1200px) {
+    header {
+
+        min-height: 10%;
+        top: 0;
+        z-index: 2;
+    }
+
+    .logo {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    #G-logo,
+    #L-logo {
+
+        font-size: 70px;
+    }
+
+    #G-logo {
+        color: #6ECCAF;
+    }
+
+    #L-logo {
+        color: #ADE792;
+    }
+
+    nav {
+        width: 65%;
+        height: 50px;
+        margin: auto;
+    }
+
+    #Filmografía,
+    #Acerca-de-Ghibli {
+        color: #F3ECB099;
+        text-decoration-line: none;
+        font-family: 'Mitr', sans-serif;
+        font-size: 25pt;
+        font-weight: 300;
+        display: flex;
+    }
+
+    #Filmografía:hover,
+    #Acerca-de-Ghibli:hover {
+        color: #F3ECB0;
+    }
+
+    #Filmografía {
+        float: left;
+    }
+
+    #Acerca-de-Ghibli {
+        float: right;
+    }
+
+
+    h1 {
+
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 30px;
+
+    }
+
+    #barra-cyr {
+
+        font-size: 25px;
+    }
+
+    #tarjetas {
+        margin-bottom: 18%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .contenedor {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .texto {
+        width: 50%
+    }
+
+    .imagen {
+        width: 50%
+    }
+
+    #titulo {
+        
+        font-size: 20px;
+        line-height: 35px;
+        
+    }
+
+    #datos {
+   
+        font-size: 18px;
+        line-height: 30px;
+        
+    }
+
+    footer {
+        min-height: unset;
+    }
+
+    #boton-m,
+    #boton-i {
+        width: 50%;
+       height: 10%;
+    }
+
+    #menu {
+        padding-right: 35%;
+        width: 10%;
+        z-index: 1;
+    }
+
+    #inicio {
+        padding-left: 35%;
+        width: 10%;
+    }
+
+    #menu-principal:hover {
+        display: block;
+    }
+
+    #menu-principal {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        bottom: 250px;
+    }
+
+    #menu-principal li {
+        font-size: 25px;
+        height: 43px;
+    }
+
+    #menu-principal #uno #directores {
+        right: -50%;
+    }
+
+    #menu-principal #dos ul {
+        right: -45%;
+    }
+
+    #menu-principal #tres #scores {
+        right: -45%;
+    }
+}

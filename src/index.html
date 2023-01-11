@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ghibli Lover's</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a id="G-logo" href="index.html">Ghibli</a>
+      <a id="L-logo" href="index.html">Lover's</a>
+    </div>
+    <!-- logo -->
+    <nav>
+      <a id="Filmografía" href="https://ghiblicollection.com/filmography">Filmografía</a>
+      <a id="Acerca-de-Ghibli" href="https://ghiblicollection.com/about">Acerca de Ghibli</a>
+      <!--Filmografía-->
+      <!--Cronología-->
+    </nav>
+  </header>
+
+  <main>
+    <h1>Películas</h1>
+    <h3>¡Bienvenid@ a Ghibli Lover’s!
+      Aquí encontrarás información relevante de tus pelis favoritas para ese fanátic@ que llevas dentro.</h3>
+    <!--<p>Total #</p> -->
+    <section id="barra-cyr">
+      <div class="contador" id="contador"></div>
+    </section>
+    <!-- <div class="resultado">Resultado Isao Takahata</div>-->
+    <!-- Tarjetas -->
+    <section id="tarjetas"></section>
+
+  </main>
+
+  <footer>
+    <!--Botón menú -->
+    <div id="botones">
+      <div id="boton-m">
+        <button id="btn-m">
+          <ul id="menu-principal">
+            <li id="todas">Todas</li>
+            <li id="uno">Directores
+              <ul id="directores">
+                <li id="Hayao Miyazaki">Hayao Miyazaki</li>
+                <li id="Isao Takahata">Isao Takahata</li>
+                <li id="Yoshifumi Kondō">Yoshifumi Kondō</li>
+                <li id="Hiroyuki Morita">Hiroyuki Morita</li>
+                <li id="Gorō Miyazaki">Gorō Miyazaki</li>
+                <li id="Hiromasa Yonebayashi">Hiromasa Yonebayashi</li>
+
+              </ul>
+            </li>
+            <li id="dos">Lanzamiento
+              <ul>
+                <li id="ordenAsc"> Más reciente</li>
+                <li id="ordenDes"> Más antigua</li>
+              </ul>
+            </li>
+            <li id="tres">Score
+              <ul id="scores">
+                <li id="less69">menos de 60</li>
+                <li id="70-80">70 a 80</li>
+                <li id="81-85">81 a 85</li>
+                <li id="86-90">86 a 90</li>
+                <li id="91-95">91 a 95</li>
+                <li id="96-100">96 a 100</li>
+              </ul>
+            </li>
+          </ul>
+          <img id="menu" src="/imagenes/menu.png">
+        </button>
+      </div>
+      <!--Botón inicio-->
+      <div id="boton-i">
+        <button id="bnt-i" onclick="window.location.href='index.html';"><img id="inicio"
+            src="/imagenes/inicio.png"></button>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <div id="root"></div> -->
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
