@@ -8,7 +8,7 @@
 * [4. Ventajas para el usuario](#4-ventajas-usuario)
 * [5. Prototipo](#5-prototipo)
 * [6. Feedback Compañeras](#6-feedback-compañeras)
-* [7. Historias de Usuario]
+* [7. Historias de Usuario](#7-historias-de-usuario)
 
 
 ***
