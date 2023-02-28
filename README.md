@@ -15,7 +15,7 @@
 
 ## **1. Definición del producto**
 
- Esta página web le permitirá a los jugadores online de pokémon conocer datos específicos de los pokemones, logrando por medio de filtros encontrar con mayor facilidad los pokémones de su preferencia.
+Esta página web le permitirá a los jugadores online de pokémon conocer datos específicos de sus personajes favoritos, logrando por medio de filtros encontrar con mayor facilidad los pokémones de su preferencia.
 
 ## **2. Principales Usuarios**
 
