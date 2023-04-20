@@ -1,37 +1,50 @@
-# Pokémon
+# Definición del producto
 
 Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
-
-## Hallazgos
+## Historias de usuario
 
 Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU001.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU005.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU006.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU007.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU008.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU009.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU010.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU011.jpeg
+
+
+## Diseño de Interfaz de usuario
+Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés - User Interface). 
+Agregar prototipo de alta en figma (enlace, capturas)
+
+- **Prototipo de baja fidelidad** 
+Durante tu trabajo deberás haber hecho e iterado bocetos (sketches) de tu solución usando papel y lápiz. Te recomendamos tomar fotos de todas las iteraciones que hagas, que las subas a tu repositorio y las menciones en tu README.md  
+
+ ![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-1.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-2.jpeg
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-3.jpeg
+
+
+
+![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png
+
+
+- **Prototipo de alta fidelidad** distintos Pokémon para completar su Pokédex.
+- **Objetivo de la interfaz** 
+El diseño debe representar el ideal de tu solución. Digamos que es lo que desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu diseño debe seguir los fundamentos de visual design.
+Mencionar paleta de colores y elección de fuente
+
+## Testeos de usabilidad
+
