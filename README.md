@@ -7,7 +7,7 @@ Para ello, concluimos la necesidad de integrar los siguientes filtros básicos:
 * Filtro por tipos
 * Filtro de pokémon legendarios
 El uso de ellos se definió más ampliamente en las historias de usuario.
-![flowchart DataLovers(Jhoanna)](https://user-images.githubusercontent.com/113317909/233431658-cc69fe94-5137-49c1-9972-0cae970573d4.PNG)
+![flowchart DataLovers(Jhoanna)](https://user-images.githubusercontent.com/113317909/233431998-4acabd37-89a1-4314-8b93-f1633c0f3695.PNG)
 
 ## Historias de usuario
 Como parte del proceso de UI realizamos las siguientes historias de usuario para Jhoale Pokédex, las cuales nos ayudaron a clarificar cómo resolveríamos las necesidades de nuestros usuarios en la web.
